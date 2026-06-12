@@ -1,0 +1,67 @@
+---
+const star = 'm12 2 3 6.5 7 .6-5.3 4.6L18 21l-6-3.7L6 21l1.3-7.3L2 9.1l7-.6Z';
+
+const stats = [
+  { count: 40, suffix: '+', lbl: 'marques afro-caribéennes accompagnées' },
+  { count: 3, suffix: '×', lbl: 'de trafic organique en moyenne sur 6 mois' },
+  { count: 0, prefix: 'Top ', suffix: ' 3', lbl: 'positions visées sur vos mots-clés locaux' },
+  { count: 100, suffix: '%', lbl: 'sans publicité payante, durablement' },
+];
+
+const quotes = [
+  {
+    text: "« Enfin quelqu'un qui comprend notre marché et notre culture. En quelques mois, on apparaît enfin quand nos clients nous cherchent. »",
+    initials: 'AK',
+    name: 'Aïcha K.',
+    role: 'Fondatrice, marque de cosmétiques',
+  },
+  {
+    text: "« Pédagogue, honnête et sans jargon. J'ai compris pour la première fois comment Google fonctionne pour mon commerce. »",
+    initials: 'DM',
+    name: 'David M.',
+    role: 'Gérant, restaurant antillais',
+  },
+];
+---
+
+<section class="sec" id="resultats">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker">Les résultats</span>
+      <h2 class="sec-title">Une visibilité qui se construit,<br />et qui dure.</h2>
+    </div>
+    <div class="stats">
+      {
+        stats.map((s) => (
+          <div class="stat reveal">
+            <div class="num" data-count={s.count} data-prefix={s.prefix} data-suffix={s.suffix}>
+              0
+            </div>
+            <div class="lbl">{s.lbl}</div>
+          </div>
+        ))
+      }
+    </div>
+    <div class="quotes">
+      {
+        quotes.map((q) => (
+          <figure class="quote reveal">
+            <div class="stars">
+              {Array.from({ length: 5 }).map(() => (
+                <svg viewBox="0 0 24 24"><path d={star} /></svg>
+              ))}
+            </div>
+            <p>{q.text}</p>
+            <figcaption class="who">
+              <span class="ava">{q.initials}</span>
+              <span>
+                <b>{q.name}</b>
+                <span>{q.role}</span>
+              </span>
+            </figcaption>
+          </figure>
+        ))
+      }
+    </div>
+  </div>
+</section>

@@ -1,0 +1,129 @@
+---
+import '../styles/global.css';
+
+export interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = 'AfriRank — SEO local & culturel pour la diaspora afro-caribéenne',
+  description = 'AfriRank aide les marques afro-caribéennes à devenir visibles sur Google grâce au SEO local et culturel. Sans publicité, durablement.',
+} = Astro.props;
+
+const canonical = new URL(Astro.url.pathname, Astro.site);
+---
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <link rel="canonical" href={canonical} />
+  <link rel="icon" type="image/png" href="/images/icon-orange.png" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:url" content={canonical} />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+</head>
+<body>
+  <slot />
+
+  <script>
+    // sticky nav shadow
+    const nav = document.getElementById('nav');
+    if (nav) {
+      const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 12);
+      onScroll();
+      window.addEventListener('scroll', onScroll, { passive: true });
+    }
+
+    // mobile menu
+    const toggle = document.getElementById('navToggle');
+    if (toggle) {
+      toggle.addEventListener('click', () => document.body.classList.toggle('menu-open'));
+      document
+        .querySelectorAll('#mobileMenu a')
+        .forEach((a) => a.addEventListener('click', () => document.body.classList.remove('menu-open')));
+    }
+
+    // reveal on scroll
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) {
+            e.target.classList.add('in');
+            io.unobserve(e.target);
+          }
+        });
+      },
+      { threshold: 0.12, rootMargin: '0px 0px -8% 0px' }
+    );
+    document.querySelectorAll('.reveal').forEach((el, i) => {
+      (el as HTMLElement).style.transitionDelay = (Math.min(i % 5, 4) * 60) + 'ms';
+      io.observe(el);
+    });
+
+    // faq accordion
+    document.querySelectorAll('.faq-q').forEach((q) => {
+      q.addEventListener('click', () => {
+        const item = q.parentElement as HTMLElement;
+        const a = item.querySelector('.faq-a') as HTMLElement;
+        const open = item.classList.contains('open');
+        document.querySelectorAll('.faq-item.open').forEach((o) => {
+          o.classList.remove('open');
+          (o.querySelector('.faq-a') as HTMLElement).style.maxHeight = '';
+        });
+        if (!open) {
+          item.classList.add('open');
+          a.style.maxHeight = a.scrollHeight + 'px';
+        }
+      });
+    });
+
+    // count up stats
+    const animateCount = (el: HTMLElement) => {
+      const target = parseFloat(el.dataset.count || '0');
+      const suffix = el.dataset.suffix || '';
+      const prefix = el.dataset.prefix || '';
+      if (target === 0) {
+        el.textContent = prefix + suffix.trim();
+        return;
+      }
+      const dur = 1400,
+        t0 = performance.now();
+      const tick = (t: number) => {
+        const p = Math.min((t - t0) / dur, 1);
+        const eased = 1 - Math.pow(1 - p, 3);
+        el.textContent = prefix + Math.round(eased * target) + suffix;
+        if (p < 1) requestAnimationFrame(tick);
+      };
+      requestAnimationFrame(tick);
+    };
+    const statIO = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) {
+            animateCount(e.target as HTMLElement);
+            statIO.unobserve(e.target);
+          }
+        });
+      },
+      { threshold: 0.6 }
+    );
+    document.querySelectorAll('.num[data-count]').forEach((el) => statIO.observe(el));
+  </script>
+</body>
+</html>

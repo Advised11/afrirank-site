@@ -1,0 +1,120 @@
+---
+const calendly = 'https://calendly.com/contact-advised-seo/30min?back=1';
+const check = 'M20 6 9 17l-5-5';
+
+const offers = [
+  {
+    tag: 'Étape 01',
+    name: 'Start',
+    featured: false,
+    desc: 'Diagnostic + roadmap + suivi stratégique.',
+    price: '690€',
+    per: '/ mois',
+    engage: 'Engagement 6 mois',
+    objLabel: 'Objectif',
+    list: ['Identifier les blocages SEO', 'Prioriser les opportunités', 'Poser les fondations'],
+    target: 'Pour les entrepreneurs et TPE voulant structurer leur visibilité.',
+    cta: 'Réserver un appel',
+    ctaClass: 'btn--cream',
+    ctaArrow: false,
+  },
+  {
+    tag: 'Le plus choisi',
+    name: 'Growth',
+    featured: true,
+    desc: "Roadmap + implémentation + optimisation continue + 3 jours d'accompagnement / mois.",
+    price: '1 490€',
+    per: '/ mois',
+    engage: 'Engagement 6 mois',
+    objLabel: 'Objectif',
+    list: ['Déployer les optimisations prioritaires', 'Développer la visibilité organique', 'Générer des résultats mesurables'],
+    target: 'Pour les marques en croissance souhaitant développer leur acquisition organique.',
+    cta: 'Réserver un appel',
+    ctaClass: 'btn--orange',
+    ctaArrow: true,
+  },
+  {
+    tag: 'Étape 03',
+    name: 'Authority',
+    featured: false,
+    desc: "Accompagnement complet + contenu + visibilité + autorité + 6 jours d'accompagnement / mois.",
+    price: '2 490€',
+    per: '/ mois',
+    engage: 'Engagement 6 mois',
+    objLabel: 'Objectif',
+    list: ["Faire du SEO un canal d'acquisition majeur", 'Produire du contenu stratégique', 'Accélérer la croissance organique'],
+    target: 'Pour les marques établies souhaitant faire du SEO un levier de croissance majeur.',
+    cta: 'Réserver un appel',
+    ctaClass: 'btn--cream',
+    ctaArrow: false,
+  },
+  {
+    tag: 'Sur-mesure',
+    name: 'Full',
+    featured: false,
+    desc: 'Un accompagnement 360° construit autour de votre projet.',
+    price: 'Sur devis',
+    per: '',
+    engage: 'Périmètre adapté à vos besoins',
+    objLabel: 'Peuvent être inclus',
+    list: ['Création / gestion de site web', 'SEO local & international', 'Branding & storytelling', "Gestion de projet à l'international", 'Formations…'],
+    target: 'Pour les projets ambitieux nécessitant un accompagnement global.',
+    cta: 'Demander un devis',
+    ctaClass: 'btn--cream',
+    ctaArrow: false,
+    ctaHref: '#contact',
+  },
+];
+---
+
+<section class="sec offers" id="offres">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="kicker">L'accompagnement</span>
+      <h2 class="sec-title">Des offres pour chaque<br />étape de croissance.</h2>
+      <p>
+        Trois formules d'accompagnement avec un engagement de 6 mois — le temps nécessaire pour que le SEO produise des
+        résultats durables — et une offre 100&nbsp;% sur-mesure.
+      </p>
+    </div>
+    <div class="offer-grid">
+      {
+        offers.map((o) => (
+          <div class={`offer reveal${o.featured ? ' featured' : ''}`}>
+            <span class="offer-tag">{o.tag}</span>
+            <h3 class={o.featured ? '' : 'offer-h3-blue'}>{o.name}</h3>
+            <p class="offer-desc">{o.desc}</p>
+            <div class="price">
+              {o.price} {o.per && <small>{o.per}</small>}
+            </div>
+            <span class="engage">
+              <svg viewBox="0 0 24 24"><path d={check} /></svg>
+              {o.engage}
+            </span>
+            <div class="obj-label">{o.objLabel}</div>
+            <ul>
+              {o.list.map((li) => (
+                <li>
+                  <svg viewBox="0 0 24 24"><path d={check} /></svg>
+                  {li}
+                </li>
+              ))}
+            </ul>
+            <p class="target">{o.target}</p>
+            <a
+              href={o.ctaHref ?? calendly}
+              target={o.ctaHref ? undefined : '_blank'}
+              rel={o.ctaHref ? undefined : 'noopener'}
+              class={`btn ${o.ctaClass}`}
+            >
+              {o.cta}
+              {o.ctaArrow && (
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7" /></svg>
+              )}
+            </a>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>
