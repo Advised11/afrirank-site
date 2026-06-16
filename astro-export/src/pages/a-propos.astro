@@ -1,0 +1,99 @@
+---
+import Base from '../layouts/Base.astro';
+const jsonLd = "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"Person\",\n  \"@id\": \"https://www.advised-seo.fr/#francis\",\n  \"name\": \"Francis Ndimba\",\n  \"jobTitle\": \"Consultant SEO freelance\",\n  \"url\": \"https://www.afrirank.fr/a-propos\",\n  \"knowsLanguage\": [\"fr\", \"en\"],\n  \"knowsAbout\": [\"SEO technique\", \"Migrations SEO\", \"SEO sémantique\", \"GEO\", \"AEO\", \"Schema.org\"],\n  \"description\": \"Expert SEO, 11 ans d'expérience en agence puis chez l'annonceur (Groupe SEB, LumApps, Rubix). Fondateur d'AfriRank.\",\n  \"sameAs\": [\"https://www.linkedin.com/in/francisndimba\"]\n}";
+---
+<Base title="Francis Ndimba — expert SEO derrière AfriRank | 11 ans, cas lourds" description="Francis Ndimba, 11 ans de SEO en agence et chez l'annonceur (Groupe SEB, LumApps, Rubix). AfriRank, c'est cette expertise senior au service des marques afro-caribéennes." active="a-propos" jsonLd={jsonLd}>
+<section class="hero hero--page wrap">
+  <div class="hero-top">
+    <span class="hero-eyebrow reveal"><img src="/images/icon-orange.png" alt="" /> À propos</span>
+    <h1 class="reveal">L'expertise qu'on réserve d'habitude aux grands groupes, <em>au service de votre marque</em>.</h1>
+    <p class="hero-sub reveal">Je m'appelle Francis Ndimba. 11 ans à faire ranker des sites — en agence, puis chez l'annonceur, sur des projets que peu de freelances ont menés. AfriRank, c'est cette expertise au service des marques afro-caribéennes établies.</p>
+  </div>
+</section>
+
+<!-- LE PARCOURS -->
+<section class="sec">
+  <div class="wrap about-grid">
+    <img src="/images/HERO.png" alt="Portrait Francis Ndimba" class="about-photo reveal" loading="lazy" />
+    <div class="reveal">
+      <span class="kicker">Le parcours — la preuve</span>
+      <h2 style="font-size:clamp(28px,3.6vw,44px);margin-bottom:28px">11 ans, des cas lourds.</h2>
+      <div class="timeline">
+        <div class="tl-item">
+          <h3>Groupe SEB</h3>
+          <p>Lead SEO technique sur la migration de <span class="tl-metric">23 sites en 2 ans</span> (Tefal, Moulinex, Rowenta, Krups…).</p>
+        </div>
+        <div class="tl-item">
+          <h3>LumApps <span style="font-size:15px;color:var(--ink-45);font-family:var(--sans);font-weight:400">(SaaS B2B)</span></h3>
+          <p>Migration de 3 sites et stratégie de contenu IA : <span class="tl-metric">+59 % de MQL</span>, +30 % d'impressions.</p>
+        </div>
+        <div class="tl-item">
+          <h3>Rubix <span style="font-size:15px;color:var(--ink-45);font-family:var(--sans);font-weight:400">(industrie, international)</span></h3>
+          <p>Migrations multi-pays (UK · FR · DE · BeNeLux).</p>
+        </div>
+        <div class="tl-item">
+          <h3>Et aussi</h3>
+          <p>Bonduelle, Arkema, BPIFrance, Isotoner, Galbani, Président…</p>
+        </div>
+      </div>
+      <p class="proof-note" style="margin-top:30px">Ces marques ne sont pas afro. C'est volontaire que je vous le dise : c'est mon terrain d'expertise senior, celui que j'apporte intact à AfriRank.</p>
+    </div>
+  </div>
+</section>
+
+<!-- LA CONVICTION -->
+<section class="sec offers">
+  <div class="wrap">
+    <div class="sec-head reveal" style="max-width:880px">
+      <span class="kicker">Pourquoi AfriRank</span>
+      <h2 class="sec-title">La conviction.</h2>
+      <p>Les marques afro-caribéennes méritent leur place sur Google et dans les réponses IA — pas par chance ni par budget pub, mais par une stratégie solide, ancrée dans leur culture. J'ai vu trop de marques fortes laisser leur CA organique à des revendeurs sans histoire. AfriRank, c'est l'expertise des grands comptes doublée d'une connaissance native de votre marché.</p>
+    </div>
+  </div>
+</section>
+
+<!-- LES VALEURS -->
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker">Comment je travaille</span>
+      <h2 class="sec-title">Quatre principes, tenus.</h2>
+    </div>
+    <div class="values">
+      <div class="value reveal">
+        <span class="v-ic"><svg viewBox="0 0 24 24"><path d="M16 11a4 4 0 1 0-8 0M4 21v-1a5 5 0 0 1 5-5h6a5 5 0 0 1 5 5v1"/><circle cx="12" cy="7" r="0"/></svg></span>
+        <div><h3>Pair à pair</h3><p>Vous avez réussi votre marque ; je connais mon métier. Sans jargon inutile.</p></div>
+      </div>
+      <div class="value reveal">
+        <span class="v-ic"><svg viewBox="0 0 24 24"><path d="M12 3 4 7v5c0 4.5 3.4 7.5 8 9 4.6-1.5 8-4.5 8-9V7Z"/></svg></span>
+        <div><h3>Senior, pas armée</h3><p>Un seul interlocuteur expert, accountable de bout en bout.</p></div>
+      </div>
+      <div class="value reveal">
+        <span class="v-ic"><svg viewBox="0 0 24 24"><path d="M15 7h3a2 2 0 0 1 2 2v3M7 15v3M3 12V6a2 2 0 0 1 2-2h6M10 14l4-4M14 14l-4-4"/><rect x="3" y="14" width="7" height="7" rx="1"/></svg></span>
+        <div><h3>Je rends les clés</h3><p>Transfert du savoir-faire à votre équipe, pas de dépendance entretenue.</p></div>
+      </div>
+      <div class="value reveal">
+        <span class="v-ic"><svg viewBox="0 0 24 24"><path d="M3 3v18h18M7 14l4-4 3 3 5-6"/></svg></span>
+        <div><h3>Chiffres, pas promesses</h3><p>On mesure, on chiffre, on ajuste. Le reste, c'est du bruit.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="sec">
+  <div class="wrap">
+    <div class="cta-band reveal">
+      <img src="/images/icon-cream.png" class="icon-watermark" alt="" />
+      <h2>Parlons de votre marque.</h2>
+      <p>30 minutes pour voir si votre marché justifie une stratégie organique — et ce qu'elle peut rapporter.</p>
+      <div class="cta-actions">
+        <a href="https://calendly.com/contact-advised-seo/30min?back=1" target="_blank" rel="noopener" class="btn btn--orange">Réserver un appel
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+        <a href="mailto:contact@afrirank.com" class="btn btn--cream">contact@afrirank.com</a>
+      </div>
+    </div>
+  </div>
+</section>
+</Base>
