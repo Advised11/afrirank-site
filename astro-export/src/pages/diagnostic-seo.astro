@@ -1,0 +1,94 @@
+---
+import Base from '../layouts/Base.astro';
+const jsonLd = "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"Service\",\n  \"serviceType\": \"Diagnostic SEO & GEO\",\n  \"name\": \"Le Diagnostic AfriRank\",\n  \"provider\": { \"@type\": \"ProfessionalService\", \"@id\": \"https://www.afrirank.fr/#business\", \"name\": \"AfriRank\" },\n  \"areaServed\": [\"FR\", \"Europe\", \"Caraïbes\"],\n  \"description\": \"Diagnostic SEO + GEO chiffré : santé technique, requêtes non-brandées, visibilité IA et chiffrage du CA organique perdu, avec plan d'action priorisé.\",\n  \"offers\": { \"@type\": \"Offer\", \"price\": \"290\", \"priceCurrency\": \"EUR\", \"category\": \"Séance one-shot\" }\n}";
+---
+<Base title="Le Diagnostic AfriRank — chiffrez le CA organique que vous perdez" description="Un diagnostic SEO + GEO chiffré pour les marques afro-caribéennes établies. On mesure le chiffre d'affaires organique capté par vos concurrents, et le plan pour le récupérer. 1 500 €, déductible." active="diagnostic" jsonLd={jsonLd}>
+<section class="hero hero--page wrap">
+  <div class="hero-top">
+    <span class="hero-eyebrow reveal"><img src="/images/icon-orange.png" alt="" /> L'amorce · Séance unique</span>
+    <h1 class="reveal">Combien de chiffre d'affaires laissez-vous <em>aux revendeurs</em> ?</h1>
+    <p class="hero-sub reveal">Le Diagnostic AfriRank met un chiffre sur votre angle mort organique — puis vous remet un plan clair pour le récupérer. Que vous continuiez avec moi ou non.</p>
+    <div class="hero-actions reveal">
+      <a href="https://calendly.com/contact-advised-seo/30min?back=1" target="_blank" rel="noopener" class="btn btn--orange">Réserver mon Diagnostic — 290 €
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+    <span class="hero-note reveal"><b>Déductible si vous poursuivez</b> · Restitution en visio · Livrable écrit</span>
+  </div>
+</section>
+
+<!-- SIGNATURE — CA perdu -->
+<section class="sec">
+  <div class="wrap signature">
+    <div class="sig-copy reveal">
+      <span class="kicker">L'arme de signature</span>
+      <h2>On ne vous promet rien. On chiffre une opportunité.</h2>
+      <p>Pour vos requêtes non-brandées clés, je calcule une fourchette réaliste : volume de recherche × CTR moyen par position × taux de conversion e-commerce prudent × votre panier moyen. Le résultat : une estimation mensuelle du chiffre d'affaires que d'autres encaissent à votre place.</p>
+    </div>
+    <div class="callout reveal">
+      <div class="co-tag">Exemple illustratif</div>
+      <p>« Huile de ricin cheveux crépus » — <span class="co-big">~8 000 recherches/mois</span>. Vous êtes 14ᵉ ; c'est un revendeur qui capte le clic et la vente. Sur 6 à 10 requêtes de ce type, l'addition se compte en <span class="co-big">milliers d'euros par mois</span>.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CE QUI EST ANALYSÉ -->
+<section class="sec problem">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker">Ce qu'on regarde</span>
+      <h2 class="sec-title">Six angles, une seule question :<br />où part votre CA ?</h2>
+    </div>
+    <div class="check-grid">
+      <div class="check-item reveal"><span class="ck"><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></span><div><b>Santé technique</b><span>Vitesse, indexation, structure — ce qui plombe le site.</span></div></div>
+      <div class="check-item reveal"><span class="ck"><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></span><div><b>Sémantique &amp; mots-clés</b><span>Vos requêtes business non-brandées, et qui les capte.</span></div></div>
+      <div class="check-item reveal"><span class="ck"><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></span><div><b>Marché &amp; concurrence</b><span>Marques et revendeurs qui prennent votre trafic.</span></div></div>
+      <div class="check-item reveal"><span class="ck"><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></span><div><b>Visibilité IA (GEO)</b><span>Êtes-vous cité dans ChatGPT, Perplexity, AI Overviews ?</span></div></div>
+      <div class="check-item reveal"><span class="ck"><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></span><div><b>Le chiffrage du CA perdu</b><span>La fourchette mensuelle, requête par requête.</span></div></div>
+      <div class="check-item reveal"><span class="ck"><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></span><div><b>Le plan priorisé</b><span>Quoi faire, dans quel ordre, pour quel impact.</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- LIVRABLE + POUR QUI -->
+<section class="sec">
+  <div class="wrap note-band">
+    <div class="note-card reveal">
+      <span class="kicker">Le livrable</span>
+      <h3>Ce que vous repartez avec</h3>
+      <p>Un document d'action clair et priorisé, plus une restitution en visio (45 min). Utilisable même si vous menez la suite en interne.</p>
+    </div>
+    <div class="note-card dark reveal">
+      <span class="kicker">Pour qui</span>
+      <h3>À qui ça s'adresse</h3>
+      <p>Aux marques afro-caribéennes qui ont déjà prouvé leur produit et leur communauté, et qui veulent sortir de la dépendance au paid social. Si vous lancez tout juste, ce n'est pas encore le moment — et je vous le dirai.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PRIX + CTA -->
+<section class="sec">
+  <div class="wrap">
+    <div class="audit-card reveal" style="grid-template-columns:1.4fr 1fr">
+      <div class="audit-left">
+        <span class="offer-tag">Le Diagnostic AfriRank</span>
+        <h2>Une séance, un chiffre, un plan.</h2>
+        <p>Déductible de votre premier mois si vous poursuivez en Growth ou Partner. Le meilleur point de départ — sans engagement de suite.</p>
+        <ul class="audit-list">
+          <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5"/></svg>Chiffrage du CA organique perdu</li>
+          <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5"/></svg>Plan d'action priorisé</li>
+          <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5"/></svg>Restitution visio (45 min)</li>
+          <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5"/></svg>Livrable écrit</li>
+        </ul>
+      </div>
+      <div class="audit-right">
+        <div class="audit-price">290 €<span>séance one-shot</span></div>
+        <a href="https://calendly.com/contact-advised-seo/30min?back=1" target="_blank" rel="noopener" class="btn btn--orange">Réserver mon Diagnostic
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+        <span class="audit-note">Déductible de votre premier mois en accompagnement.</span>
+      </div>
+    </div>
+  </div>
+</section>
+</Base>

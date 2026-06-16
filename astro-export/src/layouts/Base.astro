@@ -1,0 +1,82 @@
+---
+import '../styles/global.css';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+
+interface Props {
+  title: string;
+  description: string;
+  active?: string;
+  jsonLd?: string;
+  footerTagline?: string;
+}
+const { title, description, active = '', jsonLd = '', footerTagline } = Astro.props;
+const canonical = Astro.site ? new URL(Astro.url.pathname, Astro.site).href : Astro.url.pathname;
+---
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <link rel="canonical" href={canonical} />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:url" content={canonical} />
+  <meta property="og:image" content="/images/logo-dark.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" type="image/png" href="/images/icon-orange.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  {jsonLd && <script type="application/ld+json" set:html={jsonLd} />}
+</head>
+<body>
+  <Nav active={active} />
+  <slot />
+  <Footer tagline={footerTagline} />
+
+  <script is:inline>
+    (function () {
+      var nav = document.getElementById('nav');
+      if (nav) {
+        var onScroll = function () { nav.classList.toggle('scrolled', window.scrollY > 12); };
+        onScroll();
+        window.addEventListener('scroll', onScroll, { passive: true });
+      }
+      var toggle = document.getElementById('navToggle');
+      if (toggle) {
+        toggle.addEventListener('click', function () { document.body.classList.toggle('menu-open'); });
+        document.querySelectorAll('#mobileMenu a').forEach(function (a) {
+          a.addEventListener('click', function () { document.body.classList.remove('menu-open'); });
+        });
+      }
+      var reveals = document.querySelectorAll('.reveal');
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+      }, { threshold: .12, rootMargin: '0px 0px -8% 0px' });
+      reveals.forEach(function (el, i) {
+        el.style.transitionDelay = (Math.min(i % 5, 4) * 60) + 'ms';
+        io.observe(el);
+      });
+      var failsafe = function () { reveals.forEach(function (el) { if (!el.classList.contains('in')) { el.style.transition = 'none'; el.classList.add('in'); } }); };
+      setTimeout(failsafe, 1400);
+      window.addEventListener('load', function () { setTimeout(failsafe, 400); });
+      document.querySelectorAll('.faq-q').forEach(function (q) {
+        q.addEventListener('click', function () {
+          var item = q.parentElement;
+          var a = item.querySelector('.faq-a');
+          var open = item.classList.contains('open');
+          document.querySelectorAll('.faq-item.open').forEach(function (o) {
+            o.classList.remove('open');
+            o.querySelector('.faq-a').style.maxHeight = null;
+          });
+          if (!open) { item.classList.add('open'); a.style.maxHeight = a.scrollHeight + 'px'; }
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
