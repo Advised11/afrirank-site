@@ -1,0 +1,74 @@
+---
+import Base from '../layouts/Base.astro';
+---
+<Base
+  title="Mentions légales — AfriRank"
+  description="Mentions légales du site afrirank.fr : éditeur, hébergeur, propriété intellectuelle, données personnelles (RGPD) et cookies."
+  active="">
+<section class="hero hero--page wrap">
+  <div class="hero-top">
+    <span class="hero-eyebrow reveal"><img src="/images/icon-orange.png" alt="" /> Légal</span>
+    <h1 class="reveal">Mentions légales</h1>
+    <p class="hero-sub reveal">Les informations légales relatives au site <strong>afrirank.fr</strong> et à son éditeur, conformément à la loi pour la confiance dans l'économie numérique (LCEN).</p>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap legal reveal">
+    <p class="updated">Dernière mise à jour : juin 2026.</p>
+
+    <h2>1. Éditeur du site</h2>
+    <p>Le site <strong>afrirank.fr</strong> est édité par :</p>
+    <ul>
+      <li><strong>Advised</strong> — entreprise individuelle exploitant la marque AfriRank</li>
+      <li>Siège social : 161 chemin du Crêt de Montcher, 69210 Lentilly, France</li>
+      <li>SIRET : 880 497 953 00021 (SIREN : 880 497 953)</li>
+      <li>TVA : non applicable, article 293 B du CGI</li>
+      <li>Directeur de la publication : Francis Ndimba</li>
+      <li>Contact : <a href="mailto:contact@afrirank.com">contact@afrirank.com</a></li>
+    </ul>
+
+    <h2>2. Hébergeur</h2>
+    <p>Le site est hébergé par :</p>
+    <ul>
+      <li><strong>Netlify, Inc.</strong></li>
+      <li>2325 3rd Street, Suite 215, San Francisco, California 94107, États-Unis</li>
+      <li>Support : <a href="mailto:support@netlify.com">support@netlify.com</a></li>
+    </ul>
+
+    <h2>3. Propriété intellectuelle</h2>
+    <p>L'ensemble des éléments du site (textes, graphismes, logos, images, vidéos, structure et mise en forme) sont la propriété exclusive d'Advised by Francis Ndimba, sauf mention contraire ou contenus appartenant à des partenaires. Toute reproduction, distribution, modification, adaptation, retransmission ou publication, même partielle, de ces éléments est interdite sans l'accord écrit préalable de l'éditeur.</p>
+
+    <h2 id="donnees-personnelles">4. Données personnelles (RGPD)</h2>
+    <p>Dans le cadre des prises de contact et de la navigation, les données suivantes peuvent être collectées : nom, prénom, adresse email et données de navigation.</p>
+    <ul>
+      <li>Responsable du traitement : Francis Ndimba</li>
+      <li>Finalité : réponse aux demandes, relation commerciale et amélioration du site</li>
+      <li>Durée de conservation : 3 ans maximum à compter du dernier contact</li>
+      <li>Vos droits : accès, rectification, suppression, opposition, limitation et portabilité de vos données</li>
+    </ul>
+    <p>Pour exercer ces droits, écrivez à <a href="mailto:contact@afrirank.com">contact@afrirank.com</a>. Vous disposez également du droit d'introduire une réclamation auprès de la CNIL (<a href="https://www.cnil.fr" target="_blank" rel="noopener">cnil.fr</a>).</p>
+
+    <h2>5. Cookies</h2>
+    <p>Le site peut utiliser des cookies à des fins de mesure d'audience et d'amélioration de l'expérience utilisateur. Vous pouvez configurer ou refuser les cookies directement depuis les paramètres de votre navigateur.</p>
+
+    <h2>6. Responsabilité</h2>
+    <p>L'éditeur s'efforce de fournir des informations exactes et à jour, sans toutefois garantir l'exhaustivité ou l'absence d'erreur. Le site peut contenir des liens vers des sites tiers, sur le contenu desquels l'éditeur n'exerce aucun contrôle et décline toute responsabilité.</p>
+
+    <h2>7. Droit applicable</h2>
+    <p>Le présent site et ses mentions légales sont soumis au droit français. En cas de litige, et à défaut de résolution amiable, compétence est attribuée aux tribunaux français.</p>
+  </div>
+</section>
+
+<style>
+  .legal { max-width: 780px; }
+  .legal .updated { font-size: 14px; color: var(--ink-45); margin: 0 0 36px; }
+  .legal h2 { font-size: clamp(22px, 2.6vw, 30px); margin: 48px 0 14px; }
+  .legal p { color: var(--ink-60); font-size: 16.5px; line-height: 1.75; margin: 0 0 14px; text-wrap: pretty; }
+  .legal ul { color: var(--ink-60); font-size: 16.5px; line-height: 1.7; margin: 0 0 18px; padding-left: 1.15em; }
+  .legal li { margin-bottom: 7px; }
+  .legal strong { color: var(--blue); font-weight: 600; }
+  .legal a { color: var(--orange); text-decoration: underline; text-underline-offset: 2px; }
+  .legal a:hover { color: var(--orange-deep); }
+</style>
+</Base>
