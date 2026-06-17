@@ -1,8 +1,7 @@
+// @ts-check
 import { defineConfig } from 'astro/config';
 
-// https://astro.build/config
+// Remplacez par votre domaine réel avant la mise en ligne (sert au canonical + Open Graph).
 export default defineConfig({
-  // Update this to your real production domain before building for SEO/canonical URLs.
   site: 'https://www.afrirank.fr',
-  compressHTML: true,
 });

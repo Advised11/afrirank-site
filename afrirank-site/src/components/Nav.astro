@@ -1,26 +1,23 @@
 ---
+const { active = '' } = Astro.props;
 const links = [
-  { href: '#accueil', label: 'Accueil' },
-  { href: '#methode', label: 'Méthode' },
-  { href: '#offre', label: 'Offre' },
-  { href: '#resultats', label: 'Résultats' },
-  { href: '#apropos', label: 'À propos' },
-  { href: '#contact', label: 'Contact' },
+  { href: '/', label: 'Accueil', key: 'accueil' },
+  { href: '/diagnostic-seo', label: 'Diagnostic', key: 'diagnostic' },
+  { href: '/accompagnement', label: 'Accompagnement', key: 'accompagnement' },
+  { href: '/seo-culturel', label: 'SEO culturel', key: 'seo-culturel' },
+  { href: '/a-propos', label: 'À propos', key: 'a-propos' },
+  { href: '/contact', label: 'Contact', key: 'contact' },
 ];
 const calendly = 'https://calendly.com/contact-advised-seo/30min?back=1';
 ---
-
 <header class="nav" id="nav">
   <div class="wrap nav-inner">
-    <a href="#accueil" class="brand" aria-label="AfriRank — accueil">
-      <img src="/images/logo-dark.png" alt="AfriRank" />
-    </a>
+    <a href="/" class="brand" aria-label="AfriRank — accueil"><img src="/images/logo-dark.png" alt="AfriRank" /></a>
     <nav class="nav-links">
-      {links.map((l) => <a href={l.href}>{l.label}</a>)}
+      {links.map((l) => <a href={l.href} class={active === l.key ? 'active' : undefined}>{l.label}</a>)}
     </nav>
-    <a href={calendly} target="_blank" rel="noopener" class="btn btn--blue nav-cta">
-      Réserver un appel
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8" /></svg>
+    <a href={calendly} target="_blank" rel="noopener" class="btn btn--blue nav-cta">Réserver mon Diagnostic
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"></path></svg>
     </a>
     <button class="nav-toggle" id="navToggle" aria-label="Menu"><span></span></button>
   </div>
@@ -28,8 +25,7 @@ const calendly = 'https://calendly.com/contact-advised-seo/30min?back=1';
 
 <div class="mobile-menu" id="mobileMenu">
   {links.map((l) => <a href={l.href}>{l.label}</a>)}
-  <a href={calendly} target="_blank" rel="noopener" class="btn btn--orange">
-    Réserver un appel
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7" /></svg>
+  <a href={calendly} target="_blank" rel="noopener" class="btn btn--orange">Réserver mon Diagnostic
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"></path></svg>
   </a>
 </div>
