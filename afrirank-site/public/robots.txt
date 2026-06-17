@@ -1,0 +1,33 @@
+# robots.txt — AfriRank (https://www.afrirank.fr)
+
+# Moteurs de recherche & crawlers IA : tout est autorisé
+User-agent: *
+Allow: /
+
+# Crawlers IA explicitement bienvenus (GEO / AEO)
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# Sitemap
+Sitemap: https://www.afrirank.fr/sitemap.xml
