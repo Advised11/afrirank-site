@@ -10,8 +10,9 @@ interface Props {
   jsonLd?: string;
   footerTagline?: string;
   noindex?: boolean;
+  bare?: boolean;
 }
-const { title, description, active = '', jsonLd = '', footerTagline, noindex = false } = Astro.props;
+const { title, description, active = '', jsonLd = '', footerTagline, noindex = false, bare = false } = Astro.props;
 const canonical = Astro.site ? new URL(Astro.url.pathname, Astro.site).href : Astro.url.pathname;
 ---
 <!doctype html>
@@ -48,9 +49,9 @@ const canonical = Astro.site ? new URL(Astro.url.pathname, Astro.site).href : As
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MMWLNDWP"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
-  <Nav active={active} />
+  {!bare && <Nav active={active} />}
   <slot />
-  <Footer tagline={footerTagline} />
+  {!bare && <Footer tagline={footerTagline} />}
 
   <script is:inline>
     (function () {
