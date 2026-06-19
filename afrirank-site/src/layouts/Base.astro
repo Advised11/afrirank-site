@@ -89,5 +89,29 @@ const canonical = Astro.site ? new URL(Astro.url.pathname, Astro.site).href : As
       });
     })();
   </script>
+
+  <!-- dataLayer : suivi des CTA (réservation Calendly + clic email) -->
+  <script is:inline>
+    (function () {
+      window.dataLayer = window.dataLayer || [];
+      document.addEventListener('click', function (e) {
+        var a = e.target && e.target.closest ? e.target.closest('a') : null;
+        if (!a) return;
+        var href = a.getAttribute('href') || '';
+        var label = (a.textContent || '').replace(/\s+/g, ' ').trim().slice(0, 80);
+        var type = null;
+        if (href.indexOf('calendly.com') !== -1) type = 'reservation';
+        else if (href.indexOf('mailto:') === 0) type = 'email';
+        if (!type) return;
+        window.dataLayer.push({
+          event: 'cta_click',
+          cta_type: type,
+          cta_label: label,
+          cta_url: href,
+          page_path: location.pathname
+        });
+      }, true);
+    })();
+  </script>
 </body>
 </html>
