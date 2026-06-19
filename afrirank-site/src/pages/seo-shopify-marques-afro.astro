@@ -1,0 +1,139 @@
+---
+import Base from '../layouts/Base.astro';
+const calendly = 'https://calendly.com/contact-advised-seo/30min?back=1';
+const jsonLd = JSON.stringify({
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "SEO Shopify pour marques afro : transformer votre boutique en machine à reprendre vos ventes",
+      "description": "Shopify bien réglé peut reprendre la demande captée par vos revendeurs. Les leviers SEO Shopify clés pour une marque afro établie.",
+      "author": { "@type": "Person", "name": "Francis Ndimba", "url": "https://www.afrirank.fr/a-propos/" },
+      "publisher": { "@id": "https://www.afrirank.fr/#afrirank" },
+      "mainEntityOfPage": "https://www.afrirank.fr/seo-shopify-marques-afro/"
+    },
+    {
+      "@type": "HowTo",
+      "name": "Reprendre ses ventes avec le SEO Shopify",
+      "step": [
+        { "@type": "HowToStep", "name": "Remplir les collections", "text": "Transformer chaque collection stratégique en vraie page de réponse avec du contenu, pas une grille muette." },
+        { "@type": "HowToStep", "name": "Remplir les fiches produit", "text": "Répondre à l'intention de la cliente (type de cheveu, besoin, usage), pas au descriptif fournisseur." },
+        { "@type": "HowToStep", "name": "Maîtriser canonical et doublons d'URL", "text": "Éviter la dilution sur le double chemin produit /products/ et /collections/.../products/." },
+        { "@type": "HowToStep", "name": "Gérer les collections automatiques", "text": "Décider quelles collections par tag indexer et lesquelles bloquer pour préserver le budget de crawl." },
+        { "@type": "HowToStep", "name": "Alléger le thème", "text": "Réduire apps, scripts et images lourdes pour gagner sur les Core Web Vitals." }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://www.afrirank.fr/" },
+        { "@type": "ListItem", "position": 2, "name": "SEO marques afro-caribéennes", "item": "https://www.afrirank.fr/seo-marques-afro-caribeennes/" },
+        { "@type": "ListItem", "position": 3, "name": "SEO Shopify pour marques afro", "item": "https://www.afrirank.fr/seo-shopify-marques-afro/" }
+      ]
+    }
+  ]
+});
+---
+<Base
+  title="SEO Shopify pour marques afro : reprendre ses ventes | AfriRank"
+  description="Shopify bien réglé peut reprendre la demande captée par vos revendeurs. Les leviers SEO Shopify clés pour une marque afro établie."
+  jsonLd={jsonLd}>
+
+<section class="hero hero--page wrap">
+  <div class="hero-top">
+    <nav class="breadcrumb reveal" aria-label="Fil d'Ariane">
+      <a href="/">Accueil</a><span class="sep">›</span>
+      <a href="/seo-marques-afro-caribeennes/">SEO marques afro</a><span class="sep">›</span>
+      <span>SEO Shopify</span>
+    </nav>
+    <span class="hero-eyebrow reveal"><img src="/images/icon-orange.png" alt="" /> Guide plateforme</span>
+    <h1 class="reveal">SEO Shopify pour marques afro : <em>une machine à reprendre vos ventes</em>.</h1>
+    <p class="hero-sub reveal">Vous êtes sur Shopify. Vous vendez. Mais quand une cliente tape le nom de votre best-seller, c'est souvent une marketplace qui sort avant votre fiche officielle. La plateforme n'est pas en cause. Le réglage SEO de la plateforme l'est.</p>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:clamp(24px,4vw,48px)">
+  <div class="wrap article reveal">
+    <p>Je suis Francis, consultant SEO, onze ans de métier. J'accompagne des marques afro-caribéennes établies qui ont créé leur demande et la voient encaissée par d'autres. Shopify est un excellent outil pour reprendre ce CA, à condition de connaître ses forces et ses contraintes SEO.</p>
+
+    <h2>Ce que Shopify fait bien pour le SEO (et que vous sous-exploitez)</h2>
+    <p>Shopify propose des bases solides : balises titre et méta éditables produit par produit, redirections 301 natives, sitemap XML automatique, balises canoniques par défaut, HTTPS d'office. Le problème n'est presque jamais « Shopify ne sait pas faire de SEO », c'est « personne n'a rempli ces champs avec une intention claire ». Les fondations existent — elles sont vides.</p>
+
+    <h2>La structure d'URL Shopify : la contrainte à comprendre</h2>
+    <p>Shopify impose des segments d'URL fixes : les produits sous <strong>/products/</strong>, les collections sous <strong>/collections/</strong>, les pages sous <strong>/pages/</strong>, le blog sous <strong>/blogs/</strong>. Votre architecture SEO se construit à l'intérieur de ces contraintes. Deux pièges récurrents :</p>
+    <p><strong>Le double chemin produit.</strong> Un produit peut être accessible via <code>/products/nom</code> ET <code>/collections/categorie/products/nom</code>. Sans gestion canonique propre, vous diluez la force sur deux URLs.</p>
+    <p><strong>Les collections automatiques.</strong> Shopify génère des collections par tag (couleur, type, ingrédient) qui créent vite des dizaines d'URLs quasi vides gaspillant votre budget de crawl. Lesquelles indexer, lesquelles bloquer : c'est une décision d'architecture.</p>
+
+    <h2>Vos collections : les pages les plus puissantes, les plus négligées</h2>
+    <p>Vos pages collection captent les requêtes à fort volume : « soins cheveux crépus », « fond de teint peaux noires », « épicerie antillaise en ligne ». Par défaut, une collection c'est un titre et une grille de produits. Zéro contenu — et une collection muette ne rankera jamais sur sa requête principale. Le levier : transformer chaque collection stratégique en vraie page de réponse.</p>
+
+    <h2>Les fiches produit : remplir l'intention, pas le descriptif fournisseur</h2>
+    <p>Une fiche qui répond à « pour quel type de cheveu », « quel besoin », « comment l'utiliser », « en combien de temps voir un résultat » bat une fiche qui liste les ingrédients. C'est aussi ce qui vous rend <a href="/visibilite-ia-geo-marques-afro/">citable par les IA</a>, qui adorent extraire ces réponses factuelles.</p>
+
+    <h2>Le blog Shopify : utile, mais limité</h2>
+    <p>Le blog natif (<code>/blogs/</code>) permet le contenu de conseil qui attire la cliente en amont. Mais il a des limites : taxonomie pauvre, maillage interne rudimentaire, éditeur qui pousse rarement vers une structure Hn propre. Ces limites imposent une méthode.</p>
+
+    <h2>La vitesse Shopify : le thème, pas la plateforme</h2>
+    <p>La lenteur d'une boutique Shopify vient presque toujours du thème : apps qui chargent des scripts partout, images non compressées, sliders lourds, polices multiples. La Core Web Vitals se joue à ce niveau.</p>
+
+    <h2>En résumé : les leviers SEO Shopify</h2>
+    <div class="tbl-wrap">
+      <table class="tbl">
+        <thead><tr><th>Levier Shopify</th><th>Ce qu'il faut viser</th><th>Impact captation</th></tr></thead>
+        <tbody>
+          <tr><td>Collections (/collections/)</td><td>Ajouter du contenu de réponse aux pages stratégiques</td><td>Élevé (requêtes catégorie)</td></tr>
+          <tr><td>Fiches produit (/products/)</td><td>Remplir l'intention, pas le descriptif fournisseur</td><td>Élevé (requêtes marque + produit)</td></tr>
+          <tr><td>Canonical &amp; doublons d'URL</td><td>Éviter la dilution sur double chemin produit</td><td>Moyen (consolide la force)</td></tr>
+          <tr><td>Collections automatiques</td><td>Choisir quoi indexer / bloquer</td><td>Moyen (budget de crawl)</td></tr>
+          <tr><td>Blog (/blogs/)</td><td>Contenu de conseil malgré les limites natives</td><td>Moyen (amont + GEO)</td></tr>
+          <tr><td>Vitesse (thème)</td><td>Alléger thème, apps, images</td><td>Transverse</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <blockquote><p>Le quoi et le combien, je vous les montre. Le comment — quelle page d'abord, quel réglage, quel maillage — c'est l'accompagnement.</p></blockquote>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="kicker">Questions fréquentes</span><h2 class="sec-title">Vos questions, mes réponses.</h2></div>
+    <div class="faq">
+      <div class="faq-item reveal"><button class="faq-q">Shopify est-il bon pour le SEO ? <span class="pm"></span></button><div class="faq-a"><p>Oui. Shopify offre des fondations solides : titres et métas éditables, redirections 301, sitemap automatique, canonicals par défaut, HTTPS. Le problème vient presque toujours du fait que ces champs sont vides ou mal remplis.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-q">Peut-on modifier les URLs sur Shopify ? <span class="pm"></span></button><div class="faq-a"><p>Partiellement. Vous éditez le « handle » d'un produit ou d'une collection, mais pas les préfixes imposés (/products/, /collections/). Votre architecture SEO se construit à l'intérieur de ces contraintes.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-q">Faut-il une app SEO sur Shopify ? <span class="pm"></span></button><div class="faq-a"><p>Pas forcément. Beaucoup de leviers se règlent nativement. Multiplier les apps alourdit le thème et peut nuire à la vitesse. La priorité, c'est le contenu des collections et des fiches.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-q">Pourquoi un revendeur sort-il avant ma fiche Shopify ? <span class="pm"></span></button><div class="faq-a"><p>Parce que sa page est souvent mieux remplie (contenu, signaux, maillage) que la vôtre. C'est un problème de captation, pas de plateforme. Le Diagnostic le chiffre et le priorise.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-q">Combien de temps avant des résultats SEO sur Shopify ? <span class="pm"></span></button><div class="faq-a"><p>Reprendre sa SERP de marque va plus vite (quelques semaines) que conquérir une requête catégorie disputée (plusieurs mois). Le Diagnostic place les gains rapides en premier.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="links-more reveal">
+      <h2>Pour aller plus loin</h2>
+      <ul>
+        <li><a href="/seo-marques-afro-caribeennes/">Stratégie SEO pour marques afro-caribéennes</a></li>
+        <li><a href="/recuperer-ca-revendeurs-google/">Récupérez le CA capté par vos revendeurs</a></li>
+        <li><a href="/seo-woocommerce-prestashop-marques-afro/">SEO WooCommerce / PrestaShop</a></li>
+        <li><a href="/posseder-serp-de-marque/">Posséder votre SERP de marque</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="cta-band reveal">
+      <img src="/images/icon-cream.png" class="icon-watermark" alt="" />
+      <h2>Par où commencer : Le Diagnostic.</h2>
+      <p>Je chiffre le CA capté par vos revendeurs, j'identifie vos angles morts Shopify (collections vides, fiches faibles, doublons d'URL, vitesse) et je trace le plan priorisé. 290 €, déductibles.</p>
+      <div class="cta-actions">
+        <a href={calendly} target="_blank" rel="noopener" class="btn btn--orange">Réserver Le Diagnostic
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+        <a href="/diagnostic-seo/" class="btn btn--cream">En savoir plus</a>
+      </div>
+    </div>
+  </div>
+</section>
+</Base>

@@ -1,0 +1,117 @@
+---
+import Base from '../layouts/Base.astro';
+const calendly = 'https://calendly.com/contact-advised-seo/30min?back=1';
+const jsonLd = JSON.stringify({
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://www.afrirank.fr/" },
+        { "@type": "ListItem", "position": 2, "name": "SEO marques afro-caribéennes", "item": "https://www.afrirank.fr/seo-marques-afro-caribeennes/" },
+        { "@type": "ListItem", "position": 3, "name": "Marketplace vs site de marque", "item": "https://www.afrirank.fr/marketplace-vs-site-de-marque/" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "Faut-il quitter les marketplaces ?", "acceptedAnswer": { "@type": "Answer", "text": "Pas forcément. Une marketplace peut rester un canal d'acquisition complémentaire. Le problème, c'est quand elle devient votre principal point de vente et capte la demande de votre propre marque. L'objectif est de rééquilibrer vers le direct." } },
+        { "@type": "Question", "name": "Pourquoi la marketplace sort-elle avant mon site sur Google ?", "acceptedAnswer": { "@type": "Answer", "text": "Parce qu'elle a une autorité SEO énorme et des pages souvent mieux optimisées que les vôtres. Sans travail sur votre site, elle gagne même sur le nom de vos produits. C'est un problème de captation, pas de notoriété." } },
+        { "@type": "Question", "name": "Vendre en direct est-il plus rentable ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui, généralement : prix de détail plein, pas de commission, et surtout la donnée client qui permet le réachat et la fidélité. Une vente directe vaut bien plus qu'une vente marketplace équivalente sur la durée." } },
+        { "@type": "Question", "name": "Comment reprendre la demande captée par les marketplaces ?", "acceptedAnswer": { "@type": "Answer", "text": "En reprenant d'abord votre SERP de marque, puis vos requêtes catégorie, avec un site techniquement sain et un contenu qui répond à l'intention. Le Diagnostic chiffre la fuite et priorise les chantiers." } }
+      ]
+    }
+  ]
+});
+---
+<Base
+  title="Marketplace vs site de marque : qui capte le trafic ?"
+  description="Marketplace ou site de marque : qui capte vraiment la demande, la marge et la donnée client ? Comparaison nette et recommandation."
+  jsonLd={jsonLd}>
+
+<section class="hero hero--page wrap">
+  <div class="hero-top">
+    <nav class="breadcrumb reveal" aria-label="Fil d'Ariane">
+      <a href="/">Accueil</a><span class="sep">›</span>
+      <a href="/seo-marques-afro-caribeennes/">SEO marques afro</a><span class="sep">›</span>
+      <span>Marketplace vs site de marque</span>
+    </nav>
+    <span class="hero-eyebrow reveal"><img src="/images/icon-orange.png" alt="" /> Question fréquente</span>
+    <h1 class="reveal">Marketplace vs site de marque : qui capte le trafic ?</h1>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:clamp(24px,4vw,48px)">
+  <div class="wrap article reveal">
+    <blockquote><p><strong>Réponse courte :</strong> la <strong>marketplace capte le trafic, la marge et la donnée client</strong> — votre site de marque, lui, vous les fait garder. Vendre via une marketplace donne du volume rapide mais vous rend dépendant : c'est elle qui possède la relation cliente, encaisse la marge la plus haute et décide des règles. Pour une marque établie, l'enjeu est de <strong>reprendre ses ventes directes</strong>.</p></blockquote>
+
+    <h2>Qui capte quoi : le comparatif net</h2>
+    <div class="tbl-wrap">
+      <table class="tbl">
+        <thead><tr><th>Critère</th><th>Marketplace</th><th>Votre site de marque</th></tr></thead>
+        <tbody>
+          <tr><td>Demande de marque (votre nom)</td><td>Souvent captée par la marketplace</td><td>Vous appartient</td></tr>
+          <tr><td>Marge</td><td>Prix de gros + commission prélevée</td><td>Prix de détail plein</td></tr>
+          <tr><td>Donnée client (e-mail, historique)</td><td>À la marketplace</td><td>À vous</td></tr>
+          <tr><td>Réachat / fidélité</td><td>Difficile, client « volé »</td><td>Direct, programmable</td></tr>
+          <tr><td>Dépendance</td><td>Forte (règles, frais, visibilité subis)</td><td>Vous maîtrisez</td></tr>
+          <tr><td>SERP (Google)</td><td>La marketplace sort sur votre produit</td><td>Votre fiche doit gagner</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Le piège : une marketplace bien référencée peut sortir <strong>au-dessus de votre propre fiche</strong> sur le nom de votre best-seller. La cliente vous cherchait — elle achète chez un tiers, à votre place.</p>
+
+    <h2>Ce que vous perdez réellement</h2>
+    <ol>
+      <li><strong>La marge.</strong> Vous touchez votre prix de gros, moins la commission, au lieu de votre prix de détail.</li>
+      <li><strong>La donnée client.</strong> Pas d'e-mail, pas d'historique, pas de programme de fidélité. Vous ne pouvez pas faire revenir cette cliente.</li>
+      <li><strong>Le contrôle.</strong> La marketplace décide du prix affiché, de la présentation, et peut changer ses règles ou ses frais quand elle veut.</li>
+    </ol>
+
+    <h2>La recommandation : reprendre ses ventes directes</h2>
+    <p>Une marketplace peut rester un canal d'acquisition, à condition qu'elle ne <strong>remplace pas</strong> votre site. Pour une marque afro-caribéenne établie, la priorité est de reprendre sa demande directe : <a href="/posseder-serp-de-marque/">récupérer sa SERP de marque</a>, gagner sur ses requêtes catégorie, redevenir le premier point de vente de son propre nom. C'est exactement le problème de captation que résout AfriRank — voir <a href="/reprendre-demande-marketplaces/">reprendre la demande captée par les marketplaces</a>.</p>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="kicker">Questions fréquentes</span><h2 class="sec-title">Vos questions, mes réponses.</h2></div>
+    <div class="faq">
+      <div class="faq-item reveal"><button class="faq-q">Faut-il quitter les marketplaces ? <span class="pm"></span></button><div class="faq-a"><p>Pas forcément. Une marketplace peut rester un canal d'acquisition complémentaire. Le problème, c'est quand elle devient votre principal point de vente et capte la demande de votre propre marque. L'objectif est de rééquilibrer vers le direct.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-q">Pourquoi la marketplace sort-elle avant mon site sur Google ? <span class="pm"></span></button><div class="faq-a"><p>Parce qu'elle a une autorité SEO énorme et des pages souvent mieux optimisées que les vôtres. Sans travail sur votre site, elle gagne même sur le nom de vos produits. C'est un problème de captation, pas de notoriété.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-q">Vendre en direct est-il plus rentable ? <span class="pm"></span></button><div class="faq-a"><p>Oui, généralement : prix de détail plein, pas de commission, et surtout la donnée client qui permet le réachat et la fidélité. Une vente directe vaut bien plus qu'une vente marketplace équivalente sur la durée.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-q">Comment reprendre la demande captée par les marketplaces ? <span class="pm"></span></button><div class="faq-a"><p>En reprenant d'abord votre SERP de marque, puis vos requêtes catégorie, avec un site techniquement sain et un contenu qui répond à l'intention. Le Diagnostic chiffre la fuite et priorise les chantiers.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="links-more reveal">
+      <h2>Pour aller plus loin</h2>
+      <ul>
+        <li><a href="/seo-marques-afro-caribeennes/">Stratégie SEO pour marques afro-caribéennes</a></li>
+        <li><a href="/recuperer-ca-revendeurs-google/">Récupérez le CA capté par vos revendeurs</a></li>
+        <li><a href="/reprendre-demande-marketplaces/">Reprendre la demande captée par les marketplaces</a></li>
+        <li><a href="/posseder-serp-de-marque/">Posséder votre SERP de marque</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="cta-band reveal">
+      <img src="/images/icon-cream.png" class="icon-watermark" alt="" />
+      <h2>Combien laissez-vous aux marketplaces ?</h2>
+      <p>Le Diagnostic chiffre le CA organique capté par les marketplaces et revendeurs à votre place, et trace le plan pour le reprendre. 290 €, déductibles.</p>
+      <div class="cta-actions">
+        <a href={calendly} target="_blank" rel="noopener" class="btn btn--orange">Réserver Le Diagnostic
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+        <a href="/diagnostic-seo/" class="btn btn--cream">En savoir plus</a>
+      </div>
+    </div>
+  </div>
+</section>
+</Base>

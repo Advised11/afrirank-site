@@ -1,0 +1,140 @@
+---
+import Base from '../layouts/Base.astro';
+const calendly = 'https://calendly.com/contact-advised-seo/30min?back=1';
+const jsonLd = JSON.stringify({
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "Posséder votre SERP de marque (et arrêter de l'offrir à vos revendeurs)",
+      "description": "Quand on tape le nom de votre marque, c'est un revendeur qui domine ? Voici comment reprendre votre SERP de marque — le gain SEO le plus rapide.",
+      "author": { "@type": "Person", "name": "Francis Ndimba", "url": "https://www.afrirank.fr/a-propos/" },
+      "publisher": { "@id": "https://www.afrirank.fr/#afrirank" },
+      "mainEntityOfPage": "https://www.afrirank.fr/posseder-serp-de-marque/"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://www.afrirank.fr/" },
+        { "@type": "ListItem", "position": 2, "name": "SEO marques afro-caribéennes", "item": "https://www.afrirank.fr/seo-marques-afro-caribeennes/" },
+        { "@type": "ListItem", "position": 3, "name": "Posséder votre SERP de marque", "item": "https://www.afrirank.fr/posseder-serp-de-marque/" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "Comment savoir si je possède ma SERP de marque ?", "acceptedAnswer": { "@type": "Answer", "text": "Tapez votre nom dans Google, en navigation privée. Notez ce qui sort sur les cinq premières positions, le bloc à droite, et les suggestions associées. Si un revendeur, une marketplace ou un site tiers occupe des places que vous devriez tenir, vous ne la possédez pas entièrement." } },
+        { "@type": "Question", "name": "Pourquoi un revendeur peut-il ranker sur ma propre marque ?", "acceptedAnswer": { "@type": "Answer", "text": "Parce que Google récompense la page la mieux optimisée pour la requête, pas le propriétaire du produit. Un revendeur avec un domaine ancien et des fiches structurées peut passer devant. C'est un écart technique, donc rattrapable." } },
+        { "@type": "Question", "name": "Le knowledge panel, ça se demande à Google ?", "acceptedAnswer": { "@type": "Answer", "text": "On ne le demande pas, on le mérite. Il apparaît quand Google comprend clairement votre marque comme une entité : nom cohérent partout, données structurées, présence sur des sources reconnues, actifs reliés entre eux." } },
+        { "@type": "Question", "name": "Combien de temps pour reprendre ma SERP de marque ?", "acceptedAnswer": { "@type": "Answer", "text": "Sur les requêtes de marque, c'est généralement plus rapide que sur les requêtes catégorie, parce que la concurrence y est faible et la demande déjà présente. Un diagnostic priorise les gains les plus rapides en premier." } }
+      ]
+    }
+  ]
+});
+---
+<Base
+  title="Posséder votre SERP de marque sur Google | AfriRank"
+  description="Quand on tape le nom de votre marque, c'est un revendeur qui domine ? Voici comment reprendre votre SERP de marque — le gain SEO le plus rapide."
+  jsonLd={jsonLd}>
+
+<section class="hero hero--page wrap">
+  <div class="hero-top">
+    <nav class="breadcrumb reveal" aria-label="Fil d'Ariane">
+      <a href="/">Accueil</a><span class="sep">›</span>
+      <a href="/seo-marques-afro-caribeennes/">SEO marques afro</a><span class="sep">›</span>
+      <span>Posséder votre SERP de marque</span>
+    </nav>
+    <span class="hero-eyebrow reveal"><img src="/images/icon-orange.png" alt="" /> Guide · Territoire 1</span>
+    <h1 class="reveal">Posséder votre SERP de marque <em>(et arrêter de l'offrir à vos revendeurs)</em>.</h1>
+    <p class="hero-sub reveal">Tapez le nom de votre marque dans Google. Si la première chose qui sort n'est pas votre site, votre fiche Google et vos contenus, vous avez un problème simple à nommer : vous ne possédez pas votre propre SERP.</p>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:clamp(24px,4vw,48px)">
+  <div class="wrap article reveal">
+    <p class="lead">La SERP de marque, c'est la page de résultats quand quelqu'un cherche explicitement votre nom. Ces gens vous connaissent déjà. Ils sont prêts à acheter. C'est le trafic le plus chaud, le plus qualifié et le moins cher que vous aurez jamais. Le laisser à un revendeur, c'est payer pour faire venir un client et le déposer sur le pas de la porte d'un concurrent.</p>
+    <p>Je suis Francis. Onze ans de SEO. Dans les diagnostics AfriRank, la SERP de marque est presque toujours le premier territoire que je regarde — parce que c'est là que ça saigne le plus vite, et que ça se rebouche le plus vite aussi.</p>
+
+    <h2>Ce qu'est vraiment une SERP de marque</h2>
+    <p>Quand un internaute tape votre nom, il a déjà décidé qui il cherche. Il ne compare pas. La SERP de marque répond à une question implicite : « où est cette marque, et que dit-on d'elle ? » Sur cette page se jouent trois choses :</p>
+    <ul>
+      <li><strong>La destination.</strong> Vers qui part le clic ? Vous, ou un intermédiaire qui prend une marge sur votre propre nom.</li>
+      <li><strong>La perception.</strong> Avis, articles, suggestions de recherche, « autres questions ». C'est votre réputation affichée sans filtre.</li>
+      <li><strong>Le contrôle.</strong> Plus vous occupez de place, moins il en reste pour les autres.</li>
+    </ul>
+
+    <h2>SERP de marque saine contre SERP détournée</h2>
+    <h3>À quoi ressemble une SERP saine</h3>
+    <ul>
+      <li>Votre site officiel en position 1, avec des liens de site (sitelinks) vers vos catégories clés.</li>
+      <li>Un knowledge panel à droite : logo, description, liens vers vos réseaux, parfois vos produits phares.</li>
+      <li>Vos propres contenus qui occupent plusieurs positions : page « à propos », best-sellers, guides.</li>
+      <li>Vos profils sociaux et votre fiche Google Business si vous avez une présence physique.</li>
+    </ul>
+    <h3>À quoi ressemble une SERP détournée</h3>
+    <ul>
+      <li>Un revendeur ou une marketplace ranke au-dessus de votre site, ou juste en dessous avec une fiche plus riche.</li>
+      <li>Pas de knowledge panel, ou un panel incomplet : Google ne « comprend » pas clairement votre marque comme une entité.</li>
+      <li>Vos best-sellers se trouvent plus facilement sur Amazon que sur votre boutique.</li>
+      <li>Les suggestions associent votre nom à « [marque] amazon », « [marque] pas cher » — autant de portes de sortie.</li>
+    </ul>
+    <p>Quand votre SERP est détournée, vous payez deux fois : une fois pour construire la notoriété qui génère la recherche, une deuxième fois en marge cédée à celui qui récupère le clic.</p>
+
+    <h2>Les territoires à reprendre</h2>
+    <ol>
+      <li><strong>Votre site et ses liens de site.</strong> Votre domaine doit sortir en premier sur votre nom ; au-delà, les sitelinks transforment une ligne de résultat en mini-vitrine.</li>
+      <li><strong>Vos fiches produits.</strong> Faites en sorte que vos propres fiches soient les références sur les requêtes « [marque] + produit ».</li>
+      <li><strong>Vos contenus de marque.</strong> Une page « à propos » solide, des guides : autant de positions que personne ne peut vous voler.</li>
+      <li><strong>Le knowledge panel et les signaux d'entité.</strong> Mentions cohérentes, données structurées, présence sur des sources reconnues. Un des leviers les plus sous-exploités par les marques afro établies.</li>
+      <li><strong>La zone « avis » et les requêtes associées.</strong> « [marque] avis », « [marque] livraison » : si ce n'est pas vous qui répondez, ce sont des tiers qui cadrent votre réputation.</li>
+    </ol>
+
+    <h2>Pourquoi c'est le gain le plus rapide</h2>
+    <p><strong>La demande est déjà là.</strong> Les gens tapent déjà votre nom : il s'agit juste de récupérer le clic. <strong>La concurrence est faible sur votre propre nom</strong> — un revendeur ranke par défaut, pas par effort. <strong>Google veut bien faire</strong> : quand l'entité est claire, il a tout intérêt à montrer la marque officielle en premier. C'est souvent le CA le plus accessible à récupérer à court terme — et le même problème se rejoue face aux <a href="/reprendre-demande-marketplaces/">marketplaces</a> et dans les <a href="/visibilite-ia-geo-marques-afro/">réponses des IA</a>.</p>
+
+    <blockquote><p>Ce que le diagnostic montre, c'est le quoi et le combien. Le comment — la reprise page par page, fiche par fiche — se mène dans l'accompagnement.</p></blockquote>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="kicker">Questions fréquentes</span><h2 class="sec-title">Vos questions, mes réponses.</h2></div>
+    <div class="faq">
+      <div class="faq-item reveal"><button class="faq-q">Comment savoir si je possède ma SERP de marque ? <span class="pm"></span></button><div class="faq-a"><p>Tapez votre nom dans Google, en navigation privée. Notez ce qui sort sur les cinq premières positions, le bloc à droite et les suggestions associées. Si un revendeur, une marketplace ou un site tiers occupe des places que vous devriez tenir, vous ne la possédez pas entièrement.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-q">Pourquoi un revendeur peut-il ranker sur ma propre marque ? <span class="pm"></span></button><div class="faq-a"><p>Parce que Google récompense la page la mieux optimisée pour la requête, pas le propriétaire du produit. Un revendeur avec un domaine ancien et des fiches structurées peut passer devant. C'est un écart technique, donc rattrapable.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-q">Le knowledge panel, ça se demande à Google ? <span class="pm"></span></button><div class="faq-a"><p>On ne le demande pas, on le mérite. Il apparaît quand Google comprend clairement votre marque comme une entité : nom cohérent partout, données structurées, présence sur des sources reconnues, actifs reliés entre eux.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-q">Combien de temps pour reprendre ma SERP de marque ? <span class="pm"></span></button><div class="faq-a"><p>Sur les requêtes de marque, c'est généralement plus rapide que sur les requêtes catégorie, parce que la concurrence y est faible et la demande déjà présente. Un diagnostic priorise les gains les plus rapides en premier.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="links-more reveal">
+      <h2>Pour aller plus loin</h2>
+      <ul>
+        <li><a href="/seo-marques-afro-caribeennes/">Stratégie SEO pour marques afro-caribéennes</a></li>
+        <li><a href="/recuperer-ca-revendeurs-google/">Récupérez le CA capté par vos revendeurs</a></li>
+        <li><a href="/pourquoi-revendeurs-avant-marque-google/">Pourquoi mes revendeurs passent avant ma marque</a></li>
+        <li><a href="/reprendre-demande-marketplaces/">Reprendre la demande captée par les marketplaces</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="cta-band reveal">
+      <img src="/images/icon-cream.png" class="icon-watermark" alt="" />
+      <h2>Sur votre propre nom, qui gagne ?</h2>
+      <p>Le Diagnostic montre qui occupe votre SERP de marque position par position, les territoires cédés, et le potentiel chiffré. 290 €, déductibles si vous poursuivez.</p>
+      <div class="cta-actions">
+        <a href={calendly} target="_blank" rel="noopener" class="btn btn--orange">Réserver Le Diagnostic
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+        <a href="/diagnostic-seo/" class="btn btn--cream">En savoir plus</a>
+      </div>
+    </div>
+  </div>
+</section>
+</Base>

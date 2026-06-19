@@ -1,0 +1,116 @@
+---
+import Base from '../layouts/Base.astro';
+const calendly = 'https://calendly.com/contact-advised-seo/30min?back=1';
+const jsonLd = JSON.stringify({
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://www.afrirank.fr/" },
+        { "@type": "ListItem", "position": 2, "name": "SEO marques afro-caribéennes", "item": "https://www.afrirank.fr/seo-marques-afro-caribeennes/" },
+        { "@type": "ListItem", "position": 3, "name": "Prix du SEO e-commerce", "item": "https://www.afrirank.fr/prix-seo-marque-ecommerce/" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "Le SEO est-il rentable pour une petite marque ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui, si on cible d'abord les gains rapides (SERP de marque) plutôt que les requêtes les plus chères à conquérir. Le diagnostic sert justement à prioriser par ROI." } },
+        { "@type": "Question", "name": "Vaut-il mieux un freelance ou une agence ?", "acceptedAnswer": { "@type": "Answer", "text": "Un freelance senior offre souvent un meilleur rapport expertise/prix pour une marque établie ; l'agence se justifie sur de très gros catalogues. AfriRank est un accompagnement freelance spécialisé." } },
+        { "@type": "Question", "name": "Le SEO, c'est un coût ou un investissement ?", "acceptedAnswer": { "@type": "Answer", "text": "Un investissement : il ramène un trafic que vous ne repayez pas à chaque clic, contrairement à la publicité." } },
+        { "@type": "Question", "name": "Combien de temps avant un retour ?", "acceptedAnswer": { "@type": "Answer", "text": "Quelques semaines sur les requêtes de marque, plusieurs mois sur les requêtes catégorie. Le diagnostic fixe des attentes réalistes." } }
+      ]
+    }
+  ]
+});
+---
+<Base
+  title="Combien coûte le SEO pour une marque e-commerce ?"
+  description="Prix du SEO e-commerce en 2026 : fourchettes par format (audit, freelance, agence) et comment commencer sans engager gros."
+  jsonLd={jsonLd}>
+
+<section class="hero hero--page wrap">
+  <div class="hero-top">
+    <nav class="breadcrumb reveal" aria-label="Fil d'Ariane">
+      <a href="/">Accueil</a><span class="sep">›</span>
+      <a href="/seo-marques-afro-caribeennes/">SEO marques afro</a><span class="sep">›</span>
+      <span>Prix du SEO e-commerce</span>
+    </nav>
+    <span class="hero-eyebrow reveal"><img src="/images/icon-orange.png" alt="" /> Question fréquente</span>
+    <h1 class="reveal">Combien coûte le SEO pour une marque e-commerce ?</h1>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:clamp(24px,4vw,48px)">
+  <div class="wrap article reveal">
+    <blockquote><p><strong>Réponse courte :</strong> en France, le SEO e-commerce se situe le plus souvent entre <strong>500 et 3 000 € / mois</strong> pour un accompagnement freelance ou agence, et un audit ponctuel va de quelques centaines à quelques milliers d'euros selon la profondeur. Le bon point de départ n'est pas le plus gros budget — c'est un diagnostic qui chiffre d'abord ce que vous perdez.</p></blockquote>
+
+    <h2>Fourchettes de prix par format</h2>
+    <div class="tbl-wrap">
+      <table class="tbl">
+        <thead><tr><th>Format</th><th>Fourchette courante (marché FR)</th><th>Pour qui</th></tr></thead>
+        <tbody>
+          <tr><td>Diagnostic / audit ponctuel</td><td>~200 € à 3 000 €</td><td>Marque qui veut savoir où elle perd avant d'investir</td></tr>
+          <tr><td>Accompagnement freelance (mensuel)</td><td>~500 € à 2 000 € / mois</td><td>Marque établie qui veut un expert dédié</td></tr>
+          <tr><td>Agence (retainer mensuel)</td><td>~1 500 € à 5 000 €+ / mois</td><td>Marque avec gros catalogue / forte concurrence</td></tr>
+          <tr><td>Mission ponctuelle (rédaction, technique)</td><td>à la prestation</td><td>Besoin précis et délimité</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p><em>Fourchettes indicatives du marché français 2026. Le prix réel dépend de la taille du catalogue, de la concurrence et des objectifs.</em></p>
+
+    <h2>Ce qui fait varier le prix</h2>
+    <ul>
+      <li><strong>La taille du catalogue :</strong> plus de produits = plus de pages à optimiser.</li>
+      <li><strong>La concurrence sur vos requêtes :</strong> affronter des <a href="/reprendre-demande-marketplaces/">marketplaces</a> coûte plus qu'occuper sa SERP de marque.</li>
+      <li><strong>L'état de départ du site :</strong> un site technique sain coûte moins à faire progresser.</li>
+      <li><strong>Le périmètre :</strong> technique seul, contenu, netlinking, GEO… ou tout à la fois.</li>
+    </ul>
+
+    <h2>Le bon ordre : chiffrer avant de dépenser</h2>
+    <p>Investir dans le SEO sans connaître le manque à gagner, c'est piloter à l'aveugle. Chez AfriRank, on commence par <strong>Le Diagnostic</strong> : <strong>290 €</strong>, déductibles de l'accompagnement si vous poursuivez. Vous obtenez le chiffrage de la fuite et un plan priorisé — donc une décision budgétaire éclairée. Estimez déjà votre fuite avec le <a href="/calculateur-ca-organique-perdu/">calculateur de CA organique perdu</a>.</p>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="kicker">Questions fréquentes</span><h2 class="sec-title">Vos questions, mes réponses.</h2></div>
+    <div class="faq">
+      <div class="faq-item reveal"><button class="faq-q">Le SEO est-il rentable pour une petite marque ? <span class="pm"></span></button><div class="faq-a"><p>Oui, si on cible d'abord les gains rapides (SERP de marque) plutôt que les requêtes les plus chères à conquérir. Le diagnostic sert justement à prioriser par ROI.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-q">Vaut-il mieux un freelance ou une agence ? <span class="pm"></span></button><div class="faq-a"><p>Un freelance senior offre souvent un meilleur rapport expertise/prix pour une marque établie ; l'agence se justifie sur de très gros catalogues. AfriRank est un accompagnement freelance spécialisé.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-q">Le SEO, c'est un coût ou un investissement ? <span class="pm"></span></button><div class="faq-a"><p>Un investissement : il ramène un trafic que vous ne repayez pas à chaque clic, contrairement à la publicité.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-q">Combien de temps avant un retour ? <span class="pm"></span></button><div class="faq-a"><p>Quelques semaines sur les requêtes de marque, plusieurs mois sur les requêtes catégorie. Le diagnostic fixe des attentes réalistes.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="links-more reveal">
+      <h2>Pour aller plus loin</h2>
+      <ul>
+        <li><a href="/seo-marques-afro-caribeennes/">Stratégie SEO pour marques afro-caribéennes</a></li>
+        <li><a href="/calculateur-ca-organique-perdu/">Estimer votre CA organique perdu</a></li>
+        <li><a href="/recuperer-ca-revendeurs-google/">Récupérez le CA capté par vos revendeurs</a></li>
+        <li><a href="/scorecard-visibilite-marque/">Tester votre score de visibilité</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="cta-band reveal">
+      <img src="/images/icon-cream.png" class="icon-watermark" alt="" />
+      <h2>Chiffrer avant de dépenser : Le Diagnostic.</h2>
+      <p>290 €, déductibles de l'accompagnement. Vous repartez avec le chiffrage de la fuite et un plan priorisé — donc une décision budgétaire éclairée.</p>
+      <div class="cta-actions">
+        <a href={calendly} target="_blank" rel="noopener" class="btn btn--orange">Réserver Le Diagnostic
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+        <a href="/diagnostic-seo/" class="btn btn--cream">En savoir plus</a>
+      </div>
+    </div>
+  </div>
+</section>
+</Base>

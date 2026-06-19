@@ -1,0 +1,137 @@
+---
+import Base from '../layouts/Base.astro';
+const calendly = 'https://calendly.com/contact-advised-seo/30min?back=1';
+const jsonLd = JSON.stringify({
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "SEO pour marques de beauté & maquillage peaux noires et métissées",
+      "description": "Vos clientes cherchent leur teinte exacte sur Google. Enseignes et marketplaces captent la vente. Reprenez vos ventes directes avec AfriRank.",
+      "image": "https://www.afrirank.fr/images/article-beaute.jpg",
+      "author": { "@type": "Person", "name": "Francis Ndimba", "url": "https://www.afrirank.fr/a-propos/" },
+      "publisher": { "@id": "https://www.afrirank.fr/#afrirank" },
+      "mainEntityOfPage": "https://www.afrirank.fr/seo-beaute-maquillage-peaux-noires/"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://www.afrirank.fr/" },
+        { "@type": "ListItem", "position": 2, "name": "SEO marques afro-caribéennes", "item": "https://www.afrirank.fr/seo-marques-afro-caribeennes/" },
+        { "@type": "ListItem", "position": 3, "name": "Beauté & maquillage peaux noires", "item": "https://www.afrirank.fr/seo-beaute-maquillage-peaux-noires/" }
+      ]
+    }
+  ]
+});
+---
+<Base
+  title="SEO beauté & maquillage peaux noires | AfriRank"
+  description="Vos clientes cherchent leur teinte exacte sur Google. Enseignes et marketplaces captent la vente. Reprenez vos ventes directes avec AfriRank."
+  jsonLd={jsonLd}>
+
+<section class="hero hero--page wrap">
+  <div class="hero-top">
+    <nav class="breadcrumb reveal" aria-label="Fil d'Ariane">
+      <a href="/">Accueil</a><span class="sep">›</span>
+      <a href="/seo-marques-afro-caribeennes/">SEO marques afro</a><span class="sep">›</span>
+      <span>Beauté &amp; maquillage peaux noires</span>
+    </nav>
+    <span class="hero-eyebrow reveal"><img src="/images/icon-orange.png" alt="" /> Verticale produit</span>
+    <h1 class="reveal">SEO beauté &amp; maquillage peaux noires : <em>possédez vos teintes</em>.</h1>
+    <p class="hero-sub reveal">Une cliente cherche « fond de teint carnation foncée sous-ton chaud ». Elle ne fait pas du shopping, elle résout un problème que les marques généralistes ont ignoré pendant vingt ans. Vous avez formulé pour elle dès le départ — et pourtant, c'est une enseigne qui sort en premier.</p>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:clamp(20px,3vw,40px)">
+  <div class="wrap">
+    <figure class="article-figure reveal">
+      <img src="/images/article-beaute.jpg" alt="Produits de maquillage — fond de teint, palettes, pinceaux" loading="lazy" width="1280" height="560" />
+    </figure>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:0">
+  <div class="wrap article reveal">
+    <p class="lead">Vous avez la légitimité et le nuancier le plus complet pour les peaux noires et métissées. Mais sur Google, c'est l'inventaire de quelqu'un d'autre qui répond à la demande que vous avez contribué à créer. Ce n'est pas un problème de notoriété. C'est un problème de captation.</p>
+
+    <h2>Pourquoi le maquillage carnations foncées est un cas SEO à part</h2>
+    <p>La cliente ne cherche pas « fond de teint ». Elle cherche une nuance, un sous-ton, une promesse de tenue sur SA peau. Cette précision démultiplie les requêtes :</p>
+    <ul>
+      <li><strong>Carnation et sous-ton :</strong> peau noire foncée, ébène, métissée, caramel, sous-ton chaud / froid / neutre.</li>
+      <li><strong>Produit et besoin :</strong> fond de teint longue tenue, anti-cernes correcteur, poudre matifiante, fixateur, baume teinté.</li>
+      <li><strong>Problème de match :</strong> « quelle teinte pour peau métissée », « équivalence teinte [enseigne] », « fond de teint qui ne vire pas gris ».</li>
+      <li><strong>Soin de la peau :</strong> hyperpigmentation, taches, éclat, routine peau noire, protection solaire teintée.</li>
+    </ul>
+    <p>« Anti-cernes pour peau ébène hyperpigmentée » : des requêtes à intention d'achat maximale, et elles sont nombreuses. C'est votre terrain naturel.</p>
+
+    <h2>Qui capte vos ventes pendant que vous portez l'inclusivité</h2>
+    <ul>
+      <li><strong>Les grandes enseignes beauté</strong> qui captent « fond de teint peau foncée » par la seule force de leur domaine.</li>
+      <li><strong>Les marketplaces et pure players</strong> qui écrasent les requêtes catégorie.</li>
+      <li><strong>Les blogs et médias beauté</strong> qui publient « meilleurs fonds de teint pour peaux noires » avec des liens d'affiliation.</li>
+      <li><strong>Les IA</strong> qui recommandent des marques pour une teinte métissée — rarement la vôtre, alors que vous êtes spécialiste.</li>
+    </ul>
+
+    <h2>Les trois territoires à reprendre</h2>
+    <h3>1. Votre SERP de marque</h3>
+    <p>Si une enseigne revend vos produits et passe devant votre boutique, vous lui offrez vos propres ventes de marque. <a href="/posseder-serp-de-marque/">Comment la reprendre.</a></p>
+    <h3>2. Vos requêtes carnation et match</h3>
+    <p>« Fond de teint peau noire », « teinte pour peau métissée », « anti-cernes peau foncée » : ces requêtes doivent mener à votre nuancier, pas à celui d'un généraliste.</p>
+    <h3>3. Votre présence dans les IA (GEO)</h3>
+    <p>« Quel fond de teint pour une peau métissée à sous-ton chaud qui ne vire pas ? » est exactement le type de question qu'on pose à une IA. <a href="/visibilite-ia-geo-marques-afro/">Devenir citable.</a></p>
+
+    <h2>Les pages qui font (ou défont) votre référencement</h2>
+    <p><strong>Les fiches produit.</strong> Un fond de teint a 20, 30, 40 teintes. Chaque variante mérite d'être trouvable : nom de la teinte, carnation correspondante, sous-ton, équivalences. Une fiche qui répond à « cette teinte est-elle faite pour MA peau ? » convertit.</p>
+    <p><strong>Les pages catégorie.</strong> « Fonds de teint peaux noires », « anti-cernes carnations foncées » : vos pages les plus puissantes, souvent les plus vides de contenu.</p>
+    <p><strong>Le contenu de match et de conseil.</strong> Guides « comment trouver sa teinte », nuanciers explicatifs, comparatifs de sous-tons. C'est ce qui rassure avant l'achat ET vous rend citable par les IA.</p>
+
+    <h2>Combien ça vous coûte, réellement</h2>
+    <p>Trois pertes cumulées : <strong>la marge</strong> (prix de gros au lieu du détail), <strong>la cliente</strong> (pas d'e-mail, pas de réachat — et le maquillage se rachète), <strong>la marque</strong> (un tiers décide du prix affiché, y compris des teintes en rupture qu'il continue d'afficher). Le montant exact, le Diagnostic le mesure pour VOTRE gamme ; le <a href="/calculateur-ca-organique-perdu/">calculateur</a> en donne un premier ordre de grandeur.</p>
+
+    <blockquote><p>Le quoi et le combien, je vous les montre. Le comment — quelles fiches et catégories optimiser, dans quel ordre — c'est le travail de l'accompagnement.</p></blockquote>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="kicker">Questions fréquentes</span><h2 class="sec-title">Vos questions, mes réponses.</h2></div>
+    <div class="faq">
+      <div class="faq-item reveal"><button class="faq-q">Ma marque est reconnue pour son nuancier inclusif, ai-je besoin de SEO ? <span class="pm"></span></button><div class="faq-a"><p>Justement. Votre réputation crée la demande ; le SEO décide qui l'encaisse. Si une enseigne revend vos teintes et domine vos requêtes, vous financez sa croissance avec votre positionnement.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-q">Le SEO beauté pour peaux noires est-il spécifique ? <span class="pm"></span></button><div class="faq-a"><p>La mécanique est classique, le terrain non : requêtes par carnation et sous-ton, fort enjeu de « match », concurrence d'enseignes au domaine puissant, et un besoin de conseil que les IA captent.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-q">Comment rendre chaque teinte trouvable sur Google ? <span class="pm"></span></button><div class="faq-a"><p>Cela passe par la structure des fiches et des variantes, le contenu de match et le maillage interne. Le Diagnostic identifie quelles teintes vous échappent et pourquoi.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-q">Comment être recommandé par une IA pour une teinte précise ? <span class="pm"></span></button><div class="faq-a"><p>C'est du GEO : marque clairement reliée à son expertise carnations, contenu citable, présence structurée. Le Diagnostic vérifie si vous êtes cité aujourd'hui.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-q">Combien de temps avant des résultats ? <span class="pm"></span></button><div class="faq-a"><p>Récupérer sa SERP de marque va plus vite que conquérir « fond de teint peau noire ». Le Diagnostic place les gains rapides en premier.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="links-more reveal">
+      <h2>Pour aller plus loin</h2>
+      <ul>
+        <li><a href="/seo-marques-afro-caribeennes/">Stratégie SEO pour marques afro-caribéennes</a></li>
+        <li><a href="/recuperer-ca-revendeurs-google/">Reprenez le CA capté par vos revendeurs</a></li>
+        <li><a href="/seo-cosmetique-soin-capillaire-afro/">Cosmétique &amp; soin capillaire afro</a></li>
+        <li><a href="/visibilite-ia-geo-marques-afro/">Visibilité dans les IA pour marques afro</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="cta-band reveal">
+      <img src="/images/icon-cream.png" class="icon-watermark" alt="" />
+      <h2>Par où commencer : Le Diagnostic.</h2>
+      <p>Je chiffre le CA que les enseignes captent à votre place sur l'univers maquillage et soin peaux noires/métissées, et je trace le plan priorisé. 290 €, déductibles.</p>
+      <div class="cta-actions">
+        <a href={calendly} target="_blank" rel="noopener" class="btn btn--orange">Réserver Le Diagnostic
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+        <a href="/diagnostic-seo/" class="btn btn--cream">En savoir plus</a>
+      </div>
+    </div>
+  </div>
+</section>
+</Base>

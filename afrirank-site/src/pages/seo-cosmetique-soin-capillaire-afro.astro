@@ -1,0 +1,137 @@
+---
+import Base from '../layouts/Base.astro';
+const calendly = 'https://calendly.com/contact-advised-seo/30min?back=1';
+const jsonLd = JSON.stringify({
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "SEO pour marques de cosmétique & soin capillaire afro",
+      "description": "Vos clientes cherchent leur routine cheveux crépus sur Google. Marketplaces et revendeurs encaissent. Reprenez vos ventes directes avec AfriRank.",
+      "image": "https://www.afrirank.fr/images/article-capillaire.jpg",
+      "author": { "@type": "Person", "name": "Francis Ndimba", "url": "https://www.afrirank.fr/a-propos/" },
+      "publisher": { "@id": "https://www.afrirank.fr/#afrirank" },
+      "mainEntityOfPage": "https://www.afrirank.fr/seo-cosmetique-soin-capillaire-afro/"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://www.afrirank.fr/" },
+        { "@type": "ListItem", "position": 2, "name": "SEO marques afro-caribéennes", "item": "https://www.afrirank.fr/seo-marques-afro-caribeennes/" },
+        { "@type": "ListItem", "position": 3, "name": "Cosmétique & soin capillaire afro", "item": "https://www.afrirank.fr/seo-cosmetique-soin-capillaire-afro/" }
+      ]
+    }
+  ]
+});
+---
+<Base
+  title="SEO cosmétique & soin capillaire afro | AfriRank"
+  description="Vos clientes cherchent leur routine cheveux crépus sur Google. Marketplaces et revendeurs encaissent. Reprenez vos ventes directes avec AfriRank."
+  jsonLd={jsonLd}>
+
+<section class="hero hero--page wrap">
+  <div class="hero-top">
+    <nav class="breadcrumb reveal" aria-label="Fil d'Ariane">
+      <a href="/">Accueil</a><span class="sep">›</span>
+      <a href="/seo-marques-afro-caribeennes/">SEO marques afro</a><span class="sep">›</span>
+      <span>Cosmétique &amp; capillaire afro</span>
+    </nav>
+    <span class="hero-eyebrow reveal"><img src="/images/icon-orange.png" alt="" /> Verticale produit</span>
+    <h1 class="reveal">SEO cosmétique &amp; soin capillaire afro : <em>arrêtez de nourrir les marketplaces</em>.</h1>
+    <p class="hero-sub reveal">Votre cliente sait ce qu'elle veut : « huile pour pousse cheveux crépus », « masque protéiné 4B », « routine hydratation cheveux bouclés ». Elle est à un clic de l'achat. Et c'est un revendeur ou une marketplace qui récupère ce clic — pas vous.</p>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:clamp(20px,3vw,40px)">
+  <div class="wrap">
+    <figure class="article-figure reveal">
+      <img src="/images/article-capillaire.jpg" alt="Femme aux cheveux crépus naturels — univers du soin capillaire afro" loading="lazy" width="1280" height="560" />
+    </figure>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:0">
+  <div class="wrap article reveal">
+    <p class="lead">Vous avez passé des années à éduquer ce marché. Vos contenus, vos lives, vos tutos ont appris à toute une communauté à nommer ses besoins. Aujourd'hui, cette demande que vous avez bâtie se transforme en ventes pour d'autres. Ce n'est pas un problème de notoriété. C'est un problème de captation.</p>
+
+    <h2>Pourquoi le capillaire afro est un cas SEO à part</h2>
+    <p>Votre univers se découpe en dizaines de micro-intentions, et chacune est une page qui peut ranker. On parle de requêtes structurées par :</p>
+    <ul>
+      <li><strong>Type de cheveu :</strong> crépus, bouclés, frisés, 3A à 4C, low porosity / high porosity.</li>
+      <li><strong>Besoin :</strong> hydratation, pousse, anti-casse, définition des boucles, soin du cuir chevelu, transition.</li>
+      <li><strong>Ingrédient :</strong> beurre de karité, huile de ricin noire, aloe vera, huile de coco, protéines, fenugrec.</li>
+      <li><strong>Usage / format :</strong> leave-in, masque, après-shampoing sans rinçage, gelée coiffante, méthode LOC / LCO.</li>
+    </ul>
+    <p>Chaque combinaison (« masque protéiné 4C low poro », « routine pousse huile de ricin ») est une porte d'entrée. Multipliez par votre catalogue : une carte de territoire que peu de marques exploitent réellement.</p>
+
+    <h2>Qui capte vos ventes pendant que vous créez la demande</h2>
+    <ul>
+      <li><strong>Les marketplaces communautaires et beauté afro</strong> qui rankent sur « [votre produit phare] », souvent au-dessus de votre fiche.</li>
+      <li><strong>Les pure players généralistes</strong> qui écrasent les requêtes catégorie par leur masse de contenu.</li>
+      <li><strong>Les blogs-revendeurs</strong> qui publient « top 10 des huiles pour la pousse » et placent leurs liens d'affiliation.</li>
+      <li><strong>Les IA</strong> (ChatGPT, Perplexity, Google AI) qui recommandent une routine cheveux crépus sans jamais citer votre marque.</li>
+    </ul>
+
+    <h2>Les trois territoires à reprendre</h2>
+    <h3>1. Votre SERP de marque</h3>
+    <p>Si un revendeur sort avant votre fiche officielle, vous financez sa croissance avec votre réputation. C'est le gain le plus rapide. <a href="/posseder-serp-de-marque/">Comment posséder votre SERP de marque.</a></p>
+    <h3>2. Vos requêtes catégorie et ingrédient</h3>
+    <p>« Soin cheveux crépus secs », « huile de ricin pousse », « routine low poro » : ces requêtes sans marque doivent mener à VOS pages, pas seulement aux marketplaces.</p>
+    <h3>3. Votre présence dans les IA (GEO)</h3>
+    <p>Le capillaire afro est un univers de conseil — précisément celui que les IA adorent résumer. <a href="/visibilite-ia-geo-marques-afro/">Devenir citable par les IA.</a></p>
+
+    <h2>Les pages qui font (ou défont) votre référencement</h2>
+    <p><strong>Les fiches produit.</strong> Trop souvent une liste d'ingrédients. Elles doivent répondre à l'intention complète : pour quel type de cheveu, quel besoin, comment l'intégrer dans une routine, en combien de temps voir un résultat.</p>
+    <p><strong>Les pages catégorie.</strong> « Soins cheveux crépus », « huiles capillaires », « produits pousse ». Vos pages les plus puissantes en SEO et souvent les plus négligées : un titre, une grille, zéro contenu.</p>
+    <p><strong>Le contenu de conseil.</strong> Routines, comparatifs, guides par type de cheveu. C'est ce qui attire la cliente en amont ET nourrit votre visibilité dans les IA.</p>
+
+    <h2>Combien ça vous coûte, réellement</h2>
+    <p>La fuite vit dans l'écart entre la demande capillaire que votre marque génère et le CA direct que vous encaissez. Trois pertes cumulées : <strong>la marge</strong> (prix de gros au lieu du détail), <strong>la cliente</strong> (pas d'e-mail, pas de réachat — et le capillaire est un univers d'abonnement de fait), <strong>la marque</strong> (un tiers qui possède votre SERP décide du prix affiché). À titre d'ordre de grandeur marché, la part du trafic capillaire afro captée par des tiers sur les requêtes non-marque est rarement marginale ; le Diagnostic la mesure pour VOTRE catalogue. Estimez-la avec le <a href="/calculateur-ca-organique-perdu/">calculateur</a>.</p>
+
+    <blockquote><p>Le quoi et le combien, je vous les montre. Le comment — quelle page optimiser, dans quel ordre — c'est le travail de l'accompagnement.</p></blockquote>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="kicker">Questions fréquentes</span><h2 class="sec-title">Vos questions, mes réponses.</h2></div>
+    <div class="faq">
+      <div class="faq-item reveal"><button class="faq-q">Mes clientes connaissent déjà ma marque, ai-je besoin de SEO ? <span class="pm"></span></button><div class="faq-a"><p>C'est justement parce qu'elles vous connaissent. Votre notoriété crée la demande capillaire ; le SEO décide qui l'encaisse. Si vos revendeurs dominent vos requêtes, vous financez leur croissance avec votre réputation.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-q">Le SEO capillaire afro est-il vraiment spécifique ? <span class="pm"></span></button><div class="faq-a"><p>La mécanique est classique, le terrain non : requêtes ultra-granulaires (type de cheveu, ingrédient, porosité), forte concurrence de marketplaces communautaires, et un univers de conseil que les IA résument en permanence.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-q">Faut-il créer du contenu de blog pour ranker ? <span class="pm"></span></button><div class="faq-a"><p>Le contenu de conseil aide, mais il vient après l'essentiel : récupérer votre SERP de marque et muscler vos pages catégorie et fiches. Le Diagnostic priorise pour ne pas produire du contenu qui ne sert à rien.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-q">Comment être recommandé par ChatGPT pour une routine cheveux crépus ? <span class="pm"></span></button><div class="faq-a"><p>Cela relève du GEO : une présence structurée, une marque clairement reliée à ses bénéfices et un contenu citable. Le Diagnostic identifie si vous êtes cité aujourd'hui et où se situent vos angles morts.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-q">Combien de temps avant de voir des résultats ? <span class="pm"></span></button><div class="faq-a"><p>Reprendre sa SERP de marque va plus vite que conquérir « huile pousse cheveux crépus ». Le Diagnostic place les gains rapides en premier.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="links-more reveal">
+      <h2>Pour aller plus loin</h2>
+      <ul>
+        <li><a href="/seo-marques-afro-caribeennes/">Stratégie SEO pour marques afro-caribéennes</a></li>
+        <li><a href="/recuperer-ca-revendeurs-google/">Reprenez le CA capté par vos revendeurs</a></li>
+        <li><a href="/seo-beaute-maquillage-peaux-noires/">Beauté &amp; maquillage peaux noires</a></li>
+        <li><a href="/visibilite-ia-geo-marques-afro/">Visibilité dans les IA pour marques afro</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="cta-band reveal">
+      <img src="/images/icon-cream.png" class="icon-watermark" alt="" />
+      <h2>Par où commencer : Le Diagnostic.</h2>
+      <p>Je chiffre le CA que vos revendeurs captent à votre place sur l'univers capillaire, j'identifie vos angles morts (fiches, catégories, contenu, IA) et je trace le plan priorisé. 290 €, déductibles.</p>
+      <div class="cta-actions">
+        <a href={calendly} target="_blank" rel="noopener" class="btn btn--orange">Réserver Le Diagnostic
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+        <a href="/diagnostic-seo/" class="btn btn--cream">En savoir plus</a>
+      </div>
+    </div>
+  </div>
+</section>
+</Base>

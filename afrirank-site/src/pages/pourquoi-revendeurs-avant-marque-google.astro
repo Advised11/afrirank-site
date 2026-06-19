@@ -1,0 +1,104 @@
+---
+import Base from '../layouts/Base.astro';
+const calendly = 'https://calendly.com/contact-advised-seo/30min?back=1';
+const jsonLd = JSON.stringify({
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://www.afrirank.fr/" },
+        { "@type": "ListItem", "position": 2, "name": "SEO marques afro-caribéennes", "item": "https://www.afrirank.fr/seo-marques-afro-caribeennes/" },
+        { "@type": "ListItem", "position": 3, "name": "Pourquoi mes revendeurs passent avant ma marque", "item": "https://www.afrirank.fr/pourquoi-revendeurs-avant-marque-google/" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "Est-ce illégal qu'un revendeur ranke sur ma marque ?", "acceptedAnswer": { "@type": "Answer", "text": "Non. Tant qu'il vend vos produits légitimement, il peut se positionner sur votre nom. La réponse n'est pas juridique, elle est SEO : reprendre la place." } },
+        { "@type": "Question", "name": "Puis-je forcer Google à me mettre en premier sur ma marque ?", "acceptedAnswer": { "@type": "Answer", "text": "Pas « forcer », mais le mériter : site optimisé, fiches solides, contenu de marque, signaux d'entité cohérents. C'est très atteignable sur les requêtes de marque." } },
+        { "@type": "Question", "name": "Combien de temps pour repasser devant ?", "acceptedAnswer": { "@type": "Answer", "text": "Sur les requêtes de marque, souvent plus vite que sur les requêtes catégorie. Un diagnostic priorise les gains rapides." } },
+        { "@type": "Question", "name": "Les marketplaces sont-elles imbattables ?", "acceptedAnswer": { "@type": "Answer", "text": "Non sur votre propre marque. Sur les requêtes génériques, on choisit les batailles gagnables plutôt que de les affronter de face." } }
+      ]
+    }
+  ]
+});
+---
+<Base
+  title="Pourquoi mes revendeurs passent avant ma marque ?"
+  description="Vos revendeurs rankent devant vous sur Google ? Voici les 4 vraies raisons — et pourquoi c'est rattrapable pour une marque afro établie."
+  jsonLd={jsonLd}>
+
+<section class="hero hero--page wrap">
+  <div class="hero-top">
+    <nav class="breadcrumb reveal" aria-label="Fil d'Ariane">
+      <a href="/">Accueil</a><span class="sep">›</span>
+      <a href="/seo-marques-afro-caribeennes/">SEO marques afro</a><span class="sep">›</span>
+      <span>Pourquoi mes revendeurs passent avant ma marque</span>
+    </nav>
+    <span class="hero-eyebrow reveal"><img src="/images/icon-orange.png" alt="" /> Question fréquente</span>
+    <h1 class="reveal">Pourquoi mes revendeurs sortent-ils avant ma marque sur Google ?</h1>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:clamp(24px,4vw,48px)">
+  <div class="wrap article reveal">
+    <blockquote><p><strong>Réponse courte :</strong> parce que leurs sites ont souvent un domaine plus ancien, plus de contenu indexé, des fiches produits mieux structurées et plus de liens entrants que le vôtre. Google ne récompense pas la marque qui possède le produit — il récompense la page la mieux optimisée pour la requête. Bonne nouvelle : ce sont des écarts techniques, donc rattrapables.</p></blockquote>
+
+    <h2>Les 4 raisons concrètes</h2>
+    <h3>1. Leur domaine est plus ancien et plus large</h3>
+    <p>Un revendeur ou une marketplace publie depuis des années et sur des milliers de produits. Cette ancienneté et ce volume envoient à Google un signal d'autorité que votre site, plus récent ou plus étroit, n'a pas encore.</p>
+    <h3>2. Leurs fiches produits sont mieux optimisées</h3>
+    <p>Titres, descriptions, balises, avis clients, données structurées : les marketplaces industrialisent l'optimisation. Beaucoup de sites de marque ont, à l'inverse, des fiches courtes et des pages catégorie quasi vides.</p>
+    <h3>3. Ils ont plus de liens entrants</h3>
+    <p>Comparateurs, articles, partenaires : l'écosystème pointe massivement vers les revendeurs. Ces liens renforcent leur position sur vos propres requêtes.</p>
+    <h3>4. Votre maillage interne est faible</h3>
+    <p>Quand vos pages ne se citent pas entre elles, Google peine à comprendre lesquelles sont importantes. Le revendeur, lui, a une architecture dense qui pousse ses pages vers le haut.</p>
+
+    <h2>Ce que ça veut dire pour votre marque</h2>
+    <p>Vous ne perdez pas par manque de notoriété, mais par défaut d'optimisation. C'est précisément ce qui se corrige — et le premier territoire à reprendre est votre <a href="/posseder-serp-de-marque/">SERP de marque</a> (les recherches sur votre nom), le gain le plus rapide. Pour chiffrer ce que cette captation vous coûte : <a href="/recuperer-ca-revendeurs-google/">récupérez le CA capté par vos revendeurs</a>.</p>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="kicker">Questions fréquentes</span><h2 class="sec-title">Vos questions, mes réponses.</h2></div>
+    <div class="faq">
+      <div class="faq-item reveal"><button class="faq-q">Est-ce illégal qu'un revendeur ranke sur ma marque ? <span class="pm"></span></button><div class="faq-a"><p>Non. Tant qu'il vend vos produits légitimement, il peut se positionner sur votre nom. La réponse n'est pas juridique, elle est SEO : reprendre la place.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-q">Puis-je forcer Google à me mettre en premier sur ma marque ? <span class="pm"></span></button><div class="faq-a"><p>Pas « forcer », mais le mériter : site optimisé, fiches solides, contenu de marque, signaux d'entité cohérents. C'est très atteignable sur les requêtes de marque.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-q">Combien de temps pour repasser devant ? <span class="pm"></span></button><div class="faq-a"><p>Sur les requêtes de marque, souvent plus vite que sur les requêtes catégorie. Un diagnostic priorise les gains rapides.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-q">Les marketplaces sont-elles imbattables ? <span class="pm"></span></button><div class="faq-a"><p>Non sur votre propre marque. Sur les requêtes génériques, on choisit les batailles gagnables plutôt que de les affronter de face.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="links-more reveal">
+      <h2>Pour aller plus loin</h2>
+      <ul>
+        <li><a href="/seo-marques-afro-caribeennes/">Stratégie SEO pour marques afro-caribéennes</a></li>
+        <li><a href="/recuperer-ca-revendeurs-google/">Récupérez le CA capté par vos revendeurs</a></li>
+        <li><a href="/posseder-serp-de-marque/">Posséder votre SERP de marque</a></li>
+        <li><a href="/marketplace-vs-site-de-marque/">Marketplace vs site de marque</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="cta-band reveal">
+      <img src="/images/icon-cream.png" class="icon-watermark" alt="" />
+      <h2>Ce que cette captation vous coûte, chiffré.</h2>
+      <p>Le Diagnostic mesure le CA capté par vos revendeurs et trace le plan pour repasser devant, en commençant par les gains les plus rapides. 290 €, déductibles.</p>
+      <div class="cta-actions">
+        <a href={calendly} target="_blank" rel="noopener" class="btn btn--orange">Réserver Le Diagnostic
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+        <a href="/diagnostic-seo/" class="btn btn--cream">En savoir plus</a>
+      </div>
+    </div>
+  </div>
+</section>
+</Base>

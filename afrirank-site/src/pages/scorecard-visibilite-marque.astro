@@ -1,0 +1,181 @@
+---
+import Base from '../layouts/Base.astro';
+const calendly = 'https://calendly.com/contact-advised-seo/30min?back=1';
+const jsonLd = JSON.stringify({
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "name": "Scorecard de visibilité de marque",
+      "url": "https://www.afrirank.fr/scorecard-visibilite-marque/",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+      "description": "10 questions, un score sur 100. Évaluez si votre marque est trouvée quand on cherche votre catégorie — ou si vos revendeurs captent la place.",
+      "publisher": { "@id": "https://www.afrirank.fr/#afrirank" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://www.afrirank.fr/" },
+        { "@type": "ListItem", "position": 2, "name": "SEO marques afro-caribéennes", "item": "https://www.afrirank.fr/seo-marques-afro-caribeennes/" },
+        { "@type": "ListItem", "position": 3, "name": "Scorecard de visibilité de marque", "item": "https://www.afrirank.fr/scorecard-visibilite-marque/" }
+      ]
+    }
+  ]
+});
+---
+<Base
+  title="Scorecard : votre marque est-elle visible sur Google ?"
+  description="10 questions, un score sur 100. Évaluez si votre marque est trouvée quand on cherche votre catégorie — ou si vos revendeurs captent la place. Gratuit."
+  jsonLd={jsonLd}>
+
+<section class="hero hero--page wrap">
+  <div class="hero-top">
+    <nav class="breadcrumb reveal" aria-label="Fil d'Ariane">
+      <a href="/">Accueil</a><span class="sep">›</span>
+      <a href="/seo-marques-afro-caribeennes/">SEO marques afro</a><span class="sep">›</span>
+      <span>Scorecard de visibilité</span>
+    </nav>
+    <span class="hero-eyebrow reveal"><img src="/images/icon-orange.png" alt="" /> Outil gratuit</span>
+    <h1 class="reveal">Votre marque est-elle visible quand on cherche votre catégorie ?</h1>
+    <p class="hero-sub reveal">Tapez le nom de votre marque sur Google. Puis votre produit phare. Puis votre catégorie sans le nom de la marque. Qui sort en premier : vous, ou un revendeur ? Cette scorecard transforme votre intuition en chiffre. Dix questions, un score sur 100, une zone de risque.</p>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:clamp(24px,4vw,48px)">
+  <div class="wrap">
+    <div class="tool reveal">
+      <div id="sc-questions"></div>
+      <p class="tool-note" id="sc-progress">0 / 10 questions répondues</p>
+
+      <div class="tool-result" id="sc-result" style="display:none">
+        <p class="big" id="sc-score">0 / 100</p>
+        <p class="sub" id="sc-zone"></p>
+        <div class="gauge"><span class="needle" id="sc-needle" style="left:0%"></span></div>
+        <div class="bars" id="sc-bars"></div>
+        <p class="interp" id="sc-interp"></p>
+      </div>
+      <p class="tool-note">La scorecard évalue votre <strong>perception</strong> de votre visibilité à partir de vos réponses ; elle ne crawle pas votre site. La pondération est uniforme (chaque question pèse autant), un choix de simplicité assumé. Pour un audit basé sur vos vraies SERP, c'est Le Diagnostic.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:0">
+  <div class="wrap article reveal" style="max-width:760px">
+    <div class="tool" style="background:var(--beige)">
+      <h3 style="margin:0 0 6px">Recevez votre rapport détaillé</h3>
+      <p style="color:var(--ink-60);font-size:15px;margin:0 0 16px">Votre score domaine par domaine + les 3 angles morts qui plombent votre note.</p>
+      <form name="rapport-scorecard" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="lead-form">
+        <input type="hidden" name="form-name" value="rapport-scorecard" />
+        <input type="hidden" name="score" id="f-score" />
+        <p hidden><label>Ne pas remplir : <input name="bot-field" /></label></p>
+        <div class="tool-field" style="margin-bottom:12px">
+          <input type="email" name="email" id="f-email" placeholder="votre@email.com" required />
+        </div>
+        <button type="submit" class="btn btn--orange" style="width:100%;justify-content:center">Recevoir mon rapport</button>
+        <p id="form-ok" style="display:none;color:var(--orange);font-weight:600;margin-top:14px;text-align:center">Merci ! Votre rapport détaillé arrive par e-mail.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="cta-band reveal">
+      <img src="/images/icon-cream.png" class="icon-watermark" alt="" />
+      <h2>Vous savez où vous perdez. Le Diagnostic vous dit combien, et comment reprendre.</h2>
+      <p>Il remplace l'auto-évaluation par l'analyse de vos vraies SERP : il chiffre le CA capté par vos revendeurs et trace le plan priorisé pour remonter chaque zone rouge. 290 €, déductibles.</p>
+      <div class="cta-actions">
+        <a href={calendly} target="_blank" rel="noopener" class="btn btn--orange">Réserver Le Diagnostic
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+        <a href="/calculateur-ca-organique-perdu/" class="btn btn--cream">Estimer mon CA perdu</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script is:inline>
+  (function () {
+    var domains = [
+      { name: "SERP de marque", q: ["Quand on tape le nom exact de votre marque, votre site officiel est-il le 1er résultat ?", "Aucun revendeur ni marketplace ne passe devant votre site sur votre nom de marque ?"] },
+      { name: "Fiches produits", q: ["Quand on cherche « [marque] + [produit phare] », c'est votre fiche produit qui ressort en premier ?", "Vos fiches produits ont un contenu propre (description, usage, FAQ) et pas juste un titre + prix ?"] },
+      { name: "Contenu catégorie", q: ["Avez-vous des pages qui ciblent vos requêtes catégorie sans votre nom de marque ?", "Ces pages catégorie se positionnent-elles dans la première page de Google ?"] },
+      { name: "Présence dans les IA", q: ["Quand vous posez votre catégorie à ChatGPT ou Perplexity, votre marque est-elle citée ?", "Quand vous demandez « meilleures marques de [catégorie] » à une IA, apparaissez-vous dans la liste ?"] },
+      { name: "Maillage interne", q: ["Vos pages produits et catégorie sont-elles reliées entre elles par des liens internes pertinents ?", "Vos contenus (blog, guides) renvoient-ils vers vos pages produits / catégorie correspondantes ?"] }
+    ];
+    var opts = [["Oui", 10], ["En partie", 5], ["Non", 0]];
+    var answers = {};
+    var total = 10;
+    var cont = document.getElementById('sc-questions');
+    var n = 0;
+    domains.forEach(function (d, di) {
+      var dom = document.createElement('div');
+      dom.className = 'scorecard-dom';
+      dom.innerHTML = '<h3>' + d.name + '</h3>';
+      d.q.forEach(function (q) {
+        var qi = n++;
+        var wrap = document.createElement('div');
+        wrap.className = 'scorecard-q';
+        var p = document.createElement('p'); p.textContent = q; wrap.appendChild(p);
+        var optsWrap = document.createElement('div'); optsWrap.className = 'q-options';
+        opts.forEach(function (o) {
+          var b = document.createElement('button');
+          b.type = 'button'; b.textContent = o[0];
+          b.addEventListener('click', function () {
+            answers[qi] = { v: o[1], d: di };
+            Array.prototype.forEach.call(optsWrap.children, function (c) { c.classList.remove('sel'); });
+            b.classList.add('sel');
+            update();
+          });
+          optsWrap.appendChild(b);
+        });
+        wrap.appendChild(optsWrap);
+        dom.appendChild(wrap);
+      });
+      cont.appendChild(dom);
+    });
+
+    function update() {
+      var keys = Object.keys(answers);
+      document.getElementById('sc-progress').textContent = keys.length + ' / ' + total + ' questions répondues';
+      if (keys.length < total) { document.getElementById('sc-result').style.display = 'none'; return; }
+      var score = 0, dom = [0, 0, 0, 0, 0];
+      keys.forEach(function (k) { score += answers[k].v; dom[answers[k].d] += answers[k].v; });
+      var res = document.getElementById('sc-result');
+      res.style.display = 'block';
+      document.getElementById('sc-score').textContent = score + ' / 100';
+      document.getElementById('sc-needle').style.left = score + '%';
+      var zone, interp;
+      if (score >= 80) { zone = 'Zone verte'; interp = "Vous tenez votre territoire. La priorité est de défendre l'acquis et d'attaquer les requêtes catégorie restantes."; }
+      else if (score >= 50) { zone = 'Zone orange'; interp = "Visibilité partielle. Vous êtes connu, mais vos revendeurs captent une part réelle de vos recherches. La fuite est active."; }
+      else { zone = 'Zone rouge'; interp = "Captation forte. La demande existe mais ce sont vos revendeurs et les marketplaces qui l'encaissent. Chaque mois compte."; }
+      document.getElementById('sc-zone').textContent = 'Votre score de visibilité de marque — ' + zone;
+      document.getElementById('sc-interp').textContent = interp;
+      var bars = domains.map(function (d, i) {
+        var pct = Math.round(dom[i] / 20 * 100);
+        return '<div class="bar-row"><span class="bl">' + d.name + '</span><span class="bar-track"><span class="bar-fill" style="width:' + pct + '%"></span></span></div>';
+      }).join('');
+      document.getElementById('sc-bars').innerHTML = bars;
+      var f = document.getElementById('f-score'); if (f) f.value = score + '/100 — ' + zone;
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({ event: 'scorecard_complete', score: score });
+    }
+
+    var form = document.getElementById('lead-form');
+    if (form) {
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var data = new URLSearchParams(new FormData(form)).toString();
+        fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: data }).catch(function () {});
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({ event: 'lead_form', tool: 'scorecard' });
+        form.querySelector('#f-email').style.display = 'none';
+        form.querySelector('button').style.display = 'none';
+        document.getElementById('form-ok').style.display = 'block';
+      });
+    }
+  })();
+</script>
+</Base>

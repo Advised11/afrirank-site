@@ -1,0 +1,169 @@
+---
+import Base from '../layouts/Base.astro';
+const calendly = 'https://calendly.com/contact-advised-seo/30min?back=1';
+const jsonLd = JSON.stringify({
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "name": "Calculateur de CA organique perdu",
+      "url": "https://www.afrirank.fr/calculateur-ca-organique-perdu/",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+      "description": "Estimez en 60 secondes le CA que vos revendeurs et marketplaces captent à votre place sur Google.",
+      "publisher": { "@id": "https://www.afrirank.fr/#afrirank" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://www.afrirank.fr/" },
+        { "@type": "ListItem", "position": 2, "name": "SEO marques afro-caribéennes", "item": "https://www.afrirank.fr/seo-marques-afro-caribeennes/" },
+        { "@type": "ListItem", "position": 3, "name": "Calculateur de CA organique perdu", "item": "https://www.afrirank.fr/calculateur-ca-organique-perdu/" }
+      ]
+    }
+  ]
+});
+---
+<Base
+  title="Calculateur : CA organique perdu par votre marque"
+  description="Estimez en 60 secondes le CA que vos revendeurs et marketplaces captent à votre place sur Google. Outil gratuit, hypothèses modifiables, résultat en euros."
+  jsonLd={jsonLd}>
+
+<section class="hero hero--page wrap">
+  <div class="hero-top">
+    <nav class="breadcrumb reveal" aria-label="Fil d'Ariane">
+      <a href="/">Accueil</a><span class="sep">›</span>
+      <a href="/seo-marques-afro-caribeennes/">SEO marques afro</a><span class="sep">›</span>
+      <span>Calculateur de CA organique perdu</span>
+    </nav>
+    <span class="hero-eyebrow reveal"><img src="/images/icon-orange.png" alt="" /> Outil gratuit</span>
+    <h1 class="reveal">Combien votre marque perd en CA organique chaque mois ?</h1>
+    <p class="hero-sub reveal">Vos clients cherchent votre marque et vos produits sur Google. Une partie achète — mais pas chez vous. Cette fuite n'apparaît sur aucune facture. Ce calculateur la met en chiffres : entrez quatre données, il estime le CA mensuel et annuel capté par des tiers à votre place.</p>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:clamp(24px,4vw,48px)">
+  <div class="wrap">
+    <div class="tool reveal">
+      <div class="tool-field">
+        <label for="vol">Volume de recherche mensuel sur votre marque + vos produits : <span class="tool-val" id="vol-v">5 000</span>
+          <span class="hint">Recherches mensuelles estimées sur votre nom de marque, vos gammes et vos produits phares.</span>
+        </label>
+        <input type="range" id="vol" min="200" max="50000" step="100" value="5000" />
+      </div>
+      <div class="tool-field">
+        <label for="part">Part captée par les revendeurs / marketplaces : <span class="tool-val" id="part-v">40 %</span>
+          <span class="hint">Proportion de ces recherches qui atterrit sur un revendeur plutôt que sur votre site.</span>
+        </label>
+        <input type="range" id="part" min="0" max="100" step="1" value="40" />
+      </div>
+      <div class="tool-field">
+        <label for="conv">Taux de conversion estimé : <span class="tool-val" id="conv-v">2,0 %</span>
+          <span class="hint">Part des visiteurs qui passent à l'achat. 1 à 3 % est une fourchette e-commerce courante.</span>
+        </label>
+        <input type="range" id="conv" min="0.5" max="10" step="0.1" value="2" />
+      </div>
+      <div class="tool-field">
+        <label for="panier">Panier moyen (€) : <span class="tool-val" id="panier-v">55 €</span></label>
+        <input type="range" id="panier" min="10" max="300" step="5" value="55" />
+      </div>
+      <div class="tool-field">
+        <label for="marge">Marge sur vente directe (optionnel, %) : <span class="tool-val" id="marge-v">30 %</span>
+          <span class="hint">Pour estimer la marge perdue, pas seulement le CA détourné.</span>
+        </label>
+        <input type="range" id="marge" min="0" max="90" step="1" value="30" />
+      </div>
+
+      <div class="tool-result">
+        <p class="big"><span id="res-mois">2 200 €</span> <span style="font-size:.45em;opacity:.8">/ mois</span></p>
+        <p class="sub">captés par vos revendeurs et marketplaces, soit <strong id="res-an">26 400 €</strong> / an <span id="res-range" style="opacity:.75"></span></p>
+        <p class="interp" id="res-interp"></p>
+        <p class="interp" id="res-marge" style="opacity:.85;font-size:14px"></p>
+      </div>
+      <p class="tool-note">Toutes les valeurs sont des <strong>hypothèses modifiables</strong> : l'outil ne lit pas vos données réelles, il calcule une estimation à partir de ce que vous saisissez. Pour un chiffrage basé sur vos vraies données Search Console, il y a Le Diagnostic.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:0">
+  <div class="wrap article reveal" style="max-width:760px">
+    <div class="tool" style="background:var(--beige)">
+      <h3 style="margin:0 0 6px">Recevez votre estimation détaillée</h3>
+      <p style="color:var(--ink-60);font-size:15px;margin:0 0 16px">Votre calcul récapitulé + la checklist des 5 endroits où cette fuite se produit (SERP de marque, fiches produits, requêtes catégorie, IA, maillage).</p>
+      <form name="rapport-ca-perdu" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="lead-form">
+        <input type="hidden" name="form-name" value="rapport-ca-perdu" />
+        <input type="hidden" name="estimation" id="f-estimation" />
+        <p hidden><label>Ne pas remplir : <input name="bot-field" /></label></p>
+        <div class="tool-field" style="margin-bottom:12px">
+          <input type="email" name="email" id="f-email" placeholder="votre@email.com" required />
+        </div>
+        <button type="submit" class="btn btn--orange" style="width:100%;justify-content:center">Recevoir mon estimation</button>
+        <p id="form-ok" style="display:none;color:var(--orange);font-weight:600;margin-top:14px;text-align:center">Merci ! Votre estimation détaillée arrive par e-mail.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="cta-band reveal">
+      <img src="/images/icon-cream.png" class="icon-watermark" alt="" />
+      <h2>Ce chiffre est une estimation. Voulez-vous le vrai ?</h2>
+      <p>Le Diagnostic remplace ces hypothèses par vos données réelles : votre vraie SERP de marque, vos vraies requêtes captées, votre vrai manque à gagner — et le plan priorisé pour le reprendre. 290 €, déductibles.</p>
+      <div class="cta-actions">
+        <a href={calendly} target="_blank" rel="noopener" class="btn btn--orange">Réserver Le Diagnostic
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+        <a href="/scorecard-visibilite-marque/" class="btn btn--cream">Tester mon score de visibilité</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script is:inline>
+  (function () {
+    var fmt = new Intl.NumberFormat('fr-FR', { maximumFractionDigits: 0 });
+    var ids = ['vol', 'part', 'conv', 'panier', 'marge'];
+    var el = {};
+    ids.forEach(function (i) { el[i] = document.getElementById(i); el[i + 'v'] = document.getElementById(i + '-v'); });
+    function compute() {
+      var vol = +el.vol.value, part = +el.part.value, conv = +el.conv.value, panier = +el.panier.value, marge = +el.marge.value;
+      el.volv.textContent = fmt.format(vol);
+      el.partv.textContent = part + ' %';
+      el.convv.textContent = conv.toFixed(1).replace('.', ',') + ' %';
+      el.panierv.textContent = fmt.format(panier) + ' €';
+      el.margev.textContent = marge + ' %';
+      var mois = vol * (part / 100) * (conv / 100) * panier;
+      var an = mois * 12;
+      document.getElementById('res-mois').textContent = fmt.format(Math.round(mois)) + ' €';
+      document.getElementById('res-an').textContent = fmt.format(Math.round(an)) + ' €';
+      document.getElementById('res-range').textContent = '(fourchette ' + fmt.format(Math.round(an * 0.7)) + ' € – ' + fmt.format(Math.round(an * 1.3)) + ' €)';
+      var interp = '';
+      if (mois < 1000) interp = "Fuite modérée. La priorité est probablement de la verrouiller avant qu'elle grossisse.";
+      else if (mois <= 5000) interp = "Fuite significative. Sur un an, c'est un budget d'accompagnement déjà rentabilisé.";
+      else interp = "Fuite majeure. Chaque mois sans agir est un mois de CA offert à vos revendeurs.";
+      document.getElementById('res-interp').textContent = interp;
+      document.getElementById('res-marge').textContent = marge > 0 ? 'Dont ≈ ' + fmt.format(Math.round(an * (marge / 100))) + ' € de marge directe perdue par an.' : '';
+      var f = document.getElementById('f-estimation');
+      if (f) f.value = fmt.format(Math.round(mois)) + ' €/mois (' + fmt.format(Math.round(an)) + ' €/an) — hyp: ' + fmt.format(vol) + ' rech., ' + part + '% captés, ' + conv + '% conv, ' + panier + '€ panier';
+    }
+    ids.forEach(function (i) { el[i].addEventListener('input', compute); });
+    compute();
+
+    var form = document.getElementById('lead-form');
+    if (form) {
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var data = new URLSearchParams(new FormData(form)).toString();
+        fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: data }).catch(function () {});
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({ event: 'lead_form', tool: 'calculateur' });
+        form.querySelector('#f-email').style.display = 'none';
+        form.querySelector('button').style.display = 'none';
+        document.getElementById('form-ok').style.display = 'block';
+      });
+    }
+  })();
+</script>
+</Base>

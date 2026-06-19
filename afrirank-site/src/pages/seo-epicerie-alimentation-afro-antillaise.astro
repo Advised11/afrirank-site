@@ -1,0 +1,137 @@
+---
+import Base from '../layouts/Base.astro';
+const calendly = 'https://calendly.com/contact-advised-seo/30min?back=1';
+const jsonLd = JSON.stringify({
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "SEO pour épicerie & alimentation afro-antillaise : transformez la recette en vente",
+      "description": "On cherche des recettes et des ingrédients afro-antillais, pas « acheter ». Blogs et GMS captent la vente. Reprenez-la avec AfriRank.",
+      "image": "https://www.afrirank.fr/images/article-alimentation.jpg",
+      "author": { "@type": "Person", "name": "Francis Ndimba", "url": "https://www.afrirank.fr/a-propos/" },
+      "publisher": { "@id": "https://www.afrirank.fr/#afrirank" },
+      "mainEntityOfPage": "https://www.afrirank.fr/seo-epicerie-alimentation-afro-antillaise/"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://www.afrirank.fr/" },
+        { "@type": "ListItem", "position": 2, "name": "SEO marques afro-caribéennes", "item": "https://www.afrirank.fr/seo-marques-afro-caribeennes/" },
+        { "@type": "ListItem", "position": 3, "name": "Épicerie & alimentation afro-antillaise", "item": "https://www.afrirank.fr/seo-epicerie-alimentation-afro-antillaise/" }
+      ]
+    }
+  ]
+});
+---
+<Base
+  title="SEO épicerie & alimentation afro-antillaise | AfriRank"
+  description="On cherche des recettes et des ingrédients afro-antillais, pas « acheter ». Blogs et GMS captent la vente. Reprenez-la avec AfriRank."
+  jsonLd={jsonLd}>
+
+<section class="hero hero--page wrap">
+  <div class="hero-top">
+    <nav class="breadcrumb reveal" aria-label="Fil d'Ariane">
+      <a href="/">Accueil</a><span class="sep">›</span>
+      <a href="/seo-marques-afro-caribeennes/">SEO marques afro</a><span class="sep">›</span>
+      <span>Épicerie &amp; alimentation afro-antillaise</span>
+    </nav>
+    <span class="hero-eyebrow reveal"><img src="/images/icon-orange.png" alt="" /> Verticale produit</span>
+    <h1 class="reveal">SEO épicerie &amp; alimentation afro-antillaise : <em>transformez la recette en vente</em>.</h1>
+    <p class="hero-sub reveal">Quelqu'un veut cuisiner un thiéboudienne ce week-end. Il cherche le riz brisé, la pâte de tomate, le nététou. Il a besoin de produits — vos produits. Et c'est un blog cuisine sans boutique ou une grande surface qui capte sa recherche.</p>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:clamp(20px,3vw,40px)">
+  <div class="wrap">
+    <figure class="article-figure reveal">
+      <img src="/images/article-alimentation.jpg" alt="Étal d'épices et de produits d'épicerie afro-antillaise" loading="lazy" width="1280" height="560" />
+    </figure>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:0">
+  <div class="wrap article reveal">
+    <p class="lead">Vous tenez l'épicerie qui a exactement ce qu'il faut. Vous connaissez les marques, les origines, les substitutions. Mais sur Google, la conversation qui mène à l'achat se passe sans vous. Ce n'est pas un problème de notoriété — c'est un problème de captation, et dans la food, elle commence dès la recette.</p>
+
+    <h2>Pourquoi l'alimentation afro-antillaise est un cas SEO à part</h2>
+    <p>Ici, l'intention d'achat est presque toujours déguisée en intention culinaire. La requête commerciale se cache derrière la recette, l'ingrédient ou la curiosité :</p>
+    <ul>
+      <li><strong>Recette :</strong> poulet yassa, mafé, thiéboudienne, accras de morue, colombo, alloco, attiéké, bissap.</li>
+      <li><strong>Ingrédient :</strong> fonio, attiéké, gombo, nététou, huile de palme rouge, piment antillais, farine de manioc, riz brisé.</li>
+      <li><strong>Approvisionnement :</strong> « où acheter [ingrédient] », « épicerie africaine livraison », « équivalent de [ingrédient] ».</li>
+      <li><strong>Usage et conservation :</strong> « comment cuisiner l'attiéké », « avec quoi remplacer le nététou ».</li>
+    </ul>
+    <p>Votre catalogue croisé avec le répertoire culinaire afro-antillais, c'est une carte de centaines de pages à fort volume récurrent.</p>
+
+    <h2>Qui capte vos ventes pendant que vous tenez l'épicerie</h2>
+    <ul>
+      <li><strong>Les blogs cuisine et médias food</strong> qui dominent toutes les requêtes recette — et placent des liens affiliés.</li>
+      <li><strong>Les grandes surfaces et drives</strong> qui captent « où acheter [ingrédient] » sans avoir la référence authentique.</li>
+      <li><strong>Les marketplaces généralistes</strong> qui écrasent les requêtes ingrédient.</li>
+      <li><strong>Les IA</strong> qui donnent une recette de yassa complète sans jamais orienter vers une épicerie — ni citer la vôtre.</li>
+    </ul>
+
+    <h2>Les trois territoires à reprendre</h2>
+    <h3>1. Votre SERP de marque et vos produits référence</h3>
+    <p>Si une marketplace revend vos références et passe devant votre boutique, vous lui cédez vos propres ventes. <a href="/posseder-serp-de-marque/">Reprendre sa SERP de marque.</a></p>
+    <h3>2. Vos requêtes ingrédient et approvisionnement</h3>
+    <p>« Acheter fonio », « farine de manioc en ligne », « épices colombo authentiques » : le cœur du volume transactionnel. Ces requêtes doivent mener à vos fiches et catégories, pas à un drive généraliste.</p>
+    <h3>3. Le pont recette → produit (et les IA)</h3>
+    <p>Le trafic est sur les recettes ; la vente est sur les ingrédients. Construire le pont — de la recette authentique vers les produits pour la réaliser — capte un trafic énorme en amont. Et c'est ce contenu que les <a href="/visibilite-ia-geo-marques-afro/">IA résument</a>.</p>
+
+    <h2>Les pages qui font (ou défont) votre référencement</h2>
+    <p><strong>Les fiches produit.</strong> Souvent réduites au nom et au poids. Elles doivent répondre à l'intention culinaire : à quoi sert cet ingrédient, dans quels plats, comment le doser, le conserver, le remplacer.</p>
+    <p><strong>Les pages catégorie.</strong> « Épices africaines », « féculents et farines », « produits antillais », « boissons et sirops » : vos pages les plus puissantes, souvent les plus pauvres en contenu.</p>
+    <p><strong>Le contenu recette.</strong> Le carburant de la food afro-antillaise. Chaque recette reliée aux produits pour la cuisiner. C'est l'angle mort le plus coûteux de la verticale.</p>
+
+    <h2>Combien ça vous coûte, réellement</h2>
+    <p>Trois pertes cumulées : <strong>la marge</strong> (prix de gros au lieu du détail), <strong>le client récurrent</strong> (l'épicerie est l'univers du réachat par excellence — riz, épices, bissap chaque mois), <strong>la marque</strong> (un tiers décide du prix et de la sélection associés à votre nom). Le Diagnostic mesure la fuite pour VOTRE épicerie ; estimez-la d'abord avec le <a href="/calculateur-ca-organique-perdu/">calculateur</a>.</p>
+
+    <blockquote><p>Le quoi et le combien, je vous les montre. Le comment — quelles recettes prioriser, comment les relier aux fiches — c'est le travail de l'accompagnement.</p></blockquote>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="kicker">Questions fréquentes</span><h2 class="sec-title">Vos questions, mes réponses.</h2></div>
+    <div class="faq">
+      <div class="faq-item reveal"><button class="faq-q">Mon épicerie est connue de la communauté, ai-je besoin de SEO ? <span class="pm"></span></button><div class="faq-a"><p>Justement. Votre réputation crée la demande culinaire ; le SEO décide qui l'encaisse. Si les blogs et drives dominent vos requêtes recette et ingrédient, vous financez leur trafic avec votre culture.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-q">Le SEO food afro-antillais est-il spécifique ? <span class="pm"></span></button><div class="faq-a"><p>La mécanique est classique, le terrain non : l'intention d'achat se cache derrière la recette et l'ingrédient, la concurrence inclut des médias sans boutique, et les IA résument les recettes en permanence.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-q">Dois-je publier des recettes pour vendre des produits ? <span class="pm"></span></button><div class="faq-a"><p>Le contenu recette est le pont vers la vente, mais il vient après l'essentiel : récupérer votre SERP de marque et muscler vos pages ingrédient. Le Diagnostic priorise pour éviter de produire des recettes qui ne convertissent pas.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-q">Comment apparaître quand une IA donne une recette afro ? <span class="pm"></span></button><div class="faq-a"><p>C'est du GEO : présence structurée sur les recettes et les ingrédients, marque reliée à ses produits, contenu citable. Le Diagnostic vérifie si vous êtes cité aujourd'hui.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-q">Combien de temps avant des résultats ? <span class="pm"></span></button><div class="faq-a"><p>Récupérer sa SERP de marque et ses requêtes ingrédient va plus vite que conquérir toutes les recettes. Le Diagnostic place les gains rapides en premier.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="links-more reveal">
+      <h2>Pour aller plus loin</h2>
+      <ul>
+        <li><a href="/seo-marques-afro-caribeennes/">Stratégie SEO pour marques afro-caribéennes</a></li>
+        <li><a href="/recuperer-ca-revendeurs-google/">Reprenez le CA capté par vos revendeurs</a></li>
+        <li><a href="/seo-mode-lifestyle-afro/">Mode &amp; lifestyle afro</a></li>
+        <li><a href="/visibilite-ia-geo-marques-afro/">Visibilité dans les IA pour marques afro</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="cta-band reveal">
+      <img src="/images/icon-cream.png" class="icon-watermark" alt="" />
+      <h2>Par où commencer : Le Diagnostic.</h2>
+      <p>Je chiffre le CA que les blogs, GMS et marketplaces captent à votre place sur l'univers food afro-antillais, et je trace le plan priorisé. 290 €, déductibles.</p>
+      <div class="cta-actions">
+        <a href={calendly} target="_blank" rel="noopener" class="btn btn--orange">Réserver Le Diagnostic
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+        <a href="/diagnostic-seo/" class="btn btn--cream">En savoir plus</a>
+      </div>
+    </div>
+  </div>
+</section>
+</Base>

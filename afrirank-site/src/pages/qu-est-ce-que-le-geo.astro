@@ -1,0 +1,111 @@
+---
+import Base from '../layouts/Base.astro';
+const calendly = 'https://calendly.com/contact-advised-seo/30min?back=1';
+const jsonLd = JSON.stringify({
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://www.afrirank.fr/" },
+        { "@type": "ListItem", "position": 2, "name": "SEO marques afro-caribéennes", "item": "https://www.afrirank.fr/seo-marques-afro-caribeennes/" },
+        { "@type": "ListItem", "position": 3, "name": "Qu'est-ce que le GEO ?", "item": "https://www.afrirank.fr/qu-est-ce-que-le-geo/" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "GEO et AEO, c'est la même chose ?", "acceptedAnswer": { "@type": "Answer", "text": "En pratique, oui. GEO (Generative Engine Optimization) et AEO (Answer Engine Optimization) désignent tous deux l'optimisation pour être visible et cité dans les réponses des IA. Le terme GEO est le plus répandu." } },
+        { "@type": "Question", "name": "Le GEO remplace-t-il le SEO ?", "acceptedAnswer": { "@type": "Answer", "text": "Non, il s'y ajoute. Les fondations se recoupent largement : entité claire, présence dans les bonnes sources, contenu structuré, site techniquement propre servent les deux." } },
+        { "@type": "Question", "name": "Comment savoir si ChatGPT recommande ma marque ?", "acceptedAnswer": { "@type": "Answer", "text": "Posez-lui les vraies questions d'achat de votre niche, comme le ferait une cliente, sur plusieurs formulations, et regardez si votre marque sort. Le Diagnostic le fait de façon systématique." } },
+        { "@type": "Question", "name": "Qu'est-ce qui rend une marque citable par une IA ?", "acceptedAnswer": { "@type": "Answer", "text": "Une entité claire et cohérente, une présence dans les sources que les IA lisent, un contenu factuel et structuré, des signaux de confiance et un accès technique propre." } }
+      ]
+    }
+  ]
+});
+---
+<Base
+  title="Qu'est-ce que le GEO (référencement dans les IA) ?"
+  description="Le GEO, c'est l'art de rendre votre marque citable par ChatGPT, Perplexity et Google AI. Définition simple et ce que ça change pour vous."
+  jsonLd={jsonLd}>
+
+<section class="hero hero--page wrap">
+  <div class="hero-top">
+    <nav class="breadcrumb reveal" aria-label="Fil d'Ariane">
+      <a href="/">Accueil</a><span class="sep">›</span>
+      <a href="/seo-marques-afro-caribeennes/">SEO marques afro</a><span class="sep">›</span>
+      <span>Qu'est-ce que le GEO ?</span>
+    </nav>
+    <span class="hero-eyebrow reveal"><img src="/images/icon-orange.png" alt="" /> Question fréquente</span>
+    <h1 class="reveal">Qu'est-ce que le GEO (référencement dans les IA) ?</h1>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:clamp(24px,4vw,48px)">
+  <div class="wrap article reveal">
+    <blockquote><p><strong>Réponse courte :</strong> le GEO (Generative Engine Optimization), aussi appelé AEO (Answer Engine Optimization), c'est l'ensemble des techniques qui rendent votre marque <strong>visible et citable dans les réponses des IA</strong> comme ChatGPT, Perplexity et Google AI. Là où le SEO vise à apparaître dans les pages de résultats Google, le GEO vise à être <strong>cité dans la réponse elle-même</strong>, quand l'utilisateur pose sa question à une IA.</p></blockquote>
+
+    <h2>GEO vs SEO : la vraie différence</h2>
+    <div class="tbl-wrap">
+      <table class="tbl">
+        <thead><tr><th>&nbsp;</th><th>SEO classique</th><th>GEO / AEO</th></tr></thead>
+        <tbody>
+          <tr><td>Cible</td><td>La page de résultats Google</td><td>La réponse générée par l'IA</td></tr>
+          <tr><td>Format</td><td>Une liste de 10 liens</td><td>Une réponse directe + 3 ou 4 marques citées</td></tr>
+          <tr><td>Visibilité</td><td>On peut être trouvé en cherchant</td><td>On est cité… ou on n'existe pas</td></tr>
+          <tr><td>Réflexe utilisateur</td><td>« je cherche »</td><td>« je demande »</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Le point clé : dans une réponse d'IA, <strong>il n'y a pas de page 2</strong>. L'IA sélectionne quelques marques. Soit la vôtre en fait partie, soit elle est invisible dans cette conversation.</p>
+
+    <h2>Pourquoi le GEO compte pour votre marque</h2>
+    <p>De plus en plus de gens ne cherchent plus, ils demandent. « Quelle marque de soin capillaire afro pour cheveux secs ? », « meilleur fond de teint peaux noires ». L'IA répond avec une liste courte de marques. Conséquence directe : <strong>la décision d'achat se forme avant le clic</strong>. Si votre marque est citée, vous partez gagnant. Sinon, vous vous battez pour entrer dans une conversation déjà tranchée — souvent au profit d'un concurrent moins connu mais mieux cité. C'est le même problème que la <a href="/recuperer-ca-revendeurs-google/">captation par les revendeurs</a>, transposé aux IA.</p>
+
+    <h2>La notoriété ne suffit pas</h2>
+    <p>Une IA ne fréquente pas votre communauté Instagram. Elle ne « connaît » pas votre réputation : elle lit des sources qu'elle juge fiables. Une marque très suivie mais absente de ces sources peut tout simplement ne jamais être recommandée. Notoriété humaine et citabilité machine sont deux choses différentes — voir le <a href="/visibilite-ia-geo-marques-afro/">guide complet de la visibilité IA pour marques afro</a>.</p>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="kicker">Questions fréquentes</span><h2 class="sec-title">Vos questions, mes réponses.</h2></div>
+    <div class="faq">
+      <div class="faq-item reveal"><button class="faq-q">GEO et AEO, c'est la même chose ? <span class="pm"></span></button><div class="faq-a"><p>En pratique, oui. GEO (Generative Engine Optimization) et AEO (Answer Engine Optimization) désignent tous deux l'optimisation pour être visible et cité dans les réponses des IA. Le terme GEO est le plus répandu.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-q">Le GEO remplace-t-il le SEO ? <span class="pm"></span></button><div class="faq-a"><p>Non, il s'y ajoute. Les fondations se recoupent largement : entité claire, présence dans les bonnes sources, contenu structuré, site techniquement propre servent les deux. On mène une seule stratégie sur deux fronts.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-q">Comment savoir si ChatGPT recommande ma marque ? <span class="pm"></span></button><div class="faq-a"><p>Posez-lui les vraies questions d'achat de votre niche, comme le ferait une cliente, sur plusieurs formulations, et regardez si votre marque sort. Le Diagnostic le fait de façon systématique et identifie pourquoi vous êtes citée ou non.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-q">Qu'est-ce qui rend une marque citable par une IA ? <span class="pm"></span></button><div class="faq-a"><p>Une entité claire et cohérente, une présence dans les sources que les IA lisent, un contenu factuel et structuré, des signaux de confiance et un accès technique propre. Le détail d'exécution relève de l'accompagnement.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="links-more reveal">
+      <h2>Pour aller plus loin</h2>
+      <ul>
+        <li><a href="/visibilite-ia-geo-marques-afro/">Visibilité IA (GEO) pour marques afro</a></li>
+        <li><a href="/seo-marques-afro-caribeennes/">Stratégie SEO pour marques afro-caribéennes</a></li>
+        <li><a href="/recuperer-ca-revendeurs-google/">Récupérez le CA capté par vos revendeurs</a></li>
+        <li><a href="/scorecard-visibilite-marque/">Tester votre score de visibilité</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="cta-band reveal">
+      <img src="/images/icon-cream.png" class="icon-watermark" alt="" />
+      <h2>Êtes-vous citée par les IA — et sinon, pourquoi ?</h2>
+      <p>Le Diagnostic intègre le front IA : il montre quelles marques sont recommandées à votre place et vos angles morts de citabilité. 290 €, déductibles.</p>
+      <div class="cta-actions">
+        <a href={calendly} target="_blank" rel="noopener" class="btn btn--orange">Réserver Le Diagnostic
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+        <a href="/diagnostic-seo/" class="btn btn--cream">En savoir plus</a>
+      </div>
+    </div>
+  </div>
+</section>
+</Base>

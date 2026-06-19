@@ -1,0 +1,132 @@
+---
+import Base from '../layouts/Base.astro';
+const calendly = 'https://calendly.com/contact-advised-seo/30min?back=1';
+const jsonLd = JSON.stringify({
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "Être recommandé par les IA (GEO) quand on est une marque afro établie",
+      "description": "ChatGPT, Perplexity et Google AI recommandent déjà des marques. Si la vôtre n'est pas citée, elle disparaît. Voici comment devenir citable.",
+      "author": { "@type": "Person", "name": "Francis Ndimba", "url": "https://www.afrirank.fr/a-propos/" },
+      "publisher": { "@id": "https://www.afrirank.fr/#afrirank" },
+      "mainEntityOfPage": "https://www.afrirank.fr/visibilite-ia-geo-marques-afro/"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://www.afrirank.fr/" },
+        { "@type": "ListItem", "position": 2, "name": "SEO marques afro-caribéennes", "item": "https://www.afrirank.fr/seo-marques-afro-caribeennes/" },
+        { "@type": "ListItem", "position": 3, "name": "Visibilité IA (GEO) pour marques afro", "item": "https://www.afrirank.fr/visibilite-ia-geo-marques-afro/" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "C'est quoi le GEO, en une phrase ?", "acceptedAnswer": { "@type": "Answer", "text": "Le GEO (Generative Engine Optimization) consiste à rendre votre marque visible et citable dans les réponses des IA comme ChatGPT, Perplexity et Google AI — là où la SEO classique vise les pages de résultats Google." } },
+        { "@type": "Question", "name": "Comment savoir si ChatGPT ou Perplexity recommande ma marque ?", "acceptedAnswer": { "@type": "Answer", "text": "Posez-leur les vraies questions d'achat de votre niche, comme le ferait une cliente, et regardez si votre marque sort. Faites-le sur plusieurs formulations. Un diagnostic le fait de façon systématique." } },
+        { "@type": "Question", "name": "Ma communauté est grosse, ça ne suffit pas pour les IA ?", "acceptedAnswer": { "@type": "Answer", "text": "Non. Une IA ne fréquente pas vos réseaux ; elle lit des sources qu'elle juge fiables. Une marque connue de sa communauté mais absente de ces sources peut très bien ne jamais être recommandée." } },
+        { "@type": "Question", "name": "Le GEO remplace-t-il le SEO ?", "acceptedAnswer": { "@type": "Answer", "text": "Non, il s'y ajoute. Les fondations se recoupent largement : entité claire, bonnes sources, contenu structuré, site propre servent les deux. On mène une seule stratégie sur deux fronts." } },
+        { "@type": "Question", "name": "En combien de temps une marque devient-elle citable par les IA ?", "acceptedAnswer": { "@type": "Answer", "text": "Cela dépend de votre point de départ : clarté de l'entité, présence dans les sources, état technique. Certains leviers produisent un effet assez vite, d'autres demandent de construire dans la durée." } }
+      ]
+    }
+  ]
+});
+---
+<Base
+  title="Visibilité IA (GEO) pour marques afro | AfriRank"
+  description="ChatGPT, Perplexity et Google AI recommandent déjà des marques. Si la vôtre n'est pas citée, elle disparaît. Voici comment devenir citable."
+  jsonLd={jsonLd}>
+
+<section class="hero hero--page wrap">
+  <div class="hero-top">
+    <nav class="breadcrumb reveal" aria-label="Fil d'Ariane">
+      <a href="/">Accueil</a><span class="sep">›</span>
+      <a href="/seo-marques-afro-caribeennes/">SEO marques afro</a><span class="sep">›</span>
+      <span>Visibilité IA (GEO)</span>
+    </nav>
+    <span class="hero-eyebrow reveal"><img src="/images/icon-orange.png" alt="" /> Guide · Territoire 3</span>
+    <h1 class="reveal">Être recommandé par les IA <em>quand on est une marque afro établie</em>.</h1>
+    <p class="hero-sub reveal">Une cliente demande à ChatGPT : « quelle marque de soin capillaire afro pour cheveux crépins secs ? ». L'IA répond avec trois ou quatre noms. Si le vôtre n'en fait pas partie, vous n'existez pas dans cette conversation. Pas en deuxième page — vous n'existez pas du tout.</p>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:clamp(24px,4vw,48px)">
+  <div class="wrap article reveal">
+    <p class="lead">C'est la rupture du GEO (Generative Engine Optimization) et de l'AEO. Sur Google, une marque mal classée reste trouvable. Dans une réponse d'IA, il n'y a pas de page 2 : il y a une liste courte, et soit vous y êtes, soit vous n'y êtes pas.</p>
+    <p>Pour les marques afro-caribéennes établies, le risque est particulier : vous êtes connue de votre communauté, mais cette notoriété humaine ne se traduit pas automatiquement en notoriété machine. Une IA ne « connaît » pas votre réputation Instagram. Elle connaît ce qu'elle a lu sur des sources qu'elle juge fiables.</p>
+
+    <h2>Les moteurs de réponse deviennent un point d'entrée d'achat</h2>
+    <p>De plus en plus de gens ne « cherchent » plus, ils demandent. La décision d'achat se forme en amont du clic : avant même d'arriver sur Google, le client a déjà une liste courte de marques fournie par une IA. Si vous y êtes, vous partez gagnant. Sinon, vous vous battez pour rentrer dans une conversation déjà tranchée. Et ce point d'entrée grossit.</p>
+
+    <h2>Une marque non citée disparaît de la recommandation</h2>
+    <p>L'IA ne classe pas. Elle sélectionne. Elle ne vous donne pas une position 14 — elle ne vous mentionne pas.</p>
+    <ul>
+      <li><strong>Pas de seconde chance dans la réponse.</strong> Là où une SERP affiche dix résultats, une réponse d'IA en cite trois ou quatre.</li>
+      <li><strong>La notoriété communautaire ne suffit pas.</strong> Si les sources que l'IA lit ne parlent pas de vous de façon structurée, elle ne fait pas le lien.</li>
+      <li><strong>Le concurrent moins connu mais mieux cité gagne.</strong> La citabilité bat parfois la notoriété brute.</li>
+    </ul>
+    <p>C'est le même schéma que la <a href="/recuperer-ca-revendeurs-google/">captation par les revendeurs</a>, transposé aux IA : la demande existe, mais elle est interceptée par celui qui est mieux positionné pour être lu — ici, par la machine.</p>
+
+    <h2>Ce qui rend une marque « citable » par une IA</h2>
+    <h3>1. Une entité claire et cohérente</h3>
+    <p>L'IA doit pouvoir identifier votre marque comme une entité nette : qui vous êtes, ce que vous vendez, pour qui. Nom employé de façon cohérente partout, description stable, catégorie évidente.</p>
+    <h3>2. Une présence dans les sources que les IA lisent</h3>
+    <p>Les moteurs de réponse s'appuient sur un socle de sources jugées fiables : articles, comparatifs, contenus de référence. Y figurer, sur les bonnes thématiques, c'est devenir candidat à la citation.</p>
+    <h3>3. Un contenu structuré et factuel</h3>
+    <p>Les IA reprennent ce qui est clair et bien organisé : réponses directes à « pour quel type de cheveux », « quels ingrédients », « pour quelle peau ». Un texte marketing vague n'est pas extrait.</p>
+    <h3>4. Des signaux de confiance</h3>
+    <p>Avis cohérents, informations vérifiables, présence reconnue : autant de signaux qui rassurent le modèle sur le fait que vous recommander est sûr.</p>
+    <h3>5. Un accès technique propre</h3>
+    <p>Si les robots des IA ne peuvent pas lire votre site, vous vous excluez vous-même de leur base. L'accessibilité technique est une condition de base, souvent négligée.</p>
+
+    <h2>GEO et SEO : la même bataille, deux fronts</h2>
+    <p>Ne traitez pas le GEO comme un chantier séparé. C'est le prolongement du même problème : qui capte la demande que votre marque crée ? Une entité claire, une présence dans les bonnes sources, un contenu structuré et un site propre servent à la fois votre SERP de marque, votre reconquête face aux <a href="/reprendre-demande-marketplaces/">marketplaces</a> et votre citabilité par les IA. On ne mène pas trois projets. On mène une stratégie sur trois fronts.</p>
+
+    <blockquote><p>Le diagnostic montre le quoi et le combien. Le comment — rendre concrètement votre marque citable, source par source — appartient à l'accompagnement.</p></blockquote>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="kicker">Questions fréquentes</span><h2 class="sec-title">Vos questions, mes réponses.</h2></div>
+    <div class="faq">
+      <div class="faq-item reveal"><button class="faq-q">C'est quoi le GEO, en une phrase ? <span class="pm"></span></button><div class="faq-a"><p>Le GEO (Generative Engine Optimization) consiste à rendre votre marque visible et citable dans les réponses des IA comme ChatGPT, Perplexity et Google AI — là où la SEO classique vise les pages de résultats Google.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-q">Comment savoir si ChatGPT recommande ma marque ? <span class="pm"></span></button><div class="faq-a"><p>Posez-leur les vraies questions d'achat de votre niche, comme le ferait une cliente, et regardez si votre marque sort. Faites-le sur plusieurs formulations. Un diagnostic le fait de façon systématique et identifie pourquoi vous êtes citée ou non.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-q">Ma communauté est grosse, ça ne suffit pas pour les IA ? <span class="pm"></span></button><div class="faq-a"><p>Non. Une IA ne fréquente pas vos réseaux ; elle lit des sources qu'elle juge fiables. Une marque connue de sa communauté mais absente de ces sources peut très bien ne jamais être recommandée.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-q">Le GEO remplace-t-il le SEO ? <span class="pm"></span></button><div class="faq-a"><p>Non, il s'y ajoute. Les fondations se recoupent largement : entité claire, bonnes sources, contenu structuré, site propre servent les deux. On mène une seule stratégie sur deux fronts, pas deux projets séparés.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-q">En combien de temps devient-on citable par les IA ? <span class="pm"></span></button><div class="faq-a"><p>Cela dépend de votre point de départ : clarté de l'entité, présence dans les sources, état technique. Certains leviers produisent un effet assez vite, d'autres demandent de construire dans la durée. Un diagnostic priorise les gains les plus rapides d'abord.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="links-more reveal">
+      <h2>Pour aller plus loin</h2>
+      <ul>
+        <li><a href="/qu-est-ce-que-le-geo/">Qu'est-ce que le GEO ? (définition)</a></li>
+        <li><a href="/seo-marques-afro-caribeennes/">Stratégie SEO pour marques afro-caribéennes</a></li>
+        <li><a href="/recuperer-ca-revendeurs-google/">Récupérez le CA capté par vos revendeurs</a></li>
+        <li><a href="/posseder-serp-de-marque/">Posséder votre SERP de marque</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="cta-band reveal">
+      <img src="/images/icon-cream.png" class="icon-watermark" alt="" />
+      <h2>Êtes-vous citée quand votre cible interroge une IA ?</h2>
+      <p>Le Diagnostic intègre le front IA : il montre si vous êtes citée sur les questions d'achat clés, quelles marques sont recommandées à votre place, et vos angles morts de citabilité.</p>
+      <div class="cta-actions">
+        <a href={calendly} target="_blank" rel="noopener" class="btn btn--orange">Réserver Le Diagnostic
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+        <a href="/diagnostic-seo/" class="btn btn--cream">En savoir plus</a>
+      </div>
+    </div>
+  </div>
+</section>
+</Base>

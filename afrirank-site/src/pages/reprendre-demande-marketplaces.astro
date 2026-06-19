@@ -1,0 +1,129 @@
+---
+import Base from '../layouts/Base.astro';
+const calendly = 'https://calendly.com/contact-advised-seo/30min?back=1';
+const jsonLd = JSON.stringify({
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "Reprendre la demande que les marketplaces vous prennent",
+      "description": "Amazon capte la demande que votre marque crée. Voici le vrai coût, le mécanisme, et comment reprendre vos ventes directes sans guerre frontale.",
+      "author": { "@type": "Person", "name": "Francis Ndimba", "url": "https://www.afrirank.fr/a-propos/" },
+      "publisher": { "@id": "https://www.afrirank.fr/#afrirank" },
+      "mainEntityOfPage": "https://www.afrirank.fr/reprendre-demande-marketplaces/"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://www.afrirank.fr/" },
+        { "@type": "ListItem", "position": 2, "name": "SEO marques afro-caribéennes", "item": "https://www.afrirank.fr/seo-marques-afro-caribeennes/" },
+        { "@type": "ListItem", "position": 3, "name": "Reprendre la demande captée par les marketplaces", "item": "https://www.afrirank.fr/reprendre-demande-marketplaces/" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "Dois-je quitter Amazon et les marketplaces ?", "acceptedAnswer": { "@type": "Answer", "text": "Pas forcément. Elles peuvent rester un canal de découverte ou de volume. L'objectif n'est pas de tout couper, mais de cesser de leur céder la demande que vous créez vous-même — surtout sur votre marque." } },
+        { "@type": "Question", "name": "Pourquoi une marketplace ranke-t-elle sur ma propre marque ?", "acceptedAnswer": { "@type": "Answer", "text": "Parce que son domaine est ancien, énorme et techniquement très optimisé. Google la juge fiable, donc la positionne — même sur votre nom. C'est un écart technique, et sur les requêtes de marque, il est largement rattrapable." } },
+        { "@type": "Question", "name": "Combien de CA part réellement vers les marketplaces ?", "acceptedAnswer": { "@type": "Answer", "text": "Impossible à dire sans regarder vos données : Search Console, analytics, et vos propres ventes marketplace. C'est précisément ce qu'un diagnostic chiffre, en ordre de grandeur." } },
+        { "@type": "Question", "name": "Pourquoi ne pas se battre sur toutes les requêtes génériques ?", "acceptedAnswer": { "@type": "Answer", "text": "Parce qu'affronter un domaine de plusieurs millions de pages sur l'ensemble de la niche coûte cher et donne peu. On choisit les requêtes précises où votre légitimité bat leur catalogue." } },
+        { "@type": "Question", "name": "La vente directe vaut-elle vraiment plus qu'une vente marketplace ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui, et l'écart dépasse la commission : marge pleine, email du client, possibilité de fidéliser et de faire revenir, contrôle de l'expérience. Une vente directe construit votre actif ; une vente marketplace construit le leur." } }
+      ]
+    }
+  ]
+});
+---
+<Base
+  title="Reprendre la demande captée par les marketplaces | AfriRank"
+  description="Amazon capte la demande que votre marque crée. Voici le vrai coût, le mécanisme, et comment reprendre vos ventes directes sans guerre frontale."
+  jsonLd={jsonLd}>
+
+<section class="hero hero--page wrap">
+  <div class="hero-top">
+    <nav class="breadcrumb reveal" aria-label="Fil d'Ariane">
+      <a href="/">Accueil</a><span class="sep">›</span>
+      <a href="/seo-marques-afro-caribeennes/">SEO marques afro</a><span class="sep">›</span>
+      <span>Reprendre la demande captée par les marketplaces</span>
+    </nav>
+    <span class="hero-eyebrow reveal"><img src="/images/icon-orange.png" alt="" /> Guide · Territoire 2</span>
+    <h1 class="reveal">Reprendre la demande que <em>les marketplaces vous prennent</em>.</h1>
+    <p class="hero-sub reveal">Vous avez construit la demande. Et au moment d'acheter, une partie de vos clients tape votre nom, voit Amazon ou une marketplace en haut, clique, et achète là-bas. Le produit s'est vendu — mais pas chez vous.</p>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:clamp(24px,4vw,48px)">
+  <div class="wrap article reveal">
+    <p class="lead">Vous avez payé la notoriété, la marketplace a encaissé la conversion. Vous avez fait le travail de demande, elle a pris la marge et, au passage, la donnée client. Ce n'est pas un problème de notoriété. C'est un problème de captation. Et la captation, ça se reprend.</p>
+
+    <h2>Le mécanisme : comment la marketplace capte votre demande</h2>
+    <p>Une marketplace ne crée pas votre demande. Elle l'intercepte. Deux canaux.</p>
+    <h3>Canal 1 : la demande de marque</h3>
+    <p>Quelqu'un cherche votre nom, ou votre nom + un produit. Si la marketplace ranke sur ces requêtes — et elle ranke souvent, parce que son domaine est colossal — elle capte un clic qui vous était destiné. C'est la captation la plus chère pour vous, parce que c'est de la demande chaude, déjà décidée, que vous avez générée vous-même.</p>
+    <h3>Canal 2 : les requêtes génériques</h3>
+    <p>« huile capillaire afro », « fond de teint peau noire », « épicerie antillaise en ligne ». L'internaute ne vous cherche pas encore — il cherche une solution. La marketplace truste ces requêtes par sa masse de pages et se place en intermédiaire entre le besoin et vous. Vous devenez un fournisseur dans son catalogue, pas une marque dans la tête du client. Plus elle capte de génériques, plus elle accumule d'avis sur vos produits, plus elle ranke ensuite sur votre marque. Le cercle se referme.</p>
+
+    <h2>Le vrai coût (au-delà de la commission)</h2>
+    <h3>La marge</h3>
+    <p>Chaque vente passée par une marketplace, c'est une commission prélevée plus, souvent, une pression sur le prix. La même vente en direct vous laisse la marge pleine. Sur du volume, l'écart est massif et se cumule mois après mois.</p>
+    <h3>La donnée client</h3>
+    <p>C'est le coût le plus sous-estimé. Une vente en direct vous donne un email, un comportement d'achat, la possibilité de fidéliser. Une vente sur marketplace vous donne un numéro de commande. Le client appartient à la plateforme, pas à vous.</p>
+    <h3>La dépendance</h3>
+    <p>Plus une part de votre CA passe par une marketplace, plus elle a de pouvoir sur vous : conditions, classement, frais, visibilité. Le jour où les règles changent, vous subissez.</p>
+    <h3>L'effacement de la marque</h3>
+    <p>Sur une marketplace, vous êtes une fiche parmi des milliers, dans le gabarit de la plateforme. Pour une marque afro-caribéenne dont la force est le lien communautaire et l'identité, c'est un appauvrissement stratégique, pas seulement financier.</p>
+
+    <h2>La logique de reconquête : choisir ses batailles</h2>
+    <p>Le piège à éviter : vouloir tout reprendre d'un coup. Affronter une marketplace de face sur l'intégralité des génériques, c'est se battre contre un domaine de plusieurs millions de pages. La reconquête intelligente choisit les batailles gagnables, dans cet ordre.</p>
+    <ol>
+      <li><strong>La demande de marque.</strong> Sur votre propre nom, la marketplace n'a pas un avantage décisif. Reprendre la 1<sup>re</sup> place sur « [marque] » récupère la demande la plus chaude. <a href="/posseder-serp-de-marque/">Voir comment posséder votre SERP de marque.</a></li>
+      <li><strong>Les génériques de niche où vous êtes légitime.</strong> Pas « huile capillaire » en général, mais les requêtes précises où votre produit est exactement la bonne réponse. Vous gagnez parce que vous êtes plus pertinent qu'un catalogue.</li>
+      <li><strong>La conversion vers le direct.</strong> Une fois le clic récupéré, il faut qu'acheter en direct soit le choix évident : meilleure offre, expérience de marque, raisons de revenir.</li>
+    </ol>
+
+    <blockquote><p>Le diagnostic montre le quoi et le combien. Le comment — la reprise requête par requête, page par page — appartient à l'accompagnement.</p></blockquote>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="kicker">Questions fréquentes</span><h2 class="sec-title">Vos questions, mes réponses.</h2></div>
+    <div class="faq">
+      <div class="faq-item reveal"><button class="faq-q">Dois-je quitter Amazon et les marketplaces ? <span class="pm"></span></button><div class="faq-a"><p>Pas forcément. Elles peuvent rester un canal de découverte ou de volume. L'objectif n'est pas de tout couper, mais de cesser de leur céder la demande que vous créez vous-même — surtout sur votre marque. On rééquilibre vers le direct.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-q">Pourquoi une marketplace ranke-t-elle sur ma propre marque ? <span class="pm"></span></button><div class="faq-a"><p>Parce que son domaine est ancien, énorme et techniquement très optimisé. Google la juge fiable, donc la positionne — même sur votre nom. Sur les requêtes de marque, cet écart est largement rattrapable.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-q">Combien de CA part réellement vers les marketplaces ? <span class="pm"></span></button><div class="faq-a"><p>Impossible à dire sans regarder vos données : Search Console, analytics, et vos ventes marketplace. C'est précisément ce qu'un diagnostic chiffre, en ordre de grandeur, plutôt que d'avancer un pourcentage générique.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-q">Pourquoi ne pas se battre sur toutes les requêtes génériques ? <span class="pm"></span></button><div class="faq-a"><p>Parce qu'affronter un domaine de plusieurs millions de pages sur l'ensemble de la niche coûte cher et donne peu. On choisit les requêtes précises où votre légitimité bat leur catalogue. Moins de fronts, plus de victoires.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-q">La vente directe vaut-elle vraiment plus ? <span class="pm"></span></button><div class="faq-a"><p>Oui, et l'écart dépasse la commission : marge pleine, email du client, possibilité de fidéliser et de faire revenir, contrôle de l'expérience. Une vente directe construit votre actif ; une vente marketplace construit le leur.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="links-more reveal">
+      <h2>Pour aller plus loin</h2>
+      <ul>
+        <li><a href="/seo-marques-afro-caribeennes/">Stratégie SEO pour marques afro-caribéennes</a></li>
+        <li><a href="/recuperer-ca-revendeurs-google/">Récupérez le CA capté par vos revendeurs</a></li>
+        <li><a href="/marketplace-vs-site-de-marque/">Marketplace vs site de marque : qui capte le trafic ?</a></li>
+        <li><a href="/pourquoi-revendeurs-avant-marque-google/">Pourquoi mes revendeurs passent avant ma marque</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="cta-band reveal">
+      <img src="/images/icon-cream.png" class="icon-watermark" alt="" />
+      <h2>Combien de votre demande part vers les marketplaces ?</h2>
+      <p>Le Diagnostic met sur la table les requêtes où une marketplace vous coiffe, l'ordre de grandeur du CA qui transite ailleurs, et les batailles gagnables classées par effort/gain.</p>
+      <div class="cta-actions">
+        <a href={calendly} target="_blank" rel="noopener" class="btn btn--orange">Réserver Le Diagnostic
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+        <a href="/diagnostic-seo/" class="btn btn--cream">En savoir plus</a>
+      </div>
+    </div>
+  </div>
+</section>
+</Base>

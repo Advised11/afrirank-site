@@ -1,0 +1,135 @@
+---
+import Base from '../layouts/Base.astro';
+const calendly = 'https://calendly.com/contact-advised-seo/30min?back=1';
+const jsonLd = JSON.stringify({
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "url": "https://www.afrirank.fr/recuperer-ca-revendeurs-google/",
+      "name": "Récupérez le CA capté par vos revendeurs | AfriRank",
+      "description": "Votre marque est connue, mais ce sont vos revendeurs qui encaissent sur Google. AfriRank chiffre la fuite et trace le plan pour reprendre vos ventes directes.",
+      "isPartOf": { "@id": "https://www.afrirank.fr/#website" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://www.afrirank.fr/" },
+        { "@type": "ListItem", "position": 2, "name": "SEO marques afro-caribéennes", "item": "https://www.afrirank.fr/seo-marques-afro-caribeennes/" },
+        { "@type": "ListItem", "position": 3, "name": "Récupérer le CA capté par vos revendeurs", "item": "https://www.afrirank.fr/recuperer-ca-revendeurs-google/" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "Ma marque est déjà connue, ai-je vraiment besoin de SEO ?", "acceptedAnswer": { "@type": "Answer", "text": "Justement parce qu'elle est connue. La notoriété crée la demande ; le SEO décide qui l'encaisse. Une marque connue dont les revendeurs dominent Google finance leur croissance avec sa propre réputation." } },
+        { "@type": "Question", "name": "Pourquoi mes revendeurs rankent-ils devant moi ?", "acceptedAnswer": { "@type": "Answer", "text": "Souvent un domaine plus ancien, plus de contenu indexé, des fiches produits mieux structurées et un maillage interne plus dense. Rien d'imbattable : ce sont des écarts qui se rattrapent." } },
+        { "@type": "Question", "name": "Le SEO afro-caribéen est-il différent du SEO classique ?", "acceptedAnswer": { "@type": "Answer", "text": "La mécanique est la même, le terrain non : requêtes spécifiques, concurrence de marketplaces communautaires, et un enjeu fort de présence dans les IA. AfriRank est calé sur ce terrain." } },
+        { "@type": "Question", "name": "Combien de temps avant de voir des résultats ?", "acceptedAnswer": { "@type": "Answer", "text": "Reprendre sa SERP de marque va plus vite que conquérir des requêtes catégorie. Le Diagnostic priorise les gains les plus rapides en premier." } },
+        { "@type": "Question", "name": "Que se passe-t-il après Le Diagnostic ?", "acceptedAnswer": { "@type": "Answer", "text": "Vous avez le chiffrage et le plan. Soit vous l'exécutez en interne, soit vous passez en accompagnement (les 290 € sont alors déduits)." } }
+      ]
+    }
+  ]
+});
+---
+<Base
+  title="Récupérez le CA capté par vos revendeurs | AfriRank"
+  description="Votre marque est connue, mais ce sont vos revendeurs qui encaissent sur Google. AfriRank chiffre la fuite et trace le plan pour reprendre vos ventes directes."
+  jsonLd={jsonLd}>
+
+<section class="hero hero--page wrap">
+  <div class="hero-top">
+    <nav class="breadcrumb reveal" aria-label="Fil d'Ariane">
+      <a href="/">Accueil</a><span class="sep">›</span>
+      <a href="/seo-marques-afro-caribeennes/">SEO marques afro</a><span class="sep">›</span>
+      <span>Récupérer le CA capté par vos revendeurs</span>
+    </nav>
+    <span class="hero-eyebrow reveal"><img src="/images/icon-orange.png" alt="" /> La fuite</span>
+    <h1 class="reveal">Vos clients vous cherchent. <em>Ce sont vos revendeurs qui encaissent.</em></h1>
+    <p class="hero-sub reveal">Tapez le nom de votre marque sur Google. Puis votre produit phare. Regardez qui sort avant vous : un revendeur, une marketplace, un comparateur. Le client est venu pour vous. Il achète chez eux.</p>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:clamp(24px,4vw,48px)">
+  <div class="wrap article reveal">
+    <p class="lead">Vous payez deux fois. Une fois la marge que vous lâchez au grossiste. Une seconde fois en perdant la donnée client, le réachat, et le contrôle de votre image. Pour une marque afro-caribéenne déjà installée, ce n'est pas un problème de notoriété. C'est un problème de <strong>captation</strong>.</p>
+
+    <h2>Le scénario que vit chaque marque afro établie</h2>
+    <p>Vous avez construit la demande : années de bouche-à-oreille, de communauté, de présence en boutique et sur les réseaux. Les gens connaissent votre nom et cherchent vos produits.</p>
+    <p>Sauf que sur Google, la page qui répond à cette recherche n'est pas la vôtre. C'est celle d'un site qui a un domaine plus ancien, plus de contenu, une fiche produit mieux optimisée. Il n'a pas votre marque — il a juste pris la place qui revenait à votre marque.</p>
+    <p>Résultat concret :</p>
+    <ul>
+      <li>Un internaute cherche « [votre catégorie] » → il tombe sur un revendeur, pas sur vous.</li>
+      <li>Il cherche « [votre marque] [produit] » → la marketplace est au-dessus de votre fiche.</li>
+      <li>Il pose la question à ChatGPT ou Perplexity → votre marque n'est même pas citée.</li>
+    </ul>
+    <p>Chacune de ces requêtes est une vente que vous avez méritée et qu'un autre encaisse. <a href="/pourquoi-revendeurs-avant-marque-google/">Pourquoi vos revendeurs passent-ils devant vous ?</a></p>
+
+    <h2>Combien ça vous coûte, réellement</h2>
+    <p>La fuite est invisible parce qu'elle ne figure sur aucune facture. Elle se cache dans l'écart entre la demande que votre marque génère et le chiffre d'affaires direct que vous encaissez. Trois pertes cumulées :</p>
+    <ol>
+      <li><strong>La marge.</strong> Chaque vente partie chez un revendeur, c'est votre marge de gros au lieu de votre marge de détail.</li>
+      <li><strong>Le client.</strong> Vente indirecte = pas d'e-mail, pas de réachat, pas de programme de fidélité. Vous louez votre propre clientèle.</li>
+      <li><strong>La marque.</strong> Quand un tiers possède votre SERP, c'est lui qui dicte le prix, la présentation et l'expérience associés à votre nom.</li>
+    </ol>
+    <p>Le montant exact dépend de vos volumes, vos marges et l'intensité de la captation sur vos requêtes. C'est précisément ce que Le Diagnostic chiffre — et vous pouvez déjà en avoir un ordre de grandeur avec le <a href="/calculateur-ca-organique-perdu/">calculateur de CA organique perdu</a>.</p>
+
+    <h2>Ce que « reprendre le contrôle » veut dire</h2>
+    <p>Reprendre le contrôle, ce n'est pas « faire du SEO ». C'est récupérer trois territoires, dans cet ordre :</p>
+    <ul>
+      <li><strong><a href="/posseder-serp-de-marque/">Votre SERP de marque.</a></strong> Quand on tape votre nom, on doit tomber sur vous — site, fiches, contenus — avant tout revendeur.</li>
+      <li><strong><a href="/reprendre-demande-marketplaces/">Vos requêtes catégorie.</a></strong> Les recherches sans marque doivent mener à vos pages, pas seulement à celles des marketplaces.</li>
+      <li><strong><a href="/visibilite-ia-geo-marques-afro/">Votre présence dans les IA.</a></strong> ChatGPT, Perplexity et Google AI deviennent un point d'entrée d'achat. Une marque non citée disparaît de la recommandation.</li>
+    </ul>
+    <p>Le <em>quoi</em> et le <em>combien</em>, je vous les montre. Le <em>comment</em> — l'exécution page par page — c'est le travail de l'accompagnement.</p>
+
+    <h2>Pourquoi AfriRank</h2>
+    <p>Je suis Francis, consultant SEO depuis 11 ans. AfriRank ne fait qu'une chose : aider les marques afro-caribéennes établies à arrêter de financer la croissance de leurs revendeurs et à ramener ce chiffre d'affaires chez elles. Pas de jargon, pas de rapport de 80 pages que personne ne lit. Un chiffrage de ce que vous perdez, une carte de là où vous le perdez, et un plan pour le reprendre.</p>
+
+    <blockquote><p>Vous repartez avec le chiffre, même si vous exécutez le plan vous-même.</p></blockquote>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="kicker">Questions fréquentes</span><h2 class="sec-title">Vos questions, mes réponses.</h2></div>
+    <div class="faq">
+      <div class="faq-item reveal"><button class="faq-q">Ma marque est déjà connue, ai-je vraiment besoin de SEO ? <span class="pm"></span></button><div class="faq-a"><p>Justement parce qu'elle est connue. La notoriété crée la demande ; le SEO décide qui l'encaisse. Une marque connue dont les revendeurs dominent Google finance leur croissance avec sa propre réputation.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-q">Pourquoi mes revendeurs rankent-ils devant moi ? <span class="pm"></span></button><div class="faq-a"><p>Souvent un domaine plus ancien, plus de contenu indexé, des fiches produits mieux structurées et un maillage interne plus dense. Rien d'imbattable : ce sont des écarts qui se rattrapent.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-q">Le SEO afro-caribéen est-il différent du SEO classique ? <span class="pm"></span></button><div class="faq-a"><p>La mécanique est la même, le terrain non : requêtes spécifiques, concurrence de marketplaces communautaires, et un enjeu fort de présence dans les IA. AfriRank est calé sur ce terrain.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-q">Combien de temps avant de voir des résultats ? <span class="pm"></span></button><div class="faq-a"><p>Reprendre sa SERP de marque va plus vite que conquérir des requêtes catégorie. Le Diagnostic priorise les gains les plus rapides en premier.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-q">Que se passe-t-il après Le Diagnostic ? <span class="pm"></span></button><div class="faq-a"><p>Vous avez le chiffrage et le plan. Soit vous l'exécutez en interne, soit vous passez en accompagnement (les 290 € sont alors déduits).</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="links-more reveal">
+      <h2>Pour aller plus loin</h2>
+      <ul>
+        <li><a href="/seo-marques-afro-caribeennes/">Stratégie SEO pour marques afro-caribéennes</a></li>
+        <li><a href="/posseder-serp-de-marque/">Posséder votre SERP de marque</a></li>
+        <li><a href="/calculateur-ca-organique-perdu/">Estimer votre CA organique perdu</a></li>
+        <li><a href="/scorecard-visibilite-marque/">Tester votre score de visibilité</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="cta-band reveal">
+      <img src="/images/icon-cream.png" class="icon-watermark" alt="" />
+      <h2>Commencez par Le Diagnostic.</h2>
+      <p>Je chiffre le CA organique que vos revendeurs et marketplaces captent à votre place, j'identifie vos angles morts, et je trace le plan de reconquête. 290 €, intégralement déductibles si vous poursuivez en accompagnement.</p>
+      <div class="cta-actions">
+        <a href={calendly} target="_blank" rel="noopener" class="btn btn--orange">Réserver Le Diagnostic
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+        <a href="/diagnostic-seo/" class="btn btn--cream">En savoir plus</a>
+      </div>
+    </div>
+  </div>
+</section>
+</Base>

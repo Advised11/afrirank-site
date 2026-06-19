@@ -1,0 +1,180 @@
+---
+import Base from '../layouts/Base.astro';
+const calendly = 'https://calendly.com/contact-advised-seo/30min?back=1';
+const jsonLd = JSON.stringify({
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      "@id": "https://www.afrirank.fr/seo-marques-afro-caribeennes/#page",
+      "url": "https://www.afrirank.fr/seo-marques-afro-caribeennes/",
+      "name": "SEO pour marques afro-caribéennes | AfriRank",
+      "description": "Votre marque afro génère la demande, vos revendeurs encaissent. Découvrez comment reprendre vos ventes directes sur Google et dans les IA.",
+      "isPartOf": { "@id": "https://www.afrirank.fr/#website" },
+      "about": { "@id": "https://www.afrirank.fr/#afrirank" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://www.afrirank.fr/" },
+        { "@type": "ListItem", "position": 2, "name": "SEO pour marques afro-caribéennes", "item": "https://www.afrirank.fr/seo-marques-afro-caribeennes/" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "AfriRank, c'est pour qui ?", "acceptedAnswer": { "@type": "Answer", "text": "Pour les marques afro-caribéennes déjà établies (cosmétique, capillaire, beauté, food, mode) qui ont de la demande mais voient leurs revendeurs et marketplaces capter les ventes sur Google." } },
+        { "@type": "Question", "name": "Faut-il déjà avoir un site e-commerce ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui. AfriRank travaille avec des marques qui vendent déjà en ligne et veulent récupérer leur trafic et leurs ventes directes." } },
+        { "@type": "Question", "name": "Par quoi commence-t-on ?", "acceptedAnswer": { "@type": "Answer", "text": "Par Le Diagnostic : on chiffre la fuite et on priorise. L'exécution vient ensuite, en interne ou en accompagnement." } },
+        { "@type": "Question", "name": "AfriRank fait-il aussi du référencement dans les IA ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui. La visibilité dans ChatGPT, Perplexity et Google AI fait partie intégrante de la stratégie (GEO)." } }
+      ]
+    }
+  ]
+});
+---
+<Base
+  title="SEO pour marques afro-caribéennes | AfriRank"
+  description="Votre marque afro génère la demande, vos revendeurs encaissent. Découvrez comment reprendre vos ventes directes sur Google et dans les IA."
+  jsonLd={jsonLd}>
+
+<section class="hero hero--page wrap">
+  <div class="hero-top">
+    <nav class="breadcrumb reveal" aria-label="Fil d'Ariane">
+      <a href="/">Accueil</a><span class="sep">›</span>
+      <span>SEO marques afro-caribéennes</span>
+    </nav>
+    <span class="hero-eyebrow reveal"><img src="/images/icon-orange.png" alt="" /> Guide pilier</span>
+    <h1 class="reveal">SEO pour marques afro-caribéennes : <em>reprenez le contrôle de vos ventes</em>.</h1>
+    <p class="hero-sub reveal">Votre marque a la communauté, la notoriété et les produits. Pourtant, quand vos clients vous cherchent sur Google, ce sont souvent vos revendeurs et les marketplaces qui captent la vente. AfriRank existe pour inverser ça : ramener le chiffre d'affaires organique là où il doit être — chez vous.</p>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:clamp(20px,3vw,40px)">
+  <div class="wrap">
+    <figure class="article-figure reveal">
+      <img src="/images/article-pilier.jpg" alt="Tissus wax aux motifs afro-caribéens empilés sur un étal" loading="lazy" width="1280" height="560" />
+    </figure>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:0">
+  <div class="wrap article reveal">
+    <h2>Le vrai problème des marques afro établies</h2>
+    <p>Ce n'est pas un manque de notoriété. C'est un problème de <strong>captation</strong> : la demande que vous avez créée se transforme en ventes pour d'autres.</p>
+    <ul>
+      <li>Un client cherche votre catégorie de produit → il tombe sur un revendeur.</li>
+      <li>Il cherche votre marque + un produit → la marketplace passe devant votre fiche.</li>
+      <li>Il interroge une IA (ChatGPT, Perplexity) → votre marque n'est pas citée.</li>
+    </ul>
+    <p>À chaque fois, vous perdez de la marge, la donnée client et le contrôle de votre image. Pour chiffrer cette fuite, voyez la page <a href="/recuperer-ca-revendeurs-google/">récupérez le CA capté par vos revendeurs</a>.</p>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker">La carte</span>
+      <h2 class="sec-title">Les trois territoires à reprendre.</h2>
+    </div>
+    <div class="hub-grid">
+      <a class="hub-card reveal" href="/posseder-serp-de-marque/">
+        <span class="k">Territoire 1</span>
+        <h3>Votre SERP de marque</h3>
+        <p>Quand on tape votre nom, vous devez occuper le terrain avant tout revendeur. C'est le gain le plus rapide.</p>
+      </a>
+      <a class="hub-card reveal" href="/reprendre-demande-marketplaces/">
+        <span class="k">Territoire 2</span>
+        <h3>Vos requêtes catégorie</h3>
+        <p>Les recherches sans marque (type de produit, ingrédient, usage) doivent mener à vos pages, pas aux marketplaces.</p>
+      </a>
+      <a class="hub-card reveal" href="/visibilite-ia-geo-marques-afro/">
+        <span class="k">Territoire 3</span>
+        <h3>Votre présence dans les IA (GEO)</h3>
+        <p>Les moteurs de réponse deviennent un point d'entrée d'achat. Une marque non citée disparaît de la recommandation.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker">Par univers produit</span>
+      <h2 class="sec-title">Le SEO par univers produit.</h2>
+      <p>Chaque univers a ses requêtes, sa concurrence et ses codes. Choisissez le vôtre.</p>
+    </div>
+    <div class="hub-grid">
+      <a class="hub-card reveal" href="/seo-cosmetique-soin-capillaire-afro/"><span class="k">Verticale</span><h3>Cosmétique &amp; soin capillaire afro</h3><p>Cheveux crépus, bouclés, ingrédients, routines : un univers ultra-granulaire et ultra-qualifié.</p></a>
+      <a class="hub-card reveal" href="/seo-beaute-maquillage-peaux-noires/"><span class="k">Verticale</span><h3>Beauté &amp; maquillage peaux noires</h3><p>Carnations, sous-tons, match de teinte : l'intention d'achat la plus brûlante du marché.</p></a>
+      <a class="hub-card reveal" href="/seo-epicerie-alimentation-afro-antillaise/"><span class="k">Verticale</span><h3>Épicerie &amp; alimentation afro-antillaise</h3><p>La vente se cache derrière la recette et l'ingrédient. Reliez l'une à l'autre.</p></a>
+      <a class="hub-card reveal" href="/seo-mode-lifestyle-afro/"><span class="k">Verticale</span><h3>Mode &amp; lifestyle afro</h3><p>Wax, accessoires, déco : possédez votre style avant les marketplaces et le dropshipping.</p></a>
+    </div>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker">Par plateforme</span>
+      <h2 class="sec-title">Le SEO par plateforme.</h2>
+    </div>
+    <div class="hub-grid">
+      <a class="hub-card reveal" href="/seo-shopify-marques-afro/"><span class="k">Guide</span><h3>SEO Shopify pour marques afro</h3><p>Forces et contraintes de Shopify (collections, fiches, vitesse) pour reprendre vos ventes.</p></a>
+      <a class="hub-card reveal" href="/seo-woocommerce-prestashop-marques-afro/"><span class="k">Guide</span><h3>SEO WooCommerce / PrestaShop</h3><p>La liberté d'architecture : votre meilleur atout SEO, votre pire piège à doublons.</p></a>
+    </div>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker">Questions fréquentes</span>
+      <h2 class="sec-title">Les questions que toutes les marques se posent.</h2>
+    </div>
+    <div class="hub-grid">
+      <a class="hub-card reveal" href="/pourquoi-revendeurs-avant-marque-google/"><h3>Pourquoi mes revendeurs sortent-ils avant ma marque ?</h3></a>
+      <a class="hub-card reveal" href="/prix-seo-marque-ecommerce/"><h3>Combien coûte le SEO pour une marque e-commerce ?</h3></a>
+      <a class="hub-card reveal" href="/qu-est-ce-que-le-geo/"><h3>Qu'est-ce que le GEO (référencement dans les IA) ?</h3></a>
+      <a class="hub-card reveal" href="/marketplace-vs-site-de-marque/"><h3>Marketplace vs site de marque : qui capte le trafic ?</h3></a>
+    </div>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:0">
+  <div class="wrap article reveal">
+    <h2>Pourquoi AfriRank</h2>
+    <p>Francis, consultant SEO depuis 11 ans. AfriRank ne sert qu'une cible : les marques afro-caribéennes établies qui veulent arrêter de financer la croissance de leurs revendeurs. Un chiffrage clair, une carte des fuites, un plan priorisé. Rien de plus, rien de moins. Deux outils gratuits pour démarrer : le <a href="/calculateur-ca-organique-perdu/">calculateur de CA organique perdu</a> et la <a href="/scorecard-visibilite-marque/">scorecard de visibilité de marque</a>.</p>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker">Questions fréquentes</span>
+      <h2 class="sec-title">Tout ce qu'il faut savoir.</h2>
+    </div>
+    <div class="faq">
+      <div class="faq-item reveal"><button class="faq-q">AfriRank, c'est pour qui ? <span class="pm"></span></button><div class="faq-a"><p>Pour les marques afro-caribéennes déjà établies (cosmétique, capillaire, beauté, food, mode) qui ont de la demande mais voient leurs revendeurs et marketplaces capter les ventes sur Google.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-q">Faut-il déjà avoir un site e-commerce ? <span class="pm"></span></button><div class="faq-a"><p>Oui. AfriRank travaille avec des marques qui vendent déjà en ligne et veulent récupérer leur trafic et leurs ventes directes.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-q">Par quoi commence-t-on ? <span class="pm"></span></button><div class="faq-a"><p>Par Le Diagnostic : on chiffre la fuite et on priorise. L'exécution vient ensuite, en interne ou en accompagnement.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-q">AfriRank fait-il aussi du référencement dans les IA ? <span class="pm"></span></button><div class="faq-a"><p>Oui. La visibilité dans ChatGPT, Perplexity et Google AI fait partie intégrante de la stratégie (GEO).</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="cta-band reveal">
+      <img src="/images/icon-cream.png" class="icon-watermark" alt="" />
+      <h2>Par où commencer : Le Diagnostic.</h2>
+      <p>Une séance unique qui mesure le CA organique capté par vos revendeurs, identifie vos angles morts et trace le plan de reconquête. 290 €, déductibles si vous poursuivez en accompagnement.</p>
+      <div class="cta-actions">
+        <a href={calendly} target="_blank" rel="noopener" class="btn btn--orange">Réserver Le Diagnostic
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+        <a href="/diagnostic-seo/" class="btn btn--cream">En savoir plus</a>
+      </div>
+    </div>
+  </div>
+</section>
+</Base>

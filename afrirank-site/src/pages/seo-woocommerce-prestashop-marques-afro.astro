@@ -1,0 +1,139 @@
+---
+import Base from '../layouts/Base.astro';
+const calendly = 'https://calendly.com/contact-advised-seo/30min?back=1';
+const jsonLd = JSON.stringify({
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "SEO WooCommerce et PrestaShop pour marques afro : la liberté qui peut tout changer",
+      "description": "WooCommerce et PrestaShop offrent une liberté SEO totale. Bien réglée, elle reprend la demande captée par vos revendeurs. Les leviers clés.",
+      "author": { "@type": "Person", "name": "Francis Ndimba", "url": "https://www.afrirank.fr/a-propos/" },
+      "publisher": { "@id": "https://www.afrirank.fr/#afrirank" },
+      "mainEntityOfPage": "https://www.afrirank.fr/seo-woocommerce-prestashop-marques-afro/"
+    },
+    {
+      "@type": "HowTo",
+      "name": "Reprendre ses ventes avec le SEO WooCommerce / PrestaShop",
+      "step": [
+        { "@type": "HowToStep", "name": "Muscler les catégories", "text": "Ajouter un contenu de réponse et une arborescence plate et claire." },
+        { "@type": "HowToStep", "name": "Maîtriser attributs et facettes", "text": "Décider quelles pages de filtres indexer et lesquelles bloquer pour éviter les doublons." },
+        { "@type": "HowToStep", "name": "Structurer les URLs", "text": "Structure propre et redirections 301 à chaque changement d'URL." },
+        { "@type": "HowToStep", "name": "Optimiser les performances", "text": "Hébergement adapté, cache, allègement, base de données saine." }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://www.afrirank.fr/" },
+        { "@type": "ListItem", "position": 2, "name": "SEO marques afro-caribéennes", "item": "https://www.afrirank.fr/seo-marques-afro-caribeennes/" },
+        { "@type": "ListItem", "position": 3, "name": "SEO WooCommerce / PrestaShop", "item": "https://www.afrirank.fr/seo-woocommerce-prestashop-marques-afro/" }
+      ]
+    }
+  ]
+});
+---
+<Base
+  title="SEO WooCommerce & PrestaShop pour marques afro | AfriRank"
+  description="WooCommerce et PrestaShop offrent une liberté SEO totale. Bien réglée, elle reprend la demande captée par vos revendeurs. Les leviers clés."
+  jsonLd={jsonLd}>
+
+<section class="hero hero--page wrap">
+  <div class="hero-top">
+    <nav class="breadcrumb reveal" aria-label="Fil d'Ariane">
+      <a href="/">Accueil</a><span class="sep">›</span>
+      <a href="/seo-marques-afro-caribeennes/">SEO marques afro</a><span class="sep">›</span>
+      <span>SEO WooCommerce / PrestaShop</span>
+    </nav>
+    <span class="hero-eyebrow reveal"><img src="/images/icon-orange.png" alt="" /> Guide plateforme</span>
+    <h1 class="reveal">SEO WooCommerce et PrestaShop : <em>la liberté qui peut tout changer</em>.</h1>
+    <p class="hero-sub reveal">Contrairement à une plateforme fermée, vous pouvez tout modeler : vos URLs, votre arborescence, vos attributs, votre contenu. C'est une force énorme pour reprendre les ventes captées par vos revendeurs. C'est aussi le terrain où l'on fait le plus de dégâts SEO sans s'en rendre compte.</p>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:clamp(24px,4vw,48px)">
+  <div class="wrap article reveal">
+    <p>Je suis Francis, consultant SEO, onze ans de métier. Sur ces deux CMS, le SEO se gagne ou se perd dans l'architecture. Voici où.</p>
+
+    <h2>La liberté d'architecture : votre meilleur atout, votre pire piège</h2>
+    <p>WooCommerce (extension WordPress) et PrestaShop partagent un point fort que Shopify n'a pas : vous contrôlez vos URLs et votre arborescence sans préfixe imposé. Cette liberté permet de bâtir une architecture taillée pour vos requêtes — mais elle vous laisse aussi creuser vos propres trous : structures incohérentes, URLs qui changent sans redirection, pages générées en masse sans contenu. La plateforme ne vous protège pas de vous-même.</p>
+
+    <h2>Les catégories : votre artillerie lourde sur les requêtes afro</h2>
+    <p>Vos pages catégorie visent « soins cheveux crépus », « maquillage peaux noires », « épicerie africaine en ligne » — le gros du volume non-marque. Deux écueils : <strong>les catégories sans contenu</strong> (un titre + une grille ne donnent rien à classer à Google) et <strong>l'arborescence trop profonde ou incohérente</strong> (chemins à rallonge, doublons « cheveux &gt; soins &gt; masques » ET « soins &gt; masques » qui diluent la force).</p>
+
+    <h2>Les attributs et variations : la fabrique à doublons silencieuse</h2>
+    <p>C'est le piège technique numéro un. Vos produits ont des attributs (taille, type de cheveu, contenance). Combinés à la navigation à facettes, ils peuvent produire des milliers d'URLs filtrées. Si elles sont indexables :</p>
+    <ul>
+      <li><strong>Budget de crawl gaspillé</strong> sur des combinaisons sans valeur.</li>
+      <li><strong>Contenu dupliqué</strong> qui dilue vos pages catégorie utiles.</li>
+      <li><strong>Index gonflé</strong> de pages faibles qui tirent le site vers le bas.</li>
+    </ul>
+    <p>Le levier : décider quelles pages de filtres méritent d'être indexées (« masque cheveux 4C ») et lesquelles bloquer. Sur PrestaShop via la navigation à facettes ; sur WooCommerce via les paramètres d'URL et les canonicals.</p>
+
+    <h2>Les performances : la rançon de la flexibilité</h2>
+    <p>Ces deux CMS sont auto-hébergés : vous gérez l'hébergement, et la vitesse en dépend. <strong>WooCommerce :</strong> accumulation de plugins, thèmes lourds, base non optimisée, hébergement sous-dimensionné, absence de cache. <strong>PrestaShop :</strong> modules nombreux, cache mal configuré, PHP obsolète, requêtes lourdes sur les grands catalogues.</p>
+
+    <h2>Les extensions SEO : un cadre, pas une baguette magique</h2>
+    <p>Les extensions SEO posent le <strong>cadre</strong> (titres, métas, sitemap, données structurées, fil d'Ariane, canonicals). Elles ne décident pas quel titre bat le revendeur en place, ni quelle catégorie prioriser. L'outil exécute ; l'intelligence reste humaine.</p>
+
+    <h2>En résumé : les leviers pour reprendre vos ventes</h2>
+    <div class="tbl-wrap">
+      <table class="tbl">
+        <thead><tr><th>Levier</th><th>Ce qu'il faut viser</th><th>Impact captation</th></tr></thead>
+        <tbody>
+          <tr><td>Catégories</td><td>Contenu de réponse + arborescence plate et claire</td><td>Élevé (requêtes catégorie)</td></tr>
+          <tr><td>Attributs / facettes</td><td>Décider quoi indexer vs bloquer (anti-doublons)</td><td>Élevé (budget de crawl)</td></tr>
+          <tr><td>URLs</td><td>Structure propre + redirections 301 à chaque changement</td><td>Moyen (consolide la force)</td></tr>
+          <tr><td>Fiches produit</td><td>Remplir l'intention, pas le descriptif fournisseur</td><td>Élevé (requêtes marque + produit)</td></tr>
+          <tr><td>Performances</td><td>Hébergement, cache, allègement, base saine</td><td>Transverse</td></tr>
+          <tr><td>Extensions / modules SEO</td><td>Poser le cadre, puis appliquer une stratégie</td><td>Support</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <blockquote><p>Le quoi et le combien, je vous les montre. Le comment — l'arborescence exacte, le réglage des facettes, l'ordre des chantiers — c'est l'accompagnement.</p></blockquote>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="kicker">Questions fréquentes</span><h2 class="sec-title">Vos questions, mes réponses.</h2></div>
+    <div class="faq">
+      <div class="faq-item reveal"><button class="faq-q">WooCommerce ou PrestaShop, lequel est meilleur pour le SEO ? <span class="pm"></span></button><div class="faq-a"><p>Les deux sont excellents : liberté totale sur les URLs, l'arborescence et le contenu. Aucun n'est intrinsèquement meilleur — la différence se fait sur la rigueur de l'architecture et la maîtrise des doublons par attributs.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-q">Pourquoi mon site WooCommerce génère-t-il autant de pages dupliquées ? <span class="pm"></span></button><div class="faq-a"><p>Le plus souvent à cause des variations produit et de la navigation à facettes qui créent des URLs filtrées indexables. Sans gestion des canonicals et des paramètres d'URL, Google indexe une masse de pages quasi identiques.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-q">La navigation à facettes de PrestaShop est-elle mauvaise pour le SEO ? <span class="pm"></span></button><div class="faq-a"><p>Pas en soi — c'est sa configuration qui décide. Bien réglée, elle sert des requêtes réelles (« masque cheveux 4C »). Mal réglée, elle gonfle l'index de pages vides. Le levier est de choisir quoi indexer, quoi bloquer.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-q">Faut-il un plugin SEO sur WooCommerce ? <span class="pm"></span></button><div class="faq-a"><p>Une extension SEO pose un cadre utile (titres, métas, sitemap, données structurées). Mais elle n'écrit pas votre stratégie : quelle catégorie prioriser, quel contenu, quel maillage. L'outil exécute, la stratégie reste humaine.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-q">Pourquoi un revendeur sort-il avant ma boutique ? <span class="pm"></span></button><div class="faq-a"><p>Parce que sa page est souvent mieux remplie et mieux structurée que la vôtre, parfois sur votre propre nom. C'est un problème de captation, pas de CMS. Le Diagnostic le chiffre et le priorise.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="links-more reveal">
+      <h2>Pour aller plus loin</h2>
+      <ul>
+        <li><a href="/seo-marques-afro-caribeennes/">Stratégie SEO pour marques afro-caribéennes</a></li>
+        <li><a href="/recuperer-ca-revendeurs-google/">Récupérez le CA capté par vos revendeurs</a></li>
+        <li><a href="/seo-shopify-marques-afro/">SEO Shopify pour marques afro</a></li>
+        <li><a href="/posseder-serp-de-marque/">Posséder votre SERP de marque</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="cta-band reveal">
+      <img src="/images/icon-cream.png" class="icon-watermark" alt="" />
+      <h2>Par où commencer : Le Diagnostic.</h2>
+      <p>Je chiffre le CA capté par vos revendeurs, j'identifie vos angles morts WooCommerce/PrestaShop (catégories vides, doublons par attributs, arborescence, vitesse) et je trace le plan priorisé. 290 €, déductibles.</p>
+      <div class="cta-actions">
+        <a href={calendly} target="_blank" rel="noopener" class="btn btn--orange">Réserver Le Diagnostic
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+        <a href="/diagnostic-seo/" class="btn btn--cream">En savoir plus</a>
+      </div>
+    </div>
+  </div>
+</section>
+</Base>
