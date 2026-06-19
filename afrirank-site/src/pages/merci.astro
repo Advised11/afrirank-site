@@ -1,0 +1,98 @@
+---
+import Base from '../layouts/Base.astro';
+---
+<Base
+  title="Merci — c'est confirmé | AfriRank"
+  description="Votre demande est bien reçue. AfriRank revient vers vous très vite pour préparer votre échange."
+  active=""
+  noindex={true}
+  footerTagline="Merci de votre confiance.">
+<section class="hero hero--page wrap merci">
+  <div class="hero-top">
+    <span class="merci-badge reveal">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+    </span>
+    <h1 class="reveal">Merci — <em>c'est confirmé</em>.</h1>
+    <p class="hero-sub reveal">Votre demande est bien arrivée. Si vous venez de réserver un créneau, un email de confirmation Calendly (avec le lien de l'appel) est déjà en route. Sinon, je vous réponds sous 48 h ouvrées.</p>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:clamp(24px,4vw,48px)">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker">La suite</span>
+      <h2 class="sec-title">Ce qui se passe maintenant.</h2>
+    </div>
+    <div class="merci-steps">
+      <div class="merci-step reveal">
+        <div class="ms-num">1</div>
+        <h3>Confirmation par email</h3>
+        <p>Vous recevez un récapitulatif. Pensez à vérifier vos spams si rien n'arrive d'ici quelques minutes.</p>
+      </div>
+      <div class="merci-step reveal">
+        <div class="ms-num">2</div>
+        <h3>Je prépare l'échange</h3>
+        <p>Je jette un œil à votre marque et à votre marché avant l'appel, pour qu'on aille droit au but.</p>
+      </div>
+      <div class="merci-step reveal">
+        <div class="ms-num">3</div>
+        <h3>On chiffre l'opportunité</h3>
+        <p>30 minutes pour voir ce que votre visibilité organique peut réellement rapporter — sans engagement.</p>
+      </div>
+    </div>
+
+    <div class="cta-band reveal" style="margin-top:clamp(40px,5vw,64px)">
+      <img src="/images/icon-cream.png" class="icon-watermark" alt="" />
+      <h2>En attendant, faites connaissance avec AfriRank.</h2>
+      <p>Découvrez la démarche et l'expertise derrière la marque.</p>
+      <div class="cta-actions">
+        <a href="/" class="btn btn--orange">Retour à l'accueil
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+        <a href="/a-propos/" class="btn btn--cream">Qui est derrière AfriRank ?</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Conversion : reçu après envoi du formulaire ou réservation d'un RDV (à exploiter dans GTM pour GA4 + Google Ads) -->
+<script is:inline>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    event: 'conversion',
+    conversion_type: 'rdv_contact',
+    page_path: location.pathname
+  });
+</script>
+
+<style>
+  .merci .hero-top { text-align: center; max-width: 720px; margin: 0 auto; }
+  .merci-badge {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 76px; height: 76px; border-radius: 50%;
+    background: var(--orange); color: #fff; margin-bottom: 28px;
+    box-shadow: 0 16px 36px -14px rgba(207, 100, 53, .9);
+  }
+  .merci-badge svg { width: 38px; height: 38px; }
+  .merci .hero-sub { margin-left: auto; margin-right: auto; }
+  .merci-steps {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: clamp(18px, 2.4vw, 28px);
+  }
+  .merci-step {
+    background: #fff; border: 1px solid var(--line);
+    border-radius: 20px; padding: clamp(24px, 2.6vw, 32px);
+  }
+  .ms-num {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 38px; height: 38px; border-radius: 50%;
+    background: var(--blue); color: var(--beige);
+    font-family: var(--serif); font-size: 18px; margin-bottom: 16px;
+  }
+  .merci-step h3 { font-size: 19px; margin-bottom: 8px; }
+  .merci-step p { color: var(--ink-60); font-size: 15.5px; line-height: 1.65; }
+  @media (max-width: 760px) {
+    .merci-steps { grid-template-columns: 1fr; }
+  }
+</style>
+</Base>

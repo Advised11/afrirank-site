@@ -9,8 +9,9 @@ interface Props {
   active?: string;
   jsonLd?: string;
   footerTagline?: string;
+  noindex?: boolean;
 }
-const { title, description, active = '', jsonLd = '', footerTagline } = Astro.props;
+const { title, description, active = '', jsonLd = '', footerTagline, noindex = false } = Astro.props;
 const canonical = Astro.site ? new URL(Astro.url.pathname, Astro.site).href : Astro.url.pathname;
 ---
 <!doctype html>
@@ -27,6 +28,7 @@ const canonical = Astro.site ? new URL(Astro.url.pathname, Astro.site).href : As
   <!-- End Google Tag Manager -->
   <title>{title}</title>
   <meta name="description" content={description} />
+  {noindex && <meta name="robots" content="noindex, follow" />}
   <link rel="canonical" href={canonical} />
   <meta property="og:type" content="website" />
   <meta property="og:title" content={title} />
@@ -38,6 +40,7 @@ const canonical = Astro.site ? new URL(Astro.url.pathname, Astro.site).href : As
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://assets.calendly.com/assets/external/widget.css" />
   {jsonLd && <script type="application/ld+json" set:html={jsonLd} />}
 </head>
 <body>
@@ -111,6 +114,30 @@ const canonical = Astro.site ? new URL(Astro.url.pathname, Astro.site).href : As
           page_path: location.pathname
         });
       }, true);
+    })();
+  </script>
+
+  <!-- Calendly : ouverture en popup + redirection vers /merci/ après réservation -->
+  <script is:inline src="https://assets.calendly.com/assets/external/widget.js" async></script>
+  <script is:inline>
+    (function () {
+      // Ouvre Calendly en popup (sur le domaine) quand le widget est dispo ; sinon le lien s'ouvre normalement
+      document.addEventListener('click', function (e) {
+        var a = e.target && e.target.closest ? e.target.closest('a') : null;
+        if (!a) return;
+        var href = a.getAttribute('href') || '';
+        if (href.indexOf('calendly.com') !== -1 && window.Calendly && typeof window.Calendly.initPopupWidget === 'function') {
+          e.preventDefault();
+          window.Calendly.initPopupWidget({ url: href });
+        }
+      });
+      // Quand un RDV est confirmé dans Calendly, on amène le visiteur sur la page de confirmation
+      window.addEventListener('message', function (e) {
+        if (typeof e.origin === 'string' && e.origin.indexOf('calendly.com') === -1) return;
+        if (e.data && e.data.event === 'calendly.event_scheduled') {
+          window.location.href = '/merci/';
+        }
+      });
     })();
   </script>
 </body>

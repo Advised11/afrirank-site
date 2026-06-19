@@ -63,14 +63,22 @@ const jsonLd = "";
   // Prefill mailto from the form so "Envoyer" carries the message
   var sendBtn = document.getElementById('sendBtn');
   if (sendBtn) {
-    sendBtn.addEventListener('click', function () {
+    sendBtn.addEventListener('click', function (e) {
       var nom = (document.getElementById('f-nom').value || '').trim();
       var marque = (document.getElementById('f-marque').value || '').trim();
       var site = (document.getElementById('f-site').value || '').trim();
       var msg = (document.getElementById('f-message').value || '').trim();
+      // Garde-fou : ne pas déclencher sur un formulaire totalement vide
+      if (!nom && !marque && !site && !msg) {
+        e.preventDefault();
+        document.getElementById('f-nom').focus();
+        return;
+      }
       var subject = 'Contact AfriRank' + (marque ? ' — ' + marque : '');
       var body = 'Nom : ' + nom + '\nMarque : ' + marque + '\nSite : ' + site + '\n\n' + msg;
       sendBtn.setAttribute('href', 'mailto:contact@advised-seo.fr?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body));
+      // Ouvre le client mail, puis dirige vers la page de confirmation
+      setTimeout(function () { window.location.href = '/merci/'; }, 800);
     });
   }
 </script>
