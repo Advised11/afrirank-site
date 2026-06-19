@@ -512,3 +512,32 @@ img.about-photo{object-fit:cover;border-radius:24px}
 .q-options button.sel{background:var(--blue);color:#fff;border-color:var(--blue)}
 @media (max-width:860px){.hub-grid{grid-template-columns:repeat(2,1fr)}}
 @media (max-width:640px){.links-more ul{grid-template-columns:1fr}.hub-grid{grid-template-columns:1fr}.bar-row .bl{flex-basis:50%}}
+
+/* ============================================================
+   LANDINGS SEA / ADS (mode bare, sans nav/footer)
+   ============================================================ */
+.lp-head{position:sticky;top:0;z-index:50;background:rgba(249,246,239,.9);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.lp-head-inner{display:flex;align-items:center;justify-content:space-between;padding-top:14px;padding-bottom:14px}
+.lp-logo{height:30px;width:auto}
+.lp-hero .hero-top{text-align:center;max-width:820px;margin:0 auto}
+.lp-hero .hero-sub{margin-left:auto;margin-right:auto}
+.lp-figure{max-width:880px;margin:30px auto 0;border-radius:22px;overflow:hidden;aspect-ratio:16/7;background:var(--beige)}
+.lp-figure img{width:100%;height:100%;object-fit:cover;display:block}
+.lp-cta{display:flex;flex-direction:column;align-items:center;gap:10px;margin-top:30px}
+.lp-cta-note{font-size:13.5px;color:var(--ink-45)}
+.lp-trust{margin-top:30px;font-size:13px;letter-spacing:.02em;color:var(--ink-45);text-transform:uppercase}
+.lp-sec{padding:clamp(56px,7vw,96px) 0}
+.lp-benefits{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(16px,2vw,24px)}
+.lp-benefit{background:#fff;border:1px solid var(--line);border-radius:20px;padding:clamp(22px,2.4vw,30px)}
+.lp-benefit .v-ic{display:inline-flex;width:44px;height:44px;align-items:center;justify-content:center;border-radius:12px;background:var(--beige);color:var(--orange);margin-bottom:16px}
+.lp-benefit .v-ic svg{width:22px;height:22px}
+.lp-benefit h3{font-size:18px;margin-bottom:8px}
+.lp-benefit p{color:var(--ink-60);font-size:15px;line-height:1.6}
+.lp-proof{background:var(--beige)}
+.lp-foot{border-top:1px solid var(--line);padding:28px 0}
+.lp-foot-inner{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:10px 22px;font-size:13.5px;color:var(--ink-60)}
+.lp-foot-logo{height:22px;width:auto;opacity:.9}
+.lp-foot a{color:var(--ink-60);text-decoration:underline;text-underline-offset:2px}
+.lp-foot a:hover{color:var(--orange)}
+@media (max-width:900px){.lp-benefits{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:560px){.lp-benefits{grid-template-columns:1fr}.lp-head-cta{display:none}}
