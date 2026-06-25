@@ -1,0 +1,104 @@
+/* ============================================================
+   AfriRank — Motifs ethniques
+   Inspirés des textiles afro-caribéens (bogolan, wax, kente, pagne,
+   chevron), réinterprétés dans la palette de marque.
+
+   À CHARGER APRÈS afrirank.css :
+     <link rel="stylesheet" href="assets/afrirank.css" />
+     <link rel="stylesheet" href="assets/afrirank-motifs.css" />
+
+   Utilise les variables --beige / --blue / --orange / --yellow
+   définies dans afrirank.css.
+   ============================================================ */
+
+/* ------------------------------------------------------------
+   1. FOND DE PAGE — bogolan en filigrane (~6 %)
+   S'applique à toute la page. Les sections pleines (bleu, beige
+   foncé, blanc) le masquent : il n'apparaît que dans les zones
+   beige ouvertes. Effet discret et partiel voulu.
+   ------------------------------------------------------------ */
+body{
+  background-color:var(--beige);
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='none' stroke='%2313202D' stroke-width='2.4' stroke-linecap='square' stroke-opacity='0.06'%3E%3Cpolyline points='0,18 20,4 40,18 60,4 80,18'/%3E%3Cpolyline points='0,62 20,48 40,62 60,48 80,62'/%3E%3C/g%3E%3Cg fill='none' stroke='%2313202D' stroke-width='2.4' stroke-linecap='round' stroke-opacity='0.06'%3E%3Cpath d='M8 30v8M24 30v8M40 30v8M56 30v8M72 30v8'/%3E%3Cpath d='M0 74v6M16 74v6M32 74v6M48 74v6M64 74v6M80 74v6'/%3E%3C/g%3E%3C/svg%3E");
+  background-size:88px 88px;
+  background-position:center top;
+}
+
+/* ------------------------------------------------------------
+   2. FILET DE SÉPARATION — chevron hairline
+   Bande fine pleine largeur à poser ENTRE deux sections.
+   Usage :  <div class="motif-divider"></div>
+   Sur fond sombre, ajouter --light :
+            <div class="motif-divider motif-divider--light"></div>
+   ------------------------------------------------------------ */
+.motif-divider{
+  height:22px;
+  background-repeat:repeat-x;
+  background-position:center;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='24' viewBox='0 0 48 24'%3E%3Cg fill='none' stroke='%2313202D' stroke-width='2.6' stroke-opacity='0.30' stroke-linecap='square'%3E%3Cpolyline points='0,18 12,6 24,18 36,6 48,18'/%3E%3C/g%3E%3C/svg%3E");
+  background-size:40px 20px;
+}
+.motif-divider--light{
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='24' viewBox='0 0 48 24'%3E%3Cg fill='none' stroke='%23F9F6EF' stroke-width='2.6' stroke-opacity='0.32' stroke-linecap='square'%3E%3Cpolyline points='0,18 12,6 24,18 36,6 48,18'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* ------------------------------------------------------------
+   3. SOULIGNEMENT DE TITRE — bogolan sous un kicker
+   Petit trait texturé à poser juste après un .kicker / .sec-head.
+   Usage :  <span class="kicker">Le SEO culturel</span>
+            <div class="motif-underline"></div>
+   ------------------------------------------------------------ */
+.motif-underline{
+  height:11px;
+  width:150px;
+  margin:12px 0 4px;
+  background-repeat:repeat;
+  background-position:center;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='none' stroke='%23CF6435' stroke-width='2.6' stroke-linecap='square' stroke-opacity='0.6'%3E%3Cpolyline points='0,18 20,4 40,18 60,4 80,18'/%3E%3Cpolyline points='0,62 20,48 40,62 60,48 80,62'/%3E%3C/g%3E%3Cg fill='none' stroke='%23CF6435' stroke-width='2.6' stroke-linecap='round' stroke-opacity='0.6'%3E%3Cpath d='M8 30v8M24 30v8M40 30v8M56 30v8M72 30v8'/%3E%3C/g%3E%3C/svg%3E");
+  background-size:50px 50px;
+}
+/* centré quand le bloc parent est centré (.sec-head.center) */
+.sec-head.center .motif-underline{margin-left:auto;margin-right:auto}
+
+/* ------------------------------------------------------------
+   4. FILIGRANE D'ANGLE — bande CTA
+   S'applique automatiquement à toute .cta-band (déjà en
+   position:relative; overflow:hidden dans afrirank.css).
+   Wax en haut-droite, kente en bas-gauche, très basse opacité.
+   ------------------------------------------------------------ */
+.cta-band::before,
+.cta-band::after{
+  content:"";
+  position:absolute;
+  pointer-events:none;
+  background-repeat:repeat;
+}
+/* wax — coin haut droit */
+.cta-band::before{
+  top:-30px; right:-30px; width:340px; height:340px;
+  background-size:120px 120px;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill='none' stroke='%23F9F6EF' stroke-width='2.2' stroke-opacity='0.09'%3E%3Ccircle cx='50' cy='50' r='8'/%3E%3Ccircle cx='50' cy='50' r='17'/%3E%3Ccircle cx='50' cy='50' r='26'/%3E%3Ccircle cx='0' cy='0' r='12'/%3E%3Ccircle cx='0' cy='0' r='22'/%3E%3Ccircle cx='100' cy='0' r='12'/%3E%3Ccircle cx='100' cy='0' r='22'/%3E%3Ccircle cx='0' cy='100' r='12'/%3E%3Ccircle cx='0' cy='100' r='22'/%3E%3Ccircle cx='100' cy='100' r='12'/%3E%3Ccircle cx='100' cy='100' r='22'/%3E%3C/g%3E%3Cg fill='%23F9F6EF' fill-opacity='0.09'%3E%3Ccircle cx='50' cy='50' r='3'/%3E%3C/g%3E%3C/svg%3E");
+}
+/* kente — coin bas gauche */
+.cta-band::after{
+  bottom:-40px; left:-40px; width:280px; height:280px;
+  background-size:70px 70px;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cg fill='none' stroke='%23FFB005' stroke-width='2.2' stroke-opacity='0.12' stroke-linejoin='round'%3E%3Cpath d='M30 0 L60 30 L30 60 L0 30 Z'/%3E%3C/g%3E%3Cg fill='%23FFB005' fill-opacity='0.12'%3E%3Cpath d='M30 21 L39 30 L30 39 L21 30 Z'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* ------------------------------------------------------------
+   5. FILET DE MARQUE — haut de footer
+   S'applique automatiquement en bande fine pleine largeur
+   au sommet de <footer>. Pagne tissé doré.
+   ------------------------------------------------------------ */
+footer{position:relative}
+footer::before{
+  content:"";
+  position:absolute;
+  top:0; left:0; right:0;
+  height:8px;
+  background-repeat:repeat-x;
+  background-position:center;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='44' height='44' viewBox='0 0 44 44'%3E%3Cg fill='none' stroke='%23FFB005' stroke-width='2.2' stroke-opacity='0.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M11 0v44M33 0v44'/%3E%3Cpath d='M15 8 L22 2 L29 8'/%3E%3Cpath d='M15 24 L22 18 L29 24'/%3E%3Cpath d='M15 40 L22 34 L29 40'/%3E%3Cpath d='M4 16h4M36 16h4M4 32h4M36 32h4'/%3E%3C/g%3E%3C/svg%3E");
+  background-size:34px 17px;
+}
