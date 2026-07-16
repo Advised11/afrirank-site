@@ -1,0 +1,149 @@
+---
+import Base from '../../layouts/Base.astro';
+const calendly = 'https://calendly.com/contact-advised-seo/30min?back=1';
+const jsonLd = JSON.stringify({
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://www.afrirank.fr/en/branded-serp/#article",
+      "headline": "Type your brand name into Google. What you see isn't yours.",
+      "description": "Type your brand + reviews, + discount code. The pages that answer aren't yours. What it costs, the 10-minute inventory, and the reclaim priorities.",
+      "inLanguage": "en",
+      "image": "https://www.afrirank.fr/images/article-serp-mobile.jpg",
+      "mainEntityOfPage": "https://www.afrirank.fr/en/branded-serp/",
+      "author": { "@type": "Person", "@id": "https://www.advised-seo.fr/#francis", "name": "Francis Ndimba", "url": "https://www.afrirank.fr/en/about/" },
+      "publisher": { "@id": "https://www.afrirank.fr/#business" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.afrirank.fr/en/" },
+        { "@type": "ListItem", "position": 2, "name": "Resellers ahead of your brand", "item": "https://www.afrirank.fr/en/resellers-capture-brand-traffic/" },
+        { "@type": "ListItem", "position": 3, "name": "Branded SERP", "item": "https://www.afrirank.fr/en/branded-serp/" }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "name": "Your branded SERP inventory in 10 minutes",
+      "totalTime": "PT10M",
+      "step": [
+        { "@type": "HowToStep", "name": "Your brand alone", "text": "Search “your brand” in private browsing: who occupies the first page besides you? Is your site showing in full (sitelinks, panel)?" },
+        { "@type": "HowToStep", "name": "Your brand + reviews", "text": "Who hosts the answer? What does it say? Is it up to date?" },
+        { "@type": "HowToStep", "name": "Your brand + discount code / cheap", "text": "How many coupon sites? Do they offer real codes or empty promises (which frustrates your customers in your name)?" },
+        { "@type": "HowToStep", "name": "Your brand + hero products", "text": "You, or a reseller? If you don't show up at all, the problem runs deeper." },
+        { "@type": "HowToStep", "name": "Ask the AIs", "text": "Ask ChatGPT or Perplexity what they think of your brand — tomorrow's branded SERP is also being decided in AI answers." }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "Can I get a negative review or a page I dislike taken down?", "acceptedAnswer": { "@type": "Answer", "text": "Unless the content is illegal (defamation, provably fake), rarely — and the process is long. The effective strategy is the opposite: occupy the ground with your own answers, more complete and better positioned, so the troublesome page slides down mechanically." } },
+        { "@type": "Question", "name": "Isn't it suspicious to create a “reviews” page on my own site?", "acceptedAnswer": { "@type": "Answer", "text": "Not if it's honest: real customer reviews (with proof of how they were collected), including the critical ones and your replies. A transparent reviews page on your own site is perfectly legitimate — it's the standard for brands that control their reputation. What's suspicious is a page of fake praise." } },
+        { "@type": "Question", "name": "Can coupon sites be challenged legally?", "acceptedAnswer": { "@type": "Answer", "text": "If they use your brand to mislead (fake codes, false affiliation claims), there are levers — talk to your lawyer. But the fastest lever is still SEO: create your own offers page and rank it on “brand + discount code”. You recover the click AND the image: no more customers frustrated by dead promo codes found elsewhere." } }
+      ]
+    }
+  ]
+});
+---
+<Base
+  title="Branded SERP: who controls “[your brand] reviews”?"
+  description="Type your brand + reviews, + discount code. The pages that answer aren't yours. What it costs, the 10-minute inventory, and the reclaim priorities."
+  lang="en"
+  frPath="/serp-de-marque/"
+  enPath="/en/branded-serp/"
+  jsonLd={jsonLd}>
+
+<section class="hero hero--page wrap">
+  <div class="hero-top">
+    <nav class="breadcrumb reveal" aria-label="Breadcrumb">
+      <a href="/en/">Home</a><span class="sep">›</span>
+      <a href="/en/resellers-capture-brand-traffic/">Resellers ahead of your brand</a><span class="sep">›</span>
+      <span>Branded SERP</span>
+    </nav>
+    <span class="hero-eyebrow reveal"><img src="/images/icon-orange.png" alt="" /> Leak #4 · Branded SERP</span>
+    <h1 class="reveal">Type your brand name into Google. <em>What you see isn't yours.</em></h1>
+    <p class="hero-sub reveal">Try it right now: “[your brand] reviews”. “[your brand] discount code”. “[your brand] cheap”. Look at who answers: review sites, coupon aggregators, resellers — rarely you.</p>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:clamp(24px,4vw,48px)">
+  <div class="wrap article reveal">
+    <p class="lead">Those queries are your <strong>branded SERP</strong>: the Google storefront of your name. And it's the hottest traffic there is — people who already know you and are about to buy.</p>
+
+    <figure>
+      <img src="/images/article-serp-mobile.jpg" alt="Customer browsing a shopping app on her smartphone instead of the brand's own site" loading="lazy" />
+    </figure>
+
+    <h2>“Discount code” and “cheap” are compliments</h2>
+    <p>Counterintuitive, but true: these searches are proof your brand is working.</p>
+    <p>Nobody types “[unknown brand] promo code”. These searches only exist because your brand awareness has created purchase intent — the customer has already chosen <em>you</em>; she's just after one last validation or a discount before paying.</p>
+    <p>Leaving those queries to coupon sites means handing the very last step of your conversion funnel to third parties. The coupon site built nothing: it collects an affiliate commission on a sale you had already won — and in the worst case, it redirects to a reseller. You pay for the awareness; it monetises the close.</p>
+
+    <h2>Your branded SERP inventory in 10 minutes</h2>
+    <p>Grab a sheet of paper, open a private browsing window, and search:</p>
+    <ol>
+      <li><strong>“[your brand]”</strong> alone — who occupies the first page besides you? Is your site showing in full (sitelinks, panel)?</li>
+      <li><strong>“[your brand] reviews”</strong> — who hosts the answer? What does it say? Is it up to date?</li>
+      <li><strong>“[your brand] discount code”</strong> / <strong>“cheap”</strong> — how many coupon sites? Do they offer real codes or empty promises (which frustrates your customers in your name)?</li>
+      <li><strong>“[your brand] + your hero products”</strong> — you, or a reseller? (<a href="/en/brand-invisible-on-google/">If you don't show up at all, the problem runs deeper →</a>)</li>
+      <li><strong>Ask ChatGPT or Perplexity</strong> what they think of your brand — tomorrow's branded SERP is also being decided <a href="/en/ai-visibility-geo-black-brands/">in AI answers</a>.</li>
+    </ol>
+    <p>For each line, note: mine / a neutral third party / a third party costing me money. There's your map.</p>
+
+    <h2>The 3 branded queries to reclaim first</h2>
+    <p>Not all branded SERP leaks are equal. The typical reclaim order:</p>
+    <ol>
+      <li><strong>“[brand] + product”</strong> — the direct sale itself. The most profitable to take back, and the most legitimate: your product, your name.</li>
+      <li><strong>“[brand] reviews”</strong> — the trust. As long as a third party hosts the answer, your reputation is being edited by someone else.</li>
+      <li><strong>“[brand] discount code”</strong> — the margin. Taking this query back means no longer paying a commission on customers who were already sold.</li>
+    </ol>
+    <p>How to reclaim each one — which page to create, what content, which signals — depends on your exact situation: that's the level of detail the Diagnostic produces, query by query. What's certain: each of these three queries has an answer, and the brand always starts as the favourite on its own name <em>when it shows up to play</em>.</p>
+
+    <h2>Measure first, reclaim second</h2>
+    <p>Your branded SERP is only one of the four traffic leaks of an established brand — <a href="/en/resellers-capture-brand-traffic/">the other three are here</a>. For the overall order of magnitude: <a href="/en/lost-organic-revenue-calculator/">the lost organic revenue calculator</a>, free, 60 seconds.</p>
+    <p>For the full inventory done by a senior eye — your real branded SERP, the queries actually being captured, your prioritised reclaim plan: <a href="/en/seo-diagnostic/">the AfriRank Diagnostic</a>, €290 (~$310), credited toward your first month if you continue.</p>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="kicker">Frequently asked questions</span><h2 class="sec-title">Your questions, my answers.</h2></div>
+    <div class="faq">
+      <div class="faq-item reveal"><button class="faq-q">Can I get a negative review or a page I dislike taken down? <span class="pm"></span></button><div class="faq-a"><p>Unless the content is illegal (defamation, provably fake), rarely — and the process is long. The effective strategy is the opposite: occupy the ground with your own answers, more complete and better positioned, so the troublesome page slides down mechanically.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-q">Isn't it suspicious to create a “reviews” page on my own site? <span class="pm"></span></button><div class="faq-a"><p>Not if it's honest: real customer reviews (with proof of how they were collected), including the critical ones and your replies. A transparent reviews page on your own site is perfectly legitimate — it's the standard for brands that control their reputation. What's suspicious is a page of fake praise.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-q">Can coupon sites be challenged legally? <span class="pm"></span></button><div class="faq-a"><p>If they use your brand to mislead (fake codes, false affiliation claims), there are levers — talk to your lawyer. But the fastest lever is still SEO: create your own offers page and rank it on “[brand] discount code”. You recover the click AND the image: no more customers frustrated by dead promo codes found elsewhere.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="links-more reveal">
+      <h2>Go further</h2>
+      <ul>
+        <li><a href="/en/resellers-capture-brand-traffic/">The 4 traffic leaks of an established brand</a></li>
+        <li><a href="/en/brand-invisible-on-google/">Your brand can't be found? The 5-minute test</a></li>
+        <li><a href="/en/ai-visibility-geo-black-brands/">Your visibility in AI answers (GEO)</a></li>
+        <li><a href="/en/lost-organic-revenue-calculator/">Estimate your lost organic revenue</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="cta-band reveal">
+      <img src="/images/icon-cream.png" class="icon-watermark" alt="" />
+      <h2>Start with the Diagnostic.</h2>
+      <p>Your real branded SERP, the queries actually being captured, your prioritised reclaim plan — done by a senior eye. €290 (~$310), credited toward your first month if you continue.</p>
+      <div class="cta-actions">
+        <a href={calendly} target="_blank" rel="noopener" class="btn btn--orange">Book my Diagnostic
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+        <a href="/en/seo-diagnostic/" class="btn btn--cream">Learn more</a>
+      </div>
+    </div>
+  </div>
+</section>
+</Base>
