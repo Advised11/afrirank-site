@@ -1,0 +1,145 @@
+---
+import Base from '../../layouts/Base.astro';
+const calendly = 'https://calendly.com/contact-advised-seo/30min?back=1';
+const jsonLd = JSON.stringify({
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "Own your branded SERP (and stop handing it to your resellers)",
+      "description": "When someone types your brand name, a reseller dominates? Here's how to take back your branded SERP — the fastest SEO win there is.",
+      "inLanguage": "en",
+      "author": { "@type": "Person", "name": "Francis Ndimba", "url": "https://www.afrirank.fr/en/about/" },
+      "publisher": { "@id": "https://www.afrirank.fr/#afrirank" },
+      "mainEntityOfPage": "https://www.afrirank.fr/en/own-your-branded-serp/"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.afrirank.fr/en/" },
+        { "@type": "ListItem", "position": 2, "name": "SEO for African & Black-owned brands", "item": "https://www.afrirank.fr/en/seo-african-heritage-brands/" },
+        { "@type": "ListItem", "position": 3, "name": "Own your branded SERP", "item": "https://www.afrirank.fr/en/own-your-branded-serp/" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "inLanguage": "en",
+      "mainEntity": [
+        { "@type": "Question", "name": "How do I know if I own my branded SERP?", "acceptedAnswer": { "@type": "Answer", "text": "Type your name into Google in a private window. Note what shows up in the first five positions, the panel on the right, and the related suggestions. If a reseller, a marketplace or a third-party site holds spots you should hold, you don't fully own it." } },
+        { "@type": "Question", "name": "Why can a reseller rank on my own brand name?", "acceptedAnswer": { "@type": "Answer", "text": "Because Google rewards the page best optimised for the query, not the product's owner. A reseller with an older domain and structured product pages can get ahead. It's a technical gap, so it's closeable." } },
+        { "@type": "Question", "name": "Can you request a knowledge panel from Google?", "acceptedAnswer": { "@type": "Answer", "text": "You don't request it, you earn it. It appears when Google clearly understands your brand as an entity: a consistent name everywhere, structured data, presence on recognised sources, assets linked together." } },
+        { "@type": "Question", "name": "How long to take back my branded SERP?", "acceptedAnswer": { "@type": "Answer", "text": "On branded queries it's generally faster than on category queries, because competition is low and the demand is already there. A diagnostic prioritises the quickest wins first." } }
+      ]
+    }
+  ]
+});
+---
+<Base
+  title="Own your branded SERP on Google | AfriRank"
+  description="When someone types your brand name, a reseller dominates? Here's how to take back your branded SERP — the fastest SEO win there is."
+  lang="en"
+  frPath="/posseder-serp-de-marque/"
+  enPath="/en/own-your-branded-serp/"
+  jsonLd={jsonLd}>
+
+<section class="hero hero--page wrap">
+  <div class="hero-top">
+    <nav class="breadcrumb reveal" aria-label="Breadcrumb">
+      <a href="/en/">Home</a><span class="sep">›</span>
+      <a href="/en/seo-african-heritage-brands/">SEO for Black-owned brands</a><span class="sep">›</span>
+      <span>Own your branded SERP</span>
+    </nav>
+    <span class="hero-eyebrow reveal"><img src="/images/icon-orange.png" alt="" /> Guide · Territory 1</span>
+    <h1 class="reveal">Own your branded SERP <em>(and stop handing it to your resellers)</em>.</h1>
+    <p class="hero-sub reveal">Type your brand name into Google. If the first thing that shows up isn't your site, your Google listing and your content, you have a simple problem to name: you don't own your own SERP.</p>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:clamp(24px,4vw,48px)">
+  <div class="wrap article reveal">
+    <p class="lead">The branded SERP is the results page when someone searches explicitly for your name. These people already know you. They're ready to buy. It's the hottest, most qualified and cheapest traffic you'll ever get. Leaving it to a reseller is paying to bring a customer in and dropping them on a competitor's doorstep.</p>
+    <p>I'm Francis. Eleven years in SEO. In AfriRank diagnostics, the branded SERP is almost always the first territory I look at — because that's where it bleeds fastest, and where it seals up fastest too.</p>
+
+    <h2>What a branded SERP really is</h2>
+    <p>When someone types your name, they've already decided who they're looking for. They're not comparing. The branded SERP answers an implicit question: "where is this brand, and what's being said about it?" Three things play out on that page:</p>
+    <ul>
+      <li><strong>The destination.</strong> Where does the click go? To you, or to a middleman taking a margin on your own name.</li>
+      <li><strong>The perception.</strong> Reviews, articles, search suggestions, "people also ask". It's your reputation on display, unfiltered.</li>
+      <li><strong>The control.</strong> The more space you occupy, the less is left for everyone else.</li>
+    </ul>
+
+    <h2>A healthy branded SERP vs a hijacked one</h2>
+    <h3>What a healthy SERP looks like</h3>
+    <ul>
+      <li>Your official site in position 1, with sitelinks to your key categories.</li>
+      <li>A knowledge panel on the right: logo, description, links to your socials, sometimes your hero products.</li>
+      <li>Your own content holding several positions: about page, best-sellers, guides.</li>
+      <li>Your social profiles and your Google Business Profile if you have a physical presence.</li>
+    </ul>
+    <h3>What a hijacked SERP looks like</h3>
+    <ul>
+      <li>A reseller or a marketplace ranks above your site, or just below it with a richer listing.</li>
+      <li>No knowledge panel, or an incomplete one: Google doesn't clearly "understand" your brand as an entity.</li>
+      <li>Your best-sellers are easier to find on Amazon than on your own store.</li>
+      <li>Suggestions pair your name with "[brand] amazon", "[brand] cheap" — so many exit doors.</li>
+    </ul>
+    <p>When your SERP is hijacked, you pay twice: once to build the awareness that drives the search, a second time in margin given up to whoever catches the click.</p>
+
+    <h2>The territories to reclaim</h2>
+    <ol>
+      <li><strong>Your site and its sitelinks.</strong> Your domain must come up first on your name; beyond that, sitelinks turn a single result line into a mini storefront.</li>
+      <li><strong>Your product pages.</strong> Make your own pages the reference on "[brand] + product" queries.</li>
+      <li><strong>Your branded content.</strong> A solid about page, guides: positions nobody can steal from you.</li>
+      <li><strong>The knowledge panel and entity signals.</strong> Consistent mentions, structured data, presence on recognised sources. One of the most underused levers for established heritage brands.</li>
+      <li><strong>The "reviews" zone and related queries.</strong> "[brand] reviews", "[brand] delivery": if you're not the one answering, third parties frame your reputation.</li>
+    </ol>
+
+    <h2>Why it's the fastest win</h2>
+    <p><strong>The demand is already there.</strong> People are already typing your name: it's just about recovering the click. <strong>Competition is low on your own name</strong> — a reseller ranks by default, not by effort. <strong>Google wants to get it right</strong>: when the entity is clear, it has every reason to show the official brand first. It's often the most accessible revenue to recover in the short term — and the same problem plays out again against <a href="/en/reclaim-demand-from-marketplaces/">marketplaces</a> and in <a href="/en/ai-visibility-geo-black-brands/">AI answers</a>.</p>
+
+    <blockquote><p>What the Diagnostic shows is the what and the how much. The how — the page-by-page, listing-by-listing reclaim — is done in the engagement.</p></blockquote>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="kicker">Frequently asked</span><h2 class="sec-title">Your questions, my answers.</h2></div>
+    <div class="faq">
+      <div class="faq-item reveal"><button class="faq-q">How do I know if I own my branded SERP? <span class="pm"></span></button><div class="faq-a"><p>Type your name into Google in a private window. Note what shows up in the first five positions, the panel on the right and the related suggestions. If a reseller, a marketplace or a third-party site holds spots you should hold, you don't fully own it.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-q">Why can a reseller rank on my own brand name? <span class="pm"></span></button><div class="faq-a"><p>Because Google rewards the page best optimised for the query, not the product's owner. A reseller with an older domain and structured product pages can get ahead. It's a technical gap, so it's closeable.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-q">Can you request a knowledge panel from Google? <span class="pm"></span></button><div class="faq-a"><p>You don't request it, you earn it. It appears when Google clearly understands your brand as an entity: a consistent name everywhere, structured data, presence on recognised sources, assets linked together.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-q">How long to take back my branded SERP? <span class="pm"></span></button><div class="faq-a"><p>On branded queries it's generally faster than on category queries, because competition is low and the demand is already there. A diagnostic prioritises the quickest wins first.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="links-more reveal">
+      <h2>Go further</h2>
+      <ul>
+        <li><a href="/en/seo-african-heritage-brands/">SEO strategy for African & Black-owned brands</a></li>
+        <li><a href="/en/recover-revenue-from-resellers/">Recover the revenue your resellers capture</a></li>
+        <li><a href="/en/why-resellers-outrank-your-brand/">Why my resellers outrank my brand</a></li>
+        <li><a href="/en/reclaim-demand-from-marketplaces/">Reclaim the demand marketplaces capture</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="cta-band reveal">
+      <img src="/images/icon-cream.png" class="icon-watermark" alt="" />
+      <h2>On your own name, who wins?</h2>
+      <p>The Diagnostic shows who holds your branded SERP position by position, the territories given away, and the potential quantified. €290 (~$310), credited toward your first month if you continue.</p>
+      <div class="cta-actions">
+        <a href={calendly} target="_blank" rel="noopener" class="btn btn--orange">Book the Diagnostic
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+        <a href="/en/seo-diagnostic/" class="btn btn--cream">Learn more</a>
+      </div>
+    </div>
+  </div>
+</section>
+</Base>

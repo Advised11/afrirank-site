@@ -1,6 +1,6 @@
 ---
-const { active = '' } = Astro.props;
-const links = [
+const { active = '', lang = 'fr', altPath } = Astro.props;
+const linksFr = [
   { href: '/', label: 'Accueil', key: 'accueil' },
   { href: '/diagnostic-seo/', label: 'Diagnostic', key: 'diagnostic' },
   { href: '/accompagnement/', label: 'Accompagnement', key: 'accompagnement' },
@@ -8,24 +8,40 @@ const links = [
   { href: '/a-propos/', label: 'À propos', key: 'a-propos' },
   { href: '/contact/', label: 'Contact', key: 'contact' },
 ];
+const linksEn = [
+  { href: '/en/', label: 'Home', key: 'accueil' },
+  { href: '/en/seo-diagnostic/', label: 'Diagnostic', key: 'diagnostic' },
+  { href: '/en/seo-services/', label: 'Services', key: 'accompagnement' },
+  { href: '/en/cultural-seo/', label: 'Cultural SEO', key: 'seo-culturel' },
+  { href: '/en/about/', label: 'About', key: 'a-propos' },
+  { href: '/en/contact/', label: 'Contact', key: 'contact' },
+];
+const links = lang === 'en' ? linksEn : linksFr;
 const calendly = 'https://calendly.com/contact-advised-seo/30min?back=1';
+const homeHref = lang === 'en' ? '/en/' : '/';
+const cta = lang === 'en' ? 'Book my Diagnostic' : 'Réserver mon Diagnostic';
+const brandAria = lang === 'en' ? 'AfriRank — home' : 'AfriRank — accueil';
+// Sélecteur de langue : lien vers la page équivalente dans l'autre langue (fallback accueil)
+const switchHref = altPath || (lang === 'en' ? '/' : '/en/');
 ---
 <header class="nav" id="nav">
   <div class="wrap nav-inner">
-    <a href="/" class="brand" aria-label="AfriRank — accueil"><img src="/images/logo-dark.png" alt="AfriRank" /></a>
+    <a href={homeHref} class="brand" aria-label={brandAria}><img src="/images/logo-dark.png" alt="AfriRank" /></a>
     <nav class="nav-links">
       {links.map((l) => <a href={l.href} class={active === l.key ? 'active' : undefined}>{l.label}</a>)}
     </nav>
-    <a href={calendly} target="_blank" rel="noopener" class="btn btn--blue nav-cta">Réserver mon Diagnostic
+    <a href={calendly} target="_blank" rel="noopener" class="btn btn--blue nav-cta">{cta}
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"></path></svg>
     </a>
+    <a href={switchHref} class="nav-lang" hreflang={lang === 'en' ? 'fr-FR' : 'en'} aria-label={lang === 'en' ? 'Version française' : 'English version'}>{lang === 'en' ? 'FR' : 'EN'}</a>
     <button class="nav-toggle" id="navToggle" aria-label="Menu"><span></span></button>
   </div>
 </header>
 
 <div class="mobile-menu" id="mobileMenu">
   {links.map((l) => <a href={l.href}>{l.label}</a>)}
-  <a href={calendly} target="_blank" rel="noopener" class="btn btn--orange">Réserver mon Diagnostic
+  <a href={switchHref} hreflang={lang === 'en' ? 'fr-FR' : 'en'}>{lang === 'en' ? 'Français' : 'English'}</a>
+  <a href={calendly} target="_blank" rel="noopener" class="btn btn--orange">{cta}
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"></path></svg>
   </a>
 </div>

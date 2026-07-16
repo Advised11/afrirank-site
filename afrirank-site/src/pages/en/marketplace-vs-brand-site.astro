@@ -1,0 +1,121 @@
+---
+import Base from '../../layouts/Base.astro';
+const calendly = 'https://calendly.com/contact-advised-seo/30min?back=1';
+const jsonLd = JSON.stringify({
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.afrirank.fr/en/" },
+        { "@type": "ListItem", "position": 2, "name": "SEO for African & Black-owned brands", "item": "https://www.afrirank.fr/en/seo-african-heritage-brands/" },
+        { "@type": "ListItem", "position": 3, "name": "Marketplace vs brand site", "item": "https://www.afrirank.fr/en/marketplace-vs-brand-site/" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "inLanguage": "en",
+      "mainEntity": [
+        { "@type": "Question", "name": "Should I leave the marketplaces?", "acceptedAnswer": { "@type": "Answer", "text": "Not necessarily. A marketplace can stay a complementary acquisition channel. The problem is when it becomes your main point of sale and captures the demand for your own brand. The goal is to rebalance toward direct." } },
+        { "@type": "Question", "name": "Why does the marketplace outrank my site on Google?", "acceptedAnswer": { "@type": "Answer", "text": "Because it has enormous SEO authority and pages that are often better optimised than yours. Without work on your site, it wins even on your own product names. It's a capture problem, not a fame problem." } },
+        { "@type": "Question", "name": "Is selling direct more profitable?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, generally: full retail price, no commission, and above all the customer data that enables repeat purchase and loyalty. A direct sale is worth far more than an equivalent marketplace sale over time." } },
+        { "@type": "Question", "name": "How do I reclaim demand captured by marketplaces?", "acceptedAnswer": { "@type": "Answer", "text": "By first reclaiming your branded SERP, then your category queries, with a technically healthy site and content that answers the intent. The Diagnostic quantifies the leak and prioritises the work." } }
+      ]
+    }
+  ]
+});
+---
+<Base
+  title="Marketplace vs brand site: who captures the traffic?"
+  description="Marketplace or brand site: who really captures the demand, the margin and the customer data? A clear comparison and a recommendation."
+  jsonLd={jsonLd}
+  lang="en"
+  frPath="/marketplace-vs-site-de-marque/"
+  enPath="/en/marketplace-vs-brand-site/">
+
+<section class="hero hero--page wrap">
+  <div class="hero-top">
+    <nav class="breadcrumb reveal" aria-label="Breadcrumb">
+      <a href="/en/">Home</a><span class="sep">›</span>
+      <a href="/en/seo-african-heritage-brands/">SEO for Black-owned brands</a><span class="sep">›</span>
+      <span>Marketplace vs brand site</span>
+    </nav>
+    <span class="hero-eyebrow reveal"><img src="/images/icon-orange.png" alt="" /> Frequently asked</span>
+    <h1 class="reveal">Marketplace vs brand site: who captures the traffic?</h1>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:clamp(24px,4vw,48px)">
+  <div class="wrap article reveal">
+    <blockquote><p><strong>Short answer:</strong> the <strong>marketplace captures the traffic, the margin and the customer data</strong> — your brand site lets you keep them. Selling through a marketplace gives you fast volume but makes you dependent: it owns the customer relationship, banks the highest margin and sets the rules. For an established brand, the point is to <strong>win back your direct sales</strong>.</p></blockquote>
+
+    <h2>Who captures what: the clear comparison</h2>
+    <div class="tbl-wrap">
+      <table class="tbl">
+        <thead><tr><th>Criterion</th><th>Marketplace</th><th>Your brand site</th></tr></thead>
+        <tbody>
+          <tr><td>Branded demand (your name)</td><td>Often captured by the marketplace</td><td>Belongs to you</td></tr>
+          <tr><td>Margin</td><td>Wholesale price + commission taken</td><td>Full retail price</td></tr>
+          <tr><td>Customer data (email, history)</td><td>The marketplace's</td><td>Yours</td></tr>
+          <tr><td>Repeat purchase / loyalty</td><td>Hard, customer "stolen"</td><td>Direct, programmable</td></tr>
+          <tr><td>Dependency</td><td>High (rules, fees, visibility imposed)</td><td>You're in control</td></tr>
+          <tr><td>SERP (Google)</td><td>The marketplace ranks on your product</td><td>Your page has to win</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>The trap: a well-optimised marketplace can rank <strong>above your own product page</strong> on the name of your best-seller. The customer was looking for you — and buys from a third party, in your place.</p>
+
+    <h2>What you actually lose</h2>
+    <ol>
+      <li><strong>The margin.</strong> You earn your wholesale price, minus commission, instead of your full retail price.</li>
+      <li><strong>The customer data.</strong> No email, no history, no loyalty programme. You can't bring that customer back.</li>
+      <li><strong>The control.</strong> The marketplace decides the displayed price, the presentation, and can change its rules or fees whenever it wants.</li>
+    </ol>
+
+    <h2>The recommendation: win back your direct sales</h2>
+    <p>A marketplace can stay an acquisition channel, as long as it doesn't <strong>replace</strong> your site. For an established African & Black-owned brand, the priority is to reclaim your direct demand: <a href="/en/own-your-branded-serp/">win back your branded SERP</a>, win on your category queries, become the first point of sale for your own name again. That's exactly the capture problem AfriRank solves — see <a href="/en/reclaim-demand-from-marketplaces/">reclaim the demand captured by marketplaces</a>.</p>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="kicker">Frequently asked</span><h2 class="sec-title">Your questions, my answers.</h2></div>
+    <div class="faq">
+      <div class="faq-item reveal"><button class="faq-q">Should I leave the marketplaces? <span class="pm"></span></button><div class="faq-a"><p>Not necessarily. A marketplace can stay a complementary acquisition channel. The problem is when it becomes your main point of sale and captures the demand for your own brand. The goal is to rebalance toward direct.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-q">Why does the marketplace outrank my site on Google? <span class="pm"></span></button><div class="faq-a"><p>Because it has enormous SEO authority and pages that are often better optimised than yours. Without work on your site, it wins even on your own product names. It's a capture problem, not a fame problem.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-q">Is selling direct more profitable? <span class="pm"></span></button><div class="faq-a"><p>Yes, generally: full retail price, no commission, and above all the customer data that enables repeat purchase and loyalty. A direct sale is worth far more than an equivalent marketplace sale over time.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-q">How do I reclaim demand captured by marketplaces? <span class="pm"></span></button><div class="faq-a"><p>By first reclaiming your branded SERP, then your category queries, with a technically healthy site and content that answers the intent. The Diagnostic quantifies the leak and prioritises the work.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="links-more reveal">
+      <h2>Go further</h2>
+      <ul>
+        <li><a href="/en/seo-african-heritage-brands/">SEO strategy for African & Black-owned brands</a></li>
+        <li><a href="/en/recover-revenue-from-resellers/">Recover the revenue your resellers capture</a></li>
+        <li><a href="/en/reclaim-demand-from-marketplaces/">Reclaim the demand captured by marketplaces</a></li>
+        <li><a href="/en/own-your-branded-serp/">Own your branded SERP</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="cta-band reveal">
+      <img src="/images/icon-cream.png" class="icon-watermark" alt="" />
+      <h2>How much are you leaving to the marketplaces?</h2>
+      <p>The Diagnostic quantifies the organic revenue captured by marketplaces and resellers in your place, and maps the plan to win it back. €290 (~$310), credited toward your first month if you continue.</p>
+      <div class="cta-actions">
+        <a href={calendly} target="_blank" rel="noopener" class="btn btn--orange">Book the Diagnostic
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+        <a href="/en/seo-diagnostic/" class="btn btn--cream">Learn more</a>
+      </div>
+    </div>
+  </div>
+</section>
+</Base>

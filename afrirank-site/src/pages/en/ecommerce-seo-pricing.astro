@@ -1,0 +1,120 @@
+---
+import Base from '../../layouts/Base.astro';
+const calendly = 'https://calendly.com/contact-advised-seo/30min?back=1';
+const jsonLd = JSON.stringify({
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.afrirank.fr/en/" },
+        { "@type": "ListItem", "position": 2, "name": "SEO for African & Black-owned brands", "item": "https://www.afrirank.fr/en/seo-african-heritage-brands/" },
+        { "@type": "ListItem", "position": 3, "name": "E-commerce SEO pricing", "item": "https://www.afrirank.fr/en/ecommerce-seo-pricing/" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "inLanguage": "en",
+      "mainEntity": [
+        { "@type": "Question", "name": "Is SEO worth it for a small brand?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, if you go after the quick wins first (your branded SERP) rather than the most expensive queries to conquer. The Diagnostic exists precisely to prioritise by ROI." } },
+        { "@type": "Question", "name": "Freelancer or agency — which is better?", "acceptedAnswer": { "@type": "Answer", "text": "A senior freelancer often gives an established brand a better expertise-to-price ratio; an agency earns its keep on very large catalogues. AfriRank is a specialist freelance engagement." } },
+        { "@type": "Question", "name": "Is SEO a cost or an investment?", "acceptedAnswer": { "@type": "Answer", "text": "An investment: it brings in traffic you do not pay for on every click, unlike paid ads." } },
+        { "@type": "Question", "name": "How long before I see a return?", "acceptedAnswer": { "@type": "Answer", "text": "A few weeks on branded queries, several months on category queries. The Diagnostic sets realistic expectations." } }
+      ]
+    }
+  ]
+});
+---
+<Base
+  title="How much does e-commerce SEO cost?"
+  description="E-commerce SEO pricing in 2026: typical ranges by format (audit, freelancer, agency) and how to start without a big commitment."
+  lang="en"
+  frPath="/prix-seo-marque-ecommerce/"
+  enPath="/en/ecommerce-seo-pricing/"
+  jsonLd={jsonLd}>
+
+<section class="hero hero--page wrap">
+  <div class="hero-top">
+    <nav class="breadcrumb reveal" aria-label="Breadcrumb">
+      <a href="/en/">Home</a><span class="sep">›</span>
+      <a href="/en/seo-african-heritage-brands/">SEO for Black-owned brands</a><span class="sep">›</span>
+      <span>E-commerce SEO pricing</span>
+    </nav>
+    <span class="hero-eyebrow reveal"><img src="/images/icon-orange.png" alt="" /> Frequently asked</span>
+    <h1 class="reveal">How much does SEO cost for an e-commerce brand?</h1>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:clamp(24px,4vw,48px)">
+  <div class="wrap article reveal">
+    <blockquote><p><strong>Short answer:</strong> e-commerce SEO usually sits between <strong>€500 and €3,000 / mo (~$550–$3,250)</strong> for a freelance or agency engagement, and a one-off audit ranges from a few hundred to a few thousand euros depending on depth. The right starting point isn't the biggest budget — it's a diagnostic that first puts a number on what you're losing.</p></blockquote>
+
+    <h2>Price ranges by format</h2>
+    <div class="tbl-wrap">
+      <table class="tbl">
+        <thead><tr><th>Format</th><th>Common range</th><th>Who it's for</th></tr></thead>
+        <tbody>
+          <tr><td>One-off diagnostic / audit</td><td>~€200 to €3,000 (~$220–$3,250)</td><td>A brand that wants to know where it's losing before investing</td></tr>
+          <tr><td>Freelance engagement (monthly)</td><td>~€500 to €2,000 / mo (~$550–$2,150)</td><td>An established brand that wants a dedicated expert</td></tr>
+          <tr><td>Agency (monthly retainer)</td><td>~€1,500 to €5,000+ / mo (~$1,600–$5,400)</td><td>A brand with a large catalogue / heavy competition</td></tr>
+          <tr><td>One-off project (content, technical)</td><td>per project</td><td>A specific, well-defined need</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p><em>Indicative market ranges for 2026. The real price depends on catalogue size, competition and objectives.</em></p>
+
+    <h2>What moves the price</h2>
+    <ul>
+      <li><strong>Catalogue size:</strong> more products = more pages to optimise.</li>
+      <li><strong>Competition on your queries:</strong> taking on <a href="/en/reclaim-demand-from-marketplaces/">marketplaces</a> costs more than owning your branded SERP.</li>
+      <li><strong>The site's starting condition:</strong> a technically healthy site costs less to move forward.</li>
+      <li><strong>Scope:</strong> technical only, content, link building, GEO… or all of it at once.</li>
+    </ul>
+
+    <h2>The right order: measure before you spend</h2>
+    <p>Investing in SEO without knowing what you're missing out on is flying blind. At AfriRank, we start with <strong>the Diagnostic</strong>: <strong>€290 (~$310)</strong>, credited toward your first month if you continue. You get the leak quantified and a prioritised plan — so a budget decision made with your eyes open. Get an early estimate of your leak with the <a href="/en/lost-organic-revenue-calculator/">lost organic revenue calculator</a>.</p>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="kicker">Frequently asked</span><h2 class="sec-title">Your questions, my answers.</h2></div>
+    <div class="faq">
+      <div class="faq-item reveal"><button class="faq-q">Is SEO worth it for a small brand? <span class="pm"></span></button><div class="faq-a"><p>Yes, if you go after the quick wins first (your branded SERP) rather than the most expensive queries to conquer. The Diagnostic exists precisely to prioritise by ROI.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-q">Freelancer or agency — which is better? <span class="pm"></span></button><div class="faq-a"><p>A senior freelancer often gives an established brand a better expertise-to-price ratio; an agency earns its keep on very large catalogues. AfriRank is a specialist freelance engagement.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-q">Is SEO a cost or an investment? <span class="pm"></span></button><div class="faq-a"><p>An investment: it brings in traffic you don't repay on every click, unlike paid ads.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-q">How long before I see a return? <span class="pm"></span></button><div class="faq-a"><p>A few weeks on branded queries, several months on category queries. The Diagnostic sets realistic expectations.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="links-more reveal">
+      <h2>Go further</h2>
+      <ul>
+        <li><a href="/en/seo-african-heritage-brands/">SEO strategy for African & Black-owned brands</a></li>
+        <li><a href="/en/lost-organic-revenue-calculator/">Estimate your lost organic revenue</a></li>
+        <li><a href="/en/recover-revenue-from-resellers/">Recover the revenue your resellers capture</a></li>
+        <li><a href="/en/brand-visibility-scorecard/">Test your visibility score</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="cta-band reveal">
+      <img src="/images/icon-cream.png" class="icon-watermark" alt="" />
+      <h2>Measure before you spend: the Diagnostic.</h2>
+      <p>€290 (~$310), credited toward your first month if you continue. You leave with the leak quantified and a prioritised plan — a budget decision made with your eyes open.</p>
+      <div class="cta-actions">
+        <a href={calendly} target="_blank" rel="noopener" class="btn btn--orange">Book the Diagnostic
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+        <a href="/en/seo-diagnostic/" class="btn btn--cream">Learn more</a>
+      </div>
+    </div>
+  </div>
+</section>
+</Base>

@@ -1,0 +1,108 @@
+---
+import Base from '../../layouts/Base.astro';
+const calendly = 'https://calendly.com/contact-advised-seo/30min?back=1';
+const jsonLd = JSON.stringify({
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.afrirank.fr/en/" },
+        { "@type": "ListItem", "position": 2, "name": "SEO for African & Black-owned brands", "item": "https://www.afrirank.fr/en/seo-african-heritage-brands/" },
+        { "@type": "ListItem", "position": 3, "name": "Why my resellers outrank my brand", "item": "https://www.afrirank.fr/en/why-resellers-outrank-your-brand/" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "inLanguage": "en",
+      "mainEntity": [
+        { "@type": "Question", "name": "Is it illegal for a reseller to rank on my brand?", "acceptedAnswer": { "@type": "Answer", "text": "No. As long as they sell your products legitimately, they can rank on your name. The answer isn't legal, it's SEO: take the spot back." } },
+        { "@type": "Question", "name": "Can I force Google to put me first on my own brand?", "acceptedAnswer": { "@type": "Answer", "text": "Not 'force', but earn it: an optimised site, solid product pages, brand content, consistent entity signals. It's very achievable on branded queries." } },
+        { "@type": "Question", "name": "How long to get back in front?", "acceptedAnswer": { "@type": "Answer", "text": "On branded queries, often faster than on category queries. A diagnostic prioritises the quick wins." } },
+        { "@type": "Question", "name": "Are marketplaces unbeatable?", "acceptedAnswer": { "@type": "Answer", "text": "Not on your own brand. On generic queries, you pick the winnable battles rather than fighting them head-on." } }
+      ]
+    }
+  ]
+});
+---
+<Base
+  title="Why do my resellers outrank my brand?"
+  description="Your resellers ranking above you on Google? Here are the 4 real reasons — and why it's fixable for an established Black-owned brand."
+  jsonLd={jsonLd}
+  lang="en"
+  frPath="/pourquoi-revendeurs-avant-marque-google/"
+  enPath="/en/why-resellers-outrank-your-brand/">
+
+<section class="hero hero--page wrap">
+  <div class="hero-top">
+    <nav class="breadcrumb reveal" aria-label="Breadcrumb">
+      <a href="/en/">Home</a><span class="sep">›</span>
+      <a href="/en/seo-african-heritage-brands/">SEO for Black-owned brands</a><span class="sep">›</span>
+      <span>Why my resellers outrank my brand</span>
+    </nav>
+    <span class="hero-eyebrow reveal"><img src="/images/icon-orange.png" alt="" /> Frequently asked</span>
+    <h1 class="reveal">Why do my resellers rank above my brand on Google?</h1>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:clamp(24px,4vw,48px)">
+  <div class="wrap article reveal">
+    <blockquote><p><strong>Short answer:</strong> because their sites often have an older domain, more indexed content, better-structured product pages and more inbound links than yours. Google doesn't reward the brand that owns the product — it rewards the page best optimised for the query. Good news: those are technical gaps, so they're fixable.</p></blockquote>
+
+    <h2>The 4 concrete reasons</h2>
+    <h3>1. Their domain is older and broader</h3>
+    <p>A reseller or marketplace has been publishing for years and across thousands of products. That age and volume send Google an authority signal your site — newer or narrower — doesn't have yet.</p>
+    <h3>2. Their product pages are better optimised</h3>
+    <p>Titles, descriptions, tags, customer reviews, structured data: marketplaces industrialise optimisation. Many brand sites, by contrast, have short product pages and near-empty category pages.</p>
+    <h3>3. They have more inbound links</h3>
+    <p>Comparison sites, articles, partners: the ecosystem points massively toward resellers. Those links reinforce their position on your own queries.</p>
+    <h3>4. Your internal linking is weak</h3>
+    <p>When your pages don't reference one another, Google struggles to understand which ones matter. The reseller, meanwhile, has a dense architecture that pushes its pages upward.</p>
+
+    <h2>What this means for your brand</h2>
+    <p>You're not losing for lack of fame, but for lack of optimisation. That's exactly what gets fixed — and the first territory to reclaim is your <a href="/en/own-your-branded-serp/">branded SERP</a> (searches on your name), the quickest win. To quantify what this capture costs you: <a href="/en/recover-revenue-from-resellers/">recover the revenue your resellers capture</a>.</p>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="kicker">Frequently asked</span><h2 class="sec-title">Your questions, my answers.</h2></div>
+    <div class="faq">
+      <div class="faq-item reveal"><button class="faq-q">Is it illegal for a reseller to rank on my brand? <span class="pm"></span></button><div class="faq-a"><p>No. As long as they sell your products legitimately, they can rank on your name. The answer isn't legal, it's SEO: take the spot back.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-q">Can I force Google to put me first on my own brand? <span class="pm"></span></button><div class="faq-a"><p>Not "force", but earn it: an optimised site, solid product pages, brand content, consistent entity signals. It's very achievable on branded queries.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-q">How long to get back in front? <span class="pm"></span></button><div class="faq-a"><p>On branded queries, often faster than on category queries. A diagnostic prioritises the quick wins.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-q">Are marketplaces unbeatable? <span class="pm"></span></button><div class="faq-a"><p>Not on your own brand. On generic queries, you pick the winnable battles rather than fighting them head-on.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="links-more reveal">
+      <h2>Go further</h2>
+      <ul>
+        <li><a href="/en/seo-african-heritage-brands/">SEO strategy for African & Black-owned brands</a></li>
+        <li><a href="/en/recover-revenue-from-resellers/">Recover the revenue your resellers capture</a></li>
+        <li><a href="/en/own-your-branded-serp/">Own your branded SERP</a></li>
+        <li><a href="/en/marketplace-vs-brand-site/">Marketplace vs brand site</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="cta-band reveal">
+      <img src="/images/icon-cream.png" class="icon-watermark" alt="" />
+      <h2>What this capture costs you, quantified.</h2>
+      <p>The Diagnostic measures the revenue captured by your resellers and maps the plan to get back in front, starting with the quickest wins. €290 (~$310), credited toward your first month if you continue.</p>
+      <div class="cta-actions">
+        <a href={calendly} target="_blank" rel="noopener" class="btn btn--orange">Book the Diagnostic
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+        <a href="/en/seo-diagnostic/" class="btn btn--cream">Learn more</a>
+      </div>
+    </div>
+  </div>
+</section>
+</Base>

@@ -1,0 +1,143 @@
+---
+import Base from '../../layouts/Base.astro';
+const calendly = 'https://calendly.com/contact-advised-seo/30min?back=1';
+const jsonLd = JSON.stringify({
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "WooCommerce and PrestaShop SEO for Black-owned brands: the freedom that can change everything",
+      "description": "WooCommerce and PrestaShop give you total SEO freedom. Set up right, it reclaims the demand your resellers are capturing. The key levers.",
+      "inLanguage": "en",
+      "author": { "@type": "Person", "name": "Francis Ndimba", "url": "https://www.afrirank.fr/en/about/" },
+      "publisher": { "@id": "https://www.afrirank.fr/#afrirank" },
+      "mainEntityOfPage": "https://www.afrirank.fr/en/seo-woocommerce-black-owned-brands/"
+    },
+    {
+      "@type": "HowTo",
+      "name": "Win back your sales with WooCommerce / PrestaShop SEO",
+      "step": [
+        { "@type": "HowToStep", "name": "Strengthen your categories", "text": "Add answer content and a flat, clear site structure." },
+        { "@type": "HowToStep", "name": "Master attributes and facets", "text": "Decide which filter pages to index and which to block to avoid duplicates." },
+        { "@type": "HowToStep", "name": "Structure your URLs", "text": "A clean structure and 301 redirects on every URL change." },
+        { "@type": "HowToStep", "name": "Optimise performance", "text": "Suitable hosting, caching, a lighter build and a healthy database." }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.afrirank.fr/en/" },
+        { "@type": "ListItem", "position": 2, "name": "SEO for African & Black-owned brands", "item": "https://www.afrirank.fr/en/seo-african-heritage-brands/" },
+        { "@type": "ListItem", "position": 3, "name": "WooCommerce / PrestaShop SEO", "item": "https://www.afrirank.fr/en/seo-woocommerce-black-owned-brands/" }
+      ]
+    }
+  ]
+});
+---
+<Base
+  title="WooCommerce & PrestaShop SEO for Black-owned brands | AfriRank"
+  description="WooCommerce and PrestaShop give you total SEO freedom. Set up right, it reclaims the demand your resellers are capturing. The key levers."
+  jsonLd={jsonLd}
+  lang="en"
+  frPath="/seo-woocommerce-prestashop-marques-afro/"
+  enPath="/en/seo-woocommerce-black-owned-brands/">
+
+<section class="hero hero--page wrap">
+  <div class="hero-top">
+    <nav class="breadcrumb reveal" aria-label="Breadcrumb">
+      <a href="/en/">Home</a><span class="sep">›</span>
+      <a href="/en/seo-african-heritage-brands/">SEO for Black-owned brands</a><span class="sep">›</span>
+      <span>WooCommerce / PrestaShop SEO</span>
+    </nav>
+    <span class="hero-eyebrow reveal"><img src="/images/icon-orange.png" alt="" /> Platform guide</span>
+    <h1 class="reveal">WooCommerce and PrestaShop SEO: <em>the freedom that can change everything</em>.</h1>
+    <p class="hero-sub reveal">Unlike a closed platform, you can shape everything: your URLs, your site structure, your attributes, your content. That's a huge advantage for winning back the sales your resellers are capturing. It's also the ground where people do the most SEO damage without realising it.</p>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:clamp(24px,4vw,48px)">
+  <div class="wrap article reveal">
+    <p>I'm Francis, an SEO consultant with eleven years in the field. On these two CMSs, SEO is won or lost in the architecture. Here's where.</p>
+
+    <h2>Architectural freedom: your best asset, your worst trap</h2>
+    <p>WooCommerce (a WordPress extension) and PrestaShop share a strength Shopify doesn't have: you control your URLs and your site structure with no enforced prefix. That freedom lets you build an architecture tailored to your queries — but it also lets you dig your own holes: inconsistent structures, URLs that change without a redirect, pages generated en masse with no content. The platform won't protect you from yourself.</p>
+
+    <h2>Categories: your heavy artillery on Black-owned queries</h2>
+    <p>Your category pages target "type 4 hair care", "makeup for dark skin", "African grocery online" — the bulk of the non-branded volume. Two pitfalls: <strong>categories with no content</strong> (a title + a grid gives Google nothing to rank) and <strong>a structure that's too deep or inconsistent</strong> (endless paths, duplicates like "hair &gt; care &gt; masks" AND "care &gt; masks" that dilute the equity).</p>
+
+    <h2>Attributes and variations: the silent duplicate factory</h2>
+    <p>This is the number-one technical trap. Your products have attributes (size, hair type, volume). Combined with faceted navigation, they can produce thousands of filtered URLs. If those are indexable:</p>
+    <ul>
+      <li><strong>Crawl budget wasted</strong> on combinations with no value.</li>
+      <li><strong>Duplicate content</strong> that dilutes your useful category pages.</li>
+      <li><strong>A bloated index</strong> of thin pages that drags the whole site down.</li>
+    </ul>
+    <p>The lever: decide which filter pages deserve to be indexed ("mask for 4C hair") and which to block. On PrestaShop via faceted navigation; on WooCommerce via URL parameters and canonicals.</p>
+
+    <h2>Performance: the price of flexibility</h2>
+    <p>Both CMSs are self-hosted: you manage the hosting, and speed depends on it. <strong>WooCommerce:</strong> a pile-up of plugins, heavy themes, an unoptimised database, undersized hosting, no caching. <strong>PrestaShop:</strong> too many modules, misconfigured caching, outdated PHP, heavy queries on large catalogues.</p>
+
+    <h2>SEO extensions: a framework, not a magic wand</h2>
+    <p>SEO extensions set the <strong>framework</strong> (titles, metas, sitemap, structured data, breadcrumbs, canonicals). They don't decide which title beats the reseller in place, or which category to prioritise. The tool executes; the intelligence stays human.</p>
+
+    <h2>In short: the levers for winning back your sales</h2>
+    <div class="tbl-wrap">
+      <table class="tbl">
+        <thead><tr><th>Lever</th><th>What to aim for</th><th>Capture impact</th></tr></thead>
+        <tbody>
+          <tr><td>Categories</td><td>Answer content + a flat, clear structure</td><td>High (category queries)</td></tr>
+          <tr><td>Attributes / facets</td><td>Decide what to index vs block (anti-duplicate)</td><td>High (crawl budget)</td></tr>
+          <tr><td>URLs</td><td>Clean structure + 301 redirects on every change</td><td>Medium (consolidates equity)</td></tr>
+          <tr><td>Product pages</td><td>Fill the intent, not the supplier description</td><td>High (brand + product queries)</td></tr>
+          <tr><td>Performance</td><td>Hosting, caching, a lighter build, a healthy database</td><td>Cross-cutting</td></tr>
+          <tr><td>SEO extensions / modules</td><td>Set the framework, then apply a strategy</td><td>Support</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <blockquote><p>The what and the how-much, I show you. The how — the exact structure, the facet settings, the order of the work — that's the engagement.</p></blockquote>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="kicker">Frequently asked</span><h2 class="sec-title">Your questions, my answers.</h2></div>
+    <div class="faq">
+      <div class="faq-item reveal"><button class="faq-q">WooCommerce or PrestaShop — which is better for SEO? <span class="pm"></span></button><div class="faq-a"><p>Both are excellent: total freedom over URLs, site structure and content. Neither is inherently better — the difference comes down to architectural discipline and how well you control attribute-driven duplicates.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-q">Why does my WooCommerce site generate so many duplicate pages? <span class="pm"></span></button><div class="faq-a"><p>Most often because product variations and faceted navigation create indexable filtered URLs. Without canonical and URL-parameter handling, Google indexes a mass of near-identical pages.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-q">Is PrestaShop's faceted navigation bad for SEO? <span class="pm"></span></button><div class="faq-a"><p>Not in itself — its configuration is what decides. Set up well, it serves real queries ("mask for 4C hair"). Set up badly, it bloats the index with empty pages. The lever is choosing what to index and what to block.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-q">Do you need an SEO plugin on WooCommerce? <span class="pm"></span></button><div class="faq-a"><p>An SEO extension sets a useful framework (titles, metas, sitemap, structured data). But it doesn't write your strategy: which category to prioritise, which content, which internal links. The tool executes; the strategy stays human.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-q">Why does a reseller outrank my store? <span class="pm"></span></button><div class="faq-a"><p>Because their page is often better filled out and better structured than yours, sometimes on your own name. It's a capture problem, not a CMS problem. The Diagnostic quantifies it and sets the priorities.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="links-more reveal">
+      <h2>Go further</h2>
+      <ul>
+        <li><a href="/en/seo-african-heritage-brands/">SEO strategy for African & Black-owned brands</a></li>
+        <li><a href="/en/recover-revenue-from-resellers/">Recover the revenue your resellers are capturing</a></li>
+        <li><a href="/en/seo-shopify-black-owned-brands/">Shopify SEO for Black-owned brands</a></li>
+        <li><a href="/en/own-your-branded-serp/">Own your branded SERP</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="cta-band reveal">
+      <img src="/images/icon-cream.png" class="icon-watermark" alt="" />
+      <h2>Where to start: the Diagnostic.</h2>
+      <p>I quantify the revenue your resellers are capturing, pinpoint your WooCommerce/PrestaShop blind spots (empty categories, attribute-driven duplicates, site structure, speed) and map the prioritised plan. €290 (~$310), credited toward your first month if you continue.</p>
+      <div class="cta-actions">
+        <a href={calendly} target="_blank" rel="noopener" class="btn btn--orange">Book the Diagnostic
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+        <a href="/en/seo-diagnostic/" class="btn btn--cream">Learn more</a>
+      </div>
+    </div>
+  </div>
+</section>
+</Base>

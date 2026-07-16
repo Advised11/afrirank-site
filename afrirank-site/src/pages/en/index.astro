@@ -1,0 +1,338 @@
+---
+import Base from '../../layouts/Base.astro';
+const jsonLd = "{\n  \"@context\": \"https://schema.org\",\n  \"@graph\": [\n    {\n      \"@type\": \"ProfessionalService\",\n      \"@id\": \"https://www.afrirank.fr/en/#business\",\n      \"name\": \"AfriRank\",\n      \"url\": \"https://www.afrirank.fr/en/\",\n      \"logo\": \"https://www.afrirank.fr/images/logo-dark.png\",\n      \"image\": \"https://www.afrirank.fr/images/logo-dark.png\",\n      \"description\": \"Premium SEO & GEO for established African & Black-owned brands. An organic acquisition channel you own — on Google and in AI answers.\",\n      \"email\": \"contact@advised-seo.fr\",\n      \"priceRange\": \"€€€\",\n      \"areaServed\": [\"GB\", \"US\", \"Europe\", \"FR\"],\n      \"serviceType\": [\"SEO\", \"Cultural SEO\", \"SEO audit\", \"GEO\", \"AEO\"],\n      \"founder\": { \"@id\": \"https://www.advised-seo.fr/#francis\" },\n      \"knowsAbout\": [\n        \"E-commerce SEO\",\n        \"Cultural SEO for the African & Black diaspora\",\n        \"SEO audit\",\n        \"GEO (Generative Engine Optimization)\",\n        \"AEO (Answer Engine Optimization)\"\n      ],\n      \"sameAs\": []\n    },\n    {\n      \"@type\": \"WebSite\",\n      \"@id\": \"https://www.afrirank.fr/en/#website\",\n      \"url\": \"https://www.afrirank.fr/en/\",\n      \"name\": \"AfriRank\",\n      \"inLanguage\": \"en\",\n      \"publisher\": { \"@id\": \"https://www.afrirank.fr/en/#business\" }\n    },\n    {\n      \"@type\": \"Person\",\n      \"@id\": \"https://www.advised-seo.fr/#francis\",\n      \"name\": \"Francis Ndimba\",\n      \"jobTitle\": \"Freelance SEO consultant\",\n      \"url\": \"https://www.afrirank.fr/en/about\",\n      \"knowsLanguage\": [\"en\", \"fr\"],\n      \"knowsAbout\": [\"Technical SEO\", \"SEO migrations\", \"Semantic SEO\", \"GEO\", \"AEO\", \"Schema.org\"],\n      \"description\": \"SEO expert with 11 years' experience — agency-side then in-house (Groupe SEB, LumApps, Rubix). Founder of AfriRank.\",\n      \"sameAs\": [\"https://www.linkedin.com/in/francisndimba\"]\n    },\n    {\n      \"@type\": \"FAQPage\",\n      \"@id\": \"https://www.afrirank.fr/en/#faq\",\n      \"mainEntity\": [\n        {\n          \"@type\": \"Question\",\n          \"name\": \"How long until I see results?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"SEO is a compounding asset: the first signals usually appear within 2 to 4 months, and the channel becomes solid from month 6. Unlike paid ads, these results stay yours when you stop paying.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"What is 'cultural SEO'?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"A strategy built on the vocabulary, search intents and codes of your community — the way your customers actually search for type-4 hair, ankara, shea, black soap or jollof. Queries a generalist agency simply doesn't know. Your culture becomes a defensible advantage, not a footnote.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"Why is the diagnostic paid?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"Because it produces a real deliverable: a quantified estimate of the organic revenue you're leaving to competitors and resellers, plus a prioritised action plan. It's credited toward your first month if you continue with an engagement.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"Do you work with my brand / sector?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"I work with established African & Black-owned brands — beauty & haircare, fashion & accessories, premium food & grocery — across the UK, the US and Europe. If your brand has already proven its product and built a community, this is for you.\"\n          }\n        }\n      ]\n    }\n  ]\n}";
+---
+<Base title="AfriRank — premium SEO & GEO for established African & Black-owned brands" description="You built the brand. AfriRank builds the organic channel that keeps selling when you turn the ads off. SEO + GEO for established African & Black-owned e-commerce brands." active="accueil" jsonLd={jsonLd} lang="en" frPath="/" enPath="/en/">
+<section class="hero wrap" id="accueil">
+  <div class="hero-top">
+    <span class="hero-eyebrow reveal">
+      <img src="/images/icon-orange.png" alt="" /> SEO &amp; GEO · Established African &amp; Black-owned brands
+    </span>
+    <h1 class="reveal">Ads are rent.<br />SEO is <em>equity you own</em>.</h1>
+    <p class="hero-sub reveal">You built the brand, proved the product, grew the community. AfriRank builds the acquisition channel that keeps selling when you cut the ad budget — on Google <strong>and</strong> in AI answers.</p>
+    <div class="hero-actions reveal">
+      <a href="https://calendly.com/contact-advised-seo/30min?back=1" target="_blank" rel="noopener" class="btn btn--orange">Book my Diagnostic
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+      </a>
+      <a href="#method" class="btn btn--ghost">See the method</a>
+    </div>
+    <span class="hero-note reveal"><b>A quantified diagnostic</b> · Credited if you continue · One senior point of contact</span>
+  </div>
+
+  <div class="gallery reveal">
+    <img src="/images/image0.jpg" alt="City / diaspora lifestyle" class="g-tall" loading="lazy" />
+    <img src="/images/image1.jpg" alt="Founder / maker" class="g-mid" loading="lazy" />
+    <img src="/images/image2.jpg" alt="Customer portrait" class="g-tall" loading="lazy" />
+    <img src="/images/image3.jpg" alt="Studio / lifestyle" class="g-low" loading="lazy" />
+    <img src="/images/image4.jpg" alt="Independent brand" class="g-mid" loading="lazy" />
+  </div>
+</section>
+
+<!-- ===================== THE PROBLEM ===================== -->
+<section class="sec problem">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker">The reality</span>
+      <h2 class="sec-title">Your brand is working.<br />But its visibility isn't yours.</h2>
+      <p>The problem was never "understanding SEO". It's ending the monthly rent on your traffic — and winning back the revenue other people are booking in your name.</p>
+    </div>
+    <div class="prob-grid">
+      <div class="prob-card reveal">
+        <div class="prob-ic"><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V8l7-4 7 4v13M9 21v-5h6v5"/></svg></div>
+        <h3>You're renting your visibility</h3>
+        <p>Every month without ads, traffic drops and your CAC climbs. You pay to exist, and nothing compounds.</p>
+      </div>
+      <div class="prob-card reveal">
+        <div class="prob-ic"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></div>
+        <h3>They know your name — but Google sends the sale elsewhere</h3>
+        <p>Strong brand recognition, yet the non-brand traffic — "type 4 hair oil", "ankara dress", "organic hibiscus tea" — goes to resellers, marketplaces and competitors.</p>
+      </div>
+      <div class="prob-card reveal">
+        <div class="prob-ic"><svg viewBox="0 0 24 24"><path d="M12 3a4 4 0 0 1 4 4v1a4 4 0 0 1-1 8H9a4 4 0 0 1-1-8V7a4 4 0 0 1 4-4Z"/><path d="M9 21h6M10 17v4M14 17v4"/></svg></div>
+        <h3>You don't exist in AI answers</h3>
+        <p>ChatGPT, Perplexity and Google's AI Overviews already recommend other brands. A growing share of searches happens in your blind spot.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== THE METHOD ===================== -->
+<section class="sec" id="method">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker">The method</span>
+      <div class="motif-underline"></div>
+      <h2 class="sec-title">An expert approach, in four moves.</h2>
+      <p>No jargon, no inflated promises. Senior execution, anchored in your market, your community and the new AI answer engines.</p>
+    </div>
+    <div class="method-grid">
+      <div class="step reveal">
+        <div class="step-num">01<span class="step-dot"></span></div>
+        <h3>Diagnostic &amp; quantification</h3>
+        <p>We measure how much organic revenue you're leaving to others, and where the opportunity is hiding.</p>
+      </div>
+      <div class="step reveal">
+        <div class="step-num">02<span class="step-dot"></span></div>
+        <h3>SEO + cultural + GEO strategy</h3>
+        <p>A roadmap anchored in your market, your community and the new AI answer engines.</p>
+      </div>
+      <div class="step reveal">
+        <div class="step-num">03<span class="step-dot"></span></div>
+        <h3>Implementation</h3>
+        <p>We optimise the site, the category/product pages, the semantics and your AI visibility. We execute — we don't just recommend.</p>
+      </div>
+      <div class="step reveal">
+        <div class="step-num">04<span class="step-dot"></span></div>
+        <h3>Tracking &amp; handover</h3>
+        <p>We measure, adjust and train your team. You keep the keys when the engagement ends.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== WHERE TO START — THE DIAGNOSTIC ===================== -->
+<section class="sec" id="diagnostic">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="kicker">Where to start</span>
+      <h2 class="sec-title">First things first: the AfriRank Diagnostic.</h2>
+      <p>A single session to find out exactly how much you're losing, and where to begin. The ideal starting point — even if you don't continue with me.</p>
+    </div>
+    <div class="audit-card reveal">
+      <div class="audit-left">
+        <span class="offer-tag">The Diagnostic · One-off</span>
+        <h2>The exact figure on the organic revenue you're losing.</h2>
+        <p>We measure your site's health, your business queries and your AI visibility — then quantify the opportunity, query by query, and hand you a prioritised action plan.</p>
+        <ul class="audit-list">
+          <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5"/></svg>Technical &amp; semantic health of the site</li>
+          <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5"/></svg>Your non-brand queries — and who's capturing them</li>
+          <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5"/></svg>Visibility in AI answers (GEO)</li>
+          <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5"/></svg><b>The figure on your lost organic revenue</b></li>
+          <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5"/></svg>Prioritised action plan</li>
+          <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5"/></svg>Live walkthrough (45 min)</li>
+        </ul>
+      </div>
+      <div class="audit-right">
+        <div class="audit-price">€290<span>one-off session · ~$310</span></div>
+        <a href="https://calendly.com/contact-advised-seo/30min?back=1" target="_blank" rel="noopener" class="btn btn--orange">Book my Diagnostic
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+        <span class="audit-note">Credited toward your first month if you continue. <a href="/en/seo-diagnostic/" style="color:var(--orange-deep);font-weight:600">See the details →</a></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== THE SERVICES ===================== -->
+<section class="sec offers" id="offre">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="kicker">The services</span>
+      <h2 class="sec-title">Plans for every<br />stage of growth.</h2>
+      <p>Three tiers, 6-month engagement — the time SEO needs to deliver durable results — plus a fully bespoke option.</p>
+    </div>
+    <div class="offer-grid">
+
+      <div class="offer reveal">
+        <span class="offer-tag">Starter</span>
+        <h3 class="offer-h3-blue">Starter</h3>
+        <p class="offer-desc">To lay solid organic foundations.</p>
+        <div class="price">€690 <small>/ mo · ~$750</small></div>
+        <span class="engage"><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>6-month engagement</span>
+        <div class="obj-label">Included</div>
+        <ul>
+          <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Prioritised SEO roadmap (from the Diagnostic)</li>
+          <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Essential technical fixes</li>
+          <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>10–20 revenue-driving keywords</li>
+          <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Monthly tracking &amp; adjustments</li>
+        </ul>
+        <p class="target">To lay solid organic foundations.</p>
+        <a href="https://calendly.com/contact-advised-seo/30min?back=1" target="_blank" rel="noopener" class="btn btn--cream">Book a call</a>
+      </div>
+
+      <div class="offer featured reveal">
+        <span class="offer-tag">Best fit</span>
+        <h3>Growth</h3>
+        <p class="offer-desc">To grow organic acquisition into a real channel.</p>
+        <div class="price">€1,490 <small>/ mo · ~$1,600</small></div>
+        <span class="engage"><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>6-month engagement</span>
+        <div class="obj-label">Included</div>
+        <ul>
+          <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Everything in Starter + implementation (technical &amp; semantic)</li>
+          <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>SEO + GEO content production</li>
+          <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Category / product page optimisation</li>
+          <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Business-focused monthly reporting</li>
+        </ul>
+        <p class="target">To grow organic acquisition into a real channel.</p>
+        <a href="https://calendly.com/contact-advised-seo/30min?back=1" target="_blank" rel="noopener" class="btn btn--orange">Book a call
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+
+      <div class="offer reveal">
+        <span class="offer-tag">Partner</span>
+        <h3 class="offer-h3-blue">Partner</h3>
+        <p class="offer-desc">To make SEO + GEO a major acquisition lever.</p>
+        <div class="price">€2,490 <small>/ mo · ~$2,700</small></div>
+        <span class="engage"><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>6-month engagement</span>
+        <div class="obj-label">Included</div>
+        <ul>
+          <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Everything in Growth + a high-volume content engine</li>
+          <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Dedicated GEO strategy (AI answers)</li>
+          <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Brand authority &amp; internal linking at scale</li>
+          <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Skills handover to your team</li>
+        </ul>
+        <p class="target">To make SEO + GEO a major acquisition lever.</p>
+        <a href="https://calendly.com/contact-advised-seo/30min?back=1" target="_blank" rel="noopener" class="btn btn--cream">Book a call</a>
+      </div>
+
+      <div class="offer reveal">
+        <span class="offer-tag">Bespoke</span>
+        <h3 class="offer-h3-blue">Full</h3>
+        <p class="offer-desc">360° support built around your project.</p>
+        <div class="price">On request</div>
+        <span class="engage"><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Scope tailored to your needs</span>
+        <div class="obj-label">May include</div>
+        <ul>
+          <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Website build / management</li>
+          <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Local &amp; international SEO</li>
+          <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Branding &amp; storytelling</li>
+          <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Project management</li>
+        </ul>
+        <p class="target">For ambitious projects that need end-to-end support.</p>
+        <a href="/en/contact/" class="btn btn--cream">Request a quote</a>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:clamp(34px,4vw,48px)" class="reveal">
+      <a href="/en/seo-services/" class="btn btn--ghost" style="background:rgba(249,246,239,.06);color:var(--beige);border-color:rgba(249,246,239,.3)">Compare the tiers in detail
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== THE PROOF ===================== -->
+<section class="sec" id="preuve">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker">The proof</span>
+      <h2 class="sec-title">Senior expertise, measurable.</h2>
+    </div>
+    <div class="stats">
+      <div class="stat reveal"><div class="num">11 yrs</div><div class="lbl">of SEO experience, agency-side then in-house</div></div>
+      <div class="stat reveal"><div class="num">23 sites</div><div class="lbl">migrated in 2 years for Groupe SEB (technical SEO lead)</div></div>
+      <div class="stat reveal"><div class="num">+59%</div><div class="lbl">MQLs generated at LumApps (B2B SaaS)</div></div>
+      <div class="stat reveal"><div class="num">300+</div><div class="lbl">AI-assisted content pieces produced in 2 years</div></div>
+    </div>
+    <p class="proof-note reveal">These references aren't African-market brands — that's my senior track record, and I bring it intact to AfriRank.</p>
+  </div>
+</section>
+
+<!-- ===================== ABOUT ===================== -->
+<section class="sec about" id="apropos">
+  <div class="wrap about-grid">
+    <img src="/images/francis-ndimba.png" alt="Francis Ndimba, SEO consultant and founder of AfriRank" class="about-photo reveal" loading="lazy" />
+    <div class="about-body reveal">
+      <span class="kicker">About</span>
+      <h2>Enterprise-grade expertise, working for your brand.</h2>
+      <p>I'm <strong>Francis Ndimba</strong>, an SEO expert for 11 years — agency-side then in-house, on projects few freelancers have led (23-site migrations at SEB, +59% MQLs at LumApps, multi-country rollouts at Rubix).</p>
+      <p>AfriRank was born from one conviction: African &amp; Black-owned brands deserve their place on Google and in AI answers — not by luck or ad budget, but through a solid strategy rooted in their culture. I work <strong>peer to peer</strong>: you built the brand, I know my craft. One senior, accountable point of contact who hands you the keys.</p>
+      <div class="about-sign">
+        <img src="/images/icon-dark.png" alt="" />
+        <div>
+          <div class="sig-name">Francis Ndimba</div>
+          <div class="sig-role">Founder &amp; SEO expert — AfriRank</div>
+        </div>
+      </div>
+      <a href="/en/about/" class="about-link">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== BLOG ===================== -->
+<section class="sec" id="blog">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker">The blog</span>
+      <h2 class="sec-title">SEO &amp; GEO, made clear —<br />no fluff.</h2>
+      <p>Clear, actionable analysis for brands that want to own their visibility — on Google and in AI answers.</p>
+    </div>
+    <div class="blog-grid grid-3">
+      <a href="/en/seo-afro-haircare/" class="post feature-card reveal" style="padding:0;overflow:hidden;text-decoration:none;display:block">
+        <img src="/images/image6.jpg" alt="Afro haircare" style="height:200px" loading="lazy" />
+        <div class="post-body" style="padding:26px 28px 28px">
+          <span class="post-cat" style="font-size:12px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(--orange-deep)">Cultural SEO</span>
+          <h3 style="margin:10px 0 8px;font-size:20px;line-height:1.25">Diaspora vocabulary: the queries generalists miss</h3>
+          <p style="font-size:14.5px">"4C wash day", "castor oil for growth": why your SEO has to speak your community's language.</p>
+        </div>
+      </a>
+      <a href="/en/ai-visibility-geo-black-brands/" class="post feature-card reveal" style="padding:0;overflow:hidden;text-decoration:none;display:block">
+        <img src="/images/image7.jpg" alt="AI visibility for Black-owned brands" style="height:200px" loading="lazy" />
+        <div class="post-body" style="padding:26px 28px 28px">
+          <span class="post-cat" style="font-size:12px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(--orange-deep)">GEO</span>
+          <h3 style="margin:10px 0 8px;font-size:20px;line-height:1.25">Does ChatGPT cite you? GEO is near-open ground</h3>
+          <p style="font-size:14.5px">How to appear in AI answers before your competitors claim the space.</p>
+        </div>
+      </a>
+      <a href="/en/seo-african-heritage-brands/" class="post feature-card reveal" style="padding:0;overflow:hidden;text-decoration:none;display:block">
+        <img src="/images/image8.jpg" alt="SEO strategy for African & Black-owned brands" style="height:200px" loading="lazy" />
+        <div class="post-body" style="padding:26px 28px 28px">
+          <span class="post-cat" style="font-size:12px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(--orange-deep)">Strategy</span>
+          <h3 style="margin:10px 0 8px;font-size:20px;line-height:1.25">SEO is equity. Ads are rent.</h3>
+          <p style="font-size:14.5px">What compounds when you stop paying — and what vanishes.</p>
+        </div>
+      </a>
+    </div>
+    <div class="reveal" style="text-align:center;margin-top:40px">
+      <a href="/en/seo-african-heritage-brands/" class="btn btn--blue">See all the SEO &amp; GEO guides
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FAQ ===================== -->
+<section class="sec problem">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="kicker">Frequently asked</span>
+      <h2 class="sec-title">Everything you need to know.</h2>
+    </div>
+    <div class="faq">
+      <div class="faq-item reveal">
+        <button class="faq-q">How long until I see results? <span class="pm"></span></button>
+        <div class="faq-a"><p>SEO is a compounding asset: the first signals usually appear within 2 to 4 months, and the channel becomes solid from month 6. Unlike paid ads, these results stay yours when you stop paying.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q">What is "cultural SEO"? <span class="pm"></span></button>
+        <div class="faq-a"><p>A strategy built on the vocabulary, search intents and codes of your community — the way your customers actually search for type-4 hair, ankara, shea, black soap or jollof. Queries a generalist agency simply doesn't know. Your culture becomes a defensible advantage, not a footnote.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q">Why is the diagnostic paid? <span class="pm"></span></button>
+        <div class="faq-a"><p>Because it produces a real deliverable: a quantified estimate of the organic revenue you're leaving to competitors and resellers, plus a prioritised action plan. It's credited toward your first month if you continue with an engagement.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q">Do you work with my brand / sector? <span class="pm"></span></button>
+        <div class="faq-a"><p>I work with established African &amp; Black-owned brands — beauty &amp; haircare, fashion &amp; accessories, premium food &amp; grocery — across the UK, the US and Europe. If your brand has already proven its product and built a community, this is for you.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FINAL CTA ===================== -->
+<section class="sec" id="contact">
+  <div class="wrap">
+    <div class="cta-band reveal">
+      <img src="/images/icon-cream.png" class="icon-watermark" alt="" />
+      <h2>You built the brand. Let's build the channel that feeds it.</h2>
+      <p>30 minutes to see whether your market justifies an organic strategy — and what it could be worth to you.</p>
+      <div class="cta-actions">
+        <a href="https://calendly.com/contact-advised-seo/30min?back=1" target="_blank" rel="noopener" class="btn btn--orange">Book my Diagnostic
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+        <a href="mailto:contact@advised-seo.fr" class="btn btn--cream">contact@advised-seo.fr</a>
+      </div>
+    </div>
+  </div>
+</section>
+</Base>

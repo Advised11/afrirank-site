@@ -1,0 +1,174 @@
+---
+import Base from '../../layouts/Base.astro';
+const calendly = 'https://calendly.com/contact-advised-seo/30min?back=1';
+const jsonLd = JSON.stringify({
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "name": "Lost organic revenue calculator",
+      "url": "https://www.afrirank.fr/en/lost-organic-revenue-calculator/",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web",
+      "inLanguage": "en",
+      "areaServed": ["GB", "US", "Europe", "FR"],
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+      "description": "Estimate in 60 seconds the revenue your resellers and marketplaces capture in your place on Google.",
+      "publisher": { "@id": "https://www.afrirank.fr/#afrirank" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.afrirank.fr/en/" },
+        { "@type": "ListItem", "position": 2, "name": "SEO for African & Black-owned brands", "item": "https://www.afrirank.fr/en/seo-african-heritage-brands/" },
+        { "@type": "ListItem", "position": 3, "name": "Lost organic revenue calculator", "item": "https://www.afrirank.fr/en/lost-organic-revenue-calculator/" }
+      ]
+    }
+  ]
+});
+---
+<Base
+  title="Calculator: the organic revenue your brand is losing"
+  description="Estimate in 60 seconds the revenue your resellers and marketplaces capture in your place on Google. Free tool, adjustable assumptions, result in euros."
+  jsonLd={jsonLd}
+  lang="en"
+  frPath="/calculateur-ca-organique-perdu/"
+  enPath="/en/lost-organic-revenue-calculator/">
+
+<section class="hero hero--page wrap">
+  <div class="hero-top">
+    <nav class="breadcrumb reveal" aria-label="Breadcrumb">
+      <a href="/en/">Home</a><span class="sep">›</span>
+      <a href="/en/seo-african-heritage-brands/">SEO for Black-owned brands</a><span class="sep">›</span>
+      <span>Lost organic revenue calculator</span>
+    </nav>
+    <span class="hero-eyebrow reveal"><img src="/images/icon-orange.png" alt="" /> Free tool</span>
+    <h1 class="reveal">How much organic revenue is your brand losing every month?</h1>
+    <p class="hero-sub reveal">Your customers search for your brand and your products on Google. Some of them buy — but not from you. That leak never shows up on an invoice. This calculator puts a number on it: enter four figures and it estimates the monthly and yearly revenue being captured by third parties in your place.</p>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:clamp(24px,4vw,48px)">
+  <div class="wrap">
+    <div class="tool reveal">
+      <div class="tool-field">
+        <label for="vol">Monthly search volume for your brand + your products: <span class="tool-val" id="vol-v">5,000</span>
+          <span class="hint">Estimated monthly searches for your brand name, your ranges and your hero products.</span>
+        </label>
+        <input type="range" id="vol" min="200" max="50000" step="100" value="5000" />
+      </div>
+      <div class="tool-field">
+        <label for="part">Share captured by resellers / marketplaces: <span class="tool-val" id="part-v">40%</span>
+          <span class="hint">The proportion of those searches that lands on a reseller rather than on your own site.</span>
+        </label>
+        <input type="range" id="part" min="0" max="100" step="1" value="40" />
+      </div>
+      <div class="tool-field">
+        <label for="conv">Estimated conversion rate: <span class="tool-val" id="conv-v">2.0%</span>
+          <span class="hint">The share of visitors who go on to buy. 1 to 3% is a common e-commerce range.</span>
+        </label>
+        <input type="range" id="conv" min="0.5" max="10" step="0.1" value="2" />
+      </div>
+      <div class="tool-field">
+        <label for="panier">Average order value (€): <span class="tool-val" id="panier-v">€55</span></label>
+        <input type="range" id="panier" min="10" max="300" step="5" value="55" />
+      </div>
+      <div class="tool-field">
+        <label for="marge">Margin on direct sales (optional, %): <span class="tool-val" id="marge-v">30%</span>
+          <span class="hint">To estimate the margin lost, not just the revenue diverted.</span>
+        </label>
+        <input type="range" id="marge" min="0" max="90" step="1" value="30" />
+      </div>
+
+      <div class="tool-result">
+        <p class="big"><span id="res-mois">€2,200</span> <span style="font-size:.45em;opacity:.8">/ month</span></p>
+        <p class="sub">captured by your resellers and marketplaces, i.e. <strong id="res-an">€26,400</strong> / year <span id="res-range" style="opacity:.75"></span></p>
+        <p class="interp" id="res-interp"></p>
+        <p class="interp" id="res-marge" style="opacity:.85;font-size:14px"></p>
+      </div>
+      <p class="tool-note">Every value here is an <strong>adjustable assumption</strong>: the tool doesn't read your real data, it calculates an estimate from what you enter. For a figure based on your actual Search Console data, there's the Diagnostic.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:0">
+  <div class="wrap article reveal" style="max-width:760px">
+    <div class="tool" style="background:var(--beige)">
+      <h3 style="margin:0 0 6px">Get your detailed estimate</h3>
+      <p style="color:var(--ink-60);font-size:15px;margin:0 0 16px">Your calculation summarised + the checklist of the 5 places this leak happens (branded SERP, product pages, category queries, AI, internal linking).</p>
+      <form name="rapport-ca-perdu" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="lead-form">
+        <input type="hidden" name="form-name" value="rapport-ca-perdu" />
+        <input type="hidden" name="estimation" id="f-estimation" />
+        <p hidden><label>Do not fill in: <input name="bot-field" /></label></p>
+        <div class="tool-field" style="margin-bottom:12px">
+          <input type="email" name="email" id="f-email" placeholder="your@email.com" required />
+        </div>
+        <button type="submit" class="btn btn--orange" style="width:100%;justify-content:center">Send me my estimate</button>
+        <p id="form-ok" style="display:none;color:var(--orange);font-weight:600;margin-top:14px;text-align:center">Thank you! Your detailed estimate is on its way by email.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="cta-band reveal">
+      <img src="/images/icon-cream.png" class="icon-watermark" alt="" />
+      <h2>This figure is an estimate. Want the real one?</h2>
+      <p>The Diagnostic replaces these assumptions with your real data: your actual branded SERP, the real queries being captured, your true lost revenue — and the prioritised plan to win it back. €290 (~$310), credited if you continue.</p>
+      <div class="cta-actions">
+        <a href={calendly} target="_blank" rel="noopener" class="btn btn--orange">Book the Diagnostic
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+        <a href="/en/brand-visibility-scorecard/" class="btn btn--cream">Test my visibility score</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script is:inline>
+  (function () {
+    var fmt = new Intl.NumberFormat('en-GB', { maximumFractionDigits: 0 });
+    var ids = ['vol', 'part', 'conv', 'panier', 'marge'];
+    var el = {};
+    ids.forEach(function (i) { el[i] = document.getElementById(i); el[i + 'v'] = document.getElementById(i + '-v'); });
+    function compute() {
+      var vol = +el.vol.value, part = +el.part.value, conv = +el.conv.value, panier = +el.panier.value, marge = +el.marge.value;
+      el.volv.textContent = fmt.format(vol);
+      el.partv.textContent = part + '%';
+      el.convv.textContent = conv.toFixed(1) + '%';
+      el.panierv.textContent = '€' + fmt.format(panier);
+      el.margev.textContent = marge + '%';
+      var mois = vol * (part / 100) * (conv / 100) * panier;
+      var an = mois * 12;
+      document.getElementById('res-mois').textContent = '€' + fmt.format(Math.round(mois));
+      document.getElementById('res-an').textContent = '€' + fmt.format(Math.round(an));
+      document.getElementById('res-range').textContent = '(range €' + fmt.format(Math.round(an * 0.7)) + ' – €' + fmt.format(Math.round(an * 1.3)) + ')';
+      var interp = '';
+      if (mois < 1000) interp = "Moderate leak. The priority is probably to lock it down before it grows.";
+      else if (mois <= 5000) interp = "Significant leak. Over a year, that's an engagement budget already paid back.";
+      else interp = "Major leak. Every month without acting is a month of revenue handed to your resellers.";
+      document.getElementById('res-interp').textContent = interp;
+      document.getElementById('res-marge').textContent = marge > 0 ? 'Of which ≈ €' + fmt.format(Math.round(an * (marge / 100))) + ' in direct margin lost per year.' : '';
+      var f = document.getElementById('f-estimation');
+      if (f) f.value = '€' + fmt.format(Math.round(mois)) + '/month (€' + fmt.format(Math.round(an)) + '/year) — assumptions: ' + fmt.format(vol) + ' searches, ' + part + '% captured, ' + conv + '% conv, €' + panier + ' AOV';
+    }
+    ids.forEach(function (i) { el[i].addEventListener('input', compute); });
+    compute();
+
+    var form = document.getElementById('lead-form');
+    if (form) {
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var data = new URLSearchParams(new FormData(form)).toString();
+        fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: data }).catch(function () {});
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({ event: 'lead_form', tool: 'calculateur' });
+        form.querySelector('#f-email').style.display = 'none';
+        form.querySelector('button').style.display = 'none';
+        document.getElementById('form-ok').style.display = 'block';
+      });
+    }
+  })();
+</script>
+</Base>

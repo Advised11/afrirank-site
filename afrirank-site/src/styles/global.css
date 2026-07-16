@@ -71,7 +71,9 @@ header.nav.scrolled{border-color:var(--line);box-shadow:0 8px 30px -22px rgba(19
 .nav-links a{font-size:14.5px;font-weight:500;color:var(--blue);position:relative;padding:6px 0;letter-spacing:.005em}
 .nav-links a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:2px;background:var(--orange);transition:width .28s ease;border-radius:2px}
 .nav-links a:hover::after,.nav-links a.active::after{width:100%}
-.nav-cta{margin-left:8px}
+.nav-lang{margin-left:14px;font-size:13px;font-weight:600;letter-spacing:.06em;color:var(--blue);border:1px solid rgba(24,43,74,.22);border-radius:999px;padding:5px 11px;transition:border-color .25s ease,background .25s ease}
+.nav-lang:hover{border-color:var(--orange);background:rgba(226,110,42,.06)}
+.nav-cta{margin-left:12px}
 .nav-toggle{display:none;margin-left:auto;background:none;border:none;cursor:pointer;width:44px;height:44px;align-items:center;justify-content:center}
 .nav-toggle span{display:block;width:24px;height:2px;background:var(--blue);position:relative;transition:.3s}
 .nav-toggle span::before,.nav-toggle span::after{content:"";position:absolute;left:0;width:24px;height:2px;background:var(--blue);transition:.3s}
@@ -397,6 +399,7 @@ img.about-photo{object-fit:cover;border-radius:24px}
   .nav-links{display:none}
   .nav-toggle{display:flex}
   .nav-cta{display:none}
+  .nav-lang{display:none}
   .gallery{grid-template-columns:repeat(3,1fr)}
   .gallery image-slot:nth-child(n+4){display:none}
   .method-grid{grid-template-columns:repeat(2,1fr)}

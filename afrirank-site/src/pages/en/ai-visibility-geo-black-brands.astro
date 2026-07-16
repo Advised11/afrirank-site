@@ -1,0 +1,137 @@
+---
+import Base from '../../layouts/Base.astro';
+const calendly = 'https://calendly.com/contact-advised-seo/30min?back=1';
+const jsonLd = JSON.stringify({
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "Getting recommended by AI (GEO) as an established Black-owned brand",
+      "description": "ChatGPT, Perplexity and Google AI already recommend brands. If yours isn't cited, it disappears. Here's how to become citable.",
+      "author": { "@type": "Person", "name": "Francis Ndimba", "url": "https://www.afrirank.fr/en/about/" },
+      "publisher": { "@id": "https://www.afrirank.fr/#afrirank" },
+      "mainEntityOfPage": "https://www.afrirank.fr/en/ai-visibility-geo-black-brands/",
+      "inLanguage": "en"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.afrirank.fr/en/" },
+        { "@type": "ListItem", "position": 2, "name": "SEO for African & Black-owned brands", "item": "https://www.afrirank.fr/en/seo-african-heritage-brands/" },
+        { "@type": "ListItem", "position": 3, "name": "AI visibility (GEO) for Black-owned brands", "item": "https://www.afrirank.fr/en/ai-visibility-geo-black-brands/" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "inLanguage": "en",
+      "mainEntity": [
+        { "@type": "Question", "name": "What is GEO, in one sentence?", "acceptedAnswer": { "@type": "Answer", "text": "GEO (Generative Engine Optimization) is about making your brand visible and citable inside AI answers like ChatGPT, Perplexity and Google AI — where classic SEO targets Google's results pages." } },
+        { "@type": "Question", "name": "How do I know if ChatGPT or Perplexity recommends my brand?", "acceptedAnswer": { "@type": "Answer", "text": "Ask them the real buying questions from your niche, the way a customer would, and see whether your brand comes up. Do it across several phrasings. A diagnostic does this systematically." } },
+        { "@type": "Question", "name": "My community is huge — isn't that enough for AI?", "acceptedAnswer": { "@type": "Answer", "text": "No. An AI doesn't hang out on your socials; it reads sources it judges trustworthy. A brand its community knows well but that's absent from those sources may simply never get recommended." } },
+        { "@type": "Question", "name": "Does GEO replace SEO?", "acceptedAnswer": { "@type": "Answer", "text": "No, it adds to it. The foundations overlap heavily: a clear entity, good sources, structured content and a clean site serve both. You run one strategy on two fronts." } },
+        { "@type": "Question", "name": "How long until a brand becomes citable by AI?", "acceptedAnswer": { "@type": "Answer", "text": "It depends on your starting point: entity clarity, presence in the sources, technical health. Some levers pay off fairly fast, others take sustained building." } }
+      ]
+    }
+  ]
+});
+---
+<Base
+  title="AI visibility (GEO) for Black-owned brands | AfriRank"
+  description="ChatGPT, Perplexity and Google AI already recommend brands. If yours isn't cited, it disappears. Here's how to become citable."
+  jsonLd={jsonLd}
+  lang="en"
+  frPath="/visibilite-ia-geo-marques-afro/"
+  enPath="/en/ai-visibility-geo-black-brands/">
+
+<section class="hero hero--page wrap">
+  <div class="hero-top">
+    <nav class="breadcrumb reveal" aria-label="Breadcrumb">
+      <a href="/en/">Home</a><span class="sep">›</span>
+      <a href="/en/seo-african-heritage-brands/">SEO for Black-owned brands</a><span class="sep">›</span>
+      <span>AI visibility (GEO)</span>
+    </nav>
+    <span class="hero-eyebrow reveal"><img src="/images/icon-orange.png" alt="" /> Guide · Territory 3</span>
+    <h1 class="reveal">Getting recommended by AI <em>as an established Black-owned brand</em>.</h1>
+    <p class="hero-sub reveal">A customer asks ChatGPT: "which afro haircare brand is best for dry type 4 hair?". The AI answers with three or four names. If yours isn't one of them, you don't exist in that conversation. Not on page two — you don't exist at all.</p>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:clamp(24px,4vw,48px)">
+  <div class="wrap article reveal">
+    <p class="lead">This is the break that GEO (Generative Engine Optimization) and AEO create. On Google, a poorly ranked brand is still findable. In an AI answer there is no page 2: there's a short list, and either you're on it or you're not.</p>
+    <p>For established African & Black-owned brands, the risk is specific: your community knows you, but that human reputation doesn't automatically translate into machine reputation. An AI doesn't "know" your Instagram standing. It knows what it has read on sources it judges trustworthy.</p>
+
+    <h2>Answer engines are becoming a buying entry point</h2>
+    <p>More and more people no longer "search" — they ask. The buying decision now forms upstream of the click: before they even land on Google, the customer already holds a shortlist of brands handed to them by an AI. If you're on it, you start ahead. If not, you're fighting to break into a conversation that's already been settled. And that entry point keeps growing.</p>
+
+    <h2>An uncited brand vanishes from the recommendation</h2>
+    <p>AI doesn't rank. It selects. It doesn't give you position 14 — it just doesn't mention you.</p>
+    <ul>
+      <li><strong>No second chance inside the answer.</strong> Where a SERP shows ten results, an AI answer cites three or four.</li>
+      <li><strong>Community fame isn't enough.</strong> If the sources the AI reads don't cover you in a structured way, it doesn't make the connection.</li>
+      <li><strong>The lesser-known but better-cited competitor wins.</strong> Citability sometimes beats raw fame.</li>
+    </ul>
+    <p>It's the same pattern as <a href="/en/recover-revenue-from-resellers/">demand captured by resellers</a>, transposed to AI: the demand exists, but it's intercepted by whoever is better positioned to be read — here, by the machine.</p>
+
+    <h2>What makes a brand "citable" by an AI</h2>
+    <h3>1. A clear, consistent entity</h3>
+    <p>The AI has to be able to identify your brand as a sharp entity: who you are, what you sell, for whom. Name used consistently everywhere, a stable description, an obvious category.</p>
+    <h3>2. A presence in the sources AI reads</h3>
+    <p>Answer engines lean on a base of sources they judge trustworthy: articles, comparisons, reference content. Showing up there, on the right topics, is what makes you a candidate for citation.</p>
+    <h3>3. Structured, factual content</h3>
+    <p>AI reuses what's clear and well organised: direct answers to "which hair type is this for", "which ingredients", "which skin tone". Vague marketing copy doesn't get extracted.</p>
+    <h3>4. Trust signals</h3>
+    <p>Consistent reviews, verifiable information, a recognised presence: all signals that reassure the model that recommending you is safe.</p>
+    <h3>5. Clean technical access</h3>
+    <p>If AI crawlers can't read your site, you exclude yourself from their base. Technical accessibility is a baseline condition — and one that's often overlooked.</p>
+
+    <h2>GEO and SEO: the same battle, two fronts</h2>
+    <p>Don't treat GEO as a separate project. It's the extension of the same problem: who captures the demand your brand creates? A clear entity, a presence in the right sources, structured content and a clean site serve your branded SERP, your fight back against <a href="/en/reclaim-demand-from-marketplaces/">marketplaces</a> and your citability by AI all at once. You don't run three projects. You run one strategy across three fronts.</p>
+
+    <blockquote><p>The Diagnostic shows the what and the how much. The how — actually making your brand citable, source by source — belongs to the engagement.</p></blockquote>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="kicker">Frequently asked</span><h2 class="sec-title">Your questions, my answers.</h2></div>
+    <div class="faq">
+      <div class="faq-item reveal"><button class="faq-q">What is GEO, in one sentence? <span class="pm"></span></button><div class="faq-a"><p>GEO (Generative Engine Optimization) is about making your brand visible and citable inside AI answers like ChatGPT, Perplexity and Google AI — where classic SEO targets Google's results pages.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-q">How do I know if ChatGPT recommends my brand? <span class="pm"></span></button><div class="faq-a"><p>Ask it the real buying questions from your niche, the way a customer would, and see whether your brand comes up. Do it across several phrasings. A diagnostic does this systematically and identifies why you are — or aren't — cited.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-q">My community is huge — isn't that enough for AI? <span class="pm"></span></button><div class="faq-a"><p>No. An AI doesn't hang out on your socials; it reads sources it judges trustworthy. A brand its community knows well but that's absent from those sources may simply never get recommended.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-q">Does GEO replace SEO? <span class="pm"></span></button><div class="faq-a"><p>No, it adds to it. The foundations overlap heavily: a clear entity, good sources, structured content and a clean site serve both. You run one strategy on two fronts, not two separate projects.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-q">How long until you become citable by AI? <span class="pm"></span></button><div class="faq-a"><p>It depends on your starting point: entity clarity, presence in the sources, technical health. Some levers pay off fairly fast, others take sustained building. A diagnostic prioritises the quickest wins first.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="links-more reveal">
+      <h2>Go further</h2>
+      <ul>
+        <li><a href="/en/what-is-geo/">What is GEO? (definition)</a></li>
+        <li><a href="/en/seo-african-heritage-brands/">SEO strategy for African & Black-owned brands</a></li>
+        <li><a href="/en/recover-revenue-from-resellers/">Recover the revenue your resellers capture</a></li>
+        <li><a href="/en/own-your-branded-serp/">Own your branded SERP</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="cta-band reveal">
+      <img src="/images/icon-cream.png" class="icon-watermark" alt="" />
+      <h2>Are you cited when your audience asks an AI?</h2>
+      <p>The Diagnostic covers the AI front: it shows whether you're cited on the key buying questions, which brands get recommended in your place, and your citability blind spots.</p>
+      <div class="cta-actions">
+        <a href={calendly} target="_blank" rel="noopener" class="btn btn--orange">Book the Diagnostic
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+        <a href="/en/seo-diagnostic/" class="btn btn--cream">Learn more</a>
+      </div>
+    </div>
+  </div>
+</section>
+</Base>

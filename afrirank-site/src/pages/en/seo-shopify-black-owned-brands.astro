@@ -1,0 +1,143 @@
+---
+import Base from '../../layouts/Base.astro';
+const calendly = 'https://calendly.com/contact-advised-seo/30min?back=1';
+const jsonLd = JSON.stringify({
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "Shopify SEO for Black-owned brands: turn your store into a machine for winning back sales",
+      "description": "A well-tuned Shopify store can reclaim the demand your resellers are capturing. The key Shopify SEO levers for an established Black-owned brand.",
+      "inLanguage": "en",
+      "author": { "@type": "Person", "name": "Francis Ndimba", "url": "https://www.afrirank.fr/en/about/" },
+      "publisher": { "@id": "https://www.afrirank.fr/#afrirank" },
+      "mainEntityOfPage": "https://www.afrirank.fr/en/seo-shopify-black-owned-brands/"
+    },
+    {
+      "@type": "HowTo",
+      "name": "Win back your sales with Shopify SEO",
+      "step": [
+        { "@type": "HowToStep", "name": "Fill out your collections", "text": "Turn every strategic collection into a real answer page with content, not a silent product grid." },
+        { "@type": "HowToStep", "name": "Fill out your product pages", "text": "Answer the customer's intent (hair type, need, use case), not the supplier's description." },
+        { "@type": "HowToStep", "name": "Master canonicals and duplicate URLs", "text": "Avoid diluting equity across the dual product path /products/ and /collections/.../products/." },
+        { "@type": "HowToStep", "name": "Handle automatic collections", "text": "Decide which tag-based collections to index and which to block to preserve crawl budget." },
+        { "@type": "HowToStep", "name": "Lighten the theme", "text": "Cut apps, scripts and heavy images to gain on Core Web Vitals." }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.afrirank.fr/en/" },
+        { "@type": "ListItem", "position": 2, "name": "SEO for African & Black-owned brands", "item": "https://www.afrirank.fr/en/seo-african-heritage-brands/" },
+        { "@type": "ListItem", "position": 3, "name": "Shopify SEO for Black-owned brands", "item": "https://www.afrirank.fr/en/seo-shopify-black-owned-brands/" }
+      ]
+    }
+  ]
+});
+---
+<Base
+  title="Shopify SEO for Black-owned brands: win back sales | AfriRank"
+  description="A well-tuned Shopify store can reclaim the demand your resellers are capturing. The key Shopify SEO levers for an established Black-owned brand."
+  jsonLd={jsonLd}
+  lang="en"
+  frPath="/seo-shopify-marques-afro/"
+  enPath="/en/seo-shopify-black-owned-brands/">
+
+<section class="hero hero--page wrap">
+  <div class="hero-top">
+    <nav class="breadcrumb reveal" aria-label="Breadcrumb">
+      <a href="/en/">Home</a><span class="sep">›</span>
+      <a href="/en/seo-african-heritage-brands/">SEO for Black-owned brands</a><span class="sep">›</span>
+      <span>Shopify SEO</span>
+    </nav>
+    <span class="hero-eyebrow reveal"><img src="/images/icon-orange.png" alt="" /> Platform guide</span>
+    <h1 class="reveal">Shopify SEO for Black-owned brands: <em>a machine for winning back your sales</em>.</h1>
+    <p class="hero-sub reveal">You're on Shopify. You're selling. But when a customer types the name of your best-seller, it's often a marketplace that shows up before your official listing. The platform isn't the problem. The way its SEO is set up is.</p>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:clamp(24px,4vw,48px)">
+  <div class="wrap article reveal">
+    <p>I'm Francis, an SEO consultant with eleven years in the field. I work with established African & Black-owned brands that created their own demand and now watch others cash it in. Shopify is an excellent tool for reclaiming that revenue — as long as you know its SEO strengths and constraints.</p>
+
+    <h2>What Shopify does well for SEO (and you're under-using)</h2>
+    <p>Shopify gives you a solid base: editable title and meta tags product by product, native 301 redirects, an automatic XML sitemap, canonical tags by default, HTTPS out of the box. The problem is almost never "Shopify can't do SEO" — it's "no one filled those fields with a clear intent". The foundations are there — they're just empty.</p>
+
+    <h2>Shopify's URL structure: the constraint to understand</h2>
+    <p>Shopify enforces fixed URL segments: products under <strong>/products/</strong>, collections under <strong>/collections/</strong>, pages under <strong>/pages/</strong>, the blog under <strong>/blogs/</strong>. Your SEO architecture is built inside those constraints. Two recurring traps:</p>
+    <p><strong>The dual product path.</strong> A product can be reached via <code>/products/name</code> AND <code>/collections/category/products/name</code>. Without clean canonical handling, you dilute the equity across two URLs.</p>
+    <p><strong>Automatic collections.</strong> Shopify generates tag-based collections (colour, type, ingredient) that quickly create dozens of near-empty URLs wasting your crawl budget. Which to index and which to block is an architecture decision.</p>
+
+    <h2>Your collections: the most powerful pages, the most neglected</h2>
+    <p>Your collection pages capture high-volume queries: "type 4 hair care", "foundation for deep skin tones", "African & Caribbean grocery online". By default, a collection is a title and a product grid. Zero content — and a silent collection will never rank for its main query. The lever: turn every strategic collection into a real answer page.</p>
+
+    <h2>Product pages: fill the intent, not the supplier's description</h2>
+    <p>A page that answers "which hair type is this for", "what need does it solve", "how do I use it", "how long until I see a result" beats a page that lists ingredients. It's also what makes you <a href="/en/ai-visibility-geo-black-brands/">citable by AI</a>, which loves to pull out those factual answers.</p>
+
+    <h2>The Shopify blog: useful, but limited</h2>
+    <p>The native blog (<code>/blogs/</code>) lets you publish the advice content that draws the customer in early. But it has limits: thin taxonomy, rudimentary internal linking, an editor that rarely pushes you toward a clean Hn structure. Those limits call for a method.</p>
+
+    <h2>Shopify speed: the theme, not the platform</h2>
+    <p>A slow Shopify store almost always comes down to the theme: apps loading scripts everywhere, uncompressed images, heavy sliders, multiple fonts. Core Web Vitals are won or lost at that level.</p>
+
+    <h2>In short: the Shopify SEO levers</h2>
+    <div class="tbl-wrap">
+      <table class="tbl">
+        <thead><tr><th>Shopify lever</th><th>What to aim for</th><th>Capture impact</th></tr></thead>
+        <tbody>
+          <tr><td>Collections (/collections/)</td><td>Add answer content to your strategic pages</td><td>High (category queries)</td></tr>
+          <tr><td>Product pages (/products/)</td><td>Fill the intent, not the supplier description</td><td>High (brand + product queries)</td></tr>
+          <tr><td>Canonicals &amp; duplicate URLs</td><td>Avoid dilution on the dual product path</td><td>Medium (consolidates equity)</td></tr>
+          <tr><td>Automatic collections</td><td>Choose what to index / block</td><td>Medium (crawl budget)</td></tr>
+          <tr><td>Blog (/blogs/)</td><td>Advice content despite the native limits</td><td>Medium (top of funnel + GEO)</td></tr>
+          <tr><td>Speed (theme)</td><td>Lighten theme, apps, images</td><td>Cross-cutting</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <blockquote><p>The what and the how-much, I show you. The how — which page first, which setting, which internal links — that's the engagement.</p></blockquote>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="kicker">Frequently asked</span><h2 class="sec-title">Your questions, my answers.</h2></div>
+    <div class="faq">
+      <div class="faq-item reveal"><button class="faq-q">Is Shopify good for SEO? <span class="pm"></span></button><div class="faq-a"><p>Yes. Shopify offers solid foundations: editable titles and metas, 301 redirects, an automatic sitemap, canonicals by default, HTTPS. The problem almost always comes down to those fields being empty or poorly filled.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-q">Can you change URLs on Shopify? <span class="pm"></span></button><div class="faq-a"><p>Partly. You can edit a product's or collection's "handle", but not the enforced prefixes (/products/, /collections/). Your SEO architecture is built inside those constraints.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-q">Do you need an SEO app on Shopify? <span class="pm"></span></button><div class="faq-a"><p>Not necessarily. Many levers are handled natively. Stacking apps weighs down the theme and can hurt speed. The priority is the content of your collections and product pages.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-q">Why does a reseller outrank my Shopify listing? <span class="pm"></span></button><div class="faq-a"><p>Because their page is often better filled out (content, signals, internal links) than yours. It's a capture problem, not a platform problem. The Diagnostic quantifies it and sets the priorities.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-q">How long before SEO results on Shopify? <span class="pm"></span></button><div class="faq-a"><p>Winning back your branded SERP is faster (a few weeks) than conquering a contested category query (several months). The Diagnostic puts the quick wins first.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="links-more reveal">
+      <h2>Go further</h2>
+      <ul>
+        <li><a href="/en/seo-african-heritage-brands/">SEO strategy for African & Black-owned brands</a></li>
+        <li><a href="/en/recover-revenue-from-resellers/">Recover the revenue your resellers are capturing</a></li>
+        <li><a href="/en/seo-woocommerce-black-owned-brands/">WooCommerce / PrestaShop SEO</a></li>
+        <li><a href="/en/own-your-branded-serp/">Own your branded SERP</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="cta-band reveal">
+      <img src="/images/icon-cream.png" class="icon-watermark" alt="" />
+      <h2>Where to start: the Diagnostic.</h2>
+      <p>I quantify the revenue your resellers are capturing, pinpoint your Shopify blind spots (empty collections, weak product pages, duplicate URLs, speed) and map the prioritised plan. €290 (~$310), credited toward your first month if you continue.</p>
+      <div class="cta-actions">
+        <a href={calendly} target="_blank" rel="noopener" class="btn btn--orange">Book the Diagnostic
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+        <a href="/en/seo-diagnostic/" class="btn btn--cream">Learn more</a>
+      </div>
+    </div>
+  </div>
+</section>
+</Base>

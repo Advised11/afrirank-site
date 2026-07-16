@@ -12,12 +12,19 @@ interface Props {
   footerTagline?: string;
   noindex?: boolean;
   bare?: boolean;
+  lang?: string;
+  frPath?: string;
+  enPath?: string;
 }
-const { title, description, active = '', jsonLd = '', footerTagline, noindex = false, bare = false } = Astro.props;
+const { title, description, active = '', jsonLd = '', footerTagline, noindex = false, bare = false, lang = 'fr', frPath, enPath } = Astro.props;
 const canonical = Astro.site ? new URL(Astro.url.pathname, Astro.site).href : Astro.url.pathname;
+const abs = (p: string) => (Astro.site ? new URL(p, Astro.site).href : p);
+// La langue "autre" pour le sélecteur de langue de la navigation
+const altPath = lang === 'fr' ? enPath : frPath;
+const thanksPath = lang === 'en' ? '/en/thank-you/' : '/merci/';
 ---
 <!doctype html>
-<html lang="fr">
+<html lang={lang}>
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -32,6 +39,9 @@ const canonical = Astro.site ? new URL(Astro.url.pathname, Astro.site).href : As
   <meta name="description" content={description} />
   {noindex && <meta name="robots" content="noindex, follow" />}
   <link rel="canonical" href={canonical} />
+  {frPath && <link rel="alternate" hreflang="fr-FR" href={abs(frPath)} />}
+  {enPath && <link rel="alternate" hreflang="en" href={abs(enPath)} />}
+  {frPath && <link rel="alternate" hreflang="x-default" href={abs(frPath)} />}
   <meta property="og:type" content="website" />
   <meta property="og:title" content={title} />
   <meta property="og:description" content={description} />
@@ -45,14 +55,14 @@ const canonical = Astro.site ? new URL(Astro.url.pathname, Astro.site).href : As
   <link rel="stylesheet" href="https://assets.calendly.com/assets/external/widget.css" />
   {jsonLd && <script type="application/ld+json" set:html={jsonLd} />}
 </head>
-<body>
+<body data-thanks={thanksPath}>
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MMWLNDWP"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
-  {!bare && <Nav active={active} />}
+  {!bare && <Nav active={active} lang={lang} altPath={altPath} />}
   <slot />
-  {!bare && <Footer tagline={footerTagline} />}
+  {!bare && <Footer tagline={footerTagline} lang={lang} />}
 
   <script is:inline>
     (function () {
@@ -137,7 +147,7 @@ const canonical = Astro.site ? new URL(Astro.url.pathname, Astro.site).href : As
       window.addEventListener('message', function (e) {
         if (typeof e.origin === 'string' && e.origin.indexOf('calendly.com') === -1) return;
         if (e.data && e.data.event === 'calendly.event_scheduled') {
-          window.location.href = '/merci/';
+          window.location.href = (document.body && document.body.dataset && document.body.dataset.thanks) || '/merci/';
         }
       });
     })();

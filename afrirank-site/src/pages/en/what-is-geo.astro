@@ -1,0 +1,115 @@
+---
+import Base from '../../layouts/Base.astro';
+const calendly = 'https://calendly.com/contact-advised-seo/30min?back=1';
+const jsonLd = JSON.stringify({
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.afrirank.fr/en/" },
+        { "@type": "ListItem", "position": 2, "name": "SEO for African & Black-owned brands", "item": "https://www.afrirank.fr/en/seo-african-heritage-brands/" },
+        { "@type": "ListItem", "position": 3, "name": "What is GEO?", "item": "https://www.afrirank.fr/en/what-is-geo/" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "inLanguage": "en",
+      "mainEntity": [
+        { "@type": "Question", "name": "Are GEO and AEO the same thing?", "acceptedAnswer": { "@type": "Answer", "text": "In practice, yes. GEO (Generative Engine Optimization) and AEO (Answer Engine Optimization) both mean optimising to be visible and cited inside AI answers. GEO is the more common term." } },
+        { "@type": "Question", "name": "Does GEO replace SEO?", "acceptedAnswer": { "@type": "Answer", "text": "No, it adds to it. The foundations overlap heavily: a clear entity, presence in the right sources, structured content and a technically clean site serve both." } },
+        { "@type": "Question", "name": "How do I know if ChatGPT recommends my brand?", "acceptedAnswer": { "@type": "Answer", "text": "Ask it the real buying questions from your niche, the way a customer would, across several phrasings, and see whether your brand comes up. The Diagnostic does this systematically." } },
+        { "@type": "Question", "name": "What makes a brand citable by an AI?", "acceptedAnswer": { "@type": "Answer", "text": "A clear, consistent entity, a presence in the sources AI reads, factual and structured content, trust signals and clean technical access." } }
+      ]
+    }
+  ]
+});
+---
+<Base
+  title="What is GEO (getting your brand cited by AI)?"
+  description="GEO is the craft of making your brand citable by ChatGPT, Perplexity and Google AI. A simple definition and what it changes for you."
+  jsonLd={jsonLd}
+  lang="en"
+  frPath="/qu-est-ce-que-le-geo/"
+  enPath="/en/what-is-geo/">
+
+<section class="hero hero--page wrap">
+  <div class="hero-top">
+    <nav class="breadcrumb reveal" aria-label="Breadcrumb">
+      <a href="/en/">Home</a><span class="sep">›</span>
+      <a href="/en/seo-african-heritage-brands/">SEO for Black-owned brands</a><span class="sep">›</span>
+      <span>What is GEO?</span>
+    </nav>
+    <span class="hero-eyebrow reveal"><img src="/images/icon-orange.png" alt="" /> Frequently asked</span>
+    <h1 class="reveal">What is GEO (getting your brand cited by AI)?</h1>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:clamp(24px,4vw,48px)">
+  <div class="wrap article reveal">
+    <blockquote><p><strong>Short answer:</strong> GEO (Generative Engine Optimization), also called AEO (Answer Engine Optimization), is the set of techniques that make your brand <strong>visible and citable inside AI answers</strong> like ChatGPT, Perplexity and Google AI. Where SEO aims to appear in Google's results pages, GEO aims to be <strong>cited in the answer itself</strong>, when the user puts their question to an AI.</p></blockquote>
+
+    <h2>GEO vs SEO: the real difference</h2>
+    <div class="tbl-wrap">
+      <table class="tbl">
+        <thead><tr><th>&nbsp;</th><th>Classic SEO</th><th>GEO / AEO</th></tr></thead>
+        <tbody>
+          <tr><td>Target</td><td>Google's results page</td><td>The answer the AI generates</td></tr>
+          <tr><td>Format</td><td>A list of 10 links</td><td>A direct answer + 3 or 4 brands cited</td></tr>
+          <tr><td>Visibility</td><td>You can be found by searching</td><td>You're cited… or you don't exist</td></tr>
+          <tr><td>User reflex</td><td>"I search"</td><td>"I ask"</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>The key point: in an AI answer, <strong>there is no page 2</strong>. The AI selects a handful of brands. Either yours is one of them, or it's invisible in that conversation.</p>
+
+    <h2>Why GEO matters for your brand</h2>
+    <p>More and more people no longer search, they ask. "Which afro haircare brand for dry hair?", "best foundation for deep skin tones". The AI answers with a short list of brands. The direct consequence: <strong>the buying decision forms before the click</strong>. If your brand is cited, you start ahead. If not, you're fighting to break into a conversation that's already been settled — often in favour of a lesser-known but better-cited competitor. It's the same problem as <a href="/en/recover-revenue-from-resellers/">demand captured by resellers</a>, transposed to AI.</p>
+
+    <h2>Fame isn't enough</h2>
+    <p>An AI doesn't hang out in your Instagram community. It doesn't "know" your reputation: it reads sources it judges trustworthy. A brand with a huge following but absent from those sources may simply never get recommended. Human fame and machine citability are two different things — see the <a href="/en/ai-visibility-geo-black-brands/">full guide to AI visibility for Black-owned brands</a>.</p>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="kicker">Frequently asked</span><h2 class="sec-title">Your questions, my answers.</h2></div>
+    <div class="faq">
+      <div class="faq-item reveal"><button class="faq-q">Are GEO and AEO the same thing? <span class="pm"></span></button><div class="faq-a"><p>In practice, yes. GEO (Generative Engine Optimization) and AEO (Answer Engine Optimization) both mean optimising to be visible and cited inside AI answers. GEO is the more common term.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-q">Does GEO replace SEO? <span class="pm"></span></button><div class="faq-a"><p>No, it adds to it. The foundations overlap heavily: a clear entity, presence in the right sources, structured content and a technically clean site serve both. You run one strategy on two fronts.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-q">How do I know if ChatGPT recommends my brand? <span class="pm"></span></button><div class="faq-a"><p>Ask it the real buying questions from your niche, the way a customer would, across several phrasings, and see whether your brand comes up. The Diagnostic does this systematically and identifies why you are — or aren't — cited.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-q">What makes a brand citable by an AI? <span class="pm"></span></button><div class="faq-a"><p>A clear, consistent entity, a presence in the sources AI reads, factual and structured content, trust signals and clean technical access. The execution detail belongs to the engagement.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="links-more reveal">
+      <h2>Go further</h2>
+      <ul>
+        <li><a href="/en/ai-visibility-geo-black-brands/">AI visibility (GEO) for Black-owned brands</a></li>
+        <li><a href="/en/seo-african-heritage-brands/">SEO strategy for African & Black-owned brands</a></li>
+        <li><a href="/en/recover-revenue-from-resellers/">Recover the revenue your resellers capture</a></li>
+        <li><a href="/en/brand-visibility-scorecard/">Test your visibility score</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="cta-band reveal">
+      <img src="/images/icon-cream.png" class="icon-watermark" alt="" />
+      <h2>Are you cited by AI — and if not, why?</h2>
+      <p>The Diagnostic covers the AI front: it shows which brands get recommended in your place and your citability blind spots. €290 (~$310), credited toward your first month if you continue.</p>
+      <div class="cta-actions">
+        <a href={calendly} target="_blank" rel="noopener" class="btn btn--orange">Book the Diagnostic
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+        <a href="/en/seo-diagnostic/" class="btn btn--cream">Learn more</a>
+      </div>
+    </div>
+  </div>
+</section>
+</Base>

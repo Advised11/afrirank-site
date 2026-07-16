@@ -1,45 +1,76 @@
 ---
 const calendly = 'https://calendly.com/contact-advised-seo/30min?back=1';
-const tagline = Astro.props.tagline || 'SEO & GEO premium pour les marques afro-caribéennes établies.';
+const lang = Astro.props.lang || 'fr';
+const isEn = lang === 'en';
+const tagline = Astro.props.tagline || (isEn
+  ? 'Premium SEO & GEO for established African & Black-owned brands.'
+  : 'SEO & GEO premium pour les marques afro-caribéennes établies.');
+const t = isEn
+  ? {
+      blurb: 'Premium SEO & GEO for established African & Black-owned brands. Visibility you own — on Google and in AI answers.',
+      navTitle: 'Navigation', home: 'Home', method: 'Method', about: 'About', contact: 'Contact',
+      servicesTitle: 'Services', diagnostic: 'The Diagnostic', support: 'SEO services', cultural: 'Cultural SEO',
+      resourcesTitle: 'Resources', guide: 'SEO guide for Black-owned brands', calc: 'Lost-revenue calculator', scorecard: 'Visibility scorecard', geo: 'AI visibility (GEO)',
+      contactTitle: 'Contact', book: 'Book a call', legal: 'Legal notice', privacy: 'Privacy', llm: 'Info for AIs',
+      hrefs: {
+        home: '/en/', method: '/en/#method', about: '/en/about/', contact: '/en/contact/',
+        diagnostic: '/en/seo-diagnostic/', support: '/en/seo-services/', cultural: '/en/cultural-seo/',
+        guide: '/en/seo-african-heritage-brands/', calc: '/en/lost-organic-revenue-calculator/', scorecard: '/en/brand-visibility-scorecard/', geo: '/en/ai-visibility-geo-black-brands/',
+        legal: '/en/legal-notice/', privacy: '/en/legal-notice/#personal-data', llm: '/en/llm-info/',
+      },
+    }
+  : {
+      blurb: 'SEO & GEO premium pour les marques afro-caribéennes établies. Une visibilité que vous possédez — sur Google et dans les réponses IA.',
+      navTitle: 'Navigation', home: 'Accueil', method: 'Méthode', about: 'À propos', contact: 'Contact',
+      servicesTitle: 'Prestations', diagnostic: 'Le Diagnostic', support: 'Accompagnement', cultural: 'SEO culturel',
+      resourcesTitle: 'Ressources', guide: 'Guide SEO marques afro', calc: 'Calculateur de CA perdu', scorecard: 'Scorecard visibilité', geo: 'Visibilité IA (GEO)',
+      contactTitle: 'Contact', book: 'Réserver un appel', legal: 'Mentions légales', privacy: 'Confidentialité', llm: 'Infos pour les IA',
+      hrefs: {
+        home: '/', method: '/#methode', about: '/a-propos/', contact: '/contact/',
+        diagnostic: '/diagnostic-seo/', support: '/accompagnement/', cultural: '/seo-culturel/',
+        guide: '/seo-marques-afro-caribeennes/', calc: '/calculateur-ca-organique-perdu/', scorecard: '/scorecard-visibilite-marque/', geo: '/visibilite-ia-geo-marques-afro/',
+        legal: '/mentions-legales/', privacy: '/mentions-legales/#donnees-personnelles', llm: '/llm-info/',
+      },
+    };
 ---
 <footer>
   <div class="wrap">
     <div class="foot-top">
       <div class="foot-brand">
         <img src="/images/logo-cream.png" alt="AfriRank" />
-        <p>SEO &amp; GEO premium pour les marques afro-caribéennes établies. Une visibilité que vous possédez — sur Google et dans les réponses IA.</p>
+        <p>{t.blurb}</p>
         <div class="foot-soc">
           <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.3 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.5.4 1.1.4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.3 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.5.2-1.1.4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.3-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.5-.4-1.1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.3-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.5-.2 1.1-.4 2.2-.4C8.4 2.2 8.8 2.2 12 2.2Zm0 1.8c-3.1 0-3.5 0-4.7.1-1.1.1-1.7.2-2.1.4-.5.2-.9.4-1.3.8-.4.4-.6.8-.8 1.3-.2.4-.3 1-.4 2.1-.1 1.2-.1 1.6-.1 4.7s0 3.5.1 4.7c.1 1.1.2 1.7.4 2.1.2.5.4.9.8 1.3.4.4.8.6 1.3.8.4.2 1 .3 2.1.4 1.2.1 1.6.1 4.7.1s3.5 0 4.7-.1c1.1-.1 1.7-.2 2.1-.4.5-.2.9-.4 1.3-.8.4-.4.6-.8.8-1.3.2-.4.3-1 .4-2.1.1-1.2.1-1.6.1-4.7s0-3.5-.1-4.7c-.1-1.1-.2-1.7-.4-2.1-.2-.5-.4-.9-.8-1.3-.4-.4-.8-.6-1.3-.8-.4-.2-1-.3-2.1-.4-1.2-.1-1.6-.1-4.7-.1Zm0 3.1a4.9 4.9 0 1 1 0 9.8 4.9 4.9 0 0 1 0-9.8Zm0 8.1a3.2 3.2 0 1 0 0-6.4 3.2 3.2 0 0 0 0 6.4Zm6.2-8.3a1.15 1.15 0 1 1-2.3 0 1.15 1.15 0 0 1 2.3 0Z"></path></svg></a>
           <a href="https://www.linkedin.com/in/francisndimba" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M6.94 5a1.94 1.94 0 1 1-3.88 0 1.94 1.94 0 0 1 3.88 0ZM3.2 8.4h3.48V21H3.2V8.4Zm5.66 0h3.34v1.72h.05c.46-.88 1.6-1.8 3.3-1.8 3.53 0 4.18 2.32 4.18 5.34V21h-3.48v-5.6c0-1.34-.02-3.06-1.86-3.06-1.87 0-2.15 1.46-2.15 2.96V21H8.86V8.4Z"></path></svg></a>
         </div>
       </div>
       <div class="foot-col">
-        <h4>Navigation</h4>
-        <a href="/">Accueil</a>
-        <a href="/#methode">Méthode</a>
-        <a href="/a-propos/">À propos</a>
-        <a href="/contact/">Contact</a>
+        <h4>{t.navTitle}</h4>
+        <a href={t.hrefs.home}>{t.home}</a>
+        <a href={t.hrefs.method}>{t.method}</a>
+        <a href={t.hrefs.about}>{t.about}</a>
+        <a href={t.hrefs.contact}>{t.contact}</a>
       </div>
       <div class="foot-col">
-        <h4>Prestations</h4>
-        <a href="/diagnostic-seo/">Le Diagnostic</a>
-        <a href="/accompagnement/">Accompagnement</a>
-        <a href="/seo-culturel/">SEO culturel</a>
+        <h4>{t.servicesTitle}</h4>
+        <a href={t.hrefs.diagnostic}>{t.diagnostic}</a>
+        <a href={t.hrefs.support}>{t.support}</a>
+        <a href={t.hrefs.cultural}>{t.cultural}</a>
       </div>
       <div class="foot-col">
-        <h4>Ressources</h4>
-        <a href="/seo-marques-afro-caribeennes/">Guide SEO marques afro</a>
-        <a href="/calculateur-ca-organique-perdu/">Calculateur de CA perdu</a>
-        <a href="/scorecard-visibilite-marque/">Scorecard visibilité</a>
-        <a href="/visibilite-ia-geo-marques-afro/">Visibilité IA (GEO)</a>
+        <h4>{t.resourcesTitle}</h4>
+        <a href={t.hrefs.guide}>{t.guide}</a>
+        <a href={t.hrefs.calc}>{t.calc}</a>
+        <a href={t.hrefs.scorecard}>{t.scorecard}</a>
+        <a href={t.hrefs.geo}>{t.geo}</a>
       </div>
       <div class="foot-col">
-        <h4>Contact</h4>
+        <h4>{t.contactTitle}</h4>
         <a href="mailto:contact@advised-seo.fr">contact@advised-seo.fr</a>
-        <a href={calendly} target="_blank" rel="noopener">Réserver un appel</a>
-        <a href="/mentions-legales/">Mentions légales</a>
-        <a href="/mentions-legales/#donnees-personnelles">Confidentialité</a>
-        <a href="/llm-info/">Infos pour les IA</a>
+        <a href={calendly} target="_blank" rel="noopener">{t.book}</a>
+        <a href={t.hrefs.legal}>{t.legal}</a>
+        <a href={t.hrefs.privacy}>{t.privacy}</a>
+        <a href={t.hrefs.llm}>{t.llm}</a>
       </div>
     </div>
     <div class="foot-bot">

@@ -1,0 +1,94 @@
+---
+import Base from '../../layouts/Base.astro';
+const jsonLd = "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"Service\",\n  \"serviceType\": \"SEO & GEO Diagnostic\",\n  \"name\": \"The AfriRank Diagnostic\",\n  \"provider\": { \"@type\": \"ProfessionalService\", \"@id\": \"https://www.afrirank.fr/en/#business\", \"name\": \"AfriRank\" },\n  \"areaServed\": [\"GB\", \"US\", \"Europe\", \"FR\"],\n  \"description\": \"A quantified SEO + GEO diagnostic: technical health, non-brand queries, AI visibility and a figure on the organic revenue you're losing, with a prioritised action plan.\",\n  \"offers\": { \"@type\": \"Offer\", \"price\": \"290\", \"priceCurrency\": \"EUR\", \"category\": \"One-off session\" }\n}";
+---
+<Base title="The AfriRank Diagnostic — quantify the organic revenue you're losing" description="A quantified SEO + GEO diagnostic for established African & Black-owned brands. We measure the organic revenue captured by your competitors and resellers, and the plan to win it back. €290 (~$310), credited if you continue." active="diagnostic" jsonLd={jsonLd} lang="en" frPath="/diagnostic-seo/" enPath="/en/seo-diagnostic/">
+<section class="hero hero--page wrap">
+  <div class="hero-top">
+    <span class="hero-eyebrow reveal"><img src="/images/icon-orange.png" alt="" /> The entry point · Single session</span>
+    <h1 class="reveal">How much revenue are you leaving <em>to the resellers</em>?</h1>
+    <p class="hero-sub reveal">The AfriRank Diagnostic puts a number on your organic blind spot — then hands you a clear plan to win it back. Whether or not you continue with me.</p>
+    <div class="hero-actions reveal">
+      <a href="https://calendly.com/contact-advised-seo/30min?back=1" target="_blank" rel="noopener" class="btn btn--orange">Book my Diagnostic — €290
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+    <span class="hero-note reveal"><b>Credited if you continue</b> · Live walkthrough · Written deliverable</span>
+  </div>
+</section>
+
+<!-- SIGNATURE — lost revenue -->
+<section class="sec">
+  <div class="wrap signature">
+    <div class="sig-copy reveal">
+      <span class="kicker">The signature move</span>
+      <h2>We don't promise you anything. We quantify an opportunity.</h2>
+      <p>For your key non-brand queries, I calculate a realistic range: search volume × average CTR by position × a conservative e-commerce conversion rate × your average order value. The result: a monthly estimate of the revenue other people are booking in your name.</p>
+    </div>
+    <div class="callout reveal">
+      <div class="co-tag">Illustrative example</div>
+      <p>"Castor oil for type 4 hair growth" — <span class="co-big">~8,000 searches/month</span>. You rank 14th; a reseller is capturing the click and the sale. Across 6 to 10 queries like this, the bill runs into the <span class="co-big">thousands per month</span>.</p>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT'S ANALYSED -->
+<section class="sec problem">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker">What we look at</span>
+      <h2 class="sec-title">Six angles, one question:<br />where is your revenue going?</h2>
+    </div>
+    <div class="check-grid">
+      <div class="check-item reveal"><span class="ck"><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></span><div><b>Technical health</b><span>Speed, indexing, structure — what's dragging the site down.</span></div></div>
+      <div class="check-item reveal"><span class="ck"><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></span><div><b>Semantics &amp; keywords</b><span>Your non-brand business queries, and who's capturing them.</span></div></div>
+      <div class="check-item reveal"><span class="ck"><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></span><div><b>Market &amp; competition</b><span>The brands and resellers taking your traffic.</span></div></div>
+      <div class="check-item reveal"><span class="ck"><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></span><div><b>AI visibility (GEO)</b><span>Are you cited in ChatGPT, Perplexity, AI Overviews?</span></div></div>
+      <div class="check-item reveal"><span class="ck"><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></span><div><b>The lost-revenue figure</b><span>The monthly range, query by query.</span></div></div>
+      <div class="check-item reveal"><span class="ck"><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></span><div><b>The prioritised plan</b><span>What to do, in what order, for what impact.</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- DELIVERABLE + WHO -->
+<section class="sec">
+  <div class="wrap note-band">
+    <div class="note-card reveal">
+      <span class="kicker">The deliverable</span>
+      <h3>What you walk away with</h3>
+      <p>A clear, prioritised action document, plus a live walkthrough (45 min). Usable even if you run the rest in-house.</p>
+    </div>
+    <div class="note-card dark reveal">
+      <span class="kicker">Who it's for</span>
+      <h3>Who this is for</h3>
+      <p>For African &amp; Black-owned brands that have already proven their product and their community, and want out of their dependence on paid social. If you're only just launching, it's not the right time yet — and I'll tell you so.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PRICE + CTA -->
+<section class="sec">
+  <div class="wrap">
+    <div class="audit-card reveal" style="grid-template-columns:1.4fr 1fr">
+      <div class="audit-left">
+        <span class="offer-tag">The AfriRank Diagnostic</span>
+        <h2>One session, one figure, one plan.</h2>
+        <p>Credited toward your first month if you continue on Growth or Partner. The best starting point — with no obligation to continue.</p>
+        <ul class="audit-list">
+          <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5"/></svg>The figure on your lost organic revenue</li>
+          <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5"/></svg>Prioritised action plan</li>
+          <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5"/></svg>Live walkthrough (45 min)</li>
+          <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5"/></svg>Written deliverable</li>
+        </ul>
+      </div>
+      <div class="audit-right">
+        <div class="audit-price">€290<span>one-off session · ~$310</span></div>
+        <a href="https://calendly.com/contact-advised-seo/30min?back=1" target="_blank" rel="noopener" class="btn btn--orange">Book my Diagnostic
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+        <span class="audit-note">Credited toward your first month of an engagement.</span>
+      </div>
+    </div>
+  </div>
+</section>
+</Base>
