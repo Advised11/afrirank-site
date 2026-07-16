@@ -1,0 +1,146 @@
+---
+import Base from '../layouts/Base.astro';
+const calendly = 'https://calendly.com/contact-advised-seo/30min?back=1';
+const jsonLd = JSON.stringify({
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://www.afrirank.fr/serp-de-marque/#article",
+      "headline": "Tapez le nom de votre marque sur Google. Ce que vous voyez n'est pas à vous.",
+      "description": "Tapez votre marque + avis, + code promo. Les pages qui répondent ne sont pas à vous. Ce que ça coûte, l'inventaire en 10 minutes, et les priorités de reconquête.",
+      "inLanguage": "fr-FR",
+      "image": "https://www.afrirank.fr/images/article-serp-mobile.jpg",
+      "mainEntityOfPage": "https://www.afrirank.fr/serp-de-marque/",
+      "author": { "@type": "Person", "@id": "https://www.advised-seo.fr/#francis", "name": "Francis Ndimba", "url": "https://www.afrirank.fr/a-propos/" },
+      "publisher": { "@id": "https://www.afrirank.fr/#business" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://www.afrirank.fr/" },
+        { "@type": "ListItem", "position": 2, "name": "Revendeurs devant votre marque", "item": "https://www.afrirank.fr/revendeurs-captent-trafic-marque/" },
+        { "@type": "ListItem", "position": 3, "name": "SERP de marque", "item": "https://www.afrirank.fr/serp-de-marque/" }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "name": "L'inventaire de votre SERP de marque en 10 minutes",
+      "totalTime": "PT10M",
+      "step": [
+        { "@type": "HowToStep", "name": "Votre marque seule", "text": "Cherchez « votre marque » en navigation privée : qui occupe la première page à part vous ? Votre site est-il complet (liens de site, fiche) ?" },
+        { "@type": "HowToStep", "name": "Votre marque + avis", "text": "Qui héberge la réponse ? Que dit-elle ? Est-elle à jour ?" },
+        { "@type": "HowToStep", "name": "Votre marque + code promo / pas cher", "text": "Combien de sites de coupons ? Proposent-ils de vrais codes ou du vent (ce qui frustre vos clientes en votre nom) ?" },
+        { "@type": "HowToStep", "name": "Votre marque + produits phares", "text": "Vous, ou un revendeur ? Si vous n'apparaissez pas du tout, le problème est plus profond." },
+        { "@type": "HowToStep", "name": "Demandez aux IA", "text": "Demandez à ChatGPT ou Perplexity ce qu'ils pensent de votre marque — la SERP de marque de demain se joue aussi dans les réponses IA." }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "Puis-je faire supprimer un avis négatif ou une page qui me déplaît ?", "acceptedAnswer": { "@type": "Answer", "text": "Sauf contenu illégal (diffamation, faux manifeste), rarement — et la procédure est longue. La stratégie efficace est inverse : occuper le terrain avec vos propres réponses, plus complètes et mieux positionnées, pour que la page gênante descende mécaniquement." } },
+        { "@type": "Question", "name": "Créer moi-même une page « avis » sur mon site, ça ne fait pas suspect ?", "acceptedAnswer": { "@type": "Answer", "text": "Pas si elle est honnête : de vrais avis clients (avec preuve de collecte), y compris les critiques et vos réponses. Une page d'avis transparente sur votre propre site est parfaitement légitime — c'est le standard des marques qui contrôlent leur réputation. Ce qui est suspect, c'est une page de fausses louanges." } },
+        { "@type": "Question", "name": "Les sites de coupons sont-ils attaquables juridiquement ?", "acceptedAnswer": { "@type": "Answer", "text": "S'ils utilisent votre marque pour tromper (faux codes, fausse affiliation), il y a des leviers — parlez-en à votre juriste. Mais le levier le plus rapide reste SEO : créer votre propre page offres et la positionner sur « marque + code promo ». Vous récupérez le clic ET l'image : plus de clientes frustrées par des codes morts trouvés ailleurs." } }
+      ]
+    }
+  ]
+});
+---
+<Base
+  title="SERP de marque : qui contrôle « [votre marque] avis » ?"
+  description="Tapez votre marque + avis, + code promo. Les pages qui répondent ne sont pas à vous. Ce que ça coûte, l'inventaire en 10 minutes, et les priorités de reconquête."
+  jsonLd={jsonLd}>
+
+<section class="hero hero--page wrap">
+  <div class="hero-top">
+    <nav class="breadcrumb reveal" aria-label="Fil d'Ariane">
+      <a href="/">Accueil</a><span class="sep">›</span>
+      <a href="/revendeurs-captent-trafic-marque/">Revendeurs devant votre marque</a><span class="sep">›</span>
+      <span>SERP de marque</span>
+    </nav>
+    <span class="hero-eyebrow reveal"><img src="/images/icon-orange.png" alt="" /> Fuite n°4 · SERP de marque</span>
+    <h1 class="reveal">Tapez le nom de votre marque sur Google. <em>Ce que vous voyez n'est pas à vous.</em></h1>
+    <p class="hero-sub reveal">Faites l'exercice maintenant : « [votre marque] avis ». « [votre marque] code promo ». « [votre marque] pas cher ». Regardez qui répond : des sites d'avis, des agrégateurs de coupons, des revendeurs — rarement vous.</p>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:clamp(24px,4vw,48px)">
+  <div class="wrap article reveal">
+    <p class="lead">Ces requêtes, c'est votre <strong>SERP de marque</strong> : la vitrine Google de votre nom. Et c'est le trafic le plus chaud qui existe — des gens qui vous connaissent déjà et s'apprêtent à acheter.</p>
+
+    <figure>
+      <img src="/images/article-serp-mobile.jpg" alt="Cliente parcourant une application d'achat sur son smartphone au lieu du site de la marque" loading="lazy" />
+    </figure>
+
+    <h2>« Code promo » et « pas cher » sont des compliments</h2>
+    <p>Contre-intuitif, mais vrai : ces requêtes sont le signe que votre marque fonctionne.</p>
+    <p>Personne ne tape « [marque inconnue] code promo ». Ces recherches n'existent que parce que votre notoriété a créé une intention d'achat — la cliente a déjà choisi <em>vous</em>, elle cherche juste une dernière validation ou une remise avant de payer.</p>
+    <p>Laisser ces requêtes aux sites de coupons, c'est offrir la toute dernière étape de votre tunnel de conversion à des tiers. Le site de coupons n'a rien construit : il encaisse une commission d'affiliation sur une vente que vous aviez déjà gagnée — et dans le pire des cas, il redirige vers un revendeur. Vous payez la notoriété, il monétise la conclusion.</p>
+
+    <h2>L'inventaire de votre SERP de marque en 10 minutes</h2>
+    <p>Prenez une feuille, en navigation privée, et cherchez :</p>
+    <ol>
+      <li><strong>« [votre marque] »</strong> seule — qui occupe la première page à part vous ? Votre site est-il complet (liens de site, fiche) ?</li>
+      <li><strong>« [votre marque] avis »</strong> — qui héberge la réponse ? Que dit-elle ? Est-elle à jour ?</li>
+      <li><strong>« [votre marque] code promo »</strong> / <strong>« pas cher »</strong> — combien de sites de coupons ? Proposent-ils de vrais codes ou du vent (ce qui frustre vos clientes en votre nom) ?</li>
+      <li><strong>« [votre marque] + vos produits phares »</strong> — vous, ou un revendeur ? (<a href="/marque-invisible-google-produits/">Si vous n'apparaissez pas du tout, le problème est plus profond →</a>)</li>
+      <li><strong>Demandez à ChatGPT ou Perplexity</strong> ce qu'ils pensent de votre marque — la SERP de marque de demain se joue <a href="/visibilite-ia-geo-marques-afro/">aussi dans les réponses IA</a>.</li>
+    </ol>
+    <p>Notez pour chaque ligne : à moi / à un tiers neutre / à un tiers qui me coûte. Vous avez votre carte.</p>
+
+    <h2>Les 3 requêtes brandées à reprendre en priorité</h2>
+    <p>Toutes les fuites de votre SERP de marque ne se valent pas. L'ordre de reconquête type :</p>
+    <ol>
+      <li><strong>« [marque] + produit »</strong> — la vente directe elle-même. La plus rentable à reprendre, et la plus légitime : c'est votre produit, votre nom.</li>
+      <li><strong>« [marque] avis »</strong> — la confiance. Tant qu'un tiers héberge la réponse, votre réputation est éditée par quelqu'un d'autre.</li>
+      <li><strong>« [marque] code promo »</strong> — la marge. Reprendre cette requête, c'est arrêter de payer une commission sur des clientes déjà convaincues.</li>
+    </ol>
+    <p>Comment reprendre chacune — quelle page créer, quel contenu, quels signaux — dépend de votre situation exacte : c'est le niveau de détail que produit le Diagnostic, requête par requête. Ce qui est certain : chacune de ces trois requêtes a une réponse, et la marque part toujours favorite sur son propre nom <em>quand elle joue</em>.</p>
+
+    <h2>Mesurez d'abord, reconquérez ensuite</h2>
+    <p>Votre SERP de marque n'est qu'une des quatre fuites de trafic d'une marque établie — <a href="/revendeurs-captent-trafic-marque/">les trois autres sont ici</a>. Pour l'ordre de grandeur global : <a href="/calculateur-ca-organique-perdu/">le calculateur de CA organique perdu</a>, gratuit, 60 secondes.</p>
+    <p>Pour l'inventaire complet fait par un œil senior — votre vraie SERP de marque, vos vraies requêtes captées, votre plan de reconquête priorisé : <a href="/diagnostic-seo/">le Diagnostic AfriRank</a>, 290 €, déductibles si vous poursuivez.</p>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="kicker">Questions fréquentes</span><h2 class="sec-title">Vos questions, mes réponses.</h2></div>
+    <div class="faq">
+      <div class="faq-item reveal"><button class="faq-q">Puis-je faire supprimer un avis négatif ou une page qui me déplaît ? <span class="pm"></span></button><div class="faq-a"><p>Sauf contenu illégal (diffamation, faux manifeste), rarement — et la procédure est longue. La stratégie efficace est inverse : occuper le terrain avec vos propres réponses, plus complètes et mieux positionnées, pour que la page gênante descende mécaniquement.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-q">Créer moi-même une page « avis » sur mon site, ça ne fait pas suspect ? <span class="pm"></span></button><div class="faq-a"><p>Pas si elle est honnête : de vrais avis clients (avec preuve de collecte), y compris les critiques et vos réponses. Une page d'avis transparente sur votre propre site est parfaitement légitime — c'est le standard des marques qui contrôlent leur réputation. Ce qui est suspect, c'est une page de fausses louanges.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-q">Les sites de coupons sont-ils attaquables juridiquement ? <span class="pm"></span></button><div class="faq-a"><p>S'ils utilisent votre marque pour tromper (faux codes, fausse affiliation), il y a des leviers — parlez-en à votre juriste. Mais le levier le plus rapide reste SEO : créer votre propre page offres et la positionner sur « [marque] code promo ». Vous récupérez le clic ET l'image : plus de clientes frustrées par des codes morts trouvés ailleurs.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="links-more reveal">
+      <h2>Pour aller plus loin</h2>
+      <ul>
+        <li><a href="/revendeurs-captent-trafic-marque/">Les 4 fuites de trafic d'une marque établie</a></li>
+        <li><a href="/marque-invisible-google-produits/">Votre marque est introuvable ? Le test des 5 minutes</a></li>
+        <li><a href="/visibilite-ia-geo-marques-afro/">Votre visibilité dans les réponses IA (GEO)</a></li>
+        <li><a href="/calculateur-ca-organique-perdu/">Estimer votre CA organique perdu</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="cta-band reveal">
+      <img src="/images/icon-cream.png" class="icon-watermark" alt="" />
+      <h2>Commencez par Le Diagnostic.</h2>
+      <p>Votre vraie SERP de marque, vos vraies requêtes captées, votre plan de reconquête priorisé — fait par un œil senior. 290 €, déductibles si vous poursuivez en accompagnement.</p>
+      <div class="cta-actions">
+        <a href={calendly} target="_blank" rel="noopener" class="btn btn--orange">Réserver mon Diagnostic
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+        <a href="/diagnostic-seo/" class="btn btn--cream">En savoir plus</a>
+      </div>
+    </div>
+  </div>
+</section>
+</Base>

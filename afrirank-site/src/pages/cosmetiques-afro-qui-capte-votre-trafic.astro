@@ -1,0 +1,138 @@
+---
+import Base from '../layouts/Base.astro';
+const calendly = 'https://calendly.com/contact-advised-seo/30min?back=1';
+const jsonLd = JSON.stringify({
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://www.afrirank.fr/cosmetiques-afro-qui-capte-votre-trafic/#article",
+      "headline": "SEO des cosmétiques afro : pourquoi les grossistes trustent Google — et pourquoi c'est réversible",
+      "description": "Grossistes, marketplaces, médias : la carte de qui capte le trafic des cosmétiques afro sur Google — et pourquoi une marque légitime peut reprendre sa part.",
+      "inLanguage": "fr-FR",
+      "image": "https://www.afrirank.fr/images/article-cosmetiques-karite.jpg",
+      "mainEntityOfPage": "https://www.afrirank.fr/cosmetiques-afro-qui-capte-votre-trafic/",
+      "author": { "@type": "Person", "@id": "https://www.advised-seo.fr/#francis", "name": "Francis Ndimba", "url": "https://www.afrirank.fr/a-propos/" },
+      "publisher": { "@id": "https://www.afrirank.fr/#business" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://www.afrirank.fr/" },
+        { "@type": "ListItem", "position": 2, "name": "Revendeurs devant votre marque", "item": "https://www.afrirank.fr/revendeurs-captent-trafic-marque/" },
+        { "@type": "ListItem", "position": 3, "name": "Cosmétiques afro : qui capte votre trafic", "item": "https://www.afrirank.fr/cosmetiques-afro-qui-capte-votre-trafic/" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "Mon contenu Instagram ne suffit-il pas ?", "acceptedAnswer": { "@type": "Answer", "text": "Il crée la demande, il ne la capte pas. Instagram ne ranke pas sur Google, et vos posts disparaissent du feed en 48 h. Le même savoir, publié sur votre site, travaille pour vous des années. Ce n'est pas l'un ou l'autre : c'est votre contenu social qui prouve, et votre site qui capitalise." } },
+        { "@type": "Question", "name": "Dois-je écrire sur « les cheveux crépus » en général ?", "acceptedAnswer": { "@type": "Answer", "text": "Pas au début. Ces requêtes larges sont les plus disputées et les moins acheteuses. La priorité, c'est l'intersection entre ce que vous vendez et ce que vos clientes tapent au moment de choisir. Le contenu large vient ensuite, pour asseoir l'autorité." } },
+        { "@type": "Question", "name": "Un grossiste avec 10 ans d'ancienneté est-il rattrapable ?", "acceptedAnswer": { "@type": "Answer", "text": "Sur ses requêtes de cœur (produits secs, gros volumes), pas rapidement. Sur les requêtes de conseil et de spécificité, oui — parce que son ancienneté ne compense pas son absence de légitimité, et que les critères de Google évoluent dans votre sens. On ne l'affronte pas partout : on choisit les terrains où il ne peut pas suivre." } }
+      ]
+    }
+  ]
+});
+---
+<Base
+  title="Cosmétiques afro : qui capte vraiment le trafic Google du secteur"
+  description="Grossistes, marketplaces, médias : la carte de qui capte le trafic des cosmétiques afro sur Google — et pourquoi une marque légitime peut reprendre sa part."
+  jsonLd={jsonLd}>
+
+<section class="hero hero--page wrap">
+  <div class="hero-top">
+    <nav class="breadcrumb reveal" aria-label="Fil d'Ariane">
+      <a href="/">Accueil</a><span class="sep">›</span>
+      <a href="/revendeurs-captent-trafic-marque/">Revendeurs devant votre marque</a><span class="sep">›</span>
+      <span>Cosmétiques afro : qui capte votre trafic</span>
+    </nav>
+    <span class="hero-eyebrow reveal"><img src="/images/icon-orange.png" alt="" /> Fuite n°3 · Grossistes</span>
+    <h1 class="reveal">SEO des cosmétiques afro : pourquoi les grossistes trustent Google — <em>et pourquoi c'est réversible</em></h1>
+    <p class="hero-sub reveal">Cherchez « beurre de karité cheveux », « savon noir gommage » ou « poudre de chébé ». Regardez qui répond : des grossistes, des marketplaces, des blogs de revendeurs. Rarement une marque.</p>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:clamp(24px,4vw,48px)">
+  <div class="wrap article reveal">
+    <p class="lead">Le marché des cosmétiques afro a une particularité frappante sur Google : <strong>ceux qui ont la légitimité n'ont pas la visibilité, et inversement</strong>. Voici la carte du terrain — et la faille dans la position des généralistes.</p>
+
+    <figure>
+      <img src="/images/article-cosmetiques-karite.jpg" alt="Pot de baume au beurre de karité d'une marque artisanale de soins naturels" loading="lazy" />
+    </figure>
+
+    <h2>La carte du marché : qui capte quoi</h2>
+    <p>Quatre familles d'acteurs se partagent votre trafic potentiel :</p>
+    <table class="tbl">
+      <thead><tr><th>Acteur</th><th>Ce qu'il capte</th><th>Sa force</th><th>Sa faiblesse</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Marketplaces</strong> (Amazon…)</td><td>Requêtes produits sèches</td><td>Autorité de domaine écrasante</td><td>Zéro conseil, zéro culture</td></tr>
+        <tr><td><strong>Grossistes / multi-marques</strong></td><td>Requêtes catégorie + conseil</td><td>Volume de pages, blogs alimentés</td><td>Contenu générique, aucune expérience produit</td></tr>
+        <tr><td><strong>Médias &amp; blogs beauté</strong></td><td>Requêtes conseil et tendances</td><td>Ancienneté, notoriété</td><td>Ils ne vendent pas — et recommandent souvent… vos revendeurs</td></tr>
+        <tr><td><strong>Marques</strong> (vous)</td><td>Trop souvent : leur seul nom</td><td>Légitimité, communauté, expertise réelle</td><td>Infrastructure SEO inexistante</td></tr>
+      </tbody>
+    </table>
+    <p>La lecture est brutale mais utile : le trafic du secteur est capté par des acteurs dont aucun n'a l'expérience réelle du produit. C'est une anomalie — et les anomalies de ce type finissent par se corriger au profit de ceux qui s'y prennent tôt.</p>
+
+    <h2>Les grossistes rankent avec du contenu générique — c'est exactement leur faiblesse</h2>
+    <p>Ouvrez les articles de blog qui dominent ces requêtes. Vous y trouverez des textes interchangeables, souvent générés en série, écrits par des gens qui n'ont jamais utilisé les produits qu'ils décrivent. Aucun vécu, aucune nuance de textures, aucune compréhension des rituels.</p>
+    <p>Or Google évalue de plus en plus l'expérience réelle et l'expertise incarnée derrière un contenu — et les moteurs de réponse IA poussent cette logique encore plus loin : ils cherchent des sources qui <em>savent</em>, pas des sources qui <em>compilent</em>.</p>
+    <p>Vous formulez les produits. Vous connaissez les porosités, les textures, les erreurs d'utilisation, les questions que posent réellement vos clientes en DM. Chaque contenu que vous publiez avec ce niveau de précision est structurellement hors de portée d'un grossiste. Ils peuvent copier vos mots-clés ; ils ne peuvent pas copier votre légitimité.</p>
+    <p>Et ce vocabulaire précis — celui de votre communauté — est justement <a href="/seo-cosmetique-soin-capillaire-afro/">celui que les généralistes ratent</a> : « co-wash 4C », « huile de ricin pousse », les requêtes que seule une marque du marché sait anticiper.</p>
+
+    <h2>Les requêtes où une marque bat un généraliste à coup sûr</h2>
+    <p>Sans entrer dans une liste exhaustive — elle dépend de votre catalogue et c'est le travail du Diagnostic — les familles de requêtes gagnables suivent une typologie claire :</p>
+    <ul>
+      <li><strong>Le conseil incarné</strong> : les requêtes où la réponse exige d'avoir <em>vécu</em> le sujet (choisir selon sa porosité, corriger une erreur de routine). Le généraliste y produit du plat ; vous, du précis.</li>
+      <li><strong>La spécificité produit</strong> : les requêtes autour des ingrédients et usages que vous maîtrisez mieux que quiconque — origine, qualité, transformation.</li>
+      <li><strong>La culture</strong> : les requêtes où la dimension culturelle est la réponse. Un grossiste qui s'y essaie sonne faux immédiatement — et votre audience le sent autant que Google.</li>
+      <li><strong>Votre territoire de marque</strong> : vos requêtes brandées et semi-brandées, qui devraient être acquises et ne le sont souvent pas (<a href="/marque-invisible-google-produits/">vérifiez en 5 minutes</a>).</li>
+    </ul>
+    <p>Ce qui varie d'une marque à l'autre : lesquelles de ces requêtes portent du volume <em>et</em> de l'intention d'achat sur <em>votre</em> catalogue. C'est là que se joue la priorisation.</p>
+
+    <h2>Par où commencer</h2>
+    <p>D'abord, mesurez l'enjeu : <a href="/calculateur-ca-organique-perdu/">le calculateur de CA organique perdu</a> vous donne l'ordre de grandeur en 60 secondes.</p>
+    <p>Ensuite, si le chiffre justifie d'agir : <a href="/diagnostic-seo/">le Diagnostic AfriRank</a> identifie vos requêtes gagnables, qui les capte aujourd'hui, et le plan pour les reprendre — chiffré sur vos données réelles. 290 €, déductibles si vous poursuivez.</p>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="kicker">Questions fréquentes</span><h2 class="sec-title">Vos questions, mes réponses.</h2></div>
+    <div class="faq">
+      <div class="faq-item reveal"><button class="faq-q">Mon contenu Instagram ne suffit-il pas ? <span class="pm"></span></button><div class="faq-a"><p>Il crée la demande, il ne la capte pas. Instagram ne ranke pas sur Google, et vos posts disparaissent du feed en 48 h. Le même savoir, publié sur votre site, travaille pour vous des années. Ce n'est pas l'un ou l'autre : c'est votre contenu social qui prouve, et votre site qui capitalise.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-q">Dois-je écrire sur « les cheveux crépus » en général ? <span class="pm"></span></button><div class="faq-a"><p>Pas au début. Ces requêtes larges sont les plus disputées et les moins acheteuses. La priorité, c'est l'intersection entre ce que vous vendez et ce que vos clientes tapent au moment de choisir. Le contenu large vient ensuite, pour asseoir l'autorité.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-q">Un grossiste avec 10 ans d'ancienneté est-il rattrapable ? <span class="pm"></span></button><div class="faq-a"><p>Sur ses requêtes de cœur (produits secs, gros volumes), pas rapidement. Sur les requêtes de conseil et de spécificité, oui — parce que son ancienneté ne compense pas son absence de légitimité, et que les critères de Google évoluent dans votre sens. On ne l'affronte pas partout : on choisit les terrains où il ne peut pas suivre.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="links-more reveal">
+      <h2>Pour aller plus loin</h2>
+      <ul>
+        <li><a href="/revendeurs-captent-trafic-marque/">Les 4 fuites de trafic d'une marque établie</a></li>
+        <li><a href="/seo-cosmetique-soin-capillaire-afro/">Les requêtes capillaires que les généralistes ratent</a></li>
+        <li><a href="/marque-invisible-google-produits/">Votre marque est introuvable ? Le test des 5 minutes</a></li>
+        <li><a href="/calculateur-ca-organique-perdu/">Estimer votre CA organique perdu</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="cta-band reveal">
+      <img src="/images/icon-cream.png" class="icon-watermark" alt="" />
+      <h2>Commencez par Le Diagnostic.</h2>
+      <p>Vos requêtes gagnables, qui les capte aujourd'hui, et le plan pour les reprendre — chiffré sur vos données réelles. 290 €, déductibles si vous poursuivez en accompagnement.</p>
+      <div class="cta-actions">
+        <a href={calendly} target="_blank" rel="noopener" class="btn btn--orange">Réserver mon Diagnostic
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+        <a href="/diagnostic-seo/" class="btn btn--cream">En savoir plus</a>
+      </div>
+    </div>
+  </div>
+</section>
+</Base>

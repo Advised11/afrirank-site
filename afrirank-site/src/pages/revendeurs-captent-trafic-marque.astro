@@ -1,0 +1,158 @@
+---
+import Base from '../layouts/Base.astro';
+const calendly = 'https://calendly.com/contact-advised-seo/30min?back=1';
+const jsonLd = JSON.stringify({
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://www.afrirank.fr/revendeurs-captent-trafic-marque/#article",
+      "headline": "Pourquoi les revendeurs sont devant votre marque sur Google — et ce que ça vous coûte chaque mois",
+      "description": "Votre notoriété crée la demande, vos revendeurs l'encaissent sur Google. Le mécanisme, les 4 fuites de trafic, et ce que ça coûte chaque mois. Analyse AfriRank.",
+      "inLanguage": "fr-FR",
+      "image": "https://www.afrirank.fr/images/article-revendeurs-pilier.jpg",
+      "mainEntityOfPage": "https://www.afrirank.fr/revendeurs-captent-trafic-marque/",
+      "author": { "@type": "Person", "@id": "https://www.advised-seo.fr/#francis", "name": "Francis Ndimba", "url": "https://www.afrirank.fr/a-propos/" },
+      "publisher": { "@id": "https://www.afrirank.fr/#business" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://www.afrirank.fr/" },
+        { "@type": "ListItem", "position": 2, "name": "SEO marques afro-caribéennes", "item": "https://www.afrirank.fr/seo-marques-afro-caribeennes/" },
+        { "@type": "ListItem", "position": 3, "name": "Revendeurs devant votre marque sur Google", "item": "https://www.afrirank.fr/revendeurs-captent-trafic-marque/" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "Dois-je demander à mes revendeurs d'arrêter de vendre mes produits ?", "acceptedAnswer": { "@type": "Answer", "text": "Non. Vos revendeurs sont un canal de volume et de découverte — le problème n'est pas qu'ils vendent, c'est qu'ils captent aussi la demande qui vous était destinée. L'objectif est de reprendre votre part du trafic, pas de casser votre distribution." } },
+        { "@type": "Question", "name": "En combien de temps voit-on les premiers signaux ?", "acceptedAnswer": { "@type": "Answer", "text": "Les premiers signaux apparaissent généralement entre 2 et 4 mois, et le canal devient solide à partir de 6 mois. La différence avec la pub : ces positions restent acquises quand vous arrêtez de payer." } },
+        { "@type": "Question", "name": "Ça s'applique si je vends surtout via Instagram aujourd'hui ?", "acceptedAnswer": { "@type": "Answer", "text": "C'est le cas le plus fréquent — et le plus concerné. Votre communauté Instagram crée une demande Google que vous ne captez pas. Plus votre audience est forte, plus la fuite est grande." } }
+      ]
+    }
+  ]
+});
+---
+<Base
+  title="Revendeurs devant votre marque sur Google : pourquoi, et comment reprendre"
+  description="Votre notoriété crée la demande, vos revendeurs l'encaissent sur Google. Le mécanisme, les 4 fuites de trafic, et ce que ça coûte chaque mois. Analyse AfriRank."
+  jsonLd={jsonLd}>
+
+<section class="hero hero--page wrap">
+  <div class="hero-top">
+    <nav class="breadcrumb reveal" aria-label="Fil d'Ariane">
+      <a href="/">Accueil</a><span class="sep">›</span>
+      <a href="/seo-marques-afro-caribeennes/">SEO marques afro</a><span class="sep">›</span>
+      <span>Revendeurs devant votre marque</span>
+    </nav>
+    <span class="hero-eyebrow reveal"><img src="/images/icon-orange.png" alt="" /> Le mécanisme</span>
+    <h1 class="reveal">Pourquoi les revendeurs sont devant votre marque sur Google — <em>et ce que ça vous coûte chaque mois</em></h1>
+    <p class="hero-sub reveal">Vos clientes cherchent vos produits sur Google. Elles les trouvent — chez un revendeur, un grossiste ou une marketplace. Ce n'est ni une fatalité ni un hasard : c'est un mécanisme précis, avec quatre fuites identifiables et un coût mensuel que vous pouvez estimer.</p>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:clamp(24px,4vw,48px)">
+  <div class="wrap article reveal">
+    <p class="lead">Cette page démonte le mécanisme. À vous de voir ensuite combien il vous coûte.</p>
+
+    <figure>
+      <img src="/images/article-revendeurs-pilier.jpg" alt="Fondatrice de marque analysant sa visibilité Google sur son ordinateur portable" loading="lazy" />
+    </figure>
+
+    <h2>Plus votre communauté est forte, plus vous enrichissez vos revendeurs</h2>
+    <p>C'est le paradoxe que je constate sur la quasi-totalité des marques afro-caribéennes que j'analyse.</p>
+    <p>Vous avez construit la notoriété : Instagram, bouche-à-oreille, événements, presse. Cette notoriété fait naître un réflexe chez vos clientes : chercher vos produits sur Google avant d'acheter. Le nom d'une gamme, un produit phare, votre marque associée à un besoin.</p>
+    <p>Et là, la mécanique s'inverse. Cette demande — que vous avez créée, financée, entretenue — atterrit sur les sites qui ont investi Google pendant que vous investissiez les réseaux. Chaque story qui cartonne génère des recherches. Chaque recherche non captée est une vente à marge réduite, ou une vente perdue.</p>
+    <p>Autrement dit : votre budget de notoriété travaille aussi pour eux. Tant que la fuite n'est pas colmatée, plus vous réussissez, plus elle coûte cher.</p>
+
+    <h2>Le mécanisme : pourquoi Google préfère un grossiste à la marque légitime</h2>
+    <p>Google ne mesure pas la légitimité culturelle, ni la qualité produit, ni l'amour d'une communauté. Il mesure des signaux techniques et sémantiques : un site rapide et bien structuré, des pages qui répondent précisément aux recherches, une autorité accumulée au fil des années.</p>
+    <p>Les grossistes et marketplaces cochent ces cases par métier. Des milliers de pages, un blog alimenté en continu, une ancienneté de domaine. Pas parce qu'ils sont meilleurs — parce que c'est leur infrastructure.</p>
+
+    <h3>Ce que Google évalue vraiment (et que votre site ne lui donne pas)</h3>
+    <p>La plupart des sites de marque que j'audite ont le même profil : une belle vitrine pensée pour la conversion des visiteurs Instagram, et presque rien pour être trouvée par quelqu'un qui ne connaît pas encore l'adresse. Des fiches produits nommées avec le vocabulaire interne de la marque plutôt qu'avec les mots que tape la cliente. Des pages invisibles pour Google sans que personne ne le sache.</p>
+
+    <h3>Le cercle vicieux du 100 % réseaux sociaux</h3>
+    <p>Tant que la pub tourne, tout va bien. Le jour où vous coupez — ou l'algorithme vous coupe — le trafic tombe, et Google, lui, n'a rien à envoyer chez vous : vous ne lui avez jamais rien donné. La pub, c'est un loyer. Ce que vous ne construisez pas sur Google, d'autres l'ont construit à votre place — avec votre demande. Le détail de cette logique est dans notre <a href="/seo-marques-afro-caribeennes/">guide SEO pour marques afro-caribéennes</a>.</p>
+
+    <h2>Les 4 fuites de trafic d'une marque établie</h2>
+    <p>Quatre endroits précis où votre demande part chez des tiers. Chacune se vérifie, chacune se chiffre.</p>
+
+    <h3>Fuite n°1 — Les marketplaces sur vos requêtes produits</h3>
+    <p>Amazon et consorts sont positionnés sur vos noms de produits, parfois au-dessus de votre propre site. Ils prennent la vente, la marge, et la relation client. <a href="/amazon-vend-mes-produits/">Que faire quand Amazon vend vos produits →</a></p>
+
+    <h3>Fuite n°2 — Invisible sur vos propres produits</h3>
+    <p>Le cas le plus discret : votre site n'apparaît tout simplement pas quand on cherche vos produits. Huit fois sur dix, ce n'est pas un problème de contenu mais de structure. <a href="/marque-invisible-google-produits/">Pourquoi votre marque est introuvable →</a></p>
+
+    <h3>Fuite n°3 — Grossistes et boutiques multi-marques</h3>
+    <p>Sur les requêtes catégorie — « beurre de karité cheveux », « bissap bio » — des sites sans légitimité produit captent les acheteuses qui ne vous connaissent pas encore. C'est la fuite qui bloque votre croissance, pas seulement votre marge. <a href="/cosmetiques-afro-qui-capte-votre-trafic/">Qui capte vraiment le trafic des cosmétiques afro →</a></p>
+
+    <h3>Fuite n°4 — Votre SERP de marque colonisée</h3>
+    <p>Tapez votre marque + « avis », + « code promo ». Les pages qui répondent ne sont pas à vous. La conversion finale de vos propres clientes se joue sur des sites tiers. <a href="/serp-de-marque/">Reprendre votre SERP de marque →</a></p>
+
+    <h2>Combien ça coûte : l'ordre de grandeur</h2>
+    <p>La formule est simple et transparente :</p>
+    <blockquote><p><strong>Manque à gagner mensuel = volume de recherche × part captée par les tiers × taux de conversion × panier moyen</strong></p></blockquote>
+    <p>Exemple prudent : 5 000 recherches mensuelles sur votre marque et vos produits, 40 % captées par des tiers, 2 % de conversion, 55 € de panier — <strong>2 200 € par mois, 26 400 € par an</strong>. Avec des hypothèses basses.</p>
+    <p>Faites le calcul avec vos chiffres : <a href="/calculateur-ca-organique-perdu/">le calculateur de CA organique perdu</a> est gratuit, et toutes les hypothèses sont modifiables.</p>
+
+    <h2>La bonne nouvelle : votre légitimité est un avantage que les revendeurs n'auront jamais</h2>
+    <p>Ce mécanisme joue contre vous aujourd'hui, mais la tendance de fond joue pour vous.</p>
+    <p>Google valorise de plus en plus l'expérience réelle et l'expertise incarnée — ce qu'un grossiste ne peut pas simuler. Il vend votre produit ; vous, vous savez pourquoi il existe, pour qui, comment il s'utilise, dans quel rituel il s'inscrit. Votre communauté, vos avis, votre histoire sont des signaux qu'aucun revendeur ne peut copier.</p>
+    <p>Et les moteurs de réponse IA — ChatGPT, Perplexity, AI Overviews — accentuent cette logique : ils citent les sources qui font autorité sur un sujet, pas celles qui se contentent de le distribuer. Ce terrain est encore <a href="/visibilite-ia-geo-marques-afro/">quasi vierge sur votre marché</a>.</p>
+    <p>La demande existe, la légitimité existe. Il manque l'infrastructure qui les connecte. Ça se construit — et une fois construit, ça vous appartient.</p>
+
+    <h2>Et maintenant : dans quel ordre reprendre votre trafic</h2>
+    <p>Trois destinations, dans l'ordre :</p>
+    <ol>
+      <li><strong>Colmater</strong> — votre SERP de marque et vos requêtes produits : le trafic le plus chaud, le plus rapide à reprendre.</li>
+      <li><strong>Conquérir</strong> — les requêtes catégorie où votre légitimité peut battre les généralistes.</li>
+      <li><strong>Devancer</strong> — la visibilité IA, pendant que la place est libre.</li>
+    </ol>
+    <p>Ce qui change d'une marque à l'autre, c'est le chiffrage de chaque fuite et la priorité entre les chantiers. C'est exactement ce que produit <a href="/diagnostic-seo/">le Diagnostic AfriRank</a> : vos vraies requêtes, votre vrai manque à gagner, votre plan priorisé. 290 €, déductibles si vous poursuivez.</p>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="kicker">Questions fréquentes</span><h2 class="sec-title">Vos questions, mes réponses.</h2></div>
+    <div class="faq">
+      <div class="faq-item reveal"><button class="faq-q">Dois-je demander à mes revendeurs d'arrêter de vendre mes produits ? <span class="pm"></span></button><div class="faq-a"><p>Non. Vos revendeurs sont un canal de volume et de découverte — le problème n'est pas qu'ils vendent, c'est qu'ils captent aussi la demande qui vous était destinée. L'objectif est de reprendre votre part du trafic, pas de casser votre distribution.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-q">En combien de temps voit-on les premiers signaux ? <span class="pm"></span></button><div class="faq-a"><p>Les premiers signaux apparaissent généralement entre 2 et 4 mois, et le canal devient solide à partir de 6 mois. La différence avec la pub : ces positions restent acquises quand vous arrêtez de payer.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-q">Ça s'applique si je vends surtout via Instagram aujourd'hui ? <span class="pm"></span></button><div class="faq-a"><p>C'est le cas le plus fréquent — et le plus concerné. Votre communauté Instagram crée une demande Google que vous ne captez pas. Plus votre audience est forte, plus la fuite est grande.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="links-more reveal">
+      <h2>Pour aller plus loin</h2>
+      <ul>
+        <li><a href="/amazon-vend-mes-produits/">Amazon vend mes produits : que faire ?</a></li>
+        <li><a href="/marque-invisible-google-produits/">Votre marque n'apparaît pas sur Google ? Les vraies causes</a></li>
+        <li><a href="/cosmetiques-afro-qui-capte-votre-trafic/">Cosmétiques afro : qui capte vraiment le trafic</a></li>
+        <li><a href="/serp-de-marque/">SERP de marque : qui contrôle « votre marque + avis » ?</a></li>
+        <li><a href="/calculateur-ca-organique-perdu/">Estimer votre CA organique perdu</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="cta-band reveal">
+      <img src="/images/icon-cream.png" class="icon-watermark" alt="" />
+      <h2>Commencez par Le Diagnostic.</h2>
+      <p>Vos vraies requêtes, votre vrai manque à gagner, votre plan de reconquête priorisé — chiffré sur vos données réelles. 290 €, intégralement déductibles si vous poursuivez en accompagnement.</p>
+      <div class="cta-actions">
+        <a href={calendly} target="_blank" rel="noopener" class="btn btn--orange">Réserver mon Diagnostic
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+        <a href="/diagnostic-seo/" class="btn btn--cream">En savoir plus</a>
+      </div>
+    </div>
+  </div>
+</section>
+</Base>

@@ -459,6 +459,9 @@ img.about-photo{object-fit:cover;border-radius:24px}
 .article a:not(.btn){color:var(--orange);text-decoration:underline;text-underline-offset:2px;font-weight:500}
 .article a:not(.btn):hover{color:var(--orange-deep)}
 .article .lead{font-size:clamp(17px,1.7vw,19px);color:var(--blue)}
+.article figure{margin:28px 0}
+.article figure img{width:100%;height:auto;border-radius:14px;display:block}
+.article figcaption{font-size:13px;color:var(--ink-45);margin-top:9px}
 .article blockquote{border-left:3px solid var(--orange);background:var(--beige);padding:16px 22px;border-radius:0 12px 12px 0;margin:0 0 20px}
 .article blockquote p{margin:0;color:var(--blue);font-size:16.5px}
 

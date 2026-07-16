@@ -1,0 +1,146 @@
+---
+import Base from '../layouts/Base.astro';
+const calendly = 'https://calendly.com/contact-advised-seo/30min?back=1';
+const jsonLd = JSON.stringify({
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://www.afrirank.fr/marque-invisible-google-produits/#article",
+      "headline": "Vos produits sont excellents. Introuvables sur Google. Voici pourquoi.",
+      "description": "Votre site ne sort pas quand on cherche vos propres produits ? 8 fois sur 10, c'est un problème de structure, pas de contenu. Le test en 5 minutes, gratuit.",
+      "inLanguage": "fr-FR",
+      "image": "https://www.afrirank.fr/images/article-google-recherche.jpg",
+      "mainEntityOfPage": "https://www.afrirank.fr/marque-invisible-google-produits/",
+      "author": { "@type": "Person", "@id": "https://www.advised-seo.fr/#francis", "name": "Francis Ndimba", "url": "https://www.afrirank.fr/a-propos/" },
+      "publisher": { "@id": "https://www.afrirank.fr/#business" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://www.afrirank.fr/" },
+        { "@type": "ListItem", "position": 2, "name": "Revendeurs devant votre marque", "item": "https://www.afrirank.fr/revendeurs-captent-trafic-marque/" },
+        { "@type": "ListItem", "position": 3, "name": "Marque invisible sur Google", "item": "https://www.afrirank.fr/marque-invisible-google-produits/" }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "name": "Le test des 5 minutes : vérifier pourquoi votre marque n'apparaît pas sur Google",
+      "totalTime": "PT5M",
+      "step": [
+        { "@type": "HowToStep", "name": "Vérifier l'indexation", "text": "Tapez site:votremarque.fr dans Google. Le nombre de résultats ≈ ce que Google connaît de votre site. Comparez avec votre nombre réel de pages : un écart massif = problème d'indexation." },
+        { "@type": "HowToStep", "name": "Vérifier vos requêtes brandées", "text": "Cherchez « votre marque + votre produit phare ». Si votre site n'est pas premier, notez qui l'est : c'est votre fuite la plus chaude." },
+        { "@type": "HowToStep", "name": "Chercher comme une cliente", "text": "Cherchez votre produit phare par son usage (« crème boucles 4C »), pas par son nom de gamme. Si vous n'apparaissez nulle part en deux pages, le problème de nommage est confirmé." },
+        { "@type": "HowToStep", "name": "Ouvrir la Search Console", "text": "Dans l'onglet Pages, le nombre de pages « non indexées » vous donne l'ampleur du chantier." }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "Dois-je refaire mon site ?", "acceptedAnswer": { "@type": "Answer", "text": "Presque jamais. Dans la grande majorité des cas, la structure existante se corrige : indexation, nommage, maillage entre les pages. Une refonte est un dernier recours — et une refonte mal cadrée est justement l'une des premières causes de perte de visibilité." } },
+        { "@type": "Question", "name": "Shopify (ou Wix, ou WooCommerce) est-il le problème ?", "acceptedAnswer": { "@type": "Answer", "text": "Non. Des marques rankent très bien sur chacune de ces plateformes. Elles ont des limites techniques réelles mais connues et contournables. Le problème est ce qu'on a fait — ou pas fait — dedans." } },
+        { "@type": "Question", "name": "Mon site est récent : est-ce juste une question de temps ?", "acceptedAnswer": { "@type": "Answer", "text": "En partie. Google accorde sa confiance progressivement. Mais « attendre » ne corrige ni l'indexation, ni le nommage, ni les pages orphelines. Un site jeune et bien structuré dépasse un site ancien et négligé — l'ancienneté est un facteur, pas une excuse." } }
+      ]
+    }
+  ]
+});
+---
+<Base
+  title="Votre marque n'apparaît pas sur Google ? Les vraies causes"
+  description="Votre site ne sort pas quand on cherche vos propres produits ? 8 fois sur 10, c'est un problème de structure, pas de contenu. Le test en 5 minutes, gratuit."
+  jsonLd={jsonLd}>
+
+<section class="hero hero--page wrap">
+  <div class="hero-top">
+    <nav class="breadcrumb reveal" aria-label="Fil d'Ariane">
+      <a href="/">Accueil</a><span class="sep">›</span>
+      <a href="/revendeurs-captent-trafic-marque/">Revendeurs devant votre marque</a><span class="sep">›</span>
+      <span>Marque invisible sur Google</span>
+    </nav>
+    <span class="hero-eyebrow reveal"><img src="/images/icon-orange.png" alt="" /> Fuite n°2 · Invisibilité</span>
+    <h1 class="reveal">Vos produits sont excellents. Introuvables sur Google. <em>Voici pourquoi.</em></h1>
+    <p class="hero-sub reveal">Votre beurre de karité est peut-être le meilleur du marché. Votre communauté le sait. Google, lui, ne le sait pas — et quand une cliente cherche votre produit sans passer par Instagram, elle tombe sur tout sauf vous.</p>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:clamp(24px,4vw,48px)">
+  <div class="wrap article reveal">
+    <p class="lead">Ce n'est presque jamais une question de qualité, et rarement une question de contenu. Voici les vraies causes, et le test pour identifier la vôtre en cinq minutes.</p>
+
+    <figure>
+      <img src="/images/article-google-recherche.jpg" alt="Recherche Google sur un ordinateur portable — le réflexe de toute cliente avant d'acheter" loading="lazy" />
+    </figure>
+
+    <h2>Dans 8 cas sur 10, ce n'est pas un problème de contenu — c'est un problème de structure</h2>
+    <p>L'intuition dit : « il faut écrire plus, publier un blog, ajouter des descriptions ». C'est parfois vrai. Mais sur la majorité des sites de marque que j'audite, le blocage est en amont : Google ne <em>voit</em> pas les pages, ou ne comprend pas ce qu'elles vendent.</p>
+    <p>Les causes qui reviennent le plus :</p>
+    <ul>
+      <li><strong>Des pages non indexées</strong> : Google ne les a tout simplement pas enregistrées. Elles n'existent pas dans son index, donc pour personne.</li>
+      <li><strong>Des noms de produits internes</strong> : votre gamme s'appelle « Éclat Royal » — votre cliente cherche « crème définition boucles ». Aucun pont entre les deux.</li>
+      <li><strong>Des pages orphelines</strong> : aucune navigation n'y mène, à part un lien en story il y a huit mois. Google juge une page aussi par les chemins qui y conduisent.</li>
+      <li><strong>Un site pensé vitrine</strong> : magnifique pour qui a déjà l'adresse, muet pour un moteur de recherche.</li>
+    </ul>
+    <p>La bonne nouvelle : les problèmes de structure se corrigent plus vite que les problèmes de contenu. Encore faut-il savoir lequel vous concerne.</p>
+
+    <h2>Le test des 5 minutes : vérifiez vous-même où vous en êtes</h2>
+    <p>Vous n'avez besoin d'aucun outil payant.</p>
+    <ol>
+      <li><strong>Tapez <code>site:votremarque.fr</code> dans Google.</strong> Le nombre de résultats ≈ ce que Google connaît de votre site. Comparez avec votre nombre réel de pages (produits + collections + pages). Un écart massif = problème d'indexation.</li>
+      <li><strong>Cherchez « [votre marque] + [votre produit phare] ».</strong> Si votre site n'est pas premier, notez qui l'est : c'est votre fuite la plus chaude.</li>
+      <li><strong>Cherchez votre produit phare <em>comme une cliente</em></strong> — par son usage (« crème boucles 4C »), pas par son nom de gamme. Si vous n'apparaissez nulle part en deux pages, le problème de nommage est confirmé.</li>
+      <li><strong>Ouvrez la Search Console</strong> (gratuite, 10 min à installer si ce n'est pas fait) → « Pages » : le nombre de pages « non indexées » vous donne l'ampleur du chantier.</li>
+    </ol>
+    <p>Ce test vous dit <em>si</em> vous avez un problème et <em>lequel</em>. Il ne vous dit pas combien il vous coûte ni par quoi commencer — on y vient.</p>
+
+    <h2>Nommez vos produits comme votre cliente les cherche</h2>
+    <p>Le nom de gamme, c'est votre branding : gardez-le. Mais une page produit doit porter <em>les deux</em> langages — le vôtre et celui de la recherche.</p>
+    <p>« Éclat Royal » devient « Éclat Royal — Crème définition boucles 3C-4C ». Votre identité reste, et la page devient trouvable par les milliers de clientes qui ne connaissent pas encore votre vocabulaire. C'est exactement le principe du <a href="/seo-culturel/">SEO culturel</a> : parler la langue réelle de votre communauté — y compris dans vos balises.</p>
+    <p>Ce travail de nommage se fait produit par produit, en croisant vos gammes avec les requêtes réelles de votre marché. C'est un des chantiers types qui ressortent du Diagnostic.</p>
+
+    <h2>Vous avez fait le test. Et maintenant ?</h2>
+    <p>Si le test révèle un écart, vous savez désormais qu'une partie de votre demande vous échappe — sans savoir combien, ni quelle cause corriger en premier. <a href="/calculateur-ca-organique-perdu/">Estimez d'abord le montant avec le calculateur gratuit</a>.</p>
+    <p>Pour passer de l'estimation au chiffre réel — vos pages, vos requêtes, votre plan de correction priorisé : <a href="/diagnostic-seo/">le Diagnostic AfriRank</a>. 290 €, déductibles si vous poursuivez.</p>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="kicker">Questions fréquentes</span><h2 class="sec-title">Vos questions, mes réponses.</h2></div>
+    <div class="faq">
+      <div class="faq-item reveal"><button class="faq-q">Dois-je refaire mon site ? <span class="pm"></span></button><div class="faq-a"><p>Presque jamais. Dans la grande majorité des cas, la structure existante se corrige : indexation, nommage, maillage entre les pages. Une refonte est un dernier recours — et une refonte mal cadrée est justement l'une des premières causes de perte de visibilité.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-q">Shopify (ou Wix, ou WooCommerce) est-il le problème ? <span class="pm"></span></button><div class="faq-a"><p>Non. Des marques rankent très bien sur chacune de ces plateformes. Elles ont des limites techniques réelles mais connues et contournables. Le problème est ce qu'on a fait — ou pas fait — dedans.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-q">Mon site est récent : est-ce juste une question de temps ? <span class="pm"></span></button><div class="faq-a"><p>En partie. Google accorde sa confiance progressivement. Mais « attendre » ne corrige ni l'indexation, ni le nommage, ni les pages orphelines. Un site jeune et bien structuré dépasse un site ancien et négligé — l'ancienneté est un facteur, pas une excuse.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="links-more reveal">
+      <h2>Pour aller plus loin</h2>
+      <ul>
+        <li><a href="/revendeurs-captent-trafic-marque/">Les 4 fuites de trafic d'une marque établie</a></li>
+        <li><a href="/cosmetiques-afro-qui-capte-votre-trafic/">Cosmétiques afro : qui capte vraiment le trafic</a></li>
+        <li><a href="/seo-culturel/">Le SEO culturel, notre méthode</a></li>
+        <li><a href="/calculateur-ca-organique-perdu/">Estimer votre CA organique perdu</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="cta-band reveal">
+      <img src="/images/icon-cream.png" class="icon-watermark" alt="" />
+      <h2>Commencez par Le Diagnostic.</h2>
+      <p>Vos pages, vos requêtes, votre plan de correction priorisé — du test au chiffre réel. 290 €, intégralement déductibles si vous poursuivez en accompagnement.</p>
+      <div class="cta-actions">
+        <a href={calendly} target="_blank" rel="noopener" class="btn btn--orange">Réserver mon Diagnostic
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+        <a href="/diagnostic-seo/" class="btn btn--cream">En savoir plus</a>
+      </div>
+    </div>
+  </div>
+</section>
+</Base>
