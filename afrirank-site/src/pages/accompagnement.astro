@@ -1,6 +1,61 @@
 ---
 import Base from '../layouts/Base.astro';
-const jsonLd = "";
+const jsonLd = JSON.stringify({
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "@id": "https://www.afrirank.fr/accompagnement/#service",
+      "name": "Accompagnement SEO & GEO pour marques afro-caribéennes établies",
+      "serviceType": ["SEO", "GEO", "SEO culturel"],
+      "description": "Trois niveaux d'accompagnement SEO + GEO pour e-commerces afro-caribéens établis, engagement 6 mois, plus une offre sur-mesure.",
+      "url": "https://www.afrirank.fr/accompagnement/",
+      "provider": { "@id": "https://www.afrirank.fr/#business" },
+      "areaServed": ["FR", "Europe", "Caraïbes"],
+      "availableLanguage": ["fr", "en"],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Niveaux d'accompagnement AfriRank",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "name": "Starter",
+            "description": "Pour poser des fondations organiques solides : roadmap SEO priorisée, correctifs techniques essentiels, 10–20 mots-clés business, suivi mensuel.",
+            "priceSpecification": { "@type": "UnitPriceSpecification", "price": 690, "priceCurrency": "EUR", "unitText": "mois", "billingIncrement": 1 },
+            "url": "https://www.afrirank.fr/accompagnement/"
+          },
+          {
+            "@type": "Offer",
+            "name": "Growth",
+            "description": "Pour développer l'acquisition organique comme un vrai canal : implémentation technique et sémantique, production de contenu SEO + GEO, optimisation des pages catégories et produits, reporting business.",
+            "priceSpecification": { "@type": "UnitPriceSpecification", "price": 1490, "priceCurrency": "EUR", "unitText": "mois", "billingIncrement": 1 },
+            "url": "https://www.afrirank.fr/accompagnement/"
+          },
+          {
+            "@type": "Offer",
+            "name": "Partner",
+            "description": "Pour faire du SEO + GEO un levier d'acquisition majeur : moteur de contenu à fort volume, stratégie GEO dédiée, autorité de marque à l'échelle, transfert de compétences.",
+            "priceSpecification": { "@type": "UnitPriceSpecification", "price": 2490, "priceCurrency": "EUR", "unitText": "mois", "billingIncrement": 1 },
+            "url": "https://www.afrirank.fr/accompagnement/"
+          },
+          {
+            "@type": "Offer",
+            "name": "Full (sur-mesure)",
+            "description": "Accompagnement 360° construit autour du projet : création/gestion de site, SEO local et international, branding, gestion de projet. Tarification sur devis.",
+            "url": "https://www.afrirank.fr/contact/"
+          }
+        ]
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://www.afrirank.fr/" },
+        { "@type": "ListItem", "position": 2, "name": "Accompagnement", "item": "https://www.afrirank.fr/accompagnement/" }
+      ]
+    }
+  ]
+});
 ---
 <Base title="Accompagnement SEO & GEO — AfriRank | 3 niveaux pour marques établies" description="Trois niveaux d'accompagnement SEO + GEO pour e-commerces afro-caribéens établis. Engagement 6 mois. Du déploiement à la transmission du savoir-faire." active="accompagnement" jsonLd={jsonLd} frPath="/accompagnement/" enPath="/en/seo-services/">
 <section class="hero hero--page wrap">

@@ -8,6 +8,14 @@ const jsonLd = JSON.stringify({
       "@type": "Article",
       "headline": "SEO WooCommerce et PrestaShop pour marques afro : la liberté qui peut tout changer",
       "description": "WooCommerce et PrestaShop offrent une liberté SEO totale. Bien réglée, elle reprend la demande captée par vos revendeurs. Les leviers clés.",
+      "datePublished": "2026-06-19",
+      "dateModified": "2026-07-17",
+      "about": [
+        { "@type": "Organization", "name": "WooCommerce", "sameAs": "https://fr.wikipedia.org/wiki/WooCommerce" },
+        { "@type": "Organization", "name": "PrestaShop", "sameAs": "https://fr.wikipedia.org/wiki/PrestaShop" },
+        { "@type": "Thing", "name": "SEO e-commerce" },
+        { "@type": "Thing", "name": "Navigation à facettes" }
+      ],
       "author": { "@type": "Person", "name": "Francis Ndimba", "url": "https://www.afrirank.fr/a-propos/" },
       "publisher": { "@id": "https://www.afrirank.fr/#afrirank" },
       "mainEntityOfPage": "https://www.afrirank.fr/seo-woocommerce-prestashop-marques-afro/"
@@ -28,6 +36,16 @@ const jsonLd = JSON.stringify({
         { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://www.afrirank.fr/" },
         { "@type": "ListItem", "position": 2, "name": "SEO marques afro-caribéennes", "item": "https://www.afrirank.fr/seo-marques-afro-caribeennes/" },
         { "@type": "ListItem", "position": 3, "name": "SEO WooCommerce / PrestaShop", "item": "https://www.afrirank.fr/seo-woocommerce-prestashop-marques-afro/" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "WooCommerce ou PrestaShop, lequel est meilleur pour le SEO ?", "acceptedAnswer": { "@type": "Answer", "text": "Les deux sont excellents : liberté totale sur les URLs, l'arborescence et le contenu. Aucun n'est intrinsèquement meilleur — la différence se fait sur la rigueur de l'architecture et la maîtrise des doublons par attributs." } },
+        { "@type": "Question", "name": "Pourquoi mon site WooCommerce génère-t-il autant de pages dupliquées ?", "acceptedAnswer": { "@type": "Answer", "text": "Le plus souvent à cause des variations produit et de la navigation à facettes qui créent des URLs filtrées indexables. Sans gestion des canonicals et des paramètres d'URL, Google indexe une masse de pages quasi identiques." } },
+        { "@type": "Question", "name": "La navigation à facettes de PrestaShop est-elle mauvaise pour le SEO ?", "acceptedAnswer": { "@type": "Answer", "text": "Pas en soi — c'est sa configuration qui décide. Bien réglée, elle sert des requêtes réelles (« masque cheveux 4C »). Mal réglée, elle gonfle l'index de pages vides. Le levier est de choisir quoi indexer, quoi bloquer." } },
+        { "@type": "Question", "name": "Faut-il un plugin SEO sur WooCommerce ?", "acceptedAnswer": { "@type": "Answer", "text": "Une extension SEO pose un cadre utile (titres, métas, sitemap, données structurées). Mais elle n'écrit pas votre stratégie : quelle catégorie prioriser, quel contenu, quel maillage. L'outil exécute, la stratégie reste humaine." } },
+        { "@type": "Question", "name": "Pourquoi un revendeur sort-il avant ma boutique ?", "acceptedAnswer": { "@type": "Answer", "text": "Parce que sa page est souvent mieux remplie et mieux structurée que la vôtre, parfois sur votre propre nom. C'est un problème de captation, pas de CMS. Le Diagnostic le chiffre et le priorise." } }
       ]
     }
   ]

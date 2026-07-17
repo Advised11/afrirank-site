@@ -1,6 +1,39 @@
 ---
 import Base from '../layouts/Base.astro';
-const jsonLd = "";
+const jsonLd = JSON.stringify({
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "@id": "https://www.afrirank.fr/seo-culturel/#service",
+      "name": "SEO culturel",
+      "serviceType": "SEO culturel",
+      "description": "Stratégie SEO fondée sur une connaissance native du vocabulaire, des intentions de recherche et des saisonnalités de la communauté afro-caribéenne.",
+      "url": "https://www.afrirank.fr/seo-culturel/",
+      "provider": { "@id": "https://www.afrirank.fr/#business" },
+      "areaServed": ["FR", "Europe", "Caraïbes"]
+    },
+    {
+      "@type": "DefinedTerm",
+      "@id": "https://www.afrirank.fr/seo-culturel/#definedterm",
+      "name": "SEO culturel",
+      "description": "Stratégie de référencement qui exploite le vocabulaire, les intentions de recherche et les codes propres à une communauté culturelle — ici la diaspora afro-caribéenne — pour transformer la culture d'une marque en avantage concurrentiel défendable sur Google et dans les réponses IA. Concept formalisé par Francis Ndimba (AfriRank).",
+      "url": "https://www.afrirank.fr/seo-culturel/",
+      "inDefinedTermSet": {
+        "@type": "DefinedTermSet",
+        "name": "Méthode AfriRank",
+        "url": "https://www.afrirank.fr/"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://www.afrirank.fr/" },
+        { "@type": "ListItem", "position": 2, "name": "SEO culturel", "item": "https://www.afrirank.fr/seo-culturel/" }
+      ]
+    }
+  ]
+});
 ---
 <Base title="SEO culturel : pourquoi une marque afro a besoin d'un expert qui connaît son marché" description="Le SEO culturel n'est pas un slogan. C'est une connaissance native du vocabulaire, des intentions de recherche et des saisonnalités de la communauté afro-caribéenne. Voici concrètement ce que ça change." active="seo-culturel" jsonLd={jsonLd} frPath="/seo-culturel/" enPath="/en/cultural-seo/">
 <section class="hero hero--page wrap">

@@ -1,6 +1,40 @@
 ---
 import Base from '../../layouts/Base.astro';
-const jsonLd = "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"Person\",\n  \"@id\": \"https://www.advised-seo.fr/#francis\",\n  \"name\": \"Francis Ndimba\",\n  \"jobTitle\": \"Freelance SEO consultant\",\n  \"url\": \"https://www.afrirank.fr/en/about\",\n  \"knowsLanguage\": [\"en\", \"fr\"],\n  \"knowsAbout\": [\"Technical SEO\", \"SEO migrations\", \"Semantic SEO\", \"GEO\", \"AEO\", \"Schema.org\"],\n  \"description\": \"SEO expert with 11 years' experience — agency-side then in-house (Groupe SEB, LumApps, Rubix). Founder of AfriRank.\",\n  \"sameAs\": [\"https://www.linkedin.com/in/francisndimba\"]\n}";
+const jsonLd = JSON.stringify({
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": ["AboutPage", "ProfilePage"],
+      "@id": "https://www.afrirank.fr/en/about/",
+      "name": "About — Francis Ndimba, the SEO expert behind AfriRank",
+      "url": "https://www.afrirank.fr/en/about/",
+      "inLanguage": "en",
+      "isPartOf": { "@id": "https://www.afrirank.fr/#website" },
+      "about": { "@id": "https://www.afrirank.fr/#business" },
+      "mainEntity": { "@id": "https://www.advised-seo.fr/#francis" }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.advised-seo.fr/#francis",
+      "name": "Francis Ndimba",
+      "jobTitle": "Freelance SEO consultant",
+      "url": "https://www.afrirank.fr/en/about/",
+      "image": "https://www.afrirank.fr/images/francis-ndimba.png",
+      "worksFor": { "@id": "https://www.afrirank.fr/#business" },
+      "knowsLanguage": ["en", "fr"],
+      "knowsAbout": ["Technical SEO", "SEO migrations", "Semantic SEO", "GEO", "AEO", "Schema.org", "Cultural SEO"],
+      "description": "SEO expert with 11 years' experience — agency-side then in-house (Groupe SEB, LumApps, Rubix). Founder of AfriRank.",
+      "sameAs": ["https://www.linkedin.com/in/francisndimba"]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.afrirank.fr/en/" },
+        { "@type": "ListItem", "position": 2, "name": "About", "item": "https://www.afrirank.fr/en/about/" }
+      ]
+    }
+  ]
+});
 ---
 <Base title="Francis Ndimba — the SEO expert behind AfriRank | 11 years, heavy cases" description="Francis Ndimba, 11 years of SEO agency-side and in-house (Groupe SEB, LumApps, Rubix). AfriRank is that senior expertise, working for African & Black-owned brands." active="a-propos" jsonLd={jsonLd} lang="en" frPath="/a-propos/" enPath="/en/about/">
 <section class="hero hero--page wrap">

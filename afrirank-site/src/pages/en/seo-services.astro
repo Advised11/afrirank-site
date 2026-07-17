@@ -1,6 +1,62 @@
 ---
 import Base from '../../layouts/Base.astro';
-const jsonLd = "";
+const jsonLd = JSON.stringify({
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "@id": "https://www.afrirank.fr/en/seo-services/#service",
+      "name": "SEO & GEO services for established African & Black-owned brands",
+      "serviceType": ["SEO", "GEO", "Cultural SEO"],
+      "description": "Three tiers of SEO + GEO support for established African & Black-owned e-commerce brands, 6-month engagement, plus a fully bespoke option.",
+      "url": "https://www.afrirank.fr/en/seo-services/",
+      "inLanguage": "en",
+      "provider": { "@id": "https://www.afrirank.fr/#business" },
+      "areaServed": ["GB", "US", "FR", "Europe"],
+      "availableLanguage": ["en", "fr"],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "AfriRank service tiers",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "name": "Starter",
+            "description": "To lay solid organic foundations: prioritised SEO roadmap, essential technical fixes, 10–20 business-driving keywords, monthly follow-up.",
+            "priceSpecification": { "@type": "UnitPriceSpecification", "price": 690, "priceCurrency": "EUR", "unitText": "month", "billingIncrement": 1 },
+            "url": "https://www.afrirank.fr/en/seo-services/"
+          },
+          {
+            "@type": "Offer",
+            "name": "Growth",
+            "description": "To grow organic acquisition into a real channel: technical and semantic implementation, SEO + GEO content production, category and product page optimisation, business-focused reporting.",
+            "priceSpecification": { "@type": "UnitPriceSpecification", "price": 1490, "priceCurrency": "EUR", "unitText": "month", "billingIncrement": 1 },
+            "url": "https://www.afrirank.fr/en/seo-services/"
+          },
+          {
+            "@type": "Offer",
+            "name": "Partner",
+            "description": "To make SEO + GEO a major acquisition lever: high-volume content engine, dedicated GEO strategy, brand authority at scale, skills handover to your team.",
+            "priceSpecification": { "@type": "UnitPriceSpecification", "price": 2490, "priceCurrency": "EUR", "unitText": "month", "billingIncrement": 1 },
+            "url": "https://www.afrirank.fr/en/seo-services/"
+          },
+          {
+            "@type": "Offer",
+            "name": "Full (bespoke)",
+            "description": "360° support built around your project: website creation/management, local and international SEO, branding, project management. Custom quote.",
+            "url": "https://www.afrirank.fr/en/contact/"
+          }
+        ]
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.afrirank.fr/en/" },
+        { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.afrirank.fr/en/seo-services/" }
+      ]
+    }
+  ]
+});
 ---
 <Base title="SEO & GEO services — AfriRank | 3 tiers for established brands" description="Three tiers of SEO + GEO support for established African & Black-owned e-commerce brands. 6-month engagement. From rollout to full skills handover." active="accompagnement" jsonLd={jsonLd} lang="en" frPath="/accompagnement/" enPath="/en/seo-services/">
 <section class="hero hero--page wrap">
