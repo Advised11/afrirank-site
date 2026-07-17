@@ -42,7 +42,7 @@ const jsonLd = JSON.stringify({
       <a href="/en/seo-african-heritage-brands/">SEO for Black-owned brands</a><span class="sep">›</span>
       <span>Brand visibility scorecard</span>
     </nav>
-    <span class="hero-eyebrow reveal"><img src="/images/icon-orange.png" alt="" /> Free tool</span>
+    <span class="hero-eyebrow reveal"><img width="918" height="832" src="/images/icon-orange.webp" alt="" /> Free tool</span>
     <h1 class="reveal">Is your brand visible when people search your category?</h1>
     <p class="hero-sub reveal">Type your brand name into Google. Then your hero product. Then your category without your brand name. Who comes up first: you, or a reseller? This scorecard turns your gut feeling into a number. Ten questions, a score out of 100, a risk zone.</p>
   </div>
@@ -88,7 +88,7 @@ const jsonLd = JSON.stringify({
 <section class="sec">
   <div class="wrap">
     <div class="cta-band reveal">
-      <img src="/images/icon-cream.png" class="icon-watermark" alt="" />
+      <img width="918" height="832" src="/images/icon-cream.webp" class="icon-watermark" alt="" />
       <h2>You know where you're losing. The Diagnostic tells you how much, and how to win it back.</h2>
       <p>It replaces the self-assessment with an analysis of your real SERPs: it puts a figure on the revenue captured by your resellers and maps out the prioritised plan to lift every red zone. €290 (~$310), credited if you continue.</p>
       <div class="cta-actions">
@@ -101,86 +101,5 @@ const jsonLd = JSON.stringify({
   </div>
 </section>
 
-<script is:inline>
-  (function () {
-    var domains = [
-      { name: "Branded SERP", q: ["When someone types your exact brand name, is your official site the 1st result?", "Does no reseller or marketplace outrank your site on your own brand name?"] },
-      { name: "Product pages", q: ["When someone searches “[brand] + [hero product]”, is it your product page that comes up first?", "Do your product pages have their own content (description, how to use, FAQ) and not just a title + price?"] },
-      { name: "Category content", q: ["Do you have pages that target your category queries without your brand name?", "Do those category pages rank on the first page of Google?"] },
-      { name: "Presence in AI answers", q: ["When you ask ChatGPT or Perplexity about your category, is your brand cited?", "When you ask an AI for “best brands for [category]”, do you appear in the list?"] },
-      { name: "Internal linking", q: ["Are your product and category pages connected to each other with relevant internal links?", "Does your content (blog, guides) link out to the matching product / category pages?"] }
-    ];
-    var opts = [["Yes", 10], ["Partly", 5], ["No", 0]];
-    var answers = {};
-    var total = 10;
-    var cont = document.getElementById('sc-questions');
-    var n = 0;
-    domains.forEach(function (d, di) {
-      var dom = document.createElement('div');
-      dom.className = 'scorecard-dom';
-      dom.innerHTML = '<h3>' + d.name + '</h3>';
-      d.q.forEach(function (q) {
-        var qi = n++;
-        var wrap = document.createElement('div');
-        wrap.className = 'scorecard-q';
-        var p = document.createElement('p'); p.textContent = q; wrap.appendChild(p);
-        var optsWrap = document.createElement('div'); optsWrap.className = 'q-options';
-        opts.forEach(function (o) {
-          var b = document.createElement('button');
-          b.type = 'button'; b.textContent = o[0];
-          b.addEventListener('click', function () {
-            answers[qi] = { v: o[1], d: di };
-            Array.prototype.forEach.call(optsWrap.children, function (c) { c.classList.remove('sel'); });
-            b.classList.add('sel');
-            update();
-          });
-          optsWrap.appendChild(b);
-        });
-        wrap.appendChild(optsWrap);
-        dom.appendChild(wrap);
-      });
-      cont.appendChild(dom);
-    });
-
-    function update() {
-      var keys = Object.keys(answers);
-      document.getElementById('sc-progress').textContent = keys.length + ' / ' + total + ' questions answered';
-      if (keys.length < total) { document.getElementById('sc-result').style.display = 'none'; return; }
-      var score = 0, dom = [0, 0, 0, 0, 0];
-      keys.forEach(function (k) { score += answers[k].v; dom[answers[k].d] += answers[k].v; });
-      var res = document.getElementById('sc-result');
-      res.style.display = 'block';
-      document.getElementById('sc-score').textContent = score + ' / 100';
-      document.getElementById('sc-needle').style.left = score + '%';
-      var zone, interp;
-      if (score >= 80) { zone = 'Green zone'; interp = "You're holding your territory. The priority is to defend what you own and go after the remaining category queries."; }
-      else if (score >= 50) { zone = 'Amber zone'; interp = "Partial visibility. You're known, but your resellers are capturing a real share of your searches. The leak is active."; }
-      else { zone = 'Red zone'; interp = "Heavy capture. The demand exists but it's your resellers and the marketplaces cashing it in. Every month counts."; }
-      document.getElementById('sc-zone').textContent = 'Your brand visibility score — ' + zone;
-      document.getElementById('sc-interp').textContent = interp;
-      var bars = domains.map(function (d, i) {
-        var pct = Math.round(dom[i] / 20 * 100);
-        return '<div class="bar-row"><span class="bl">' + d.name + '</span><span class="bar-track"><span class="bar-fill" style="width:' + pct + '%"></span></span></div>';
-      }).join('');
-      document.getElementById('sc-bars').innerHTML = bars;
-      var f = document.getElementById('f-score'); if (f) f.value = score + '/100 — ' + zone;
-      window.dataLayer = window.dataLayer || [];
-      window.dataLayer.push({ event: 'scorecard_complete', score: score });
-    }
-
-    var form = document.getElementById('lead-form');
-    if (form) {
-      form.addEventListener('submit', function (e) {
-        e.preventDefault();
-        var data = new URLSearchParams(new FormData(form)).toString();
-        fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: data }).catch(function () {});
-        window.dataLayer = window.dataLayer || [];
-        window.dataLayer.push({ event: 'lead_form', tool: 'scorecard' });
-        form.querySelector('#f-email').style.display = 'none';
-        form.querySelector('button').style.display = 'none';
-        document.getElementById('form-ok').style.display = 'block';
-      });
-    }
-  })();
-</script>
+<script is:inline>(function(){var m=[{name:"Branded SERP",q:["When someone types your exact brand name, is your official site the 1st result?","Does no reseller or marketplace outrank your site on your own brand name?"]},{name:"Product pages",q:["When someone searches \u201C[brand] + [hero product]\u201D, is it your product page that comes up first?","Do your product pages have their own content (description, how to use, FAQ) and not just a title + price?"]},{name:"Category content",q:["Do you have pages that target your category queries without your brand name?","Do those category pages rank on the first page of Google?"]},{name:"Presence in AI answers",q:["When you ask ChatGPT or Perplexity about your category, is your brand cited?","When you ask an AI for \u201Cbest brands for [category]\u201D, do you appear in the list?"]},{name:"Internal linking",q:["Are your product and category pages connected to each other with relevant internal links?","Does your content (blog, guides) link out to the matching product / category pages?"]}],h=[["Yes",10],["Partly",5],["No",0]],d={},p=10,v=document.getElementById("sc-questions"),f=0;m.forEach(function(n,e){var o=document.createElement("div");o.className="scorecard-dom",o.innerHTML="<h3>"+n.name+"</h3>",n.q.forEach(function(u){var r=f++,t=document.createElement("div");t.className="scorecard-q";var l=document.createElement("p");l.textContent=u,t.appendChild(l);var s=document.createElement("div");s.className="q-options",h.forEach(function(a){var c=document.createElement("button");c.type="button",c.textContent=a[0],c.addEventListener("click",function(){d[r]={v:a[1],d:e},Array.prototype.forEach.call(s.children,function(y){y.classList.remove("sel")}),c.classList.add("sel"),g()}),s.appendChild(c)}),t.appendChild(s),o.appendChild(t)}),v.appendChild(o)});function g(){var n=Object.keys(d);if(document.getElementById("sc-progress").textContent=n.length+" / "+p+" questions answered",n.length<p){document.getElementById("sc-result").style.display="none";return}var e=0,o=[0,0,0,0,0];n.forEach(function(a){e+=d[a].v,o[d[a].d]+=d[a].v});var u=document.getElementById("sc-result");u.style.display="block",document.getElementById("sc-score").textContent=e+" / 100",document.getElementById("sc-needle").style.left=e+"%";var r,t;e>=80?(r="Green zone",t="You're holding your territory. The priority is to defend what you own and go after the remaining category queries."):e>=50?(r="Amber zone",t="Partial visibility. You're known, but your resellers are capturing a real share of your searches. The leak is active."):(r="Red zone",t="Heavy capture. The demand exists but it's your resellers and the marketplaces cashing it in. Every month counts."),document.getElementById("sc-zone").textContent="Your brand visibility score \u2014 "+r,document.getElementById("sc-interp").textContent=t;var l=m.map(function(a,c){var y=Math.round(o[c]/20*100);return'<div class="bar-row"><span class="bl">'+a.name+'</span><span class="bar-track"><span class="bar-fill" style="width:'+y+'%"></span></span></div>'}).join("");document.getElementById("sc-bars").innerHTML=l;var s=document.getElementById("f-score");s&&(s.value=e+"/100 \u2014 "+r),window.dataLayer=window.dataLayer||[],window.dataLayer.push({event:"scorecard_complete",score:e})}var i=document.getElementById("lead-form");i&&i.addEventListener("submit",function(n){n.preventDefault();var e=new URLSearchParams(new FormData(i)).toString();fetch("/",{method:"POST",headers:{"Content-Type":"application/x-www-form-urlencoded"},body:e}).catch(function(){}),window.dataLayer=window.dataLayer||[],window.dataLayer.push({event:"lead_form",tool:"scorecard"}),i.querySelector("#f-email").style.display="none",i.querySelector("button").style.display="none",document.getElementById("form-ok").style.display="block"})})();</script>
 </Base>

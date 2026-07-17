@@ -1,0 +1,19 @@
+# Cache navigateur (Netlify) — assets fingerprintés en immutable, le reste en durée adaptée
+
+# CSS/JS générés par Astro : nom hashé → cache 1 an immutable
+/_astro/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Fonts auto-hébergées : stables → 1 an immutable
+/fonts/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Images : 30 jours + revalidation en arrière-plan
+/images/*
+  Cache-Control: public, max-age=2592000, stale-while-revalidate=86400
+
+# Sitemap et robots : 1 jour
+/sitemap.xml
+  Cache-Control: public, max-age=86400
+/robots.txt
+  Cache-Control: public, max-age=86400

@@ -45,7 +45,7 @@ import Base from '../../layouts/Base.astro';
     </div>
 
     <div class="cta-band reveal" style="margin-top:clamp(40px,5vw,64px)">
-      <img src="/images/icon-cream.png" class="icon-watermark" alt="" />
+      <img width="918" height="832" src="/images/icon-cream.webp" class="icon-watermark" alt="" />
       <h2>In the meantime, get to know AfriRank.</h2>
       <p>Discover the approach and the expertise behind the brand.</p>
       <div class="cta-actions">
@@ -59,14 +59,7 @@ import Base from '../../layouts/Base.astro';
 </section>
 
 <!-- Conversion: fired after form submission or booking (use in GTM for GA4 + Google Ads) -->
-<script is:inline>
-  window.dataLayer = window.dataLayer || [];
-  window.dataLayer.push({
-    event: 'conversion',
-    conversion_type: 'rdv_contact',
-    page_path: location.pathname
-  });
-</script>
+<script is:inline>window.dataLayer=window.dataLayer||[],window.dataLayer.push({event:"conversion",conversion_type:"rdv_contact",page_path:location.pathname});</script>
 
 <style>
   .merci .hero-top { text-align: center; max-width: 720px; margin: 0 auto; }

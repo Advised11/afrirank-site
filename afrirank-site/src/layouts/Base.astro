@@ -1,4 +1,5 @@
 ---
+import '../styles/fonts.css';
 import '../styles/global.css';
 import '../styles/afrirank-motifs.css';
 import Nav from '../components/Nav.astro';
@@ -29,11 +30,7 @@ const thanksPath = lang === 'en' ? '/en/thank-you/' : '/merci/';
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!-- Google Tag Manager -->
-  <script is:inline>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-MMWLNDWP');</script>
+  <script is:inline>(function(t,n,r,e,m){t[e]=t[e]||[],t[e].push({"gtm.start":new Date().getTime(),event:"gtm.js"});var g=n.getElementsByTagName(r)[0],a=n.createElement(r),s=e!="dataLayer"?"&l="+e:"";a.async=!0,a.src="https://www.googletagmanager.com/gtm.js?id="+m+s,g.parentNode.insertBefore(a,g)})(window,document,"script","dataLayer","GTM-MMWLNDWP");</script>
   <!-- End Google Tag Manager -->
   <title>{title}</title>
   <meta name="description" content={description} />
@@ -49,9 +46,8 @@ const thanksPath = lang === 'en' ? '/en/thank-you/' : '/merci/';
   <meta property="og:image" content="/images/logo-dark.png" />
   <meta name="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" href="/images/icon-orange.png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="preload" href="/fonts/lora-normal-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="/fonts/inter-normal-latin.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="stylesheet" href="https://assets.calendly.com/assets/external/widget.css" />
   {jsonLd && <script type="application/ld+json" set:html={jsonLd} />}
 </head>
@@ -64,93 +60,13 @@ const thanksPath = lang === 'en' ? '/en/thank-you/' : '/merci/';
   <slot />
   {!bare && <Footer tagline={footerTagline} lang={lang} />}
 
-  <script is:inline>
-    (function () {
-      var nav = document.getElementById('nav');
-      if (nav) {
-        var onScroll = function () { nav.classList.toggle('scrolled', window.scrollY > 12); };
-        onScroll();
-        window.addEventListener('scroll', onScroll, { passive: true });
-      }
-      var toggle = document.getElementById('navToggle');
-      if (toggle) {
-        toggle.addEventListener('click', function () { document.body.classList.toggle('menu-open'); });
-        document.querySelectorAll('#mobileMenu a').forEach(function (a) {
-          a.addEventListener('click', function () { document.body.classList.remove('menu-open'); });
-        });
-      }
-      var reveals = document.querySelectorAll('.reveal');
-      var io = new IntersectionObserver(function (entries) {
-        entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
-      }, { threshold: .12, rootMargin: '0px 0px -8% 0px' });
-      reveals.forEach(function (el, i) {
-        el.style.transitionDelay = (Math.min(i % 5, 4) * 60) + 'ms';
-        io.observe(el);
-      });
-      var failsafe = function () { reveals.forEach(function (el) { if (!el.classList.contains('in')) { el.style.transition = 'none'; el.classList.add('in'); } }); };
-      setTimeout(failsafe, 1400);
-      window.addEventListener('load', function () { setTimeout(failsafe, 400); });
-      document.querySelectorAll('.faq-q').forEach(function (q) {
-        q.addEventListener('click', function () {
-          var item = q.parentElement;
-          var a = item.querySelector('.faq-a');
-          var open = item.classList.contains('open');
-          document.querySelectorAll('.faq-item.open').forEach(function (o) {
-            o.classList.remove('open');
-            o.querySelector('.faq-a').style.maxHeight = null;
-          });
-          if (!open) { item.classList.add('open'); a.style.maxHeight = a.scrollHeight + 'px'; }
-        });
-      });
-    })();
-  </script>
+  <script is:inline>(function(){var t=document.getElementById("nav");if(t){var o=function(){t.classList.toggle("scrolled",window.scrollY>12)};o(),window.addEventListener("scroll",o,{passive:!0})}var i=document.getElementById("navToggle");i&&(i.addEventListener("click",function(){document.body.classList.toggle("menu-open")}),document.querySelectorAll("#mobileMenu a").forEach(function(e){e.addEventListener("click",function(){document.body.classList.remove("menu-open")})}));var a=document.querySelectorAll(".reveal"),s=new IntersectionObserver(function(e){e.forEach(function(n){n.isIntersecting&&(n.target.classList.add("in"),s.unobserve(n.target))})},{threshold:.12,rootMargin:"0px 0px -8% 0px"});a.forEach(function(e,n){e.style.transitionDelay=Math.min(n%5,4)*60+"ms",s.observe(e)});var c=function(){a.forEach(function(e){e.classList.contains("in")||(e.style.transition="none",e.classList.add("in"))})};setTimeout(c,1400),window.addEventListener("load",function(){setTimeout(c,400)}),document.querySelectorAll(".faq-q").forEach(function(e){e.addEventListener("click",function(){var n=e.parentElement,r=n.querySelector(".faq-a"),u=n.classList.contains("open");document.querySelectorAll(".faq-item.open").forEach(function(l){l.classList.remove("open"),l.querySelector(".faq-a").style.maxHeight=null}),u||(n.classList.add("open"),r.style.maxHeight=r.scrollHeight+"px")})})})();</script>
 
   <!-- dataLayer : suivi des CTA (réservation Calendly + clic email) -->
-  <script is:inline>
-    (function () {
-      window.dataLayer = window.dataLayer || [];
-      document.addEventListener('click', function (e) {
-        var a = e.target && e.target.closest ? e.target.closest('a') : null;
-        if (!a) return;
-        var href = a.getAttribute('href') || '';
-        var label = (a.textContent || '').replace(/\s+/g, ' ').trim().slice(0, 80);
-        var type = null;
-        if (href.indexOf('calendly.com') !== -1) type = 'reservation';
-        else if (href.indexOf('mailto:') === 0) type = 'email';
-        if (!type) return;
-        window.dataLayer.push({
-          event: 'cta_click',
-          cta_type: type,
-          cta_label: label,
-          cta_url: href,
-          page_path: location.pathname
-        });
-      }, true);
-    })();
-  </script>
+  <script is:inline>(function(){window.dataLayer=window.dataLayer||[],document.addEventListener("click",function(e){var a=e.target&&e.target.closest?e.target.closest("a"):null;if(a){var r=a.getAttribute("href")||"",n=(a.textContent||"").replace(/\s+/g," ").trim().slice(0,80),t=null;r.indexOf("calendly.com")!==-1?t="reservation":r.indexOf("mailto:")===0&&(t="email"),t&&window.dataLayer.push({event:"cta_click",cta_type:t,cta_label:n,cta_url:r,page_path:location.pathname})}},!0)})();</script>
 
   <!-- Calendly : ouverture en popup + redirection vers /merci/ après réservation -->
   <script is:inline src="https://assets.calendly.com/assets/external/widget.js" async></script>
-  <script is:inline>
-    (function () {
-      // Ouvre Calendly en popup (sur le domaine) quand le widget est dispo ; sinon le lien s'ouvre normalement
-      document.addEventListener('click', function (e) {
-        var a = e.target && e.target.closest ? e.target.closest('a') : null;
-        if (!a) return;
-        var href = a.getAttribute('href') || '';
-        if (href.indexOf('calendly.com') !== -1 && window.Calendly && typeof window.Calendly.initPopupWidget === 'function') {
-          e.preventDefault();
-          window.Calendly.initPopupWidget({ url: href });
-        }
-      });
-      // Quand un RDV est confirmé dans Calendly, on amène le visiteur sur la page de confirmation
-      window.addEventListener('message', function (e) {
-        if (typeof e.origin === 'string' && e.origin.indexOf('calendly.com') === -1) return;
-        if (e.data && e.data.event === 'calendly.event_scheduled') {
-          window.location.href = (document.body && document.body.dataset && document.body.dataset.thanks) || '/merci/';
-        }
-      });
-    })();
-  </script>
+  <script is:inline>(function(){document.addEventListener("click",function(t){var e=t.target&&t.target.closest?t.target.closest("a"):null;if(e){var n=e.getAttribute("href")||"";n.indexOf("calendly.com")!==-1&&window.Calendly&&typeof window.Calendly.initPopupWidget=="function"&&(t.preventDefault(),window.Calendly.initPopupWidget({url:n}))}}),window.addEventListener("message",function(t){typeof t.origin=="string"&&t.origin.indexOf("calendly.com")===-1||t.data&&t.data.event==="calendly.event_scheduled"&&(window.location.href=document.body&&document.body.dataset&&document.body.dataset.thanks||"/merci/")})})();</script>
 </body>
 </html>

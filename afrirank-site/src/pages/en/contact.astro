@@ -37,7 +37,7 @@ const jsonLd = JSON.stringify({
 <Base title="Contact — AfriRank | Book your SEO Diagnostic" description="Let's spend 30 minutes on your brand and your organic potential. Book a call or write to AfriRank." active="contact" jsonLd={jsonLd} lang="en" frPath="/contact/" enPath="/en/contact/">
 <section class="hero hero--page wrap" style="padding-bottom:0">
   <div class="hero-top">
-    <span class="hero-eyebrow reveal"><img src="/images/icon-orange.png" alt="" /> Contact</span>
+    <span class="hero-eyebrow reveal"><img width="918" height="832" src="/images/icon-orange.webp" alt="" /> Contact</span>
     <h1 class="reveal">Let's talk about <em>your visibility</em>.</h1>
     <p class="hero-sub reveal">30 minutes to see whether your market justifies an organic strategy — and what it could be worth. No obligation.</p>
   </div>
@@ -91,27 +91,9 @@ const jsonLd = JSON.stringify({
   </div>
 </section>
 
-<script is:inline>
-  // Prefill mailto from the form so "Send" carries the message
-  var sendBtn = document.getElementById('sendBtn');
-  if (sendBtn) {
-    sendBtn.addEventListener('click', function (e) {
-      var nom = (document.getElementById('f-nom').value || '').trim();
-      var marque = (document.getElementById('f-marque').value || '').trim();
-      var site = (document.getElementById('f-site').value || '').trim();
-      var msg = (document.getElementById('f-message').value || '').trim();
-      // Guard: don't fire on a completely empty form
-      if (!nom && !marque && !site && !msg) {
-        e.preventDefault();
-        document.getElementById('f-nom').focus();
-        return;
-      }
-      var subject = 'AfriRank contact' + (marque ? ' — ' + marque : '');
-      var body = 'Name: ' + nom + '\nBrand: ' + marque + '\nSite: ' + site + '\n\n' + msg;
-      sendBtn.setAttribute('href', 'mailto:contact@advised-seo.fr?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body));
-      // Open the mail client, then head to the confirmation page
-      setTimeout(function () { window.location.href = '/en/thank-you/'; }, 800);
-    });
-  }
-</script>
+<script is:inline>var sendBtn=document.getElementById("sendBtn");sendBtn&&sendBtn.addEventListener("click",function(m){var t=(document.getElementById("f-nom").value||"").trim(),e=(document.getElementById("f-marque").value||"").trim(),n=(document.getElementById("f-site").value||"").trim(),o=(document.getElementById("f-message").value||"").trim();if(!t&&!e&&!n&&!o){m.preventDefault(),document.getElementById("f-nom").focus();return}var a="AfriRank contact"+(e?" \u2014 "+e:""),d="Name: "+t+`
+Brand: `+e+`
+Site: `+n+`
+
+`+o;sendBtn.setAttribute("href","mailto:contact@advised-seo.fr?subject="+encodeURIComponent(a)+"&body="+encodeURIComponent(d)),setTimeout(function(){window.location.href="/en/thank-you/"},800)});</script>
 </Base>
