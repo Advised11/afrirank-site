@@ -1,0 +1,229 @@
+---
+import Base from '../layouts/Base.astro';
+const jsonLd = JSON.stringify({
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "@id": "https://www.afrirank.fr/coaching-seo/#service",
+      "name": "Programme Bâtisseur — Coaching SEO & GEO",
+      "serviceType": ["Coaching SEO", "GEO", "SEO culturel"],
+      "url": "https://www.afrirank.fr/coaching-seo/",
+      "provider": { "@id": "https://www.afrirank.fr/#business" },
+      "areaServed": ["FR", "Europe", "Caraïbes"],
+      "availableLanguage": ["fr"],
+      "description": "Programme de coaching SEO et GEO de 90 jours pour marques afro-caribéennes établies : 12 sessions hebdomadaires, revue des livrables sous 48 h, banque de requêtes SEO culturel, kit complet et roadmap 12 mois. Prérequis : le Diagnostic (290 €, déductible).",
+      "offers": {
+        "@type": "Offer",
+        "name": "Programme Bâtisseur",
+        "price": "490",
+        "priceCurrency": "EUR",
+        "priceSpecification": { "@type": "UnitPriceSpecification", "price": "490", "priceCurrency": "EUR", "unitText": "mois (programme de 3 mois, ou 1 290 € en une fois)" },
+        "url": "https://www.afrirank.fr/coaching-seo/"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.afrirank.fr/coaching-seo/#faq",
+      "mainEntity": [
+        { "@type": "Question", "name": "Coaching ou accompagnement : comment choisir ?", "acceptedAnswer": { "@type": "Answer", "text": "Une seule question : qui exécute ? Avec 3 à 4 heures par semaine et l'envie d'apprendre, le coaching rend autonome en 90 jours. Si le temps est la ressource la plus rare, l'accompagnement met l'exécution d'AfriRank au service de la marque. Beaucoup de marques commencent par le coaching, puis confient l'exécution quand le canal décolle." } },
+        { "@type": "Question", "name": "Combien de temps faut-il prévoir chaque semaine ?", "acceptedAnswer": { "@type": "Answer", "text": "Comptez 3 à 4 heures : 1 heure de session, et 2 à 3 heures d'exécution. Chaque session débouche sur une action précise." } },
+        { "@type": "Question", "name": "Le coaching couvre-t-il la visibilité dans les réponses IA (GEO) ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui. Le mois 3 du programme est dédié au GEO : structurer le site et le contenu pour être cité par ChatGPT, Perplexity et les AI Overviews, avec un tracker de visibilité IA inclus dans le Kit Bâtisseur." } },
+        { "@type": "Question", "name": "Que se passe-t-il si je n'y arrive pas seul ?", "acceptedAnswer": { "@type": "Answer", "text": "Les livrables sont revus sous 48 h ouvrées, et il est possible de basculer vers l'accompagnement en cours de programme si l'exécution demande trop de temps." } },
+        { "@type": "Question", "name": "Pourquoi le Diagnostic est-il obligatoire avant le programme ?", "acceptedAnswer": { "@type": "Answer", "text": "Le Diagnostic (290 €, déductible du programme) chiffre le chiffre d'affaires organique perdu et fixe les priorités : c'est la feuille de route des 90 jours." } }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://www.afrirank.fr/" },
+        { "@type": "ListItem", "position": 2, "name": "Coaching", "item": "https://www.afrirank.fr/coaching-seo/" }
+      ]
+    }
+  ]
+});
+---
+<Base title="Coaching SEO pour marques afro-caribéennes — Programme Bâtisseur | AfriRank" description="90 jours de coaching SEO & GEO hebdomadaire : vous exécutez, un senior vous guide. Apprenez à bâtir le canal organique de votre marque afro-caribéenne. 490 €/mois." active="coaching" jsonLd={jsonLd} frPath="/coaching-seo/">
+<section class="hero hero--page wrap">
+  <div class="hero-top">
+    <span class="hero-eyebrow reveal"><img width="918" height="832" src="/images/icon-orange.webp" alt="" /> Le Coaching · Programme Bâtisseur · 90 jours</span>
+    <h1 class="reveal">Apprenez à bâtir votre <em>patrimoine organique</em>.</h1>
+    <p class="hero-sub reveal">90 jours de coaching hebdomadaire pour maîtriser le SEO et la visibilité IA de votre marque — et reprendre le trafic que revendeurs et marketplaces encaissent à votre place. Vous exécutez, je guide : chacune de vos pages est revue par un senior de 11 ans de métier.</p>
+    <div class="hero-actions reveal">
+      <a href="https://calendly.com/contact-advised-seo/30min?back=1" target="_blank" rel="noopener" class="btn btn--orange">Réserver mon Diagnostic
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+      </a>
+      <a href="/accompagnement/" class="btn btn--ghost">Voir l'accompagnement</a>
+    </div>
+    <span class="hero-note reveal"><b>3 marques en parallèle, pas plus</b> · Prérequis : le Diagnostic (290 €, déductible) · Sessions enregistrées</span>
+  </div>
+</section>
+
+<!-- LE CONSTAT -->
+<section class="sec problem">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="kicker">Le constat</span>
+      <h2 class="sec-title">Les formations SEO ne parlent pas <br />votre langue. Ni celle de votre communauté.</h2>
+      <p>Vous avez la motivation et quelques heures par semaine. Ce qui vous manque, ce n'est pas une énième vidéo générique — c'est un expert qui regarde <em>vos</em> pages et connaît <em>votre</em> marché.</p>
+    </div>
+    <div class="prob-grid">
+      <div class="prob-card reveal">
+        <div class="prob-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+        <h3>Les formations en ligne sont génériques</h3>
+        <p>Des heures de vidéos, zéro retour sur votre site. Vous apprenez la théorie, mais personne ne vous dit si votre page catégorie est bonne — ni pourquoi c'est un <a href="/revendeurs-captent-trafic-marque/" style="color:var(--orange-deep);font-weight:600">revendeur qui capte la vente</a>.</p>
+      </div>
+      <div class="prob-card reveal">
+        <div class="prob-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></div>
+        <h3>Votre vocabulaire n'y figure pas</h3>
+        <p>« Co-wash 4C », « sneakers wax », « bissap bio » : les requêtes de votre communauté n'existent dans aucune formation généraliste. C'est pourtant là que dort votre avantage concurrentiel — c'est tout l'objet du <a href="/seo-culturel/" style="color:var(--orange-deep);font-weight:600">SEO culturel</a>.</p>
+      </div>
+      <div class="prob-card reveal">
+        <div class="prob-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+        <h3>L'accompagnement n'est pas encore dans le budget</h3>
+        <p>Déléguer entièrement son SEO demande un investissement que toutes les marques ne peuvent pas engager tout de suite. Le coaching comble exactement ce vide : l'expertise senior, votre exécution.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COACHING OU ACCOMPAGNEMENT -->
+<section class="sec-sm" id="comparatif">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker">Coaching ou accompagnement ?</span>
+      <h2 class="sec-title">Une seule question : qui exécute ?</h2>
+      <p>Les deux mènent au même endroit — un canal organique que vous possédez. La différence, c'est qui tient les outils. Avec le coaching, <b>vous bâtissez, guidé chaque semaine</b>. Avec <a href="/accompagnement/" style="color:var(--orange-deep);font-weight:600">l'accompagnement</a>, <b>AfriRank bâtit pour vous</b>.</p>
+    </div>
+    <div class="cmp-scroll reveal">
+      <table class="cmp">
+        <thead>
+          <tr><th></th><th class="featured-col">Coaching Bâtisseur</th><th>Accompagnement (Starter → Partner)</th></tr>
+        </thead>
+        <tbody>
+          <tr><th>Qui exécute</th><td class="featured-col">Vous, guidé par un senior</td><td>AfriRank exécute pour vous</td></tr>
+          <tr><th>Votre temps requis</th><td class="featured-col">3 à 4 h / semaine</td><td>~1 h / mois (points de suivi)</td></tr>
+          <tr><th>Durée</th><td class="featured-col">3 mois (programme)</td><td>6 mois (engagement)</td></tr>
+          <tr><th>Budget</th><td class="featured-col">490 € / mois</td><td>690 € à 2 490 € / mois</td></tr>
+          <tr><th>Rythme des résultats</th><td class="featured-col">Au rythme de votre exécution</td><td>Au rythme d'une exécution experte</td></tr>
+          <tr><th>Ce que vous possédez à la fin</th><td class="featured-col">La compétence, la méthode, le Kit — et votre autonomie</td><td>Les résultats, la stratégie — et une équipe formée (Partner)</td></tr>
+          <tr><th>Pour qui</th><td class="featured-col">Fondateur·rice qui a du temps et l'envie d'apprendre</td><td>Marque dont le temps est la ressource la plus rare</td></tr>
+          <tr><th>Prérequis</th><td class="featured-col">Le Diagnostic (290 €, déductible)</td><td>Le Diagnostic (290 €, déductible)</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="sec-head reveal" style="margin-top:32px">
+      <p><b>Le bon choix en une phrase :</b> si vous (ou quelqu'un de votre équipe) pouvez investir 3 à 4 heures par semaine, le coaching vous rend autonome pour une fraction du coût. Si chaque heure de votre semaine est déjà prise par le produit et la communauté, l'accompagnement met mon exécution au service de votre marque. Et les deux se combinent : beaucoup de marques commencent par le coaching, puis me confient l'exécution quand le canal décolle — vous saurez alors exactement ce que vous achetez, et pourquoi.</p>
+    </div>
+  </div>
+</section>
+
+<!-- LE PROGRAMME -->
+<section class="sec" id="programme">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="kicker">Le programme</span>
+      <h2 class="sec-title">90 jours, 12 sessions, <br />une compétence qui vous reste.</h2>
+      <p>Une session de travail de 60 minutes chaque semaine, en visio et enregistrée. Entre les sessions, vous exécutez — et j'annote vos livrables sous 48 h ouvrées.</p>
+    </div>
+    <div class="method-grid">
+      <div class="step reveal">
+        <div class="step-num">01<span class="step-dot"></span></div>
+        <h3>Fondations — mois 1</h3>
+        <p>On part du chiffrage de votre <a href="/diagnostic-seo/" style="color:var(--orange-deep);font-weight:600">Diagnostic</a>. Setup des outils (Search Console, suivi), correctifs techniques essentiels que vous réalisez avec revue, priorisation de vos money pages.</p>
+      </div>
+      <div class="step reveal">
+        <div class="step-num">02<span class="step-dot"></span></div>
+        <h3>Contenu culturel — mois 2</h3>
+        <p>Construction de votre banque de requêtes diaspora, méthode de brief, optimisation de vos pages catégories et produits pour reprendre les requêtes que vos revendeurs captent. Votre première production, revue ligne à ligne.</p>
+      </div>
+      <div class="step reveal">
+        <div class="step-num">03<span class="step-dot"></span></div>
+        <h3>GEO &amp; autorité — mois 3</h3>
+        <p>Visibilité dans les réponses IA (ChatGPT, Perplexity, AI Overviews), maillage interne, signaux d'autorité. Votre marque commence à exister là où vos concurrents ne regardent pas encore.</p>
+      </div>
+      <div class="step reveal">
+        <div class="step-num">04<span class="step-dot"></span></div>
+        <h3>Bilan &amp; autonomie</h3>
+        <p>Bilan chiffré du programme et votre roadmap 12 mois pour continuer seul·e. Vous gardez les clés, la méthode et tous les enregistrements.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- L'OFFRE -->
+<section class="sec-sm" id="offre">
+  <div class="wrap">
+    <div class="audit-card reveal">
+      <div class="audit-left">
+        <span class="offer-tag">Programme Bâtisseur · 90 jours</span>
+        <h2>L'expertise senior, entre vos mains.</h2>
+        <p>Un programme limité à <b>3 marques en parallèle</b>, pour que chaque session et chaque revue ait la profondeur d'un vrai travail à quatre mains.</p>
+        <ul class="audit-list">
+          <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5"/></svg>12 sessions de travail hebdomadaires (60 min, enregistrées)</li>
+          <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5"/></svg>Revue de vos pages et contenus sous 48 h ouvrées</li>
+          <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5"/></svg><b>Votre banque de requêtes « SEO culturel »</b>, construite ensemble</li>
+          <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5"/></svg>Le Kit Bâtisseur : templates de briefs, checklist technique, tracker de visibilité IA</li>
+          <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5"/></svg>Bilan chiffré + roadmap 12 mois pour continuer en autonomie</li>
+        </ul>
+      </div>
+      <div class="audit-right">
+        <div class="audit-price">490 €<span>/ mois · 3 mois</span></div>
+        <a href="https://calendly.com/contact-advised-seo/30min?back=1" target="_blank" rel="noopener" class="btn btn--orange">Réserver mon Diagnostic
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+        <span class="audit-note">Ou 1 290 € en une fois. Le Diagnostic (290 €) est le point de départ du programme — et il en est déductible.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="sec problem">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="kicker">Questions fréquentes</span>
+      <h2 class="sec-title">Tout ce qu'il faut savoir.</h2>
+    </div>
+    <div class="faq">
+      <div class="faq-item reveal">
+        <button class="faq-q">Coaching ou accompagnement : comment choisir ? <span class="pm"></span></button>
+        <div class="faq-a"><p>Une seule question : qui exécute ? Si vous avez 3 à 4 heures par semaine et l'envie d'apprendre, le coaching vous rend autonome en 90 jours. Si votre temps est votre ressource la plus rare, <a href="/accompagnement/" style="color:var(--orange-deep);font-weight:600">l'accompagnement</a> met mon exécution au service de votre marque. Beaucoup de marques commencent par le coaching, puis me confient l'exécution quand le canal décolle.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q">Combien de temps dois-je prévoir chaque semaine ? <span class="pm"></span></button>
+        <div class="faq-a"><p>Comptez 3 à 4 heures : 1 heure de session ensemble, et 2 à 3 heures d'exécution de votre côté. Le programme est conçu pour un fondateur qui gère déjà sa marque au quotidien — chaque session débouche sur une action précise, jamais sur une liste infinie.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q">Le coaching couvre-t-il la visibilité dans les réponses IA (GEO) ? <span class="pm"></span></button>
+        <div class="faq-a"><p>Oui. Le mois 3 est dédié au <a href="/qu-est-ce-que-le-geo/" style="color:var(--orange-deep);font-weight:600">GEO</a> : structurer votre site et votre contenu pour être cité par ChatGPT, Perplexity et les AI Overviews. Le Kit Bâtisseur inclut un tracker de visibilité IA pour mesurer vos progrès — un terrain encore quasi vierge chez les marques afro-caribéennes.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q">Et si je n'y arrive pas seul·e ? <span class="pm"></span></button>
+        <div class="faq-a"><p>C'est prévu. D'abord, vos livrables sont revus sous 48 h : vous n'êtes jamais bloqué·e longtemps. Ensuite, si en cours de programme vous réalisez que l'exécution vous demande trop, on bascule vers l'accompagnement — et ce que vous avez appris rend cette collaboration bien plus efficace.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q">Pourquoi le Diagnostic est-il obligatoire avant le programme ? <span class="pm"></span></button>
+        <div class="faq-a"><p>Parce qu'on ne coache pas dans le vide. <a href="/diagnostic-seo/" style="color:var(--orange-deep);font-weight:600">Le Diagnostic</a> chiffre le chiffre d'affaires organique que vous laissez à d'autres et identifie vos priorités : c'est la feuille de route de vos 90 jours. Il coûte 290 € et il est déductible du programme.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="sec" id="contact">
+  <div class="wrap">
+    <div class="cta-band reveal">
+      <img width="918" height="832" src="/images/icon-cream.webp" class="icon-watermark" alt="" />
+      <h2>Vous avez bâti la marque. Apprenez à bâtir le canal qui la nourrit.</h2>
+      <p>30 minutes pour voir si le programme Bâtisseur est fait pour vous — ou si l'accompagnement vous ira mieux.</p>
+      <div class="cta-actions">
+        <a href="https://calendly.com/contact-advised-seo/30min?back=1" target="_blank" rel="noopener" class="btn btn--orange">Réserver mon Diagnostic
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+        <a href="mailto:contact@advised-seo.fr" class="btn btn--cream">contact@advised-seo.fr</a>
+      </div>
+    </div>
+  </div>
+</section>
+</Base>
